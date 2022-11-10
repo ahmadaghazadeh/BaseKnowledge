@@ -731,4 +731,4 @@ When passed --hard The Commit History ref pointers are updated to the specified 
 
 
 #### --mixed
-**This is the default operating mode**. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory. Let us continue.
+**This is the default operating mode**. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory. Let us continue. 
