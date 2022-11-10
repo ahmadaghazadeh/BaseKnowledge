@@ -615,3 +615,37 @@ All the lieutenants have one integration manager known as the **benevolent dicta
 
 ![image](images/snapshots.png)
  
+## 33. Git Merge Strategies
+
+Once Git finds a common base commit it will create a new "merge commit" that combines the changes of the specified merge commits. Technically, a merge commit is a regular commit which just happens to have two parent commits.
+
+* Recursive
+
+```bash
+git merge -s recursive branch1 branch2
+```
+This operates on two heads. Recursive is the default merge strategy when pulling or merging one branch. Additionally this can detect and handle merges involving renames, but currently cannot make use of detected copies. This is the default merge strategy when pulling or merging one branch.
+
+* Resolve
+```bash
+git merge -s resolve branch1 branch2
+```
+This can only resolve two heads using a 3-way merge algorithm. It tries to carefully detect cris-cross merge ambiguities and is considered generally safe and fast.
+
+* Octopus
+```bash
+git merge -s octopus branch1 branch2 branch3 branchN
+```
+The **default merge strategy** for **more than two heads**. When more than one branch is passed octopus is automatically engaged. If a merge has conflicts that need manual resolution octopus will refuse the merge attempt. It is primarily used for bundling similar feature branch heads together.
+
+* Ours
+```bash
+git merge -s ours branch1 branch2 branchN
+```
+The Ours strategy operates on multiple N number of branches. The output merge result is always that of the current branch HEAD. The "ours" term implies the preference effectively **ignoring all changes** from all other branches. It is intended to be used to combine history of similar feature branches.
+
+* Subtree
+```bash
+git merge -s subtree branchA branchB
+```
+This is an extension of the recursive strategy. When merging A and B, **if B is a child subtree of A**, B is first updated to reflect the tree structure of A, This update is also done to the common ancestor tree that is shared between A and B.
