@@ -649,3 +649,24 @@ The Ours strategy operates on multiple N number of branches. The output merge re
 git merge -s subtree branchA branchB
 ```
 This is an extension of the recursive strategy. When merging A and B, **if B is a child subtree of A**, B is first updated to reflect the tree structure of A, This update is also done to the common ancestor tree that is shared between A and B.
+
+## 35. Figure 1: Distribution of Git's Programming Languages
+
+https://github.com/git/git
+
+![image](images/git-languages.png)
+
+# In the case of the public key, it will be created with the filename extension '.pub'.
+
+
+## 36. Comparing changes with git diff
+
+* Diffing is a function that takes two input data sets and outputs the changes between them. git diff is a multi-use Git command that when executed runs a diff function on Git data sources. These data sources can be commits, branches, files and more.
+
+* After staging a series of changes to the index, which command could you use to review them prior to a commit?
+
+```bash
+ # After staging
+ git add --all 
+ git diff --cached
+```
