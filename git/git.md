@@ -732,3 +732,9 @@ When passed --hard The Commit History ref pointers are updated to the specified 
 
 #### --mixed
 **This is the default operating mode**. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory. Let us continue. 
+
+The Staging Index has been reset and the pending changes have been moved into the Working Directory. Compare this to the --hard reset case where the Staging Index was reset and the Working Directory was reset as well, losing these updates.
+
+### --soft
+
+When the --soft argument is passed, the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left **untouched**. This behavior can be hard to clearly demonstrate.
