@@ -724,16 +724,19 @@ In addition to updating the commit ref pointers, git reset will modify the state
 
 * The default invocation of `git reset` has implicit arguments of `--mixed` and `HEAD`. This means executing `git reset` is equivalent to executing` git reset --mixed HEAD`. In this form `HEAD` is the specified commit. Instead of HEAD any Git SHA-1 commit `hash` can be used.
 
-![image](images/git-rest-options.svg)
+![image](images/git-rest-options.png)
 
 #### --hard
 When passed --hard The Commit History ref pointers are updated to the specified commit. Then, the Staging Index and Working Directory are reset to match that of the specified commit. Any previously pending changes to the Staging Index and the Working Directory gets reset to match the state of the Commit Tree. This means any pending work that was hanging out in the Staging Index and Working Directory **will be lost**.
 
 #### --mixed
-**This is the default operating mode**. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory. Let us continue. 
+**This is the default operating mode**. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from **the Staging Index are moved to the Working Directory**. Let us continue. 
 
 The Staging Index has been reset and the pending changes have been moved into the Working Directory. Compare this to the --hard reset case where the Staging Index was reset and the Working Directory was reset as well, losing these updates.
 
 ### --soft
 
 When the --soft argument is passed, the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left **untouched**. This behavior can be hard to clearly demonstrate.
+
+### Resetting vs Reverting
+* If git revert is a “safe” way to undo changes, you can think of git reset as the dangerous method
