@@ -740,3 +740,4 @@ When the --soft argument is passed, the ref pointers are updated and the reset s
 
 ### Resetting vs Reverting
 * If git revert is a “safe” way to undo changes, you can think of git reset as the dangerous method
+    
