@@ -739,4 +739,9 @@ The Staging Index has been reset and the pending changes have been moved into th
 When the --soft argument is passed, the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left **untouched**. This behavior can be hard to clearly demonstrate.
 
 ### Resetting vs Reverting
-* If git revert is a “safe” way to undo changes, you can think of git reset as the dangerous method
+* If `git revert `is a “safe” way to undo changes, you can think of `git reset` as the dangerous method
+* ` Git reset` will never delete a commit, however, commits can become '**orphaned**' which means there is no direct path from a ref to access them. These orphaned commits can usually be found and restored using` git reflog`. Git will permanently delete any orphaned commits after it runs the internal **garbage collector**. By default, Git is configured to run the garbage **collector every 30 days**. 
+
+**Don't Reset Public History**
+
+### 38. revert
