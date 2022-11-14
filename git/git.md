@@ -749,5 +749,6 @@ When the --soft argument is passed, the ref pointers are updated and the reset s
 
 ### 38. revert
  
-    
- 
+* The` git revert` command is used for undoing changes to a repository's commit history. Other 'undo' commands like, `git checkout` and` git reset`, move the HEAD and branch ref pointers to a specified commit.
+
+* A revert operation will take the specified commit, inverse the changes from that commit, and create a new **"revert commit".**
