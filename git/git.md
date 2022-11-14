@@ -787,7 +787,6 @@ git restore <fileName> --staged
 # Restores a specific revision of the file. By default, the file will be restored to its last committed state (or simply be unstaged). The --source option, however, allows you to restore the file at a specific revision.
 git restore <fileName> --source HEAD
 
-# Allows you to select individual chunks to restore. Git steps through all of the individual chunks of changes in an interactive way and asks you, for each chunk, if you want to discard/unstage it.
-git restore <fileName> --patch
+#  
 
 ```
