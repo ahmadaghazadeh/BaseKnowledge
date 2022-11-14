@@ -745,10 +745,16 @@ When the --soft argument is passed, the ref pointers are updated and the reset s
 
 **Don't Reset Public History**
 
-* If `git revert `is a “safe” way to undo changes, you can think of `git reset` as the dangerous method
+
 
 ### 38. revert
- 
-* The` git revert` command is used for undoing changes to a repository's commit history. Other 'undo' commands like, `git checkout` and` git reset`, move the HEAD and branch ref pointers to a specified commit.
+ * The `git revert` command can be considered an 'undo' type command, however, it is not a traditional undo operation. 
+ * The `git revert` command is used for undoing changes to a repository's commit history. Other 'undo' commands like, `git checkout` and `git reset`, move the HEAD and branch ref pointers to a specified commit.
+    
+ It's important to understand that git revert undoes a single commit—it does not "revert" back to the previous state of a project by removing all subsequent commits. In Git, this is **actually called a reset**, not a revert.
 
-* A revert operation will take the specified commit, inverse the changes from that commit, and create a new **"revert commit".**
+* If `git revert `is a “safe” way to undo changes, you can think of `git reset` as the dangerous method
+
+![image](images/revertVsReset.svg)
+
+The `git revert` command is a `forward-moving` undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified.` Git revert` is a safer alternative to` git reset` in regards to losing work.
