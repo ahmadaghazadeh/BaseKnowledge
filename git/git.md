@@ -758,3 +758,17 @@ When the --soft argument is passed, the ref pointers are updated and the reset s
 ![image](images/revertVsReset.svg)
 
 The `git revert` command is a `forward-moving` undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified.` Git revert` is a safer alternative to` git reset` in regards to losing work.
+
+### 39. help
+ 
+<object data="images/Atlassian-Git-Cheatsheet.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="images/Atlassian-Git-Cheatsheet.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="images/Atlassian-Git-Cheatsheet.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
+```bash
+# To open help page for reset
+git help reset 
+git help revert
+``` 
