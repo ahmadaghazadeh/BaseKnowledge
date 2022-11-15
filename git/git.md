@@ -864,3 +864,34 @@ git prune --expire
 
 * The `git prune` command is intended to be invoked as a child command to `git gc`.
   
+## 42.  What is the difference between Git and SVN?
+* Git is a free and open-source **version control system distributed** under the license of GNU, whereas SVN is **a centralized version control system** distributed under the open-source license.
+
+### 43. Git workflow
+![image](images/Git-WorkFlow.png)
+1. Master 2. Hotfix 3. Develop 4. Feature 5. Release
+
+## 44. branch
+
+*  In Git, branches are a part of your everyday development process. Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to encapsulate your changes.
+
+```bash
+# List all of the branches in your repository. 
+git branch
+git branch --list
+
+# Create a new branch called ＜branch＞. This does not check out the new branch.
+git branch <branch>
+
+# Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.
+git branch -d <branch>
+
+# Force delete the specified branch, even if it has unmerged changes.
+git branch -D <branch>
+
+# Rename the current branch to ＜branch＞.
+git branch -m <branch>
+
+#List all remote branches. 
+git branch -a
+```
