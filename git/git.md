@@ -474,7 +474,9 @@ git log -3
 git log --after="2014-7-1"
 git log --after="yesterday"
 git log --after="2014-7-1" --before="2014-7-4"
+git log --since="2014-7-1" --before="2014-7-4"
 git log --author="John"
+git log --committer="John"
 git log --author="John\|Mary"
 git log --grep="JRA-224:"
 git log -- foo.py bar.py
@@ -629,7 +631,19 @@ Date:   Fri Feb 4 11:26:27 2022 +0000
 All the lieutenants have one integration manager known as the **benevolent dictator**. The benevolent dictator pushes from their directory to a reference repository from which all the collaborators need to pull.
 
 ![image](images/benevolent-dictator.png)
- 
+
+### Trunk-Based development
+
+* Trunk-based development is a version control management practice where **developers merge small**, **frequent updates to a core “trunk” or main branch**. It’s a common practice among DevOps teams and part of the DevOps lifecycle since it streamlines merging and integration phases. In fact, trunk-based development is a required practice of CI/CD. Developers can **create short-lived branches** with a few small commits compared to other long-lived feature branching strategies. As codebase complexity and team size grow, trunk-based development helps keep production releases flowing.
+
+
+![image](images/Trunk-Based-Development.png)
+
+![image](images/gitflow.png)
+
+* Gitflow is an alternative Git branching model that **uses long-lived feature branches and multiple primary branches.** Gitflow has more, longer-lived branches and larger commits than trunk-based development. Under this model, developers create a feature branch and delay merging it to the main trunk branch until the feature is complete. These long-lived feature branches require more collaboration to merge as they have a higher risk of deviating from the trunk branch and introducing conflicting updates. 
+
+
 ## 31. Git Internals - Transfer Protocols
 
 * Git can transfer data between two repositories in two major ways: the **“dumb”** protocol and the **“smart”** protocol. This section will quickly cover how these two main protocols operate.
@@ -829,3 +843,23 @@ git help revert
 `git restore <fileName> --patch`
 
  
+### 41. Prune
+
+* The git prune command is an internal housekeeping utility that cleans up unreachable or "orphaned" Git objects. Unreachable objects are those that are inaccessible by any refs. Any commit that cannot be accessed through a branch or tag is considered unreachable. git prune is generally not executed directly. Prune is considered a garbage collection command and is a child command of the git gc command.
+
+```bash
+# Don't execute the prune. Just show an output of what it will do
+git prune -n --dry-run
+
+# Display output of all objects and actions taken by the prune
+git prune -v --verbose
+
+# Displays output that indicates the progress of the prune
+git prune --progress
+
+# Force expiration of objects that are past 
+git prune --expire 
+
+```
+
+* The `git prune` command is intended to be invoked as a child command to `git gc`.
