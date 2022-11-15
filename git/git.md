@@ -896,3 +896,20 @@ git branch -m <branch>
 git branch -a
 ```
   
+## 45. clean
+
+* `Git clean` can be considered complementary to other commands like `git reset` and `git checkout`. Whereas these other commands operate on **files previously added** to the Git tracking index, the git clean command operates on **untracked files**. Untracked files are files that have been created within your repo's working directory but have not yet been added to the repository's tracking index using the `git add` command.
+
+```bash
+# The -n option will perform a “dry run” of git clean. 
+git clean --dry-run -n
+
+# The force option initiates the actual deletion of untracked files from the current directory
+git clean -f
+
+# The -x option tells git clean to also include any ignored files. 
+git clean -x 
+
+# This example demonstrates a combination with -f that will remove untracked files from the current directory as well as any files that Git usually ignores.
+git clean -xf
+```
