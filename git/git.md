@@ -75,7 +75,39 @@ git reset --soft HEAD~2     (going back two commits before HEAD)
 
 ## 5. Merge
 
-Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
+* Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
+
+* Conflicts generally arise when two people have changed the **same lines** in a file, or if one developer **deleted a file** while another developer was modifying it. 
+
+### Git fails to start the merge
+
+* A merge will fail to start when Git sees there are changes in either the working directory or staging area of the current project. Git fails to start the merge because these pending changes could be written over by the commits that are being merged in. The local state will need to be stabilized using `git stash, git checkout, git commit or git reset`.
+
+```bash
+error: Entry '<fileName>' not uptodate. Cannot merge. (Changes in working directory)
+```
+
+### Git fails during the merge
+
+* A failure DURING a merge indicates a conflict between the current local branch and the branch being merged. This indicates a conflict with another developers code. Git will do its best to merge the files but will leave things for you to resolve manually in the conflicted files. A mid-merge failure will output the following error message:
+  
+```bash
+error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes in staging area)
+```
+
+### How to identify merge conflicts
+* Use cat conflictFile OR Use any text editor
+* Find conflict and solve this
+* `git add conflictFile`
+* `git commit -m "merged and resolved the conflict in conflictFile"`
+
+```bash
+ <<<<<<< HEAD
+ =======
+ >>>>>>> new_branch_to_merge_later
+```
+* Think of these new lines as "conflict dividers". The ======= line is the "center" of the conflict. All the content between the center and the <<<<<<< HEAD line is content that exists in the current branch main which the HEAD ref is pointing to. Alternatively all content between the center and >>>>>>> new_branch_to_merge_later is content that is present in our merging branch.
+
 
 ```bash
     # Start a new feature
@@ -90,6 +122,10 @@ Merging is Git's way of putting a forked history back together again. The git me
     git checkout main
     git merge new-feature
     git branch -d new-feature
+    
+    # Executing git merge with the --abort option will exit from the merge process and return the branch to the state before the merge began.
+    git merge --abort
+
 ```
 ![image](images/merge.svg?raw=svg)
 
