@@ -914,6 +914,50 @@ git clean -x
 # This example demonstrates a combination with -f that will remove untracked files from the current directory as well as any files that Git usually ignores.
 git clean -xf
 ```
-  
-  
-  
+
+## 46. reflog
+
+ * Git keeps track of updates to the tip of branches using a mechanism called reference logs, or "reflogs." Many Git commands accept a parameter for specifying a reference or "ref", which is a pointer to a commit. Common examples include:
+```bash
+git checkout
+git reset
+git merge
+```
+Reflogs track when Git **refs were updated in the local repository**.
+
+* In addition to branch tip reflogs, a special reflog is maintained for the Git stash. Reflogs are stored in directories under the local repository's .git directory. git reflog directories can be found at .git/logs/refs/heads/., .git/logs/HEAD, and also .git/logs/refs/stash if the` git stash` has been used on the repo.
+
+```bash
+# By default, git reflog will output the reflog of the HEAD ref.
+git reflog
+git reflog show HEAD
+
+# You can get a complete reflog of all refs by executing:
+ git reflog show --all 
+
+# To see the reflog for a specific branch pass that branch name to git reflog show
+git reflog show otherbranch
+```
+The following are some examples of available time qualifiers:
+
+```bash
+1.minute.ago
+1.hour.ago
+1.day.ago
+yesterday
+1.week.ago
+1.month.ago
+1.year.ago
+2011-05-17.09:00:00
+1.day.2.hours.ago
+git diff main@{0} main@{1.day.ago} 
+
+# By default, the reflog expiration date is set to 90 days. 
+
+git reflog expire=time
+git reflog expire -n
+
+ # As with expire, delete has potential to lose data and is not commonly invoked by end users.
+git reflog delete
+
+```
