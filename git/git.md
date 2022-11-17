@@ -953,11 +953,10 @@ yesterday
 git diff main@{0} main@{1.day.ago} 
 
 # By default, the reflog expiration date is set to 90 days. 
-
 git reflog expire=time
 git reflog expire -n
 
- # As with expire, delete has potential to lose data and is not commonly invoked by end users.
+# As with expire, delete has potential to lose data and is not commonly invoked by end users.
 git reflog delete
 
 ``` 
