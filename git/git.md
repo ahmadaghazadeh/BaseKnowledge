@@ -960,5 +960,4 @@ git reflog expire -n
  # As with expire, delete has potential to lose data and is not commonly invoked by end users.
 git reflog delete
 
-```
-  
+``` 
