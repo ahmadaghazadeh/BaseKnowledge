@@ -1011,4 +1011,4 @@ git reflog delete
 * The git fetch command downloads commits, files, and refs from a remote repository into your local repo.
 * It’s similar to svn update in that it lets you see how the central history has progressed, **but it doesn’t force you to actually merge the changes into your repository**.
 * Fetched content has to be explicitly checked out using the git checkout command. This makes fetching a safe way to review commits before integrating them with your local repository.
-* When downloading content from a remote repo, git pull and git fetch commands are available to accomplish the task. You can consider git fetch the 'safe' version of the two commands.
+* When downloading content from a remote repo, git pull and git fetch commands are available to accomplish the task. You can consider git fetch the **'safe'** version of the two commands.
