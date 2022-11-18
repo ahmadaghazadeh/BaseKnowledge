@@ -1,18 +1,21 @@
 # Git
 
 ## 1. How can you check your current git version?
+
 ```bash
 git --version
 ```
 
 ## 2. What command lets you create a connection between a local and remote repository?
 
-* The git remote command lets you create, view, and delete connections to other repositories. 
+* The git remote command lets you create, view, and delete connections to other repositories.
 
 ```bash
 git remote add origin
 ```
+
 #### More commands
+
 ```bash
 
 # List your existing remotes in order to get the name
@@ -44,11 +47,10 @@ git remote prune [-n | --dry-run] <name>…​
 git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]
 
 ```
+
 ## 3. Git Hard Reset to HEAD
 
 The purpose of the “git reset” command is to move the current HEAD to the commit specified (in this case, the HEAD itself, one commit before HEAD and so on)(**alter the working directory**).
-
-
 
 ```bash
 git reset --hard HEAD       (going back to HEAD)
@@ -61,6 +63,7 @@ git reset --hard HEAD~2     (going back two commits before HEAD)
 ```
 
 ## 4. Git Hard Reset to HEAD
+
 Contrary to the hard reset, the soft reset **won’t alter the working directory** and the index.
 
 As a consequence, the changes done between the original HEAD and the current HEAD will be staged.
@@ -78,7 +81,7 @@ git reset --soft HEAD~2     (going back two commits before HEAD)
 
 * Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
 
-* Conflicts generally arise when two people have changed the **same lines** in a file, or if one developer **deleted a file** while another developer was modifying it. 
+* Conflicts generally arise when two people have changed the **same lines** in a file, or if one developer **deleted a file** while another developer was modifying it.
 
 ### Git fails to start the merge
 
@@ -97,6 +100,7 @@ error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes 
 ```
 
 ### How to identify merge conflicts
+
 * Use cat conflictFile OR Use any text editor
 * Find conflict and solve this
 * `git add conflictFile`
@@ -107,8 +111,8 @@ error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes 
  =======
  >>>>>>> new_branch_to_merge_later
 ```
-* Think of these new lines as "conflict dividers". The ======= line is the "center" of the conflict. All the content between the center and the <<<<<<< HEAD line is content that exists in the current branch main which the HEAD ref is pointing to. Alternatively all content between the center and >>>>>>> new_branch_to_merge_later is content that is present in our merging branch.
 
+* Think of these new lines as "conflict dividers". The ======= line is the "center" of the conflict. All the content between the center and the <<<<<<< HEAD line is content that exists in the current branch main which the HEAD ref is pointing to. Alternatively all content between the center and >>>>>>> new_branch_to_merge_later is content that is present in our merging branch.
 
 ```bash
     # Start a new feature
@@ -128,9 +132,10 @@ error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes 
     git merge --abort
 
 ```
+
 ![image](images/merge.svg?raw=svg)
 
-#### **Squash** 
+#### **Squash**
 
 Instead of each commit on the topic branch being added to the history of the default branch, a **squash** merge adds all the file changes to **a single new commit** on the default branch.
 
@@ -138,8 +143,8 @@ A simple way to think about this is that squash merge gives you just the file ch
 
 ![image](images/squash-branch-merge.png?raw=png)
 
-
 ## 6. Add
+
 ```bash
 # Stage a specific directory or file
 git add <path> 
@@ -160,6 +165,7 @@ git add -u
 ```
 
 ## 7. cherry-pick
+
 * Cherry picking is the act of picking a commit from a branch and applying it to another.
 
 **Team collaboration**
@@ -174,9 +180,7 @@ When a bug is discovered it is important to deliver a fix to end users as quickl
 
 Sometimes a feature branch may go stale and not get merged into main. Sometimes a pull request might get closed without merging. Git never loses those commits and through commands like git log and git reflog they can be found and cherry picked back to life.
 
-
 ![image](images/AfterCherryPick.jpg?raw=jpg)
-
 
 ## 8. Git Commands - Patching
 
@@ -224,7 +228,8 @@ Once you provide these two commit hashes, Git understands the bug must be somewh
 ![image](images/bisect-checkout-middle.png)
 
 ## 10. rebase
-* Rebase is one of two Git utilities that specializes in integrating changes from one branch onto another. The other change integration utility is git merge. Merge is always a forward moving change record. Alternatively, rebase has powerful history rewriting features. 
+
+* Rebase is one of two Git utilities that specializes in integrating changes from one branch onto another. The other change integration utility is git merge. Merge is always a forward moving change record. Alternatively, rebase has powerful history rewriting features.
 
 * Rebasing is the process of moving or combining a sequence of commits to a new base commit. Rebasing is most useful and easily visualized in the context of a feature branching workflow.
 
@@ -234,12 +239,14 @@ Once you provide these two commit hashes, Git understands the bug must be somewh
 
 **Don't rebase public history**
 
- * You can run rebase interactively by adding the -i option to git rebase. You must indicate how far back you want to rewrite commits by telling the command which commit to rebase onto.
+* You can run rebase interactively by adding the -i option to git rebase. You must indicate how far back you want to rewrite commits by telling the command which commit to rebase onto.
 
 ```bash
 git rebase -i HEAD~3
 ```
+
 Remember again that this is a rebasing command — every commit in the range HEAD~3..HEAD with a changed message and all of its descendants will be rewritten. Don’t include any commit you’ve already pushed to a central server — doing so will confuse other developers by providing an alternate version of the same change.
+
 ```bash
 #  means during playback the commit will be discarded from the final combined commit block.
 git rebase -- d
@@ -261,7 +268,7 @@ git rebase -- x
 
 ![image](images/hooks.png)
 
-### local hooks:
+### local hooks
 
 * pre-commit
 * prepare-commit-msg
@@ -298,10 +305,13 @@ The global level configuration is **user-specific** configuration. User-specific
 The system-level configuration is applied across an entire system. The entire system means **all users on an operating system and all repositories**. The system-level configuration file stores in a gitconfig file off the system directory. $(prefix)/etc/gitconfig on UNIX systems and C:\ProgramData\Git\config on Windows.
 
 ## 13. How could you squash multiple commits together without using git merge --squash?
+
 * Rebasing
 
-## 14. clone 
+## 14. clone
+
 * git clone is a Git command line utility which is used to target an existing repository and create a clone, or copy of the target repository
+
 ```bash
 #Cloning a specific tag
 git clone --branch <tag> <repo>
@@ -317,7 +327,6 @@ How can you display a list of files added or modified in a specific commit?
 Use the diff-tree command with the commit hash.
 
 ## 16. gitignore
-
 
 | Pattern                          | Example matches                                                                     | Explanation*                                                                                                                                                                                                         |
 |----------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -367,16 +376,18 @@ git commit --amend -m "New commit message"
 
 ![image](images/git-staging-workflow.png)
 
-## 20. tag 
+## 20. tag
 
 ![image](images/tag-branch.png)
 
  Tags are ref's that point to specific points in Git history. Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1.0.1). A tag is like a branch that doesn’t change.
+
 ```bash
 git tag <tagname>
 ```
 
 ### Annotated Tags
+
 Annotated tags are stored as full objects in the Git database. To reiterate, They store extra meta data such as: the tagger name, email, and date. Similar to commits and commit messages Annotated tags have a tagging message. Additionally, for security, annotated tags can be signed and verified with GNU Privacy Guard (GPG). Suggested best practices for git tagging is to prefer annotated tags over lightweight so you can have all the associated meta-data.
 
 ```bash
@@ -400,6 +411,7 @@ git checkout v1.4
 ```
 
 * Listing Tags
+
 ```bash
 git tag
 
@@ -408,6 +420,7 @@ git tag -l
 ```
 
 ## 21. Fixing GIT Branch and Tag Name Collisions
+
 ```bash
 git show tag1
 git show branchName
@@ -420,6 +433,7 @@ git show refs/heads/release1
 https://geedew.com/fixing-git-branch-and-tag-name-collision/
 
 ```
+
 ## 22. push
 
 ```bash
@@ -443,9 +457,11 @@ git init --bare <directory>
 git push --force-with-lease
 
 ```
+
 ### --force-with-lease
+
 * Imagine that you have to rebase what you have already published. You will have to bypass the "must fast-forward" rule in order to replace the history you originally published with the rebased history. If somebody else built on top of your original history while you are rebasing, the tip of the branch at the remote may advance with their commit, and blindly pushing with --force will lose their work.
-*  alone, without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them.
+* alone, without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them.
 
 ## 23. alias
 
@@ -458,11 +474,12 @@ git config --global alias.ci commit
 git config --global alias.st status
 ```
 
-* Creating the aliases will not modify the source commands. So git checkout will still be available even though we now have the git co alias. 
+* Creating the aliases will not modify the source commands. So git checkout will still be available even though we now have the git co alias.
 
 * Directly editing Git config files The global or local config files can be manually edited and saved to create aliases. The global config file lives at **$HOME/.gitconfig** file path. The local path lives within an active git repository at **/.git/config**
 
 ## 24. log
+
 ```bash
 # Show log in a single line
 git log --oneline
@@ -519,15 +536,15 @@ git r, --ignore-unmatch file.js
 
 ```
 
-## 26. To keeping a git structure after successfully merge two branchs.
+## 26. To keeping a git structure after successfully merge two branchs
 
 Run git branch -d <branch name> to delete the merged branch.
 
-## 27. stash 
+## 27. stash
 
 * git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
 
-* The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy. 
+* The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy.
 
 ```bash
 # save changes on stash
@@ -539,9 +556,11 @@ git stash pop
 #you can reapply the changes to your working copy and keep them in your stash with git stash apply:
 git stash apply
 ```
+
 **This is useful if you want to apply the same stashed changes to multiple branches.**
 
 ### Stashing untracked or ignored files
+
 By default, running git stash will stash:
 
 * changes that have been added to your index (staged changes)
@@ -591,13 +610,14 @@ git init <directory>
 ```bash
 git init <directory> --template=<template_directory>
 ```
-*  The default Git templates usually reside in a `/usr/share/git-core/templates` directory but may be a different path on your machine.
+
+* The default Git templates usually reside in a `/usr/share/git-core/templates` directory but may be a different path on your machine.
 
 * The default templates are a good reference and example of how to utilize template features. A powerful feature of templates that's exhibited in the default templates is **Git Hook configuration**.
 
 ## 29. rerere
   
-* You need to set the configuration variable rerere.enabled in order to enable this command. While working on a feature branch you try to use "git rerere" to solve a recurring merge conflict but nothing is happening. 
+* You need to set the configuration variable rerere.enabled in order to enable this command. While working on a feature branch you try to use "git rerere" to solve a recurring merge conflict but nothing is happening.
 
 * This command assists the developer in this process by recording conflicted automerge results and corresponding hand resolve results on the initial manual merge, and applying previously recorded hand resolutions to their corresponding automerge results.
 
@@ -605,12 +625,13 @@ git init <directory> --template=<template_directory>
 
 If you have read Curious git, you know that git stores different types of objects in .git/objects. The object types are:
 
-* commit; 
+* commit;
 * tree;
 * blob;
 * annotated tag.
 
 ### commit
+
 * The commit object contains the directory tree object hash, parent commit hash, author, committer, date and message.
 
 ```bash
@@ -623,7 +644,6 @@ Date:   Fri Feb 4 11:26:27 2022 +0000
 ```
 
 ![image](images/data-model-3.png)
-
 
 ## 30. Distributed Git - Distributed Workflows
 
@@ -645,13 +665,11 @@ All the lieutenants have one integration manager known as the **benevolent dicta
 
 * Trunk-based development is a version control management practice where **developers merge small**, **frequent updates to a core “trunk” or main branch**. It’s a common practice among DevOps teams and part of the DevOps lifecycle since it streamlines merging and integration phases. In fact, trunk-based development is a required practice of CI/CD. Developers can **create short-lived branches** with a few small commits compared to other long-lived feature branching strategies. As codebase complexity and team size grow, trunk-based development helps keep production releases flowing.
 
-
 ![image](images/Trunk-Based-Development.png)
 
 ![image](images/gitflow.png)
 
-* Gitflow is an alternative Git branching model that **uses long-lived feature branches and multiple primary branches.** Gitflow has more, longer-lived branches and larger commits than trunk-based development. Under this model, developers create a feature branch and delay merging it to the main trunk branch until the feature is complete. These long-lived feature branches require more collaboration to merge as they have a higher risk of deviating from the trunk branch and introducing conflicting updates. 
-
+* Gitflow is an alternative Git branching model that **uses long-lived feature branches and multiple primary branches.** Gitflow has more, longer-lived branches and larger commits than trunk-based development. Under this model, developers create a feature branch and delay merging it to the main trunk branch until the feature is complete. These long-lived feature branches require more collaboration to merge as they have a higher risk of deviating from the trunk branch and introducing conflicting updates.
 
 ## 31. Git Internals - Transfer Protocols
 
@@ -661,12 +679,13 @@ All the lieutenants have one integration manager known as the **benevolent dicta
 
  If you’re setting up a repository to be served read-only over HTTP, the dumb protocol is likely what will be used. This protocol is called “dumb” because it requires no Git-specific code on the server side during the transport process; the fetch process is a series of HTTP GET requests, where the client can assume the layout of the Git repository on the server.
 
- ### The Smart Protocol
- * SSH
- * HTTP(S)
+### The Smart Protocol
 
+* SSH
+* HTTP(S)
 
 ## 32. What's
+
 * Having a distributed architecture, Git is an example of a DVCS (**hence Distributed Version Control System**). Rather than have only one single place for the full version history of the software as is common in once-popular version control systems like CVS or Subversion (also known as SVN), in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.
 
 ### Snapshots, Not Differences
@@ -678,7 +697,7 @@ All the lieutenants have one integration manager known as the **benevolent dicta
 * Git doesn’t think of or store its data this way. Instead, **Git thinks of its data more like a series of snapshots of a miniature filesystem**. With Git, every time you commit, or save the state of your project, Git basically takes **a picture of what all your files** look like at that moment and stores a reference to that snapshot. To be efficient, **if files have not changed, Git doesn’t store the file again**, just a link to the previous identical file it has already stored. Git thinks about its data more like a stream of snapshots.
 
 ![image](images/snapshots.png)
- 
+
 ## 33. Git Merge Strategies
 
 Once Git finds a common base commit it will create a new "merge commit" that combines the changes of the specified merge commits. Technically, a merge commit is a regular commit which just happens to have two parent commits.
@@ -688,40 +707,48 @@ Once Git finds a common base commit it will create a new "merge commit" that com
 ```bash
 git merge -s recursive branch1 branch2
 ```
+
 This operates on two heads. Recursive is the default merge strategy when pulling or merging one branch. Additionally this can detect and handle merges involving renames, but currently cannot make use of detected copies. This is the default merge strategy when pulling or merging one branch.
 
 * Resolve
+
 ```bash
 git merge -s resolve branch1 branch2
 ```
+
 This can only resolve two heads using a 3-way merge algorithm. It tries to carefully detect cris-cross merge ambiguities and is considered generally safe and fast.
 
 * Octopus
+
 ```bash
 git merge -s octopus branch1 branch2 branch3 branchN
 ```
+
 The **default merge strategy** for **more than two heads**. When more than one branch is passed octopus is automatically engaged. If a merge has conflicts that need manual resolution octopus will refuse the merge attempt. It is primarily used for bundling similar feature branch heads together.
 
 * Ours
+
 ```bash
 git merge -s ours branch1 branch2 branchN
 ```
+
 The Ours strategy operates on multiple N number of branches. The output merge result is always that of the current branch HEAD. The "ours" term implies the preference effectively **ignoring all changes** from all other branches. It is intended to be used to combine history of similar feature branches.
 
 * Subtree
+
 ```bash
 git merge -s subtree branchA branchB
 ```
+
 This is an extension of the recursive strategy. When merging A and B, **if B is a child subtree of A**, B is first updated to reflect the tree structure of A, This update is also done to the common ancestor tree that is shared between A and B.
 
 ## 35. Figure 1: Distribution of Git's Programming Languages
 
-https://github.com/git/git
+<https://github.com/git/git>
 
 ![image](images/git-languages.png)
 
-# In the case of the public key, it will be created with the filename extension '.pub'.
-
+### In the case of the public key, it will be created with the filename extension '.pub'
 
 ## 36. Comparing changes with git diff
 
@@ -739,25 +766,28 @@ https://github.com/git/git
 
 * The git reset command is a complex and versatile tool for undoing changes. It has three primary forms of invocation. These forms correspond to command line arguments --soft, --mixed, --hard. The three arguments each correspond to Git's three internal state management mechanism's, The Commit Tree (HEAD), The Staging Index, and The Working Directory.
 
-* To properly understand git reset usage, we must first understand Git's internal state management systems. Sometimes these mechanisms are called Git's "three trees". 
+* To properly understand git reset usage, we must first understand Git's internal state management systems. Sometimes these mechanisms are called Git's "three trees".
 
 ### 1. The working directory
+
 * The first tree we will examine is "The Working Directory". This tree is in sync with the local filesystem and is representative of the immediate changes made to content in files and directories.
 * These changes are currently a part of the first tree, "The Working Directory". Git status can be used to show changes to the Working Directory. They will be displayed in the red with a 'modified' prefix.
   
 ### 2. Staging index
-* Next up is the 'Staging Index' tree. This tree is tracking Working Directory changes, that have been promoted with git add, to be stored in the next commit. 
+
+* Next up is the 'Staging Index' tree. This tree is tracking Working Directory changes, that have been promoted with git add, to be stored in the next commit.
 
 * To accurately view the state of the Staging Index we must utilize a lesser known Git command git ls-files. The git ls-files command is essentially a debug utility for inspecting the state of the Staging Index tree.
 
 ```bash
 git ls-files -s
-``` 
+```
 
 ### 3. Commit history
+
 * The final tree is the Commit History. The git commit command adds changes to a permanent snapshot that lives in the Commit History. This snapshot also includes the state of the Staging Index at the time of commit.
 
-### How Rest works 
+### How Rest works
 
 At a surface level, git reset is similar in behavior to `git checkout`. Where `git checkout` solely operates on the HEAD ref pointer, `git reset` will move the HEAD ref pointer and the current branch ref pointer. To better demonstrate this behavior consider the following example:
 
@@ -781,15 +811,17 @@ In addition to updating the commit ref pointers, git reset will modify the state
 
 ### Main Options
 
-* The default invocation of `git reset` has implicit arguments of `--mixed` and `HEAD`. This means executing `git reset` is equivalent to executing` git reset --mixed HEAD`. In this form `HEAD` is the specified commit. Instead of HEAD any Git SHA-1 commit `hash` can be used.
+* The default invocation of `git reset` has implicit arguments of `--mixed` and `HEAD`. This means executing `git reset` is equivalent to executing`git reset --mixed HEAD`. In this form `HEAD` is the specified commit. Instead of HEAD any Git SHA-1 commit `hash` can be used.
 
 ![image](images/git-rest-options.png)
 
 #### --hard
+
 When passed --hard The Commit History ref pointers are updated to the specified commit. Then, the Staging Index and Working Directory are reset to match that of the specified commit. Any previously pending changes to the Staging Index and the Working Directory gets reset to match the state of the Commit Tree. This means any pending work that was hanging out in the Staging Index and Working Directory **will be lost**.
 
 #### --mixed
-**This is the default operating mode**. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from **the Staging Index are moved to the Working Directory**. Let us continue. 
+
+**This is the default operating mode**. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from **the Staging Index are moved to the Working Directory**. Let us continue.
 
 The Staging Index has been reset and the pending changes have been moved into the Working Directory. Compare this to the --hard reset case where the Staging Index was reset and the Working Directory was reset as well, losing these updates.
 
@@ -798,28 +830,27 @@ The Staging Index has been reset and the pending changes have been moved into th
 When the --soft argument is passed, the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left **untouched**. This behavior can be hard to clearly demonstrate.
 
 ### Resetting vs Reverting
- 
-* If `git revert `is a “safe” way to undo changes, you can think of `git reset` as the dangerous method
-* ` Git reset` will never delete a commit, however, commits can become '**orphaned**' which means there is no direct path from a ref to access them. These orphaned commits can usually be found and restored using` git reflog`. Git will permanently delete any orphaned commits after it runs the internal **garbage collector**. By default, Git is configured to run the garbage **collector every 30 days**. 
 
-**Don't Reset Public History**
+* If `git revert`is a “safe” way to undo changes, you can think of `git reset` as the dangerous method
+* `Git reset` will never delete a commit, however, commits can become '**orphaned**' which means there is no direct path from a ref to access them. These orphaned commits can usually be found and restored using`git reflog`. Git will permanently delete any orphaned commits after it runs the internal **garbage collector**. By default, Git is configured to run the garbage **collector every 30 days**.
 
-
+### Don't Reset Public History
 
 ### 38. revert
- * The `git revert` command can be considered an 'undo' type command, however, it is not a traditional undo operation. 
- * The `git revert` command is used for undoing changes to a repository's commit history. Other 'undo' commands like, `git checkout` and `git reset`, move the HEAD and branch ref pointers to a specified commit.
-    
+
+* The `git revert` command can be considered an 'undo' type command, however, it is not a traditional undo operation.
+* The `git revert` command is used for undoing changes to a repository's commit history. Other 'undo' commands like, `git checkout` and `git reset`, move the HEAD and branch ref pointers to a specified commit.
+
  It's important to understand that git revert undoes a single commit—it does not "revert" back to the previous state of a project by removing all subsequent commits. In Git, this is **actually called a reset**, not a revert.
 
-* If `git revert `is a “safe” way to undo changes, you can think of `git reset` as the dangerous method
+* If `git revert`is a “safe” way to undo changes, you can think of `git reset` as the dangerous method
 
 ![image](images/revertVsReset.svg)
 
-The `git revert` command is a `forward-moving` undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified.` Git revert` is a safer alternative to` git reset` in regards to losing work.
+The `git revert` command is a `forward-moving` undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified.`Git revert` is a safer alternative to`git reset` in regards to losing work.
 
 ### 39. help
- 
+
 <object data="images/Atlassian-Git-Cheatsheet.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="images/Atlassian-Git-Cheatsheet.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="images/Atlassian-Git-Cheatsheet.pdf">Download PDF</a>.</p>
@@ -830,18 +861,19 @@ The `git revert` command is a `forward-moving` undo operation that offers a safe
 # To open help page for reset
 git help reset 
 git help revert
-``` 
+```
 
 ### 40. restore
 
-* The "restore" command helps to unstage or even discard uncommitted local changes. 
+* The "restore" command helps to unstage or even discard uncommitted local changes.
 * On the one hand, the command can be used to undo the effects of git add and unstage changes you have previously added to the **Staging** Area.
 * On the other hand, the restore command can also be used to discard local changes in a file, thereby restoring its last committed state.
 
- 
 `git restore <fileName>`
+
 * Removes the file from the Staging Area, but leaves its actual modifications untouched. By default, the git restore command will discard any local, uncommitted changes in the corresponding files and thereby restore their last committed state. With the --staged option, however, the file will only be removed from the Staging Area - but its actual modifications will remain untouched.
-* 
+*
+
 `git restore <fileName> --staged`
 
 * Restores a specific revision of the file. By default, the file will be restored to its last committed state (or simply be unstaged). The --source option, however, allows you to restore the file at a specific revision.
@@ -851,7 +883,6 @@ git help revert
   
 `git restore <fileName> --patch`
 
- 
 ### 41. Prune
 
 * The git prune command is an internal housekeeping utility that cleans up unreachable or "orphaned" Git objects. Unreachable objects are those that are inaccessible by any refs. Any commit that cannot be accessed through a branch or tag is considered unreachable. git prune is generally not executed directly. Prune is considered a garbage collection command and is a child command of the git gc command.
@@ -874,15 +905,18 @@ git prune --expire
 * The `git prune` command is intended to be invoked as a child command to `git gc`.
   
 ## 42.  What is the difference between Git and SVN?
+
 * Git is a free and open-source **version control system distributed** under the license of GNU, whereas SVN is **a centralized version control system** distributed under the open-source license.
 
 ### 43. Git workflow
+
 ![image](images/Git-WorkFlow.png)
+
 1. Master 2. Hotfix 3. Develop 4. Feature 5. Release
 
 ## 44. branch
 
-*  In Git, branches are a part of your everyday development process. Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to encapsulate your changes.
+* In Git, branches are a part of your everyday development process. Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to encapsulate your changes.
 
 ```bash
 # List all of the branches in your repository. 
@@ -925,15 +959,17 @@ git clean -xf
 
 ## 46. reflog
 
- * Git keeps track of updates to the tip of branches using a mechanism called reference logs, or "reflogs." Many Git commands accept a parameter for specifying a reference or "ref", which is a pointer to a commit. Common examples include:
+* Git keeps track of updates to the tip of branches using a mechanism called reference logs, or "reflogs." Many Git commands accept a parameter for specifying a reference or "ref", which is a pointer to a commit. Common examples include:
+
 ```bash
 git checkout
 git reset
 git merge
 ```
+
 Reflogs track when Git **refs were updated in the local repository**.
 
-* In addition to branch tip reflogs, a special reflog is maintained for the Git stash. Reflogs are stored in directories under the local repository's .git directory. git reflog directories can be found at .git/logs/refs/heads/., .git/logs/HEAD, and also .git/logs/refs/stash if the` git stash` has been used on the repo.
+* In addition to branch tip reflogs, a special reflog is maintained for the Git stash. Reflogs are stored in directories under the local repository's .git directory. git reflog directories can be found at .git/logs/refs/heads/., .git/logs/HEAD, and also .git/logs/refs/stash if the`git stash` has been used on the repo.
 
 ```bash
 # By default, git reflog will output the reflog of the HEAD ref.
@@ -946,6 +982,7 @@ git reflog show HEAD
 # To see the reflog for a specific branch pass that branch name to git reflog show
 git reflog show otherbranch
 ```
+
 The following are some examples of available time qualifiers:
 
 ```bash
@@ -967,4 +1004,11 @@ git reflog expire -n
 # As with expire, delete has potential to lose data and is not commonly invoked by end users.
 git reflog delete
 
-``` 
+```
+
+## 47. fetch
+
+* The git fetch command downloads commits, files, and refs from a remote repository into your local repo.
+* It’s similar to svn update in that it lets you see how the central history has progressed, **but it doesn’t force you to actually merge the changes into your repository**.
+* Fetched content has to be explicitly checked out using the git checkout command. This makes fetching a safe way to review commits before integrating them with your local repository.
+* When downloading content from a remote repo, git pull and git fetch commands are available to accomplish the task. You can consider git fetch the 'safe' version of the two commands.
