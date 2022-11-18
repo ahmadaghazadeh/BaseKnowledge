@@ -555,6 +555,13 @@ git stash pop
 
 #you can reapply the changes to your working copy and keep them in your stash with git stash apply:
 git stash apply
+
+# to restore some previously stashed work to a new branch
+git stash branch <branch name>
+
+# to see the details of the changes in the first of the three stash entries
+git stash show -p stash@{2}
+
 ```
 
 **This is useful if you want to apply the same stashed changes to multiple branches.**
