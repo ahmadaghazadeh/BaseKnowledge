@@ -1012,3 +1012,18 @@ git reflog delete
 * It’s similar to svn update in that it lets you see how the central history has progressed, **but it doesn’t force you to actually merge the changes into your repository**.
 * Fetched content has to be explicitly checked out using the git checkout command. This makes fetching a safe way to review commits before integrating them with your local repository.
 * When downloading content from a remote repo, git pull and git fetch commands are available to accomplish the task. You can consider git fetch the **'safe'** version of the two commands.
+* `git pull` is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content.
+
+```bash
+# Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
+# Same as the above command, but only fetch the specified branch.
+git fetch <remote> <branch>
+
+# A power move which fetches all registered remotes and their branches:
+git fetch --all
+
+# The --dry-run option will perform a demo run of the command. It will output examples of actions it will take during the fetch but not apply them.
+git fetch --dry-run
+
+
+```
