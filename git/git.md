@@ -1025,5 +1025,21 @@ git fetch --all
 # The --dry-run option will perform a demo run of the command. It will output examples of actions it will take during the fetch but not apply them.
 git fetch --dry-run
 
+```
 
+## 48. pull
+
+* The `git pull` command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows. The git pull command is actually a combination of **two other commands, `git fetch` followed by `git merge`**.
+
+```bash
+git pull <remote>
+
+# Similar to the default invocation, fetches the remote content but does not create a new merge commit.
+git pull --no-commit <remote>
+
+# Same as the previous pull Instead of using git merge to integrate the remote branch with the local one, use git rebase.
+git pull --rebase <remote>
+
+# Gives verbose output during a pull which displays the content being downloaded and the merge details.
+git pull --verbose
 ```
