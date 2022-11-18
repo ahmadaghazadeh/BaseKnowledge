@@ -438,7 +438,15 @@ git push <remote> --tags
 # Bare repos don’t have a working directory so a push will not alter any in progress working directory content.
 git init --bare <directory>
 
+# Usually, "git push" refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it.
+
+git push --force-with-lease
+
 ```
+### --force-with-lease
+* Imagine that you have to rebase what you have already published. You will have to bypass the "must fast-forward" rule in order to replace the history you originally published with the rebased history. If somebody else built on top of your original history while you are rebasing, the tip of the branch at the remote may advance with their commit, and blindly pushing with --force will lose their work.
+*  alone, without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them.
+
 ## 23. alias
 
 * Aliases are used to create shorter commands that map to longer commands.
