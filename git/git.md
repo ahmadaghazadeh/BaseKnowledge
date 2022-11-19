@@ -535,7 +535,7 @@ git log --merges
 
 ## 25. rm
 
-* The primary function of git rm is to remove tracked files from the Git index. Additionally, git rm can be used to remove files from both the staging index and the working directory.
+* The primary function of `git rm `is to **remove** tracked files from the Git index. Additionally, `git rm` can be used to remove files from both the staging index and the working directory.
 * There is no option to remove a file from only the working directory. The files being operated on must be identical to the files in the current HEAD. If there is a discrepancy between the HEAD version of a file and the staging index or working tree version, Git will block the removal. This block is a safety mechanism to prevent removal of in-progress changes.
 
 ```bash
@@ -1163,6 +1163,37 @@ git show-ref -heads --tags
 
 ```
 
-## 53.
+## 53. Origin & Master
 * The term origin is referred to the remote repository where you want to publish your commits. The **default remote repository is called origin**, although you can work with several remotes having a different name at the same time. It is said as an alias of the system.
 * **Master** is a naming convention for Git branch. It's a default branch of Git. After cloning a project from a remote server, the resulting local repository contains only a single local branch. This branch is called a "master" branch. **It means that "master" is a repository's "default" branch.**
+
+## 54. remote
+
+* The git remote command lets you create, view, and delete connections to other repositories. Remote connections are more like bookmarks rather than direct links into other repositories. Instead of providing real-time access to another repository, they serve as convenient names that can be used to reference a not-so-convenient URL.
+
+* For example, the following diagram shows two remote connections from your repo into the central repo and another developer’s repo. Instead of referencing them by their full URLs, you can pass the origin and john shortcuts to other Git commands.
+
+![image](images/remote.svg)
+
+```bash
+# List the remote connections you have to other repositories.
+git remote
+
+# Same as the above command, but include the URL of each connection.
+git remote -v
+
+# Create a new connection to a remote repository. After adding a remote, you’ll be able to use ＜name＞ as a convenient shortcut for ＜url＞ in other Git commands.
+git remote add <name> <url>
+
+# Remove the connection to the remote repository called ＜name＞.
+git remote rm <name>
+
+# Rename a remote connection from ＜old-name＞ to ＜new-name＞.
+git remote rename <old-name> <new-name>
+
+git remote show upstream
+
+# To Update the remote repository, named origin, to point to the new remote repository
+git remote set-url origin 'url'
+
+```
