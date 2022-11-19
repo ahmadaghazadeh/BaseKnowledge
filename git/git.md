@@ -1114,3 +1114,19 @@ git show --pretty="full" --name-only
 
 ```
 
+## 51. Git vs Github
+
+|S.No.|Git|GitHub|
+|-----|---|------|
+|1.|	Git is a software.|	GitHub is a service.|
+|2.|	Git is a command-line tool	|GitHub is a graphical user interface|
+|3.	|Git is installed locally on the system	|GitHub is hosted on the web
+|4.	|Git is maintained by linux.	|GitHub is maintained by Microsoft.
+|5.	|Git is focused on version control and code sharing.	|GitHub is focused on centralized source code hosting.
+|6.	|Git is a version control system to manage source code history. |GitHub is a hosting service for Git repositories.
+|7.	|Git was first released in 2005. 	|GitHub was launched in 2008.
+|8.	|Git has no user management feature.  	|GitHub has a built-in user management feature.
+|9.	|Git is open-source licensed.	|GitHub includes a free-tier and pay-for-use tier.
+|10.|	Git has minimal external tool configuration.|	GitHub has an active |marketplace for tool integration.
+|11.|	Git provides a Desktop interface named Git Gui.|	GitHub provides a Desktop interface named GitHub Desktop.
+|12.|	Git competes with CVS, Azure DevOps Server, Subversion, Mercurial, etc.|	GitHub competes with GitLab, Git Bucket, AWS Code Commit, etc.
