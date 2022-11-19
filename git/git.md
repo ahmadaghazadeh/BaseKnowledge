@@ -1130,3 +1130,16 @@ git show --pretty="full" --name-only
 |10.|	Git has minimal external tool configuration.|	GitHub has an active |marketplace for tool integration.
 |11.|	Git provides a Desktop interface named Git Gui.|	GitHub provides a Desktop interface named GitHub Desktop.
 |12.|	Git competes with CVS, Azure DevOps Server, Subversion, Mercurial, etc.|	GitHub competes with GitLab, Git Bucket, AWS Code Commit, etc.
+
+## 52. show-ref
+* Displays references available in a local repository along with the associated commit IDs. Results can be filtered using a pattern and tags can be dereferenced into object IDs. Additionally, it can be used to test whether a particular ref exists.
+
+```bash
+# Show the HEAD reference, even if it would normally be filtered out.
+git show-ref --head
+
+
+# Limit to "refs/heads" and "refs/tags", respectively. These options are not mutually exclusive; when given both, references stored in "refs/heads" and "refs/tags" are displayed.
+git show-ref -heads --tags
+
+```
