@@ -427,6 +427,9 @@ Executing this command creates a lightweight tag identified as v1.4-lw. Lightwei
 * You can view the state of a repo at a tag by using the git checkout command.
 * By default, a push doesn’t send tags to the remote repository.
 ```bash
+# Push tags to remote repository
+git push <remote> --tags
+
 git checkout v1.4
 ```
 
@@ -535,22 +538,23 @@ git log --merges
 
 ## 25. rm
 
-* The primary function of `git rm `is to **remove** tracked files from the Git index. Additionally, `git rm` can be used to remove files from both the staging index and the working directory.
-* There is no option to remove a file from only the working directory. The files being operated on must be identical to the files in the current HEAD. If there is a discrepancy between the HEAD version of a file and the staging index or working tree version, Git will block the removal. This block is a safety mechanism to prevent removal of in-progress changes.
+* The primary function of `git rm `is to **remove tracked files** from the Git index. Additionally, `git rm` can be used to remove files from both the staging index and the working directory.
+* There is no option to remove a file from only the working directory. The files being operated on must be identical to the files in the current HEAD. **If there is a discrepancy between the HEAD version of a file and the staging index or working tree version, Git will block the removal**. This block is a safety mechanism to prevent removal of in-progress changes.
 
 ```bash
-# The "dry run" option is a safeguard that will execute the git rm command but not actually delete the files. Instead it will output which files it would have removed.
+* The "dry run" option is a safeguard that will execute the git rm command but not actually delete the files. Instead it will output which files it would have removed.
+
 git rm -n/--dry-run test.js
 
-# The -r option is shorthand for 'recursive'. When operating in recursive mode git rm will remove a target directory and all the contents of that directory.
+* The -r option is shorthand for 'recursive'. When operating in recursive mode git rm will remove a target directory and all the contents of that directory.
 
 git rm -r directory
 
-# The cached option specifies that the removal should happen **only on the staging index**. Working directory **files will be left alone**.
+* The cached option specifies that the removal should happen only on the staging index. Working directory files will be left alone.
 
 git rm --cached file.js
 
-# This causes the command to exit with a 0 sigterm status even if no files matched. This is a Unix level status code. The code 0 indicates a successful invocation of the command. The --ignore-unmatch option can be helpful when using git rm as part of a greater shell script that needs to fail gracefully.
+* This causes the command to exit with a 0 sigterm status even if no files matched. This is a Unix level status code. The code 0 indicates a successful invocation of the command. The --ignore-unmatch option can be helpful when using git rm as part of a greater shell script that needs to fail gracefully.
 
 git r, --ignore-unmatch file.js
 
@@ -562,24 +566,29 @@ Run git branch -d <branch name> to delete the merged branch.
 
 ## 27. stash
 
-* git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
+* `git stash` temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
 
-* The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy.
+* The `git stash` command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy.
 
 ```bash
-# save changes on stash
+save changes on stash
+
 git stash 
 
-# Popping your stash removes the changes from your stash and reapplies them to your working copy.
+* Popping your stash removes the changes from your stash and reapplies them to your working copy.
+
 git stash pop
 
-#you can reapply the changes to your working copy and keep them in your stash with git stash apply:
+* you can reapply the changes to your working copy and keep them in your stash with git stash apply:
+
 git stash apply
 
-# to restore some previously stashed work to a new branch
+* to restore some previously stashed work to a new branch
+
 git stash branch <branch name>
 
-# to see the details of the changes in the first of the three stash entries
+* to see the details of the changes in the first of the three stash entries
+
 git stash show -p stash@{2}
 
 ```
@@ -588,7 +597,7 @@ git stash show -p stash@{2}
 
 ### Stashing untracked or ignored files
 
-By default, running git stash will stash:
+By default, running `git stash` will stash:
 
 * changes that have been added to your index (staged changes)
 * changes made to files that are currently tracked by Git (unstaged changes)
