@@ -1052,3 +1052,11 @@ git pull --rebase <remote>
 git pull --verbose
 ```
  
+ ## 49. What does detached HEAD mean?
+
+ * In Git, HEAD refers to the currently checked-out branch’s latest commit. However, in a detached HEAD state, the HEAD does not point to any branch, but a specific commit or the remote repository.
+
+
+![image](images/git-detached-head.avif)
+
+
