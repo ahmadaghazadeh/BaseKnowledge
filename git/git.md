@@ -425,7 +425,7 @@ git tag v1.4-lw
 Executing this command creates a lightweight tag identified as v1.4-lw. Lightweight tags are created with the absence of the -a, -s, or -m options. Lightweight tags create a new tag checksum and store it in the .git/ directory of the project's repo.
 
 * You can view the state of a repo at a tag by using the git checkout command.
-  
+* By default, a push doesn’t send tags to the remote repository.
 ```bash
 git checkout v1.4
 ```
@@ -1210,7 +1210,7 @@ git remote set-url origin 'url'
 
 ```
 
-## 53. pull requset
+## 55. pull requset
 * GitHub provides forking functionality designed to allow you to work with projects where you aren't an owner or don't have write access. Forking makes a remote copy of the project in your repository that you can then clone locally. To submit updates to the target repository (upstream repository) you can submit a pull request.
   
 * Pull requests are a mechanism for a developer to notify team members that they have completed a feature. Once their feature branch is ready, the developer files a pull request via their Bitbucket/Github account. This lets everybody involved know that they need to review the code and merge it into the main branch.
