@@ -1059,4 +1059,58 @@ git pull --verbose
 
 ![image](images/git-detached-head.avif)
 
+## 50. show
+* `git-show` is a command line utility that is used to view expanded details on Git objects such as blobs, trees, tags, and commits. `git-show` has specific behavior per object type.
+
+* --pretty[=＜format＞]
+The pretty option takes a secondary format value that can be one of: `oneline, short, medium, full, fuller, email, raw, and format:＜string＞.`** If omitted, the format defaults to medium.**
+
+```bash
+git show --pretty="full" --name-only
+
+• %H: commit hash
+• %h: abbreviated commit hash
+• %T: tree hash
+• %t: abbreviated tree hash
+• %P: parent hashes
+• %p: abbreviated parent hashes
+• %an: author name
+• %aN: author name 
+• %ae: author email
+• %aE: author email 
+• %ad: author date (format respects --date= option)
+• %aD: author date, RFC2822 style
+• %ar: author date, relative
+• %at: author date, UNIX timestamp
+• %ai: author date, ISO 8601 format
+• %cn: committer name
+• %cN: committer name 
+• %ce: committer email
+• %cE: committer email 
+• %cd: committer date
+• %cD: committer date, RFC2822 style
+• %cr: committer date, relative
+• %ct: committer date, UNIX timestamp
+• %ci: committer date, ISO 8601 format
+• %d: ref names, like the --decorate option of git-log(1)
+• %e: encoding
+• %s: subject
+• %f: sanitized subject line, suitable for a filename
+• %b: body
+• %N: commit notes
+• %gD: reflog selector, e.g., refs/stash@{1}
+• %gd: shortened reflog selector, e.g., stash@{1}
+• %gs: reflog subject
+• %Cred: switch color to red
+• %Cgreen: switch color to green
+• %Cblue: switch color to blue
+• %Creset: reset color
+• %C(...): color specification, as described in color.branch.* config option
+• %m: left, right or boundary mark
+• %n: newline
+• %%: a raw %
+• %x00: print a byte from a hex code
+• %w([[,[,]]]): switch line wrapping, like the -w option of git-shortlog
+
+```
 
