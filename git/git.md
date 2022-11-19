@@ -1,4 +1,4 @@
-# Git
+g# Git
 
 ## 1. How can you check your current git version?
 
@@ -15,6 +15,7 @@ git remote add origin
 ```
 
 #### More commands
+
 
 ```bash
 
@@ -1050,3 +1051,4 @@ git pull --rebase <remote>
 # Gives verbose output during a pull which displays the content being downloaded and the merge details.
 git pull --verbose
 ```
+ 
