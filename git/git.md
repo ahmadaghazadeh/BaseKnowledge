@@ -690,6 +690,18 @@ All the lieutenants have one integration manager known as the **benevolent dicta
 
 ### Trunk-Based development
 
+### Gitflow workflow vs Feature Branch workflow
+* Core concept of gitflow workflow come from Vincent Driessen. **this concept is working by split branch for each purpose.**
+
+* Master branch — This branch contain production of code base
+* Develop branch — This branch is develop branch.
+* Feature branch — This branch split from develop branch. in case we need new feature we must split it from develop branch. when this feature done. we need to combine back to develop
+* Release branch — This branch for release. checking everything before release. include write document about this release.
+* Hotfix branch — This branch for fix urgent bug on production.
+
+### Feature Branch workflow
+* This concept come from popular Github. 3rd service for provide code storage version control. the concept it self is pretty easy. remote our code to remote repository that online on github. push it. if have any feature. we need pull request it before project owner review code. and merge it to master branch.
+
 * Trunk-based development is a version control management practice where **developers merge small**, **frequent updates to a core “trunk” or main branch**. It’s a common practice among DevOps teams and part of the DevOps lifecycle since it streamlines merging and integration phases. In fact, trunk-based development is a required practice of CI/CD. Developers can **create short-lived branches** with a few small commits compared to other long-lived feature branching strategies. As codebase complexity and team size grow, trunk-based development helps keep production releases flowing.
 
 ![image](images/Trunk-Based-Development.png)
@@ -1197,3 +1209,10 @@ git remote show upstream
 git remote set-url origin 'url'
 
 ```
+
+## 53. pull requset
+* GitHub provides forking functionality designed to allow you to work with projects where you aren't an owner or don't have write access. Forking makes a remote copy of the project in your repository that you can then clone locally. To submit updates to the target repository (upstream repository) you can submit a pull request.
+  
+* Pull requests are a mechanism for a developer to notify team members that they have completed a feature. Once their feature branch is ready, the developer files a pull request via their Bitbucket/Github account. This lets everybody involved know that they need to review the code and merge it into the main branch.
+* But, the pull request is more than just a notification—it’s a dedicated forum for discussing the proposed feature. If there are any problems with the changes, teammates can post feedback in the pull request and even tweak the feature by pushing follow-up commits. All of this activity is tracked directly inside of the pull request.
+  
