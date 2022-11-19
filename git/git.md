@@ -63,7 +63,7 @@ git reset --hard HEAD~1     (equivalent to "^")
 git reset --hard HEAD~2     (going back two commits before HEAD)
 ```
 
-## 4. Git Hard Reset to HEAD
+## 4. Git Soft Reset to HEAD
 
 Contrary to the hard reset, the soft reset **won’t alter the working directory** and the index.
 
