@@ -1,4 +1,4 @@
-g# Git
+# Git
 
 ## 1. How can you check your current git version?
 
