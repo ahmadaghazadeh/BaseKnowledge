@@ -271,12 +271,31 @@ git rebase -- x
 
 ### local hooks
 
-* pre-commit
-* prepare-commit-msg
-* commit-msg
-* post-commit
-* post-checkout
-* pre-rebase
+* The `pre-commit` script is executed every time you run git commit before Git asks the developer for a commit message or generates a commit object. You can use this hook to inspect the snapshot that is about to be committed. For example, you may want to run some automated tests that make sure the **commit doesn’t break any existing functionality.**
+  
+* The `prepare-commit-msg` hook is called after the pre-commit hook to populate the text editor with a commit message. This is a good place to alter the automatically **generated commit messages** for squashed or merged commits.
+  
+* The `commit-msg` hook is much like the `prepare-commit-msg` hook, but it’s called after the user enters a commit message. This is an appropriate place to warn developers that their message doesn’t adhere to your team’s standards.
+The only argument passed to this hook is the name of the file that contains the message. If it doesn’t like the message that the user entered, it can alter this file in-place (just like with prepare-commit-msg) or it can abort the commit entirely by exiting with a non-zero status.
+
+* The `post-commit` hook is called immediately after the commit-msg hook. It can’t change the outcome of the git commit operation, so it’s used primarily for notification purposes.
+  
+* The `post-checkout` hook works a lot like the` post-commit` hook, but it’s called whenever you successfully check out a reference with `git checkout`. This is nice for clearing out your working directory of generated files that would otherwise cause confusion.
+  
+* The `pre-rebase` hook is called before` git rebase` changes anything, making it a good place to make sure something terrible isn’t about to happen.
+
+### Server-side Hooks
+* The `pre-receive` hook is executed every time somebody uses `git push` to push commits to the repository. It should always reside in the remote repository that is the destination of the push, not in the originating repository. The hook runs before any references are updated, so it’s a good place to enforce any **kind of development policy** that you want. If you don’t like who is doing the pushing, how the **commit message is formatted**, or the changes contained in the commit, you can simply reject it. While you can’t stop developers from making malformed commits, you can prevent these commits from entering the official codebase by rejecting them with pre-receive.
+  
+* The `update` hook is called after `pre-receive`, and it works much the same way. It’s still called before anything is actually updated, but it’s called separately for each ref that was pushed. That means if the user tries to push 4 branches, `update` is executed 4 times. Unlike `pre-receive`, this hook doesn’t need to read from standard input. Instead, it accepts the following 3 arguments:
+
+1. The name of the ref being updated
+2. The old object name stored in the ref
+3. The new object name stored in the ref
+   
+This is the same information passed to pre-receive, but since update is invoked separately for each ref, you can reject some refs while allowing others.
+
+* The `post-receive` hook gets called after a successful push operation, making it a good place to perform notifications. For many workflows, this is a better place to trigger notifications than` post-commit` because the changes are available on a public server instead of residing only on the user’s local machine. Emailing other developers and triggering a continuous integration system are common use cases for `post-receive`. The script takes no parameters, but is sent the same information as pre-receive via standard input.
 
 ## 12. Git Environment
 
@@ -489,7 +508,7 @@ git log --oneline
 git log --stat
 
 
-# This outputs the entire patch representing that commit. Include more info.
+# The git log command includes many options for displaying diffs with each commit. Two of the most common options are --stat and -p.
 git log -p
 
 git shortlog
@@ -1143,3 +1162,7 @@ git show-ref --head
 git show-ref -heads --tags
 
 ```
+
+## 53.
+* The term origin is referred to the remote repository where you want to publish your commits. The **default remote repository is called origin**, although you can work with several remotes having a different name at the same time. It is said as an alias of the system.
+* **Master** is a naming convention for Git branch. It's a default branch of Git. After cloning a project from a remote server, the resulting local repository contains only a single local branch. This branch is called a "master" branch. **It means that "master" is a repository's "default" branch.**
