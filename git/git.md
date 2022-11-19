@@ -144,7 +144,7 @@ A simple way to think about this is that squash merge gives you just the file ch
 ![image](images/squash-branch-merge.png?raw=png)
 
 ## 6. Add
-
+*  The `git add` command adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, `git add` doesn't really affect the repository in any significant way—changes are not actually recorded until you run` git commit`.
 ```bash
 # Stage a specific directory or file
 git add <path> 
@@ -1050,3 +1050,4 @@ git pull --rebase <remote>
 # Gives verbose output during a pull which displays the content being downloaded and the merge details.
 git pull --verbose
 ```
+ 
