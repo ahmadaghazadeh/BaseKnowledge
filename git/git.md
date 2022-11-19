@@ -1050,4 +1050,3 @@ git pull --rebase <remote>
 # Gives verbose output during a pull which displays the content being downloaded and the merge details.
 git pull --verbose
 ```
- 
