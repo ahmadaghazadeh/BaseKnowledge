@@ -819,13 +819,13 @@ This is an extension of the recursive strategy. When merging A and B, **if B is 
 ### 1. The working directory
 
 * The first tree we will examine is "The Working Directory". This tree is in sync with the local filesystem and is representative of the immediate changes made to content in files and directories.
-* These changes are currently a part of the first tree, "The Working Directory". Git status can be used to show changes to the Working Directory. They will be displayed in the red with a 'modified' prefix.
+* These changes are currently a part of the first tree, "The Working Directory". `Git status` can be used to show changes to the Working Directory. They will be displayed in the red with a '`modified`' prefix.
   
 ### 2. Staging index
 
-* Next up is the 'Staging Index' tree. This tree is tracking Working Directory changes, that have been promoted with git add, to be stored in the next commit.
+* Next up is the 'Staging Index' tree. This tree is tracking Working Directory changes, that have been promoted with `git add`, to be stored in the next commit.
 
-* To accurately view the state of the Staging Index we must utilize a lesser known Git command git ls-files. The git ls-files command is essentially a debug utility for inspecting the state of the Staging Index tree.
+* To accurately view the state of the Staging Index we must utilize a lesser known `Git command git ls-files`. The `git ls-files` command is essentially a debug utility for inspecting the state of the Staging Index tree.
 
 ```bash
 git ls-files -s
@@ -833,11 +833,11 @@ git ls-files -s
 
 ### 3. Commit history
 
-* The final tree is the Commit History. The git commit command adds changes to a permanent snapshot that lives in the Commit History. This snapshot also includes the state of the Staging Index at the time of commit.
+* The final tree is the Commit History. The `git commit` command adds changes to a permanent snapshot that lives in the Commit History. This snapshot also includes the state of the Staging Index at the time of commit.
 
 ### How Rest works
 
-At a surface level, git reset is similar in behavior to `git checkout`. Where `git checkout` solely operates on the HEAD ref pointer, `git reset` will move the HEAD ref pointer and the current branch ref pointer. To better demonstrate this behavior consider the following example:
+At a surface level, `git reset` is similar in behavior to `git checkout`. Where `git checkout` solely operates on the HEAD ref pointer, `git reset` will move the HEAD ref pointer and the current branch ref pointer. To better demonstrate this behavior consider the following example:
 
 ![image](images/git-sequence.png)
 
@@ -847,7 +847,7 @@ This example demonstrates a sequence of commits on the main branch. The HEAD ref
 
 ![image](images/git-checkout2.png)
 
-With `git checkout`, **the main ref is still pointing to d. The HEAD ref has been moved, and now points at commit b.** The repo is now in a 'detached HEAD' state.
+With `git checkout`, **the main ref is still pointing to d. The HEAD ref has been moved, and now points at commit b.** The repo is now in a **'detached HEAD'** state.
 
 ### git reset b
 
@@ -855,7 +855,7 @@ With `git checkout`, **the main ref is still pointing to d. The HEAD ref has bee
 
 Comparatively, `git reset`, moves both the HEAD and branch refs to the specified commit.
 
-In addition to updating the commit ref pointers, git reset will modify the state of the three trees. The ref pointer modification always happens and is an update to the third tree, the Commit tree. The command line arguments --soft, --mixed, and --hard direct how to modify the Staging Index, and Working Directory trees.
+In addition to updating the commit ref pointers, `git reset` will modify the state of the three trees. The ref pointer modification always happens and is an update to the third tree, the Commit tree. The command line arguments `--soft, --mixed, and --hard` direct how to modify the Staging Index, and Working Directory trees.
 
 ### Main Options
 
