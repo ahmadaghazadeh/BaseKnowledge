@@ -915,12 +915,12 @@ git help revert
 
 * The "restore" command helps to unstage or even discard uncommitted local changes.
 * On the one hand, the command can be used to undo the effects of git add and unstage changes you have previously added to the **Staging** Area.
-* On the other hand, the restore command can also be used to discard local changes in a file, thereby restoring its last committed state.
+* On the other hand, the restore command can also be used to discard local changes in a file, **thereby restoring its last committed state.**
 
 `git restore <fileName>`
 
 * Removes the file from the Staging Area, but leaves its actual modifications untouched. By default, the git restore command will discard any local, uncommitted changes in the corresponding files and thereby restore their last committed state. With the --staged option, however, the file will only be removed from the Staging Area - but its actual modifications will remain untouched.
-*
+
 
 `git restore <fileName> --staged`
 
