@@ -967,23 +967,23 @@ git prune --expire
 * In Git, branches are a part of your everyday development process. Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to encapsulate your changes.
 
 ```bash
-# List all of the branches in your repository. 
+*#* List all of the branches in your repository. 
 git branch
 git branch --list
 
-# Create a new branch called ＜branch＞. This does not check out the new branch.
+* Create a new branch called ＜branch＞. This does not check out the new branch.
 git branch <branch>
 
-# Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.
+* Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.
 git branch -d <branch>
 
-# Force delete the specified branch, even if it has unmerged changes.
+* Force delete the specified branch, even if it has unmerged changes.
 git branch -D <branch>
 
-# Rename the current branch to ＜branch＞.
+* Rename the current branch to ＜branch＞.
 git branch -m <branch>
 
-#List all remote branches. 
+* List all remote branches. 
 git branch -a
 ```
   
