@@ -1063,14 +1063,14 @@ git reflog delete
 * `git pull` is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content.
 
 ```bash
-# Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
-# Same as the above command, but only fetch the specified branch.
+* Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
+* Same as the above command, but only fetch the specified branch.
 git fetch <remote> <branch>
 
-# A power move which fetches all registered remotes and their branches:
+* A power move which fetches all registered remotes and their branches:
 git fetch --all
 
-# The --dry-run option will perform a demo run of the command. It will output examples of actions it will take during the fetch but not apply them.
+* The --dry-run option will perform a demo run of the command. It will output examples of actions it will take during the fetch but not apply them.
 git fetch --dry-run
 
 ```
@@ -1082,13 +1082,13 @@ git fetch --dry-run
 ```bash
 git pull <remote>
 
-# Similar to the default invocation, fetches the remote content but does not create a new merge commit.
+* Similar to the default invocation, fetches the remote content but does not create a new merge commit.
 git pull --no-commit <remote>
 
-# Same as the previous pull Instead of using git merge to integrate the remote branch with the local one, use git rebase.
+* Same as the previous pull Instead of using git merge to integrate the remote branch with the local one, use git rebase.
 git pull --rebase <remote>
 
-# Gives verbose output during a pull which displays the content being downloaded and the merge details.
+* Gives verbose output during a pull which displays the content being downloaded and the merge details.
 git pull --verbose
 ```
  
