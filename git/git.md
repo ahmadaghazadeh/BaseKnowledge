@@ -1175,11 +1175,11 @@ git show --pretty="full" --name-only
 * Displays references available in a local repository along with the associated commit IDs. Results can be filtered using a pattern and tags can be dereferenced into object IDs. Additionally, it can be used to test whether a particular ref exists.
 
 ```bash
-# Show the HEAD reference, even if it would normally be filtered out.
+* Show the HEAD reference, even if it would normally be filtered out.
 git show-ref --head
 
 
-# Limit to "refs/heads" and "refs/tags", respectively. These options are not mutually exclusive; when given both, references stored in "refs/heads" and "refs/tags" are displayed.
+* Limit to "refs/heads" and "refs/tags", respectively. These options are not mutually exclusive; when given both, references stored in "refs/heads" and "refs/tags" are displayed.
 git show-ref -heads --tags
 
 ```
