@@ -222,7 +222,7 @@ modified: beta-notes.js
 #### Q21. Which statement is true when you use the git add -A command?
 
 - [ ] Only new files in the working directory are staged to the index.
-- [ ] All new and updated files from the working directory are staged to the index.
+- [x] All new and updated files from the working directory are staged to the index.
 - [ ] All files in the working directory are staged to the index in alphabetical order.
 - [ ] Only updated files in the working directory are staged to the index.
 
@@ -231,14 +231,14 @@ modified: beta-notes.js
 - [ ] use git show refs/push-notifications
 - [ ] use git show push-notifications
 - [ ] use git show head/refs/push-notifications
-- [ ] use git show refs/head/push-notifications
+- [x] use git show refs/head/push-notifications
 
 [Reference](https://geedew.com/fixing-git-branch-and-tag-name-collision/)
 
 #### Q23. Your team lead needs a list of all commits that will be moved before you perform a rebase. Which command can you use to access that information?
 
 - [ ] git rebase -log
-- [ ] git rebase -i
+- [x] git rebase -i
 - [ ] git rebase -verbose
 - [ ] git rebase -all
 
@@ -253,18 +253,18 @@ git bisect good 69faab6268350295550de7d587bc323d
 - [ ] It runs a merge of a good commit that is discovered using a known bad commit and known good commit
 - [ ] It marks a commit for deletion using a known bad commit and known good commit to determine which commit introduced a bug
 - [ ] It defines a bad commit and resets the HEAD using a known bad commit and known good commit
-- [ ] It performs a binary search using a known bad commit and known good commit to determine which commit introduced a bug
+- [x] It performs a binary search using a known bad commit and known good commit to determine which commit introduced a bug
 
 #### Q25. In a situation where you have several commits for a single task, what is the most efficient way to restructure your commit history?
 
 - [ ] Cherry pick the related commits to another branch.
 - [ ] Delete the task commits and recommit with a new message.
-- [ ] Squash the related commits together into a single coherent commit.
+- [x] Squash the related commits together into a single coherent commit.
 - [ ] Stash the related commits under a new hash.
 
 #### Q26. Which of the following is true of the git push command?
 
-- [ ] By default a push doesn't send tags to the remote repository.
+- [x] By default a push doesn't send tags to the remote repository.
 - [ ] Commits can only be tagged when they are created.
 - [ ] Tags are pushed to the remote repository with their respective commits.
 - [ ] Only annotated tags are automatically pushed to the remote repository with a commit.
@@ -280,7 +280,7 @@ git push -u origin master
 - [ ] git push master
 - [ ] git push origin
 - [ ] Same as before, git push -u origin master
-- [ ] git push
+- [x] git push
 
 #### Q28. How would you create a custom shortcut or command across your git environment?
 
