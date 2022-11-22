@@ -1197,10 +1197,10 @@ git show-ref -heads --tags
 ![image](images/remote.svg)
 
 ```bash
-# List the remote connections you have to other repositories.
+* List the remote connections you have to other repositories.
 git remote
 
-# Same as the above command, but include the URL of each connection.
+* Same as the above command, but include the URL of each connection.
 git remote -v
 
 # Create a new connection to a remote repository. After adding a remote, you’ll be able to use ＜name＞ as a convenient shortcut for ＜url＞ in other Git commands.

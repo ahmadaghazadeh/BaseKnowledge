@@ -1,8 +1,13 @@
+<style>
+red { color: red }
+blue { color: blue }
+</style>
+
 ## Git
 
 #### Q1. How can you check your current git version?
 
-- [ ] git --v
+- [x] git --v
 - [ ] git --version
 - [ ] git --option
 - [ ] git --current
@@ -10,7 +15,7 @@
 #### Q2. What command lets you create a connection between a local and remote repository?
 
 - [ ] git remote add new
-- [ ] git remote add origin
+- [x] git remote add origin
 - [ ] git remote new origin
 - [ ] git remote origin
 
@@ -24,7 +29,7 @@ git merge --squash HEAD@{1}
 ```
 
 - [ ] They reset the HEAD to the fifth commit in the repo, then merge to the master branch.
-- [ ] The current branch's HEAD is reset back five commits, then prior commits are squashed into a single commit.
+- [x] The current branch's HEAD is reset back five commits, then prior commits are squashed into a single commit.
 - [ ] They delete the last five commits.
 - [ ] They merge the last five commits into a new branch.
 
@@ -38,13 +43,13 @@ git merge --squash HEAD@{1}
 - [ ] Checkout the push-notifications branch and run git merge beta
 - [ ] Checkout the master branch and run git merge beta -> push-notifications
 - [ ] Delete the push-notifications branch and it will be committed to the master branch automatically
-- [ ] Checkout the beta branch and run git merge push-notifications
+- [x] Checkout the beta branch and run git merge push-notifications
 
-#### Q5. Which of the following is true you when you use the following command?
+#### <red>Q5. Which of the following is true you when you use the following command?<red>
 
 `git add -A`
 
-- [ ] All new and updated files are staged
+- [x] All new and updated files are staged
 - [ ] Files are staged in alphabetical order.
 - [ ] All new files are staged
 - [ ] Only updated files are staged
