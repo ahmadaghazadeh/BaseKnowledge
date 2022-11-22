@@ -1,17 +1,9 @@
-<header>
-<style>
-red { color: red }
-blue { color: blue }
-green { color: green }
-</style>
-</header>
-
 ## Git
 
-#### <red>Q1. How can you check your current git version?<red>
+#### Q1. How can you check your current git version?
 
-- [x] <mark >git --v</mark >
-- [ ] <green>git --version</green>
+- [x] <span style='color:red'>	git --v</span>
+- [ ] <span style='color:green'>	git --version</span>
 - [ ] git --option
 - [ ] git --current
 
