@@ -1,14 +1,15 @@
 <style>
 red { color: red }
 blue { color: blue }
+green { color: green }
 </style>
 
 ## Git
 
-#### Q1. How can you check your current git version?
+#### <red>Q1. How can you check your current git version?<red>
 
-- [x] git --v
-- [ ] git --version
+- [x] <red>git --v<red>
+- [ ] <green>git --version<green>
 - [ ] git --option
 - [ ] git --current
 
@@ -58,7 +59,7 @@ git merge --squash HEAD@{1}
 
 `git remote -v`
 
-- [ ] A list of remote repositories and their URLs
+- [x] A list of remote repositories and their URLs
 - [ ] The current git version you're running
 - [ ] An inline editor for modifying remote repositories
 - [ ] The last 5 git versions you've installed
@@ -72,9 +73,9 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 
 - [ ] The commit is being tagged for release on the feature-user-location branch
 - [ ] A commit is being copied from its original branch over to the feature-user-location branch
-- [ ] The commit is being cherry picked as the new HEAD of the commit history
+- [ ] <green>The commit is being cherry picked as the new HEAD of the commit history<green>
 - [ ] A commit is being copied from the feature-user-location branch to the master branch
-- [ ] The branch is switched to the feature-user-location branch, and the specified commit is applied to the branch.
+- [x] <red>The branch is switched to the feature-user-location branch, and the specified commit is applied to the branch.<red>
 
 **Explanation:** Commits aren't copied when cherry picking, they are cherry picked. The changes introduced by the commit are applied and a new commit is then created. This allow us to get specific changes as if they were patches (in the GIT's book, this is actually called [Patching](https://git-scm.com/book/en/v2/Appendix-C:-Git-Commands-Patching "See this in the GIT's book")). As a new commit is created upon feature-user-location, HEAD also changes to match it. You can see this in `cat .git/HEAD` and `cat .git/refs/heads/feature-user-location` for this case. See `man git-cherry-pick` for details.
 
@@ -87,21 +88,21 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 - [ ] It deletes all previous commits and reset the repository history back to its initial state.
 - [ ] It resets the working branch to the first commit.
 - [ ] It keeps the HEAD at the current commit, but clears all previous commits.
-- [ ] It sets HEAD to the previous commit and leaves changes from the undone commit in the stage/index.
+- [x] It sets HEAD to the previous commit and leaves changes from the undone commit in the stage/index.
 
 #### Q9. You find a bug in your project, but can't locate where it was introduced in the commit history. How would you diagnose this problem?
 
 - [ ] Manually backtrack through your commit history.
 - [ ] Use git search -diff to compare all commits in your repository history.
 - [ ] Run a git rebase to find the buggy commit.
-- [ ] Use git bisect to compare the buggy commit to an early commit that works as expected.
+- [x] Use git bisect to compare the buggy commit to an early commit that works as expected.
 
-#### Q10. Why would the following command be used?
+#### <red>Q10. Why would the following command be used?<red>
 
 `git rebase -i HEAD~10`
 
-- [ ] To run a comparative search of the last 10 commits for differences
-- [ ] To list the last 10 commits and modify them with either the squash or fixup command
+- [x] <red>To run a comparative search of the last 10 commits for differences<red>
+- [ ] <green>To list the last 10 commits and modify them with either the squash or fixup command<green>
 - [ ] To delete the last 10 commits and reset the HEAD
 - [ ] In order to locally cache the last 10 commits
 
