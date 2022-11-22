@@ -10,8 +10,8 @@ green { color: green }
 
 #### <red>Q1. How can you check your current git version?<red>
 
-- [x] <red>git --v<red>
-- [ ] <green>git --version<green>
+- [x] <mark >git --v</mark >
+- [ ] <green>git --version</green>
 - [ ] git --option
 - [ ] git --current
 
