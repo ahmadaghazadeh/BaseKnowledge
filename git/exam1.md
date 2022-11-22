@@ -1,8 +1,8 @@
 ## Git
 
-#### Q1. How can you check your current git version?
+#### <span style='color:red'>	Q1. How can you check your current git version?</span>
 
-- [x] <span style='color:red'>	git --v</span>
+- [x] git --v
 - [ ] <span style='color:green'>	git --version</span>
 - [ ] git --option
 - [ ] git --current
@@ -40,7 +40,7 @@ git merge --squash HEAD@{1}
 - [ ] Delete the push-notifications branch and it will be committed to the master branch automatically
 - [x] Checkout the beta branch and run git merge push-notifications
 
-#### <red>Q5. Which of the following is true you when you use the following command?<red>
+#### <span style='color:red'> 	Q5. Which of the following is true you when you use the following command? </span>
 
 `git add -A`
 
@@ -67,9 +67,9 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 
 - [ ] The commit is being tagged for release on the feature-user-location branch
 - [ ] A commit is being copied from its original branch over to the feature-user-location branch
-- [ ] <green>The commit is being cherry picked as the new HEAD of the commit history<green>
+- [ ] <span style='color:green'>	The commit is being cherry picked as the new HEAD of the commit history</span>
 - [ ] A commit is being copied from the feature-user-location branch to the master branch
-- [x] <red>The branch is switched to the feature-user-location branch, and the specified commit is applied to the branch.<red>
+- [x] The branch is switched to the feature-user-location branch, and the specified commit is applied to the branch.
 
 **Explanation:** Commits aren't copied when cherry picking, they are cherry picked. The changes introduced by the commit are applied and a new commit is then created. This allow us to get specific changes as if they were patches (in the GIT's book, this is actually called [Patching](https://git-scm.com/book/en/v2/Appendix-C:-Git-Commands-Patching "See this in the GIT's book")). As a new commit is created upon feature-user-location, HEAD also changes to match it. You can see this in `cat .git/HEAD` and `cat .git/refs/heads/feature-user-location` for this case. See `man git-cherry-pick` for details.
 
@@ -95,8 +95,8 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 
 `git rebase -i HEAD~10`
 
-- [x] <red>To run a comparative search of the last 10 commits for differences<red>
-- [ ] <green>To list the last 10 commits and modify them with either the squash or fixup command<green>
+- [x] To run a comparative search of the last 10 commits for differences
+- [ ] <span style='color:green'>	To list the last 10 commits and modify them with either the squash or fixup command</span>
 - [ ] To delete the last 10 commits and reset the HEAD
 - [ ] In order to locally cache the last 10 commits
 
