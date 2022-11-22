@@ -1,6 +1,6 @@
 ## Git
 
-#### <span style='color:red'>	Q1. How can you check your current git version?</span>
+#### <font  style='color:red'>	Q1. How can you check your current git version?</font >
 
 - [x] git --v
 - [ ] <span style='color:green'>	git --version</span>
