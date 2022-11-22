@@ -7,6 +7,11 @@
 - [ ] git --option
 - [ ] git --current
 
+
+<mark >Highlighted text</mark>
+<mark style="background-color: #FFFF00">Highlighted text</mark>
+<div style="background-color: #FFFF00">Highlighted text</div>
+
 #### Q2. What command lets you create a connection between a local and remote repository?
 
 - [ ] git remote add new
