@@ -131,7 +131,7 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 #### Q15. How can you display a list of files added or modified in a specific commit?
 
 - [ ] Find the commit in the remote repository, as that's the only place that kind of information is stored.
-- [ ] Use the `diff-tree` command with the commit hash.
+- [x] Use the `diff-tree` command with the commit hash.
 - [ ] Run `git commit --info` with the commit hash.
 - [ ] Access the commit stash data with `git stash`.
 
@@ -147,7 +147,7 @@ build/
 
 - [ ] All files with a .swift, .txt, or metadata file extension, as well as the entire build directory
 - [ ] Only the build directory
-- [ ] All files in the build directory, as well as files ending with .txt or .metadata
+- [x] All files in the build directory, as well as files ending with .txt or .metadata
 - [ ] Only files with .swift and .txt extensions.
 
 A line starting with `#` serves as a comment. Hence `# .swift` does not do anything. See `man gitignore`.
