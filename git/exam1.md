@@ -159,9 +159,9 @@ A line starting with `#` serves as a comment. Hence `# .swift` does not do anyth
 - [ ] Nothing, you can't use multiple options in the same command
 - [ ] Adds all new files to the staging area
 - [ ] Commits all new files with a message
-- [ ] Adds all modified files to the staging area, then commits them with a message
+- [x] Adds all modified files to the staging area, then commits them with a message
 
-#### Q18. After checking your git status you get the following output, which shows the file beta-notes.js in the commit but also unstaged. How can this situation occur?
+#### **Q18. After checking your git status you get the following output, which shows the file beta-notes.js in the commit but also unstaged. How can this situation occur?**
 
 ```shell
 Change to be committed:
@@ -176,7 +176,7 @@ modified: beta-notes.js
 ```
 
 - [ ] There were two copies of beta-notes.js but one was deleted
-- [ ] beta-notes.js was staged, then modified afterwards, creating two different versions of the file
+- [x] beta-notes.js was staged, then modified afterwards, creating two different versions of the file
 - [ ] Two copies of beta-notes.js were created, but only one is being tracked
 - [ ] There are two tracked copies of beta-notes.js, but one was removed from the commit
 
