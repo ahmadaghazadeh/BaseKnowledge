@@ -111,7 +111,7 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 
 - [ ] `--all`
 - [ ] `--master`
-- [ ] `--global`
+- [x] `--global`
 - [ ] `--update`
 
 #### Q13. How could you squash multiple commits together without using git merge --squash?
