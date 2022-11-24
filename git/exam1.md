@@ -103,8 +103,8 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 #### Q11. Why would you use a pre-receive hook in your remote repository?
 
 - [ ] You wouldn't, you would use it in the local repository
-- [ ] To execute a script when a remote receives a push that is triggered before any refs are updated
-- [x] To fire a script after updates are made to the remote repository
+- [x] To execute a script when a remote receives a push that is triggered before any refs are updated
+- [ ] ~~To fire a script after updates are made to the remote repository~~
 - [ ] To debug all commit tags and release versions
 
 #### Q12. What option can you use to apply git configurations across your entire git environment?
