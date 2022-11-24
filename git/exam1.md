@@ -184,10 +184,10 @@ modified: beta-notes.js
 
 - [ ] Saved files
 - [ ] git documents
-- [ ] Staging area
+- [x] Staging area
 - [ ] git cache
 
-#### Q20. What commands would you use to force an overwrite of your local files with the master branch?
+#### **Q20. What commands would you use to force an overwrite of your local files with the master branch?**
 
 - [ ] ⠀
 
@@ -210,7 +210,7 @@ modified: beta-notes.js
   git reset --hard origin/myCurrentBranch
 ```
 
-- [ ]
+- [x]
 
 ```bash
   git fetch --all
