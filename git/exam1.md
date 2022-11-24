@@ -118,7 +118,7 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 
 - [ ] Caching
 - [ ] You can't. git merge --squash is the only git command for that operation.
-- [ ] Rebasing
+- [x] Rebasing
 - [ ] Reflogging
 
 #### Q14. If you cloned an existing git repository, what would happen?
