@@ -124,7 +124,7 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 #### Q14. If you cloned an existing git repository, what would happen?
 
 - [ ] A new copy would overwrite the central repository
-- [ ] A copy of the repository would be created on your local machine
+- [x] A copy of the repository would be created on your local machine
 - [ ] Nothing, cloning is not a supported git function
 - [ ] A copy of the repository would be created on the hosting platform
 
