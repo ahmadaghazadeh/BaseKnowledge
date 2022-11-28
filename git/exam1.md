@@ -365,7 +365,7 @@ modified: beta-notes.js
 
 - [ ] A set of files, representing the state of a project at a given point of time.
 - [ ] Reference to parent commit objects.
-- [ ] An SHA1 name, a 40-character string that uniquely identifies the commit object.
+- [x] An SHA1 name, a 40-character string that uniquely identifies the commit object.
 
 #### Q39. Which option enables inclusion of committer name in custom log format?
 
