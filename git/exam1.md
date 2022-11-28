@@ -374,9 +374,9 @@ modified: beta-notes.js
 - [ ] %cd
 - [x] %cn
 
-#### Q40. How many ways are present in Git to integrate changes from one branch into another?
+#### **Q40. How many ways are present in Git to integrate changes from one branch into another?**
 
-- [ ] 3
+- [x] 3
 - [ ] 5
 - [ ] 2
 - [ ] 4
