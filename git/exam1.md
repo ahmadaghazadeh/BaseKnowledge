@@ -302,14 +302,14 @@ modified: beta-notes.js
 - [ ] beta-notes.js is untracked and has been modified.
 - [ ] beta-notes.js is a tracked file and has been modified, but has not been added to the current commit.
 - [ ] beta-notes.js is untracked but has been added to the current commit.
-- [ ] beta-notes.js is tracked, and the modified file has been added to the current commit.
+- [x] beta-notes.js is tracked, and the modified file has been added to the current commit.
 
 #### Q30. What command would let you modify your previous commit?
 
 - [ ] --fix
 - [ ] --quickfix
 - [ ] --modify
-- [ ] --amend
+- [x] --amend
 
 #### Q31. What is the best way to characterize the git commit structure?
 
