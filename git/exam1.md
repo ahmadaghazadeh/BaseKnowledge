@@ -310,18 +310,18 @@ modified: beta-notes.js
 - [ ] --modify
 - [x] --amend
 
-#### Q31. What is the best way to characterize the git commit structure?
-
+#### **Q31. What is the best way to characterize the git commit structure?
+**
 - [ ] Data array
-- [ ] Data log
+- [x] Data log
 - [ ] Data snapshot
 - [ ] Data dictionary
 
-#### Q32. What change will the following command make to the staging area files?
+#### **Q32. What change will the following command make to the staging area files?**
 
-`git rm --cached testfile.js`
+`git rm --cached testfile.js` 
 
-- [ ] testfile.js will be removed from the staging area and its changes no longer tracked.
+- [x] testfile.js will be removed from the staging area and its changes no longer tracked.
 - [ ] testfile.js will be removed from the staging area but its changes will still be tracked.
 - [ ] A copy of testfile.js will be cached on your desktop.
 - [ ] The current copy of testfile.js will be saved in the staging area.
@@ -329,7 +329,7 @@ modified: beta-notes.js
 #### Q33. After you've successfully merged two branches and committed the changes, what is the next step in keeping your git structure organized?
 
 - [ ] Use the git reset --soft HEAD to roll back one commit.
-- [ ] Run git branch -d `<branch name>` to delete the merged branch.
+- [x] Run git branch -d `<branch name>` to delete the merged branch.
 - [ ] Use git clear-all to clean up any hanging files.
 - [ ] Run git rebase to move the current commit to its original location.
 
@@ -338,19 +338,19 @@ modified: beta-notes.js
 - [ ] This is not possible, as you cannot save locally without committing.
 - [ ] Run git hold to save a local copy of what you're doing to return to later.
 - [ ] Save your work with git local-cache.
-- [ ] Use git stash to save your work and come back later and reapply the stashed commit.
+- [x] Use git stash to save your work and come back later and reapply the stashed commit.
 
 #### Q35. What command would you use to create a new git repository?
 
 - [ ] git add
 - [ ] git start
 - [ ] git new
-- [ ] git init
+- [x] git init
 
 #### Q36. While working on a feature branch you try to use "git rerere" to solve a recurring merge conflict but nothing is happening. What could be causing this issue?
 
 - [ ] The "-all" option isn't added to the command.
-- [ ] "rerere.enabled" isn't enable in the config file.
+- [x] "rerere.enabled" isn't enable in the config file.
 - [ ] The commit hash is missing.
 - [ ] The filepath isn't specified.
 
