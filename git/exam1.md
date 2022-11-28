@@ -376,13 +376,13 @@ modified: beta-notes.js
 
 #### **Q40. How many ways are present in Git to integrate changes from one branch into another?**
 
-- [x] 3
+- ~~3~~
 - [ ] 5
-- [ ] 2
+- [x] 2
 - [ ] 4
 
 [Reference link](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
-`In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase.`
+`In Git, there are two main ways to integrate changes from one branch into another: the **merge** and the **rebase**.`
 
 #### Q41. Which user should be created first during setting up of SSH?
 
