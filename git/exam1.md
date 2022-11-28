@@ -372,7 +372,7 @@ modified: beta-notes.js
 - [ ] %ce
 - [ ] %cr
 - [ ] %cd
-- [ ] %cn
+- [x] %cn
 
 #### Q40. How many ways are present in Git to integrate changes from one branch into another?
 
