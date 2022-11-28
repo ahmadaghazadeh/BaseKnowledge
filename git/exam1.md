@@ -359,7 +359,7 @@ modified: beta-notes.js
 - [ ] core.page
 - [ ] page
 - [ ] pager
-- [ ] core.pager
+- [x] core.pager
 
 #### Q38. What does commit object contain?
 
