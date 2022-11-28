@@ -298,7 +298,6 @@ Changes not staged for commit:
 
 modified: beta-notes.js
 ```
-
 - [ ] beta-notes.js is untracked and has been modified.
 - [ ] beta-notes.js is a tracked file and has been modified, but has not been added to the current commit.
 - [ ] beta-notes.js is untracked but has been added to the current commit.
