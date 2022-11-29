@@ -438,7 +438,7 @@ modified: beta-notes.js
 - [ ] duplicate
 - [ ] replicate
 - [ ] copy
-- [ ] clone
+- [x] clone
 
 #### Q49. How does Git think of its data?
 
