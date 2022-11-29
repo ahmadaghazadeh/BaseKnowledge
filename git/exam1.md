@@ -452,7 +452,7 @@ modified: beta-notes.js
 - [ ] %am
 - [ ] %ad
 - [ ] %ae
-- [ ] %an
+- [x] %an
 
 #### Q51. Which version onwards did Git offer reversing a file back to what it looked like when last committed?
 
