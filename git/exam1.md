@@ -454,10 +454,10 @@ modified: beta-notes.js
 - [ ] %ae
 - [x] %an
 
-#### Q51. Which version onwards did Git offer reversing a file back to what it looked like when last committed?
+#### **Q51. Which version onwards did Git offer reversing a file back to what it looked like when last committed?**
 
 - [ ] 1.7
-- [ ] 1.6
+- [x] 1.6
 - [ ] 2.0
 - [ ] 1.8
 
