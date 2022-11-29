@@ -407,7 +407,7 @@ modified: beta-notes.js
 
 #### Q44. Which Git command begins tracking of a new file?
 
-- [ ] add
+- [x] add
 - [ ] addfile
 - [ ] begin
 - [ ] track
