@@ -444,7 +444,7 @@ modified: beta-notes.js
 
 - [ ] File
 - [ ] None of these
-- [ ] Snapshot
+- [x] Snapshot 
 - [ ] Folder
 
 #### Q50. Which option enables inclusion of author name in custom log format?
