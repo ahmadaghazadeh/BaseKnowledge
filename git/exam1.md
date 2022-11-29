@@ -428,7 +428,7 @@ modified: beta-notes.js
 
 #### Q47. Which of these terms best describes Git?
 
-- [ ] Distributed Version Control System
+- [x] Distributed Version Control System
 - [ ] Issue Tracking System
 - [ ] Integrated Development Environment
 - [ ] Web-Based Repository Hosting Service
