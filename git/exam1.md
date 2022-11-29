@@ -417,7 +417,7 @@ modified: beta-notes.js
 - [ ] All of these
 - [ ] SSH
 - [ ] Git
-- [ ] HTTP
+- [x] HTTP
 
 #### Q46. Which key press returns a set of suggestions to pick from, when writing a Git command?
 
