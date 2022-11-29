@@ -394,7 +394,7 @@ modified: beta-notes.js
 #### **Q42. Which command will list tags with the 1.4.2 series?**
 
 - [ ] git tag 'v1.4.2'
-- [x] git tag -I 'v1.4.2.\*'
+- [x] git tag -l 'v1.4.2.\*'
 - [ ] git tag-list 'v1.4.2\*'
 - [ ] git tag 'v1.4.2\*'
 
