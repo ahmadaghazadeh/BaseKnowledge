@@ -423,7 +423,7 @@ modified: beta-notes.js
 
 - [ ] Control
 - [ ] Shift
-- [ ] Tab
+- [x] Tab
 - [ ] Alt
 
 #### Q47. Which of these terms best describes Git?
