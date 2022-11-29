@@ -388,10 +388,10 @@ modified: beta-notes.js
 
 - [ ] git
 - [ ] admin
-- [ ] root
+- [x] root
 - [ ] None of these
 
-#### Q42. Which command will list tags with the 1.4.2 series?
+#### **Q42. Which command will list tags with the 1.4.2 series?**
 
 - [ ] git tag 'v1.4.2'
 - [ ] git tag -I 'v1.4.2.\*'
