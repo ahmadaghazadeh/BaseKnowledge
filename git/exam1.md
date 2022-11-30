@@ -498,7 +498,7 @@ modified: beta-notes.js
 
 #### Q57. How many individual commits can a single repository have?
 
-- [ ] any number of commits
+- [x] any number of commits
 - [ ] only one commit local per repository
 - [ ] only three commits per branch
 - [ ] only one commit per HEAD
