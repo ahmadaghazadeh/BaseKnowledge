@@ -513,9 +513,9 @@ modified: beta-notes.js
 #### Q59. After staging a series of changes to the index, which command could you use to review them prior to a commit?
 
 - [ ] git diff --cached
-- [ ] git diff
+- [x] git diff
 - [ ] git diff --HEAD
-- [ ] git status -v -v
+- [ ] git status -v -v 
 
 #### Q60. What does the git stash drop command do?
 
