@@ -510,7 +510,7 @@ modified: beta-notes.js
 - [ ] heavy and annotated
 - [x] lightweight and annotated
 
-#### Q59. After staging a series of changes to the index, which command could you use to review them prior to a commit?
+#### **Q59. After staging a series of changes to the index, which command could you use to review them prior to a commit?**
 
 - [ ] git diff --cached
 - [x] git diff
@@ -519,7 +519,7 @@ modified: beta-notes.js
 
 #### Q60. What does the git stash drop command do?
 
-- [ ] removes the most recent stash entry
+- [x] removes the most recent stash entry
 - [ ] deletes the stash
 - [ ] lists everything in the stash
 - [ ] throws away the oldest entry
