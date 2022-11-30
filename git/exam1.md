@@ -490,7 +490,7 @@ modified: beta-notes.js
 - [ ] pk
 
 #### **Q56. What is the difference between initializing a normal repo and a bare repo?**
-
+ 
 - [ ] Bare repos store their git history in a .git subfolder.
 - [ ] Bare repos do not have the .git extension.
 - [x] Bare repos do not come with working or checked-out source files.
