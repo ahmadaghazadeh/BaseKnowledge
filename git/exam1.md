@@ -485,7 +485,7 @@ modified: beta-notes.js
 #### Q55. What is usually the extension of file which has the public key?
 
 - [ ] ssh
-- [ ] pub
+- [x] pub
 - [ ] key
 - [ ] pk
 
