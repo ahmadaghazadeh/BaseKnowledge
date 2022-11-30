@@ -464,13 +464,13 @@ modified: beta-notes.js
 #### Q52. Which strategy is used by Git for merging two branches?
 
 - [ ] LIFO
-- [ ] recursive
+- [x] recursive
 - [ ] FIFO
 - [ ] octopus
 
 #### Q53. What does refs store?
 
-- [ ] SHA-1 value
+- [x] SHA-1 value
 - [ ] None of these
 - [ ] Branch name
 - [ ] Project name
