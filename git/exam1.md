@@ -508,7 +508,7 @@ modified: beta-notes.js
 - [ ] heavy and concise
 - [ ] lightweight and immutable
 - [ ] heavy and annotated
-- [ ] lightweight and annotated
+- [x] lightweight and annotated
 
 #### Q59. After staging a series of changes to the index, which command could you use to review them prior to a commit?
 
