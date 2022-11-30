@@ -478,7 +478,7 @@ modified: beta-notes.js
 #### Q54. What Language is used in GIT?
 
 - [ ] C
-- [ ] C++
+- [x] C++
 - [ ] C#
 - [ ] Java
 
