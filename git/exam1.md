@@ -489,11 +489,11 @@ modified: beta-notes.js
 - [ ] key
 - [ ] pk
 
-#### Q56. What is the difference between initializing a normal repo and a bare repo?
+#### **Q56. What is the difference between initializing a normal repo and a bare repo?**
 
 - [ ] Bare repos store their git history in a .git subfolder.
 - [ ] Bare repos do not have the .git extension.
-- [ ] Bare repos do not come with working or checked-out source files.
+- [x] Bare repos do not come with working or checked-out source files.
 - [ ] Bare repos should be used for local rather than remote repos.
 
 #### Q57. How many individual commits can a single repository have?
