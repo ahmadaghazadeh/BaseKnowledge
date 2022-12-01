@@ -581,7 +581,7 @@ git checkout -b beta-test
 
 - [ ] Use git restore -p.
 - [ ] Use git merge -u.
-- [ ] Use git merge --abort.
+- [x] Use git merge --abort.
 - [ ] Use git merge --undo.
 
 #### Q69. If you have several commits for a single feature, what is the most efficient way to restructure your commit history?
