@@ -597,7 +597,7 @@ git checkout -b beta-test
 - [ ] `git tag --light "v3.8.1"`
 - [ ] `git tag v3.8.1 —-annotate -m "<tagMessage>"`
 - [ ] `git tag -l v3.8.1`
-
+ 
 #### Q71. What is the main issue with using git rebase when working with multiple developers?
 
 - [ ] Rebase affects only your repository and creates a diff in the master branch.
