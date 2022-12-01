@@ -570,11 +570,11 @@ git checkout -b beta-test
 - [ ] a read-only version of the repository stored on a backup server in case local repositories become lost or corrupted
 - [x] a version of the repository hosted on the internet or network that is pushed to or pulled from by collaborators
 
-#### Q67. After modifying some existing files in a repository, you decide to discard the changes. What command can you use?
+#### **Q67. After modifying some existing files in a repository, you decide to discard the changes. What command can you use?**
 
-- [ ] git restore
+- [x] git restore
 - [ ] git undo
-- [ ] git clean
+- [ ] git clean 
 - [ ] git checkout
 
 #### Q68. After starting to merge a feature branch into your master branch, you encounter a merge conflict and decide you do not want to perform the merge. How can you stop the merge and restore to the pre-merge state?
