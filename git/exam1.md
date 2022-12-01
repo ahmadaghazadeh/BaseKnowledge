@@ -531,11 +531,11 @@ modified: beta-notes.js
 - [ ] `git checkout <nameOfBranch>`
 - [x] `git checkout -b <nameOfBranch>`
 
-#### Q62. After mistakenly staging a file named myFile to the index, how would you remove it from the index to exclude it from your next commit?
+#### **Q62. After mistakenly staging a file named myFile to the index, how would you remove it from the index to exclude it from your next commit?**
 
 - [ ] Use git reset HEAD^.
-- [ ] Use git reset myFile.txt.
-- [x] Use git -rm myFile.txt.
+- [x] Use git reset myFile.txt.
+- [ ] ~~Use git -rm myFile.txt.~~
 - [ ] Use git reset.
 
 #### Q63. What happens if you run this command from your master branch?
