@@ -591,9 +591,9 @@ git checkout -b beta-test
 - [ ] Delete the task commits and recommit with a new message.
 - [ ] Use git cherry-pick to place the commits in another branch.
 
-#### Q70. Which command correctly creates a lightweight tag?
+#### **Q70. Which command correctly creates a lightweight tag?**
 
-- [ ] `git tag v3.8.1`
+- [x] `git tag v3.8.1`
 - [ ] `git tag --light "v3.8.1"`
 - [ ] `git tag v3.8.1 —-annotate -m "<tagMessage>"`
 - [ ] `git tag -l v3.8.1`
