@@ -558,7 +558,7 @@ git checkout -b beta-test
 
 #### Q65. You want to perform a git reset but cannot recall all of the available options. What command would you use to see a description of them?
 
-- [ ] git help reset
+- [x] git help reset
 - [ ] git -h reset
 - [ ] git options reset
 - [ ] git reset help
