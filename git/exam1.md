@@ -529,13 +529,13 @@ modified: beta-notes.js
 - [ ] `git -b checkout <nameOfBranch>`
 - [ ] `git branch`
 - [ ] `git checkout <nameOfBranch>`
-- [ ] `git checkout -b <nameOfBranch>`
+- [x] `git checkout -b <nameOfBranch>`
 
 #### Q62. After mistakenly staging a file named myFile to the index, how would you remove it from the index to exclude it from your next commit?
 
 - [ ] Use git reset HEAD^.
 - [ ] Use git reset myFile.txt.
-- [ ] Use git -rm myFile.txt.
+- [x] Use git -rm myFile.txt.
 - [ ] Use git reset.
 
 #### Q63. What happens if you run this command from your master branch?
@@ -546,7 +546,7 @@ git checkout -b beta-test
 
 - [ ] The beta-test branch will be checked out of the current commit.
 - [ ] The beta-test branch will be checked out and deleted.
-- [ ] A new branch called beta-test will be created and switched to.
+- [x] A new branch called beta-test will be created and switched to.
 - [ ] The beta-test branch will be merged with the master branch.
 
 #### Q64. How does Git internally manage branches?
