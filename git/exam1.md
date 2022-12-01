@@ -568,7 +568,7 @@ git checkout -b beta-test
 - [ ] a version of the repository that mirrors changes made in the local repository's master branch for open-source collaboration efforts
 - [ ] the lead repository elected by the Git arbitrator found within local repositories of collaborating team members
 - [ ] a read-only version of the repository stored on a backup server in case local repositories become lost or corrupted
-- [ ] a version of the repository hosted on the internet or network that is pushed to or pulled from by collaborators
+- [x] a version of the repository hosted on the internet or network that is pushed to or pulled from by collaborators
 
 #### Q67. After modifying some existing files in a repository, you decide to discard the changes. What command can you use?
 
