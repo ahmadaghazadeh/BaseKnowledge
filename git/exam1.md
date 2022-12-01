@@ -475,10 +475,10 @@ modified: beta-notes.js
 - [ ] Branch name
 - [ ] Project name
 
-#### Q54. What Language is used in GIT?
+#### **Q54. What Language is used in GIT?**
 
-- [ ] C
-- [x] C++
+- [x] C
+- [ ] ~~C++~~
 - [ ] C#
 - [ ] Java
 
@@ -512,8 +512,8 @@ modified: beta-notes.js
 
 #### **Q59. After staging a series of changes to the index, which command could you use to review them prior to a commit?**
 
-- [ ] git diff --cached
-- [x] git diff
+- [x] git diff --cached
+- [ ] ~~git diff~~
 - [ ] git diff --HEAD
 - [ ] git status -v -v 
 
