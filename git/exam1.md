@@ -587,7 +587,7 @@ git checkout -b beta-test
 #### Q69. If you have several commits for a single feature, what is the most efficient way to restructure your commit history?
 
 - [ ] Use git stash to consolidate the commits under a new hash.
-- [ ] Use git squash to consolidate the commits together into a single coherent commit.
+- [x] Use git squash to consolidate the commits together into a single coherent commit.
 - [ ] Delete the task commits and recommit with a new message.
 - [ ] Use git cherry-pick to place the commits in another branch.
 
