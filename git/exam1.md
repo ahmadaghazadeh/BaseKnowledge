@@ -638,7 +638,7 @@ git checkout -b beta-test
 `git reset --soft HEAD^`
 
 - [ ] It resets the working branch to the first commit.
-- [ ] It sets HEAD to previous commit and leaves changes from the undone commit in the stage/index.
+- [x] It sets HEAD to previous commit and leaves changes from the undone commit in the stage/index.
 - [ ] It deletes all previous commits and resets the repository history back to its initial state.
 - [ ] It keeps the HEAD at the current commit, but clears all previous commits.
 
@@ -646,7 +646,7 @@ git checkout -b beta-test
 
 - [ ] Git works only on Linux, while SVN works on all operating systems.
 - [ ] SVN works only on Linux, while Git works on all operating systems.
-- [ ] SVN is a centralized system, while Git is a distributed system.
+- [x] SVN is a centralized system, while Git is a distributed system.
 - [ ] Git a centralized system, while SVN is a distributed system.
 
 #### Q78. This command is an example of what kind of tag?
