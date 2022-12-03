@@ -598,18 +598,18 @@ git checkout -b beta-test
 - [ ] `git tag v3.8.1 —-annotate -m "<tagMessage>"`
 - [ ] `git tag -l v3.8.1`
  
-#### Q71. What is the main issue with using git rebase when working with multiple developers?
+#### **Q71. What is the main issue with using git rebase when working with multiple developers?**
 
 - [ ] Rebase affects only your repository and creates a diff in the master branch.
 - [ ] Rebase creates a temporary copy of the master branch in the remote repo.
 - [ ] Rebase moves the HEAD of the remote master branch one commit forward.
 - [x] Rebase deletes all commit history for the new feature branch.
 
-#### Q72. What Git workflow is used by teams that collaborate on a single branch and avoid creating long-lived development branches?
+#### **Q72. What Git workflow is used by teams that collaborate on a single branch and avoid creating long-lived development branches?**
 
 - [ ] Git flow
 - [ ] Mainline flow
-- [ ] Trunk-Based Development
+- [x] Trunk-Based Development
 - [ ] GitHub flow
 
 #### Q73. Which option on the git log command allows you to limit output to commits made after certain date?
