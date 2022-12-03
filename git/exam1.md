@@ -614,7 +614,7 @@ git checkout -b beta-test
 
 #### Q73. Which option on the git log command allows you to limit output to commits made after certain date?
 
-- [ ] `--since`
+- [x] `--since`
 - [ ] `--sinceWhen`
 - [ ] `-<n>`
 - [ ] `--afterDate`
