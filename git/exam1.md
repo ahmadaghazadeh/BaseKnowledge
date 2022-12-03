@@ -628,9 +628,9 @@ git checkout -b beta-test
 
 #### **Q75. What conflicts can occur when forcing a push after rebasing?**
 
-- [ ] The remote master branch could have existing changes overwritten.
+- [x] The remote master branch could have existing changes overwritten.
 - [ ] The origin URL will be reset to its default value.
-- [x] The current HEAD will be deleted and can't be reinstated.
+- [ ] ~~The current HEAD will be deleted and can't be reinstated.~~
 - [ ] Nothing, it's common practice to force a push after rebasing.
 
 #### Q76. How does this command alter the currently checked-out branch?
@@ -649,13 +649,13 @@ git checkout -b beta-test
 - [x] SVN is a centralized system, while Git is a distributed system.
 - [ ] Git a centralized system, while SVN is a distributed system.
 
-#### Q78. This command is an example of what kind of tag?
+#### Q78. **This command is an example of what kind of tag?**
 
 `git tag -a v1.4 -m "ABCD v1.5"`
 
 - [ ] verbose
-- [ ] annotated
-- [x] lightweight
+- [x] annotated
+- [ ] ~~lightweight~~
 - [ ] deferred
 
 #### Q79. What is the difference between a soft reset (`git reset --soft`) and a hard reset (`git reset –hard`) ?
