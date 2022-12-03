@@ -673,7 +673,7 @@ Which of the following options is correct ?
 - [ ] `1. Develop 2. Release 3. Hotfix 4. Feature 5. Master`
 - [ ] `1. Master 2. Release 3. Hotfix 4. Feature 5. Develop`
 - [ ] `1. Develop 2. Master 3. Hotfix 4. Feature 5. Develop`
-- [ ] `1. Master 2. Hotfix 3. Develop 4. Feature 5. Release`
+- [x] `1. Master 2. Hotfix 3. Develop 4. Feature 5. Release`
 
 #### Q81. What information does the git config file store?
 
