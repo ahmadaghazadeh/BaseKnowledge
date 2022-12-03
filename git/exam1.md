@@ -655,7 +655,7 @@ git checkout -b beta-test
 
 - [ ] verbose
 - [ ] annotated
-- [ ] lightweight
+- [x] lightweight
 - [ ] deferred
 
 #### Q79. What is the difference between a soft reset (`git reset --soft`) and a hard reset (`git reset –hard`) ?
