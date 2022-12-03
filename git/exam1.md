@@ -603,7 +603,7 @@ git checkout -b beta-test
 - [ ] Rebase affects only your repository and creates a diff in the master branch.
 - [ ] Rebase creates a temporary copy of the master branch in the remote repo.
 - [ ] Rebase moves the HEAD of the remote master branch one commit forward.
-- [ ] Rebase deletes all commit history for the new feature branch.
+- [x] Rebase deletes all commit history for the new feature branch.
 
 #### Q72. What Git workflow is used by teams that collaborate on a single branch and avoid creating long-lived development branches?
 
