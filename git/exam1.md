@@ -666,7 +666,6 @@ git checkout -b beta-test
 - [ ] A hard reset caches the old HEAD pointer, while a soft reset deletes it entirely.
 
 #### Q80. Consider the following Git workflow:
-
 ![image](images/Git-WorkFlow.png?raw=png)
 Which of the following options is correct ?
 
