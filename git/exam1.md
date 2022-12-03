@@ -624,7 +624,7 @@ git checkout -b beta-test
 - [ ] `git cache --obsolete <time>`
 - [ ] `git branch --rebase <time>`
 - [ ] `git delete --inert <time>`
-- [ ] `git prune --expire <time>`
+- [x] `git prune --expire <time>`
 
 #### Q75. What conflicts can occur when forcing a push after rebasing?
 
