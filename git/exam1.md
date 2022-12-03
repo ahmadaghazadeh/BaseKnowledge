@@ -626,11 +626,11 @@ git checkout -b beta-test
 - [ ] `git delete --inert <time>`
 - [x] `git prune --expire <time>`
 
-#### Q75. What conflicts can occur when forcing a push after rebasing?
+#### **Q75. What conflicts can occur when forcing a push after rebasing?**
 
 - [ ] The remote master branch could have existing changes overwritten.
 - [ ] The origin URL will be reset to its default value.
-- [ ] The current HEAD will be deleted and can't be reinstated.
+- [x] The current HEAD will be deleted and can't be reinstated.
 - [ ] Nothing, it's common practice to force a push after rebasing.
 
 #### Q76. How does this command alter the currently checked-out branch?
