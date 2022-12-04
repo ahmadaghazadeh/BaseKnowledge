@@ -690,12 +690,12 @@ Which of the following options is correct ?
 - [x] a programmatic design pattern used to manage code between multiple engineering teams
 - [ ] a type of software that links a project with a GitHub repository
 
-#### Q83. What is the difference between using the git stash and git stash pop commands?
+#### **Q83. What is the difference between using the git stash and git stash pop commands?**
 
 - [ ] git stash removes a commit from the repo history, while git stash pop saves changes to multiple branches.
 - [ ] git stash saves changes to multiple branches, while git stash pop removes a commit from the repo history.
 - [ ] git stash removes the most recent commit, while git stash pop saves current changes.
-- [ ] git stash creates a stash entry, while git stash pop places the saved state onto the working directory.
+- [x] git stash creates a stash entry, while git stash pop places the saved state onto the working directory.
 
 #### Q84. Which command can be used to list the branches that have been merged into the currently checked-out branch?
 
