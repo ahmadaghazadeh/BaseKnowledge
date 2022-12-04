@@ -736,7 +736,7 @@ Which of the following options is correct ?
 - [ ] `git push --overwrite`
 - [ ] `git push --update`
 - [ ] `git push --assert`
-- [ ] `git push --force-with-lease`
+- [x] `git push --force-with-lease`
 
 #### Q90. What is the difference between `git fetch` and `git pull`
 
