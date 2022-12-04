@@ -687,7 +687,7 @@ Which of the following options is correct ?
 
 - [ ] a type of architecture used to manage large databases
 - [ ] a system that shows, tracks, and controls changes to a set of files over time
-- [ ] a programmatic design pattern used to manage code between multiple engineering teams
+- [x] a programmatic design pattern used to manage code between multiple engineering teams
 - [ ] a type of software that links a project with a GitHub repository
 
 #### Q83. What is the difference between using the git stash and git stash pop commands?
