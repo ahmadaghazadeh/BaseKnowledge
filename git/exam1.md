@@ -683,11 +683,11 @@ Which of the following options is correct ?
 
 [Reference](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config#:~:text=The%20git%20config%20command%20is,modify%20a%20configuration%20text%20file.)
 
-#### Q82. What is version control?
+#### **Q82. What is version control?**
 
 - [ ] a type of architecture used to manage large databases
-- [ ] a system that shows, tracks, and controls changes to a set of files over time
-- [x] a programmatic design pattern used to manage code between multiple engineering teams
+- [x] a system that shows, tracks, and controls changes to a set of files over time
+- [ ] ~~a programmatic design pattern used to manage code between multiple engineering teams~~
 - [ ] a type of software that links a project with a GitHub repository
 
 #### **Q83. What is the difference between using the git stash and git stash pop commands?**
