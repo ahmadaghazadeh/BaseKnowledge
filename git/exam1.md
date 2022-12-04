@@ -713,7 +713,7 @@ Which of the following options is correct ?
 
 #### Q86. Which use case is NOT a good candidate for a Git hook?
 
-- [ ] state dependent environment changes
+- [x] state dependent environment changes
 - [ ] continuous integration
 - [ ] increasing code coverage
 - [ ] enforcing commit rules
