@@ -727,9 +727,9 @@ Which of the following options is correct ?
 
 #### **Q88. What information do Git reflogs (reference logs) store?**
 - [ ] shell script pointers and keychain credentials
-- [ ] updates to branch tips and other references in the local repository
+- [x] updates to branch tips and other references in the local repository
 - [ ] release notes and hook script values
-- [x] tag and versioning information
+- [ ] ~~tag and versioning information~~
 
 #### Q89. You have just completed rebasing your master branch and need to manually update the remote master, even though there is a merge conflict. How can you accomplish this?
 
