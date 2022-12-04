@@ -678,7 +678,7 @@ Which of the following options is correct ?
 
 - [ ] shell scripts and flags
 - [ ] keychain and account information
-- [ ] local and global repository options
+- [x] local and global repository options
 - [ ] pre-compile scripts and settings
 
 [Reference](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config#:~:text=The%20git%20config%20command%20is,modify%20a%20configuration%20text%20file.)
