@@ -718,9 +718,9 @@ Which of the following options is correct ?
 - [ ] increasing code coverage
 - [ ] enforcing commit rules
 
-#### Q87. After starting to work on a new feature and creating new files in the working directory related to it, the customer determined the feature was no longer required. What command can be used to remove the untracked files from the working directory ?
+#### **Q87. After starting to work on a new feature and creating new files in the working directory related to it, the customer determined the feature was no longer required. What command can be used to remove the untracked files from the working directory ?**
 
-- [ ] `git clean -f`
+- [x] `git clean -f`
 - [ ] `git rm .`
 - [ ] `git reset HEAD`
 - [ ] `git checkout .`
