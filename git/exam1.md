@@ -708,7 +708,7 @@ Which of the following options is correct ?
 
 - [ ] Create a post-commit shell script that triggers the action.
 - [ ] Create a post-commit hook to trigger the script.
-- [ ] Create a pre-commit hook to trigger the script.
+- [x] Create a pre-commit hook to trigger the script.
 - [ ] Create a pre-commit shell script that triggers the action.
 
 #### Q86. Which use case is NOT a good candidate for a Git hook?
