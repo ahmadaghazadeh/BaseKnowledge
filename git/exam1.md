@@ -748,7 +748,7 @@ Which of the following options is correct ?
 #### Q91. What command displays the difference between the working tree and the stage/index area, as well as files not tracked by Git?
 
 - [ ] `git current`
-- [ ] `git status`
+- [x] `git status`
 - [ ] `git local`
 - [ ] `git context`
 
