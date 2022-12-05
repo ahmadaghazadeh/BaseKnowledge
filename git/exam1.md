@@ -773,7 +773,7 @@ Which of the following options is correct ?
 - [x] git stash show -p stash@{2}
 - [ ] git stash list
 - [ ] git stash show -p stash@{1}
-- [ ] git stash show -p
+- [ ] git stash show -p 
 
 [reference here](https://stackoverflow.com/questions/10725729/see-whats-in-a-stash-without-applying-it)
 
@@ -782,7 +782,7 @@ Which of the following options is correct ?
 - [ ] Use `git --delete <branch_name>`.
 - [ ] Use `git push <remote_name> --d <branch_name>`.
 - [ ] Use `git push <remote_name> --D`.
-- [ ] Use `git push <remote_name> --delete <branch_name>`.
+- [x] Use `git push <remote_name> --delete <branch_name>`.
 
 [reference here](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely)
 
