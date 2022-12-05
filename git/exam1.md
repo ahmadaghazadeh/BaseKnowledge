@@ -840,12 +840,12 @@ Which of the following options is correct ?
 
 [reference](https://www.theserverside.com/video/Git-vs-GitHub-What-is-the-difference-between-them)
 
-#### Q102. What command finds the HEAD of the current branch?
+#### **Q102. What command finds the HEAD of the current branch?**
 
 - [ ] `git head --verify`
 - [ ] `git log --head`
 - [ ] `git hash --head`
-- [ ] `git show-ref --head`
+- [x] `git show-ref --head`
 
 [reference](https://git-scm.com/docs/git-show-ref)
 
