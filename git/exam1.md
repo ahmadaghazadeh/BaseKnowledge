@@ -849,18 +849,18 @@ Which of the following options is correct ?
 
 [reference](https://git-scm.com/docs/git-show-ref)
 
-#### Q103. When Git Workflows contain a long-running branch, what purpose does the long-running branch serve?
+#### **Q103. When Git Workflows contain a long-running branch, what purpose does the long-running branch serve?**
 
 - [ ] Long-running branches store unstable code until it os peer reviewed for integration into a feature branch.
 - [ ] Long-running branches correspond to agile sprints and are used to store related to features developed in the sprint.
 - [ ] Long-running branches contain code related to experimental feature development that is merged into short-lived branches such as master.
-- [ ] Long-running branches correspond to different stages of development and are always open for topic/feature branches to be pulled into.
+- [x] Long-running branches correspond to different stages of development and are always open for topic/feature branches to be pulled into.
 
 #### Q104. What command takes changes from the master branch on the remote repository origin and merges then to the local checked-out branch?
 
 - [ ] `git commit -u origin`
 - [ ] `git checkout origin`
-- [ ] `git pull origin master`
+- [x] `git pull origin master`
 - [ ] `git push origin master`
 
 #### Q105. While pushing changes to a remote repository, you receive the following message. How do you resolve this issue?
