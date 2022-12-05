@@ -804,9 +804,9 @@ Which of the following options is correct ?
 
 [reference here](https://git-scm.com/docs/git-add#Documentation/git-add.txt--p)
 
-#### Q98. After checking out a specific commit, you receive a warning message indicating You are in 'detached HEAD' state. What is Git warning you of?
+#### **Q98. After checking out a specific commit, you receive a warning message indicating You are in 'detached HEAD' state. What is Git warning you of?**
 
-- [ ] You are not working on the most recent commit of a branch.
+- [x] You are not working on the most recent commit of a branch.
 - [ ] A teammate has flagged the code with an issue.
 - [ ] The commit does not have a parent.
 - [ ] The branch has not been pushed to the remote repository.
