@@ -757,7 +757,7 @@ Which of the following options is correct ?
 - [ ] Use `git branch <stash hash>`.
 - [ ] Add the stashed commits to the current commit, then create a new branch.
 - [ ] Use `git checkout -b`.
-- [ ] Run `git stash branch <branch name>`.
+- [x] Run `git stash branch <branch name>`.
 
 [reference here](https://stackoverflow.com/questions/6925099/git-stash-changes-apply-to-new-branch)
 
