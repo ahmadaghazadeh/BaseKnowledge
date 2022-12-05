@@ -863,7 +863,7 @@ Which of the following options is correct ?
 - [x] `git pull origin master`
 - [ ] `git push origin master`
 
-#### Q105. While pushing changes to a remote repository, you receive the following message. How do you resolve this issue?
+#### **Q105. While pushing changes to a remote repository, you receive the following message. How do you resolve this issue?**
 
 ```bash
 error: failed to push some refs to 'https://github.com/myrepo/simple.git'
@@ -873,7 +873,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] Use the --atomic option with the push command.
 - [ ] Execute a pull, then resolve any merge conflicts and execute another push.
 - [ ] Execute a fetch, then execute another push.
-- [ ] Use the --force option with the push command.
+- [x] Use the --force option with the push command.
 
 #### Q106. What does the -p option add to the output of the `git log` command?
 
