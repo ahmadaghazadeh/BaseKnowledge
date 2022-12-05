@@ -761,11 +761,11 @@ Which of the following options is correct ?
 
 [reference here](https://stackoverflow.com/questions/6925099/git-stash-changes-apply-to-new-branch)
 
-#### Q93. What is the difference between git branch -d and git branch -D?
+#### **Q93. What is the difference between git branch -d and git branch -D?**
 
 - [ ] -D deletes the local branch, while -d deletes the branch regardless of push and merge status.
 - [ ] -d deletes the current commit head, while -D deletes the entire branch.
-- [ ] -d deletes the local branch, while -D deletes the local branch regardless of push and merge status.
+- [x] -d deletes the local branch, while -D deletes the local branch regardless of push and merge status.
 - [ ] -D deletes the current commit head, while -d deletes the entire branch.
 
 #### Q94. You stashed three sets of changes but cannot remember the contents of the first stash entry. What command would you use to see the details of the changes in the first of the three stash entries?
