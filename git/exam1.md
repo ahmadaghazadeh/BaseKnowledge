@@ -871,9 +871,9 @@ hint: Updates were rejected because the remote contains work that you do not hin
 ```
 
 - [ ] Use the --atomic option with the push command.
-- [ ] Execute a pull, then resolve any merge conflicts and execute another push.
+- [x] Execute a pull, then resolve any merge conflicts and execute another push.
 - [ ] Execute a fetch, then execute another push.
-- [x] Use the --force option with the push command.
+- [ ] ~~Use the --force option with the push command.~~
 
 #### Q106. What does the -p option add to the output of the `git log` command?
 
