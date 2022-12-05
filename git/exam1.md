@@ -835,7 +835,7 @@ Which of the following options is correct ?
 
 - [ ] Repository managers are proprietary versions of Git that do not include enhanced features.
 - [ ] Repository managers provide an enhanced command-line tool that is used to manage multiple local repositories.
-- [ ] Repository managers provide an online service for hosting Git repositories that include collaboration features such as pull requests, issue tracking, and peer reviews.
+- [x] Repository managers provide an online service for hosting Git repositories that include collaboration features such as pull requests, issue tracking, and peer reviews.
 - [ ] Repository managers distribute repositories across multiple locations on a user's workstation, providing redundant storage that allows for quick backup and recovery.
 
 [reference](https://www.theserverside.com/video/Git-vs-GitHub-What-is-the-difference-between-them)
