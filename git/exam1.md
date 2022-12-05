@@ -777,7 +777,7 @@ Which of the following options is correct ?
 
 [reference here](https://stackoverflow.com/questions/10725729/see-whats-in-a-stash-without-applying-it)
 
-#### Q95. How would you delete a remote branch in your repository?
+#### **Q95. How would you delete a remote branch in your repository?**
 
 - [ ] Use `git --delete <branch_name>`.
 - [ ] Use `git push <remote_name> --d <branch_name>`.
@@ -790,7 +790,7 @@ Which of the following options is correct ?
 
 - [ ] delete
 - [ ] expire
-- [ ] show
+- [x] show
 - [ ] update
 
 [reference here](https://git-scm.com/docs/git-reflog)
