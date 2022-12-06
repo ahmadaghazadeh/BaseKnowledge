@@ -903,12 +903,12 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [x] files in the working directory that Git does not know about because the have not been staged or committed
 - [ ] files in the remote repository that Git does not know about because they have not been tagged
 
-#### Q110. What type of Git hook could be used to validate that a commit message contains a ticket number?
+#### **Q110. What type of Git hook could be used to validate that a commit message contains a ticket number?**
 
 - [ ] pre-commit
 - [ ] commit-msg
 - [ ] applypatch-msg
-- [ ] prepare-commit-msg
+- [x] prepare-commit-msg
 
 #### Q111. What is the difference between git stash pop and git stash apply?
 
