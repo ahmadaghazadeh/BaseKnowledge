@@ -887,7 +887,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] an area that stores commits prior to them being pushed to the remote repository
 - [ ] an area containing stash entries that can applied to the working files
 - [ ] an area where changes from a branch in the remote repository are stored before they are applied to a local branch
-- [ ] an area that stores information about changes that will be included in the next commit
+- [x] an area that stores information about changes that will be included in the next commit
 
 #### Q108. What command would you use to stage changes to the index strictly for properties files in the current directory?
 
