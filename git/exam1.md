@@ -931,9 +931,9 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [x] a pointer to the most recent commit in the currently checked-out branch
 - [ ] a pointer to where the repository is stored in memory
 
-#### Q114. After staging changes to several files, you realize the changes to the config.properties file are incorrect, and need to be removed from the stage and working directory. What command can you use to remove the staged changes to the file?
+#### **Q114. After staging changes to several files, you realize the changes to the config.properties file are incorrect, and need to be removed from the stage and working directory. What command can you use to remove the staged changes to the file?**
 
-- [ ] git reset HEAD^ -- config.properties
+- [x] git reset HEAD^ -- config.properties
 - [ ] git rm config.properties
 - [ ] git rf config.properties
 - [ ] git checkout HEAD -- config.properties
