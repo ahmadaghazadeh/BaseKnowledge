@@ -875,12 +875,12 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] Execute a fetch, then execute another push.
 - [ ] ~~Use the --force option with the push command.~~
 
-#### Q106. What does the -p option add to the output of the `git log` command?
+#### **Q106. What does the -p option add to the output of the `git log` command?**
 
 - [ ] It adds patch output that shows the differences introduced in each commit.
 - [ ] It adds patch output that shows a summary listing modified files.
 - [ ] It adds padding to the output and displays a histogram showing the number of lines changed in each commit.
-- [ ] It adds the full commit message and notes associated with each commit.
+- [x] It adds the full commit message and notes associated with each commit.
 
 #### Q107. What is the staging area or index?
 
