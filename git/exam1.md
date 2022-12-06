@@ -913,7 +913,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 #### Q111. What is the difference between git stash pop and git stash apply?
 
 - [ ] git stash pop pushes the topmost commit to the current branch, while git stash apply caches the last commit in the current branch.
-- [ ] git stash pop applies the topmost entry in the stash to the working files and removes it from the stash, while git stash apply applies the topmost entry in the stash to the working files but leaves it in the stash.
+- [x] git stash pop applies the topmost entry in the stash to the working files and removes it from the stash, while git stash apply applies the topmost entry in the stash to the working files but leaves it in the stash.
 - [ ] git stash pop merges the topmost commit to the current branch, while git stash apply merges the last commit in the current branch.
 - [ ] git stash pop applies the topmost entry in the stash to the working files but leaves it in the stash, while git stash apply applies the topmost entry in the stash to the working files and removes it from the stash.
 
