@@ -891,7 +891,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 #### Q108. What command would you use to stage changes to the index strictly for properties files in the current directory?
 
-- [ ] `git add *.properties`
+- [x] `git add *.properties`
 - [ ] `git add %.properties`
 - [ ] `git add .properties`
 - [ ] `git add properties`
