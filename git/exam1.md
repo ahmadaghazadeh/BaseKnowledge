@@ -949,7 +949,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] - git remote create-update origin https://github.com/yourcompany/core-api.git
 - [ ] - git remote update origin https://github.com/yourcompany/core-api.git
-- [ ] - git remote set-url origin https://github.com/yourcompany/core-api.git
+- [x] - git remote set-url origin https://github.com/yourcompany/core-api.git
 - [ ] - git remote add https://github.com/yourcompany/core-api.git
 
 #### Q117. When is the cherry-pick command used?
