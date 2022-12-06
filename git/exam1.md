@@ -906,9 +906,9 @@ hint: Updates were rejected because the remote contains work that you do not hin
 #### **Q110. What type of Git hook could be used to validate that a commit message contains a ticket number?**
 
 - [ ] pre-commit
-- [ ] commit-msg
+- [x] commit-msg
 - [ ] applypatch-msg
-- [x] prepare-commit-msg
+- [ ] ~~prepare-commit-msg~~
 
 #### Q111. What is the difference between git stash pop and git stash apply?
 
@@ -919,10 +919,10 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 #### **Q112. After making some major changes to your code, you are a little nervous about committing. What command would you use to review the commit prior to making it?**
 
-- [x] git commit --verify
+- [ ] ~~git commit --verify~~
 - [ ] git notes show
 - [ ] git commit preview
-- [ ] git commit --dry-run
+- [x] git commit --dry-run
 
 #### **Q113. What statement best describes Git's concept of HEAD?**
 
