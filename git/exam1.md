@@ -900,7 +900,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] files in the local repository that have not been merged into the master branch
 - [ ] staged files that Git does not know about because the have not been committed
-- [ ] files in the working directory that Git does not know about because the have not been staged or committed
+- [x] files in the working directory that Git does not know about because the have not been staged or committed
 - [ ] files in the remote repository that Git does not know about because they have not been tagged
 
 #### Q110. What type of Git hook could be used to validate that a commit message contains a ticket number?
