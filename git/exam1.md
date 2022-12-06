@@ -877,10 +877,10 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 #### **Q106. What does the -p option add to the output of the `git log` command?**
 
-- [ ] It adds patch output that shows the differences introduced in each commit.
+- [x] It adds patch output that shows the differences introduced in each commit.
 - [ ] It adds patch output that shows a summary listing modified files.
 - [ ] It adds padding to the output and displays a histogram showing the number of lines changed in each commit.
-- [x] It adds the full commit message and notes associated with each commit.
+- [ ] ~~It adds the full commit message and notes associated with each commit.~~
 
 #### Q107. What is the staging area or index?
 
@@ -942,7 +942,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] - git grep -a "MaxConnections"
 - [ ] - git log --search-string "MaxConnections"
-- [ ] - git log -S "MaxConnections"
+- [x] - git log -S "MaxConnections"
 - [ ] - git commit --with "MaxConnections"
 
 #### Q116. Your company has moved its remote repository to GitHub at this location: https://github.com/yourcompany/core-api.git. What command updates the remote repository, named origin, to point to the new remote repository at this location?
