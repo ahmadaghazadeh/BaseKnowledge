@@ -917,18 +917,18 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] git stash pop merges the topmost commit to the current branch, while git stash apply merges the last commit in the current branch.
 - [ ] git stash pop applies the topmost entry in the stash to the working files but leaves it in the stash, while git stash apply applies the topmost entry in the stash to the working files and removes it from the stash.
 
-#### Q112. After making some major changes to your code, you are a little nervous about committing. What command would you use to review the commit prior to making it?
+#### **Q112. After making some major changes to your code, you are a little nervous about committing. What command would you use to review the commit prior to making it?**
 
 - [x] git commit --verify
 - [ ] git notes show
 - [ ] git commit preview
 - [ ] git commit --dry-run
 
-#### Q113. What statement best describes Git's concept of HEAD?
+#### **Q113. What statement best describes Git's concept of HEAD?**
 
 - [ ] a pointer to the most recently changed file in the stage/index
 - [ ] a pointer to the master branch
-- [ ] a pointer to the most recent commit in the currently checked-out branch
+- [x] a pointer to the most recent commit in the currently checked-out branch
 - [ ] a pointer to where the repository is stored in memory
 
 #### Q114. After staging changes to several files, you realize the changes to the config.properties file are incorrect, and need to be removed from the stage and working directory. What command can you use to remove the staged changes to the file?
