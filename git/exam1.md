@@ -981,7 +981,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] `git checkout <url>`
 - [ ] `git pull <url>`
-- [ ] `git clone <url>`
+- [x] `git clone <url>`
 - [ ] `git replicate <url>`
 
 #### Q121. What would happen if you ran the `git reset testfile.js` command?
