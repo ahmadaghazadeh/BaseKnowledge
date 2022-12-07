@@ -1034,7 +1034,7 @@ Untracked files:
 
 #### Q127. After making a commit, you notice that you forgot to include changes to the doge.txt file. What command or commands would you use to add the changes to the commit ?
 
-- [ ] ⠀
+- [x] ⠀
 
 ```bash
   git add doge.txt
@@ -1083,7 +1083,7 @@ git commit -m "Removed file"
   git commit -m "Removed file"
 ```
 
-- [ ] ⠀
+- [x] ⠀
 
 ```bash
   git rm --cached wrongfile
@@ -1094,7 +1094,7 @@ git commit -m "Removed file"
 
 - [ ] Send an email to a project owner.
 - [ ] I don't bother reporting software bugs because there's no transparency and they never get fixed anyway.
-- [ ] Search for the bug in the project's existing issues and create a new one if it hasn't been reported yet.
+- [x] Search for the bug in the project's existing issues and create a new one if it hasn't been reported yet.
 - [ ] Use git search -diff to compare all commits in your repository history.
 
 Explanation: A project's issues are visible to anyone who has access to the project, so you may find a resolution is already planned or available. Otherwise, you can create and track the issue yourself.
