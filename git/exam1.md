@@ -972,7 +972,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] - You cannot exclude the files from the repository.
 - [ ] - Tag the files with excluded.
-- [ ] - Add a pattern matching the files to the .gitignore file.
+- [x] - Add a pattern matching the files to the .gitignore file.
 - [ ] - Add the files to the omitted branch
 
 [reference](https://git-scm.com/docs/gitignore)
