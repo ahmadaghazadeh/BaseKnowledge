@@ -988,7 +988,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] testfile.js would be reverted to a blank file.
 - [ ] testfile.js would be reset to its first saved state.
-- [ ] testfile.js would be reverted to its last saved copy.
+- [x] testfile.js would be reverted to its last saved copy.
 - [ ] testfile.js would be removed from the stage/index area, if present.
 
 #### Q122. What situation can occur when attempting to combine branches containing changes to the same piece of code?
@@ -996,7 +996,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] lost code
 - [ ] automatic override
 - [ ] collisions
-- [ ] merge conflict
+- [x] merge conflict
 
 #### Q123. When Git workflows contain a topic branch, what purpose does the topic branch serve?
 
