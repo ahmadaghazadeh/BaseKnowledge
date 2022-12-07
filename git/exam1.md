@@ -1110,7 +1110,7 @@ Explanation: Pull requests are the correct way to communicate that commits are r
 
 #### Q131. Which command would remove a file named wrongfile from the current branch of a repository, the index, and working files?
 
-- [ ] Fork the project's repository to your GitHub account, clone the forked repository to your local machine, push changes to your repository, and submit a pull request to the target (upstream) repository.
+- [x] Fork the project's repository to your GitHub account, clone the forked repository to your local machine, push changes to your repository, and submit a pull request to the target (upstream) repository.
 - [ ] Clone the project to your local machine and push updates directly to the project repository.
 - [ ] Use git commands to make a copy of the project so that you can work locally. Submit an issue to get your changes into the target repository.
 - [ ] Use git show push-notifications
