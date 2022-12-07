@@ -1120,7 +1120,7 @@ Explanation: GitHub provides forking functionality designed to allow you to work
 #### Q132. What is GitHub?
 
 - [ ] version control
-- [ ] A hosting platform for Git repositories
+- [x] A hosting platform for Git repositories
 - [ ] for keeping images
 - [ ] for social networking
 
@@ -1128,7 +1128,7 @@ Explanation: GitHub is a popular hosting platform for developers to store their 
 
 #### Q133. Which statement is true of the git push command?
 
-- [ ] By default, a push doesn’t send tags to the remote repository.
+- [x] By default, a push doesn’t send tags to the remote repository.
 - [ ] Only annotated tags are automatically pushed to the remote repository with a commit.
 - [ ] Tags are pushed to the remote repository with their respective commits.
 - [ ] Commits can be tagged only when they are created.
@@ -1137,12 +1137,12 @@ Explanation: GitHub is a popular hosting platform for developers to store their 
 
 - [ ] Add and commit.
 - [ ] branch and checkout.
-- [ ] fetch and merge.
+- [x] fetch and merge.
 - [ ] None of these.
 
 #### Q135. What is the command to set the user email for the current repository?
 
 - [ ] git email.user
-- [ ] git config user.email
+- [x] git config user.email
 - [ ] git config email
 - [ ] All of the above.
