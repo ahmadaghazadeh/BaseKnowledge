@@ -1027,9 +1027,9 @@ Untracked files:
 
 #### Q126. What command can you use to remove untracked files from the working directory?
 
-- [ ] `git rm -all`
+- [ ] `git rm -all` 
 - [ ] `git rm --cached`
-- [ ] `git clean -d -f`
+- [x] `git clean -d -f`
 - [ ] `git checkout`
 
 #### Q127. After making a commit, you notice that you forgot to include changes to the doge.txt file. What command or commands would you use to add the changes to the commit ?
