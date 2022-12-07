@@ -1102,7 +1102,7 @@ Explanation: A project's issues are visible to anyone who has access to the proj
 #### Q130. Suppose you have created a bug fix on a new branch and want it to become part of the next production build generated from the main branch. What should you do next?
 
 - [ ] Copy your branch changes and commit them directly to the main branch.
-- [ ] Create a pull request to merge your new branch into the main branch.
+- [x] Create a pull request to merge your new branch into the main branch.
 - [ ] On second thought, maybe I won't share this fix. I'll just put it in my own private version of the source code.
 - [ ] Use git bisect to compare the buggy commit to an early commit that works as expected.
 
