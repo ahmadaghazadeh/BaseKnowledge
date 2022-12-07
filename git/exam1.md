@@ -1009,7 +1009,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] Provide detailed commit messages that describe the changes being introduced by the commit. <url>
 - [ ] make large commits that introduce multiple features. <url>
-- [ ] Keep local repository branches in sync with upstream branches in the remote repository by committing,pushing and pulling frequently. <url>
+- [x] Keep local repository branches in sync with upstream branches in the remote repository by committing,pushing and pulling frequently. <url>
 - [ ] Avoid frequent interaction with the remote repository to reduce the probability of pulling conflicts. <url>
 
 #### Q125. You have changed your mind about adding broccoli to your project. How should you remove it?
