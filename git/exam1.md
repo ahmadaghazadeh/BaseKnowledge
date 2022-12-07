@@ -1020,8 +1020,8 @@ Untracked files:
   brccoli
 ```
 
-- [ ] `git remove broccoli`
-- [ ] `git clean -f`
+- [x] `git remove broccoli`
+- [ ] ~~`git clean -f`~~
 - [ ] `git clean`
 - [ ] `git remove .`
 
