@@ -1,5 +1,7 @@
 ## Git
 
+## This is a first exam for git: 100/x=1-131/38 => %70.99
+
 #### Q1. How can you check your current git version?
 
 - [ ] ~~git --v~~
@@ -40,7 +42,7 @@ git merge --squash HEAD@{1}
 - [ ] Delete the push-notifications branch and it will be committed to the master branch automatically
 - [x] Checkout the beta branch and run git merge push-notifications
 
-#### **Q5. Which of the following is true you when you use the following command? **
+#### **Q5. Which of the following is true you when you use the following command?**
 
 `git add -A`
 
@@ -58,7 +60,7 @@ git merge --squash HEAD@{1}
 - [ ] An inline editor for modifying remote repositories
 - [ ] The last 5 git versions you've installed
 
-#### Q7. Looking at the following commands, describe what is happening.
+#### **Q7. Looking at the following commands, describe what is happening.**
 
 ```bash
 git checkout feature-user-location
@@ -91,7 +93,7 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 - [ ] Run a git rebase to find the buggy commit.
 - [x] Use git bisect to compare the buggy commit to an early commit that works as expected.
 
-#### <red>Q10. Why would the following command be used?<red>
+#### **Q10. Why would the following command be used?**
 
 `git rebase -i HEAD~10`
 
@@ -100,7 +102,7 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 - [ ] To delete the last 10 commits and reset the HEAD
 - [ ] In order to locally cache the last 10 commits
 
-#### Q11. Why would you use a pre-receive hook in your remote repository?
+#### **Q11. Why would you use a pre-receive hook in your remote repository?**
 
 - [ ] You wouldn't, you would use it in the local repository
 - [x] To execute a script when a remote receives a push that is triggered before any refs are updated
@@ -310,8 +312,7 @@ modified: beta-notes.js
 - [ ] --modify
 - [x] --amend
 
-#### **Q31. What is the best way to characterize the git commit structure?
-**
+#### **Q31. What is the best way to characterize the git commit structure?**
 - [ ] Data array
 - [x] Data log
 - [ ] Data snapshot
@@ -1012,7 +1013,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [x] Keep local repository branches in sync with upstream branches in the remote repository by committing,pushing and pulling frequently. <url>
 - [ ] Avoid frequent interaction with the remote repository to reduce the probability of pulling conflicts. <url>
 
-#### Q125. You have changed your mind about adding broccoli to your project. How should you remove it?
+#### **Q125. You have changed your mind about adding broccoli to your project. How should you remove it?**
 
 ```bash
 Untracked files:
@@ -1146,3 +1147,5 @@ Explanation: GitHub is a popular hosting platform for developers to store their 
 - [x] git config user.email
 - [ ] git config email
 - [ ] All of the above.
+
+
