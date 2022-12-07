@@ -998,10 +998,10 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] collisions
 - [x] merge conflict
 
-#### Q123. When Git workflows contain a topic branch, what purpose does the topic branch serve?
+#### **Q123. When Git workflows contain a topic branch, what purpose does the topic branch serve?**
 
 - [ ] Topic branches store unstable code until it is peer reviewed for integration into another feature branch. <url>
-- [ ] Topic branches correspond to different stages of development and are always open for long-running branches to be pulled into. <url>
+- [x] Topic branches correspond to different stages of development and are always open for long-running branches to be pulled into. <url>
 - [ ] Topic branches are used in waterfall development methodologies to track the state of the code during the various stages of waterfall. <url>
 - [ ] Topic branches are short-lived branches used to store work related to a particular feature. <url>
 
