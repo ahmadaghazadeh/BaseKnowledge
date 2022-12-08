@@ -1,2 +1,3 @@
-.vscode/
-**/bin/**/
+/.vscode
+**/[Bb]in
+**/[Oo]bj
