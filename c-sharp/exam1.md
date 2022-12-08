@@ -12,7 +12,7 @@
 - [ ] Delegates are not supported in the current version of C#
 - [ ] They cannot be used as callbacks.
 - [ ] Only variables can be passed to delegates as parameters.
-- [ ] They can be chained together.
+- [x] They can be chained together.
 
 [Official documentation: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/#delegates-overview)
 

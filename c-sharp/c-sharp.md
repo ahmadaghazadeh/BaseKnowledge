@@ -156,3 +156,17 @@ class Program
 7- If a multicast delegate returns a value then it returns the value from the last assigned target method.
 D8- elegate is used to declare an event and anonymous methods in C#.
 
+
+#### 3.
+
+C# and .NET Framework (4.5 & Core) supports asynchronous programming using some native functions, classes, and reserved keywords.
+
+**What is Asynchronous Programming?**
+In asynchronous programming, the code gets executed in a thread without having to wait for an I/O-bound or long-running task to finish. For example, in the asynchronous programming model, the LongProcess() method will be executed in a separate thread from the thread pool, and the main application thread will continue to execute the next statement.
+
+Microsoft recommends Task-based Asynchronous Pattern  to implement asynchronous programming in the .NET Framework or .NET Core applications using async , await keywords and Task or Task<TResult> class.
+
+Now let's rewrite the above example in asynchronous pattern using async keyword.
+
+
+[Code Sample](examples/asynchronous/asynchronous1.cs)
