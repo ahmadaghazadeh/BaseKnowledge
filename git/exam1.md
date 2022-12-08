@@ -1,6 +1,6 @@
 ## Git
 
-## This is a first exam for git: 100/x=1-131/38 => %70.99
+## This is a first exam for git: 100/x=1-(131/38) => x=%70.99
 
 #### Q1. How can you check your current git version?
 
