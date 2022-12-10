@@ -168,3 +168,7 @@ class Dog4 extends Animal {
 }  
 
 ```
+
+## 5. access modifiers 
+
+![image](images/access-modifiers.jpg)
