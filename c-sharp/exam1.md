@@ -20,7 +20,7 @@
 
 - [ ] reactive
 - [ ] inherited callback
-- [ ] task-based
+- [x] task-based
 - [ ] callback-based
 
 [Official documentation: Task asynchronous programming model](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model) resposta correta --> var contacts = new List<string>();

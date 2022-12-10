@@ -168,5 +168,157 @@ Microsoft recommends Task-based Asynchronous Pattern  to implement asynchronous 
 
 Now let's rewrite the above example in asynchronous pattern using async keyword.
 
+``` c#
 
+using System;
+using System.Threading.Tasks;
+
+public class Asynchronous1
+{
+	public static async Task Run()
+	{
+		LongProcess();
+		ShortProcess();
+	}
+
+	public static async void LongProcess()
+	{
+		Console.WriteLine("LongProcess Started");
+		await Task.Delay(4000); // hold execution for 4 seconds
+		Console.WriteLine("LongProcess Completed");
+	}
+
+	static void ShortProcess()
+	{
+		Console.WriteLine("ShortProcess Started");
+		//do something here
+		Console.WriteLine("ShortProcess Completed");
+	}
+}
+
+```
 [Code Sample](examples/asynchronous/asynchronous1.cs)
+
+### async, await, and Task
+Use async along with await and Task if the async method returns a value back to the calling code. We used only the async keyword in the above program to demonstrate the simple asynchronous void method.
+
+The await keyword waits for the async method until it returns a value. So the main application thread stops there until it receives a return value.
+
+The Task class represents an asynchronous operation and Task<TResult> generic class represents an operation that can return a value. In the above example, we used await Task.Delay(4000) that started async operation that sleeps for 4 seconds and await holds a thread until 4 seconds.
+
+The following demonstrates the async method that returns a value.
+
+``` c#
+
+public class Asynchronous2
+{
+	public static async Task Run()
+	{
+        Task<int> result = LongProcess();
+        ShortProcess();
+        var val = await result; // wait untile get the return value
+        Console.WriteLine("Result: {0}", val);
+    }
+
+    static async Task<int> LongProcess()
+    {
+        Console.WriteLine("LongProcess Started");
+        await Task.Delay(4000); // hold execution for 4 seconds
+        Console.WriteLine("LongProcess Completed");
+        return 10;
+    }
+
+    static void ShortProcess()
+    {
+        Console.WriteLine("ShortProcess Started");
+        //do something here
+        Console.WriteLine("ShortProcess Completed");
+    }
+}
+
+```
+[Code Sample](examples/asynchronous/asynchronous2.cs)
+
+In the above example, in the static async Task<int> LongProcess() method, Task<int> is used to indicate the return value type int. int val = await result; will stop the main thread there until it gets the return value populated in the result. Once get the value in the result variable, it then automatically assigns an integer to val.
+
+An async method should return void, Task, or Task<TResult>, where TResult is the return type of the async method. Returning void is normally used for event handlers. The async keyword allows us to use the await keyword within the method so that we can wait for the asynchronous method to complete for other methods which are dependent on the return value.
+
+If you have multiple async methods that return the values then you can use await for all methods just before you want to use the return value in further steps.
+
+``` c#
+
+
+public class Asynchronous3
+{
+	public static async Task Run()
+	{
+        Task<int> result1 = LongProcess1();
+        Task<int> result2 = LongProcess2();
+        //do something here
+        Console.WriteLine("After two long processes.");
+        int val = await result1; // wait untile get the return value
+        DisplayResult(val);
+        val = await result2; // wait untile get the return value
+        DisplayResult(val);
+    }
+
+    static async Task<int> LongProcess1()
+    {
+        Console.WriteLine("LongProcess 1 Started");
+        await Task.Delay(4000); // hold execution for 4 seconds
+        Console.WriteLine("LongProcess 1 Completed");
+        return 10;
+    }
+
+    static async Task<int> LongProcess2()
+    {
+        Console.WriteLine("LongProcess 2 Started");
+        await Task.Delay(4000); // hold execution for 4 seconds
+        Console.WriteLine("LongProcess 2 Completed");
+        return 20;
+    }
+
+    static void DisplayResult(int val)
+    {
+        Console.WriteLine(val);
+    }
+}
+
+```
+
+[Code Sample](examples/asynchronous/asynchronous3.cs)
+
+In the above program, we do await result1 and await result2 just before we need to pass the return value to another method.
+
+Thus, you can use async, await, and Task to implement asynchronous programming in .NET Framework or .NET Core using C#.
+
+#### 4. Attributes (Annotation In Java)
+
+*Attributes are used in C# to convey declarative information or metadata about various code elements such as methods, assemblies, properties, types, etc. Attributes are added to the code by using a declarative tag that is placed using square brackets ([ ]) on top of the required code element. There are two types of Attributes implementations provided by the .NET Framework are:
+
+1- Predefined Attributes
+2- Custom Attributes
+
+**Properties of Attributes:**
+
+Attributes can have arguments just like methods, properties, etc. can have arguments.
+Attributes can have zero or more parameters.
+Different code elements such as methods, assemblies, properties, types, etc. can have one or multiple attributes.
+Reflection can be used to obtain the metadata of the program by accessing the attributes at run-time.
+Attributes are generally derived from the System.Attribute Class.
+
+1. **Predefined Attributes**
+Predefined attributes are those attributes that are a part of the .NET Framework Class Library and are supported by the C# compiler for a specific purpose. Some of the predefined attributes that are derived from the System.Attribute base class are given as follows:
+
+|Attribute|Description|
+|---|---|
+|AttributeUsage|This attribute specifies the usage of a different attribute.|
+|CLSCompliant|This attribute shows if a particular code element complies with the Common Language Specification.|
+|ContextStatic|This attribute indicates if a static field value is unique for the specified context.|
+|Flags|This attribute indicates if a static field value is unique for the specified context.|
+|LoaderOptimization|This attribute sets the optimization policy for the default loader in the main method.|
+|NonSerialized|This attribute signifies that the field of the serializable class should not be serialized.|
+|Obsolete|This attribute marks the code elements that are obsolete i.e. not in use anymore.|
+|Serializable|This attribute signifies that the field of the serializable class can be serialized.|
+|ThreadStatic|This attribute indicates that there is a unique static field value for each thread.|
+|DllImport|This attribute indicates that the method is a static entry point as shown by the unmanaged DLL.|

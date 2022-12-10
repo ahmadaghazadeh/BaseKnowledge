@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
+﻿
 public class Asynchronous1
 {
 	public static async Task Run()
