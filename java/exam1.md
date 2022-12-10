@@ -83,9 +83,9 @@ System.out.println(str);
 - [ ] CD
 - [ ] CDE
 - [ ] D
-- [ ] "abcde"
+- [x] "abcde"
 
-#### Q7. What is the result of this code?
+#### **Q7. What is the result of this code?**
 
 ```java
 class Main {
