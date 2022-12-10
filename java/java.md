@@ -125,8 +125,46 @@ public class InterfaceSample {
         }
     }
 }
-
-
  ``` 
 
+## 4. instanceof
 
+* The java instanceof operator is used to test whether the object is an instance of the specified type (class or subclass or interface).
+
+* The instanceof in java is also known as type comparison operator because it compares the instance with type. It returns either **true or false**. If we apply the instanceof operator with any variable that has null value, it returns false.
+
+* If we apply instanceof operator with a variable that have null value, it returns **false**. Let's see the example given below where we apply instanceof operator with the variable that have null value.
+
+``` java
+  Dog2 d=null;  
+  System.out.println(d instanceof Dog2);//false  
+```
+* Possibility of downcasting with instanceof
+Let's see the example, where downcasting is possible by instanceof operator.
+
+``` java
+class Dog3 extends Animal {  
+  static void method(Animal a) {  
+    if(a instanceof Dog3){  
+       Dog3 d=(Dog3)a;//downcasting  
+       System.out.println("ok downcasting performed");  
+    }  
+  }  
+```
+
+* Downcasting without the use of java instanceof
+
+``` java
+class Animal { }  
+class Dog4 extends Animal {  
+  static void method(Animal a) {  
+       Dog4 d=(Dog4)a;//downcasting  
+       System.out.println("ok downcasting performed");  
+  }  
+   public static void main (String [] args) {  
+    Animal a=new Dog4();  
+    Dog4.method(a);  
+  }  
+}  
+
+```

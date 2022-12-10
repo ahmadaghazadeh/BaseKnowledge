@@ -160,7 +160,7 @@ class Three implements One, Two {
 }
 ```
 
-#### Q9. What is the output of this code?
+#### **Q9. What is the output of this code?**
 
 ```java
 class Main {
