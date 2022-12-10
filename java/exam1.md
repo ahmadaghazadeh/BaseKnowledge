@@ -103,7 +103,7 @@ class Main {
 ```
 
 - [ ] It will show a stack trace with a runtime exception.
-- [ ] "java.lang.Exception"
+- [x] "java.lang.Exception"
 - [ ] It will run and throw an exception.
 - [ ] It will not compile.
 

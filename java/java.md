@@ -53,8 +53,80 @@ There are mainly two types of exceptions: checked and unchecked. An error is con
 |throw|The "throw" keyword is used to throw an exception.|
 |throws|The "throws" keyword is used to declare exceptions. It specifies that there may occur an exception in the method. It doesn't throw an exception. It is always used with method signature.|
 
+ [Code Sample](examples/ExceptionSample.java)
 
-``` java
+ ``` java
 
-```
+ public class ExceptionSample {
+    public static void main(String[] args) {
+        System.out.println(print(1));
+        System.out.println(print1(1)); <== has an error because print1 has throws in signature
+    }
+
+    static Exception print(int i){
+        if (i>0) {
+            return new Exception();
+        } else {
+            throw new RuntimeException();
+        }
+    }
+
+    static  void print1(int i) throws Exception {
+        if (i>0) {
+            throw new Exception();
+        } else {
+            throw new RuntimeException();
+        }
+    }
+}
+
+ ```   
+
+ ## 3. interface
+ * An **interface in Java** is a blueprint of a class. It has static constants and abstract methods.
+
+* In other words, you can say that interfaces can have abstract methods and **variables**. It cannot have a method body.
+
+* It cannot be **instantiated** just like the abstract class.
+
+* Since Java 8, we can have **default and static methods** in an interface.
+
+* Since Java 9, we can have **private methods** in an interface.
+
+* Why use Java interface?
+  1. It is used to achieve abstraction.
+  2. By interface, we can support the functionality of **multiple inheritance**.
+  3. It can be used to achieve **loose coupling**.
+
+![image](images/interfacerelation.jpg)
+
+[Code Sample](examples/InterfaceSample.java)
+
+ ``` java
+
+public class InterfaceSample {
+     
+    interface One {
+        default void method() {
+            System.out.println("One");
+        }
+    }
     
+    interface Two {
+        default void method () {
+            System.out.println("One");
+        }
+    }
+    class Three implements One, Two {
+
+        public void method() {
+            One.super.method();
+            Two.super.method();
+        }
+    }
+}
+
+
+ ``` 
+
+
