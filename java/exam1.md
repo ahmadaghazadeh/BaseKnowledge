@@ -19,7 +19,7 @@
 
 - [ ] method overloading
 - [ ] method overrunning
-- [ ] method overriding
+- [x] method overriding
 - [ ] method calling
 
 #### Q3. Given the following definitions, which of these expression will **NOT** evaluate to true?
@@ -27,7 +27,7 @@
 `boolean b1 = true, b2 = false; int i1 = 1, i2 = 2;`
 
 - [ ] `(i1 | i2) == 3`
-- [ ] `i2 && b1`
+- [x] `i2 && b1`
 - [ ] `b1 || !b2`
 - [ ] `(i1 ^ i2) < 4`
 
@@ -44,7 +44,7 @@
 8: }
 ```
 
-- [ ] It will not compile because of line 4.
+- [x] It will not compile because of line 4.
 - [ ] It will not compile because of line 3.
 - [ ] 123
 - [ ] 1234
@@ -68,7 +68,7 @@ interface Interface2 {
 - [ ] `super1.print(); super2.print();`
 - [ ] `this.print();`
 - [ ] `super.print();`
-- [ ] `Interface1.print(); Interface2.print();`
+- [x] `Interface1.print(); Interface2.print();`
 
 #### Q6. What does the following code print?
 
