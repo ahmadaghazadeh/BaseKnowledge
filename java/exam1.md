@@ -238,7 +238,7 @@ is [Type-Import-on-Demand Declarations](https://docs.oracle.com/javase/specs/jls
 13: }
 ```
 
-- [ ] It will not compile because of line 10.
+- [x] It will not compile because of line 10.
 - [ ] "Hello!"
 - [ ] It will not compile because of line 2.
 - [ ] "World!"
@@ -256,7 +256,7 @@ class Main {
 ```
 
 - [ ] `java Main 1 2 "3 4" 5`
-- [ ] `java Main 1 "2" "2" 5`
+- [x] `java Main 1 "2" "2" 5`
 - [ ] `java Main.class 1 "2" 2 5`
 - [ ] `java Main 1 "2" "3 4" 5`
 
