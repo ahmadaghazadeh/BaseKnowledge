@@ -311,14 +311,14 @@ System.out.print("apple".compareTo("banana"));
 
 - [ ] `0`
 - [ ] positive number
-- [ ] negative number
+- [x] negative number
 - [ ] compilation error
 
 #### Q17. You have an ArrayList of names that you want to sort alphabetically. Which approach would **NOT** work?
 
 - [ ] `names.sort(Comparator.comparing(String::toString))`
 - [ ] `Collections.sort(names)`
-- [ ] `names.sort(List.DESCENDING)`
+- [x] `names.sort(List.DESCENDING)`
 - [ ] `names.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList())`
 
 - [Reference](https://www.scaler.com/topics/java/arraylist-in-java/)

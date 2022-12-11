@@ -387,3 +387,116 @@ Main Completes
 "a".compareTo("a") is 0
 
 "b".compareTo("a") is 1
+
+## ArrayList 
+* ArrayList is a class in java.util package which implements dynamic-sized arrays.** ArrayList dynamically grows and shrinks in size on the addition and removal of elements respectively.** ArrayList inherits the AbstractList class and implements the List, RandomAccess and java.io.Serializable interface. Addition of elements to an ArrayList takes amortized constant time - O(1).
+
+* When an ArrayList is created, its default **capacity or size is 10** if not provided by the user. The size of the ArrayList grows based on load factor and current capacity.
+
+1. The Load Factor is a measure to decide when to increase its capacity. The default value of load factor of an ArrayList is 0.75f
+2. ArrayList in Java expands its capacity after each threshold which is calculated as the product of current capacity and load factor of the ArrayList instance.
+
+```
+Threshold = (Load Factor) * (Current Capacity)
+```
+
+For example, if the user creates an ArrayList of size 10,
+
+**Threshold = Load Factor * Current Capacity = 0.75 * 10 ≅ 7**
+
+![image](images/how-java-arraylist-works.webp)
+
+In Java 8 and later, the new capacity of the ArrayList is calculated to be 50% more than its old capacity.
+
+``` 
+new_capacity = old_capacity + (old_capacity >> 1)
+```
+
+For example, if the array size is 10 and it has reached the threshold value, we have to increase its capacity to add new elements. The new capacity will be 10 + (10 >> 1) => 10 + 5 => 15. Hence, the size is increased from 10 to 15.
+
+
+``` java
+import java.util.*;
+
+class SortMethod {
+
+  public static void main(String[] args) {
+    ArrayList<String> names = new ArrayList<String>();
+    names.add("Raj");
+    names.add("Priya");
+    names.add("Shashank");
+    names.add("Ansh");
+    System.out.println("Before sorting, names : " + names);
+
+    //Sorting ArrayList in ascending order
+    Collections.sort(names); //1
+    names.sort(Comparator.comparing(String::toString))//2
+    names.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList())// 3
+    System.out.println("After sorting, names : " + names);
+  }
+}
+
+The implementation is iterative merge sort and takes O(n * log(n)).
+
+```
+
+### How to synchronize ArrayList in Java?
+
+* Collections.synchronizedList
+* CopyOnWriteArrayList
+
+``` java
+import java.util.*;
+
+class SynchronizeExample {
+
+  public static void main(String[] args) {
+    List<String> arr = new ArrayList<String>();
+    // adding elements to the list
+    arr.add("Hello");
+    arr.add("World");
+    arr.add("in");
+    arr.add("Java");
+
+    // Synchronizing the ArrayList externally using
+    // synchronizedList() method
+    arr = Collections.synchronizedList(arr);
+
+    synchronized (arr) {
+      // It should be in synchronized block
+      Iterator it = arr.iterator();
+
+      // Iterating through the elements
+      while (it.hasNext()) System.out.println(it.next());
+    }
+  }
+}
+
+
+import java.io.*;
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+class SynchronizeUsingCopyOnWriteArrayList {
+
+  public static void main(String[] args) {
+    // creating a thread-safe ArrayList using
+    // CopyOnWriteArrayist.
+    CopyOnWriteArrayList<String> arr = new CopyOnWriteArrayList<String>();
+
+    // Adding elements to synchronized ArrayList
+    arr.add("Hello");
+    arr.add("World");
+    arr.add("in");
+    arr.add("Java");
+
+    System.out.println("Elements of synchronized ArrayList :");
+
+    // Iterating on the synchronized ArrayList using an iterator.
+    Iterator<String> it = arr.iterator();
+
+    while (it.hasNext()) System.out.println(it.next());
+  }
+}
+
+```
