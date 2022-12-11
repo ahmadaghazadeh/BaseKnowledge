@@ -1,6 +1,12 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class Sample  {
     public static void main(String[] args) {
-        System.out.println(args[2]);
+      ArrayList<Integer> ii= new ArrayList<>();
+      for (Integer integer : ii) {
+        
+      }
     }
 
       

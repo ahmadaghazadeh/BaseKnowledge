@@ -272,7 +272,7 @@ class Main {
 ```
 
 - [ ] "123451234512345"
-- [ ] Nothing - this will not compile.
+- [x] Nothing - this will not compile.
 - [ ] a negative integer value
 - [ ] "12345100000"
 
@@ -292,13 +292,13 @@ class Main {
 ```
 
 - [ ] The code does not compile.
-- [ ] A runtime exception is thrown.
+- [x] A runtime exception is thrown.
 - [ ] "world!!world"
 - [ ] "world!world!"
 
 #### Q15. How do you write a foreach loop that will iterate over ArrayList\<Pencil\>pencilCase?
 
-- [ ] `for (Pencil pencil : pencilCase) {}`
+- [x] `for (Pencil pencil : pencilCase) {}`
 - [ ] `for (pencilCase.next()) {}`
 - [ ] `for (Pencil pencil : pencilCase.iterator()) {}`
 - [ ] `for (pencil in pencilCase) {}`
