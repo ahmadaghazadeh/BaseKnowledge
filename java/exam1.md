@@ -325,7 +325,7 @@ System.out.print("apple".compareTo("banana"));
 
 #### Q18. By implementing encapsulation, you cannot directly access the class's \_ properties unless you are writing code inside the class itself.
 
-- [ ] private
+- [x] private
 - [ ] protected
 - [ ] no-modifier
 - [ ] public
@@ -334,7 +334,7 @@ System.out.print("apple".compareTo("banana"));
 
 - [ ] `new SimpleDateFormat("yyyy-MM-dd").format(new Date())`
 - [ ] `new Date(System.currentTimeMillis())`
-- [ ] `LocalDate.now()`
+- [x] `LocalDate.now()`
 - [ ] `Calendar.getInstance().getTime()`
 
 **Explanation**: LocalDate is the newest class added in java 8
@@ -344,7 +344,7 @@ System.out.print("apple".compareTo("banana"));
 `boolean isDivisibleBy5 = _____`
 
 - [ ] `int0 / 5 ? true: false`
-- [ ] `int0 % 5 == 0`
+- [x] `int0 % 5 == 0`
 - [ ] `int0 % 5 != 5`
 - [ ] `Math.isDivisible(int0, 5)`
 
