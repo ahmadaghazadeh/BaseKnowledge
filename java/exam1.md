@@ -179,7 +179,7 @@ class Main {
 - [x] truetrue
 - [ ] falsetrue
 
-#### Q10. Given the following two classes, what will be the output of the Main class?
+#### **Q10. Given the following two classes, what will be the output of the Main class?**
 
 ```java
 package mypackage;
@@ -210,7 +210,7 @@ class Main {
 - [ ] Lines 1 and 2 generate compiler errors due to class name conflicts.
 - [ ] "-123"
 - [ ] It will throw an exception on line 5.
-- [ ] "123"
+- [x] "123"
 
 **Explanation:** `The answer is "123". The `abs()` method evaluates to the one inside mypackage.Math class, because The import statements of the form:`
 
