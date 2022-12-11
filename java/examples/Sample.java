@@ -3,10 +3,9 @@ import java.util.LinkedList;
 
 public class Sample  {
     public static void main(String[] args) {
-      ArrayList<Integer> ii= new ArrayList<>();
-      for (Integer integer : ii) {
-        
-      }
+      System.out.println("\"a\".compareTo(\"b\") is " + "a".compareTo("b"));
+      System.out.println("\"a\".compareTo(\"a\") is " +"a".compareTo("a"));
+      System.out.println("\"b\".compareTo(\"a\") is " +"b".compareTo("a"));
     }
 
       
