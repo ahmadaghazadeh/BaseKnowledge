@@ -602,7 +602,7 @@ class Main {
 ```
 
 - [ ] Hello World!
-- [ ] HelloHelloWorld!
+- [x] HelloHelloWorld!
 - [ ] Hello Hello World!
 - [ ] Hello HelloWorld!
 
@@ -620,10 +620,10 @@ public class Main {
 
 - [ ] x
 - [ ] null
-- [ ] 10
+- [x] 10
 - [ ] 5
 
-#### Q38. Which approach cannot be used to iterate over a List named _theList_?
+#### **Q38. Which approach cannot be used to iterate over a List named _theList_?**
 
 - [ ] A
 
@@ -641,7 +641,7 @@ for (Object object : theList) {
 }
 ```
 
-- [ ] C
+- [x] C
 
 ```java
 Iterator it = theList.iterator();
@@ -667,18 +667,18 @@ theList.forEach(System.out::println);
 - [ ] public isHealthy("avocado")
 - [ ] private String isHealthy(String food)
 
-#### Q40. Which are valid keywords in a Java module descriptor (module-info.java)?
+#### **Q40. Which are valid keywords in a Java module descriptor (module-info.java)?**
 
 - [ ] provides, employs
 - [ ] imports, exports
 - [ ] consumes, supplies
-- [ ] requires, exports
+- [x] requires, exports
 
 #### Q41. Which type of variable keeps a constant value once it is assigned?
 
 - [ ] non-static
 - [ ] static
-- [ ] final
+- [x] final
 - [ ] private
 
 #### Q42. How does the keyword `volatile` affect how a variable is handled?

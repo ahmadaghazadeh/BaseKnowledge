@@ -747,3 +747,5 @@ Thread t = new Thread(new Runnable() {
 
 t.start();
 ```
+
+## volatile

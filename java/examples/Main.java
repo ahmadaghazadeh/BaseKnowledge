@@ -1,17 +1,14 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 class Main {
-	static int count = 0;
-	public static void main(String[] args) {
-		if (count < 3) {
-			count++;
-			main(null);
-		} else {
-			return;
-		}
-		System.out.println("Hello World!");
-	}
+ 	public static void main(String[] args) {
+		String[] array = {"abc", "2", "10", "0"};
+
+ 		List<String> lst=Arrays.asList(array);
+		 
+ 	}
  }
  
