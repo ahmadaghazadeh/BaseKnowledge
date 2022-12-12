@@ -500,3 +500,187 @@ class SynchronizeUsingCopyOnWriteArrayList {
 }
 
 ```
+
+## this vs super
+
+* The **super** keyword is used to represent an instance of the **parent class** which is created implicitly for each object of the child class. The super keyword can be used to invoke the parent class methods and constructors. It can also be used to access the fields of the parent class.
+
+* The **this** keyword is used to represent the **current instance of a class**. It is used to access the instance variables and invoke current class methods and constructors. The this keyword can be passed as an argument to a method call representing the current class instance.
+
+[Refrence]([images/how-java-arraylist-works.webp](https://www.scaler.com/topics/java/this-and-super-keyword-in-java/))
+
+### this
+
+ [Code Sample](examples/ThisSample.java.java)
+
+``` java 
+ 
+public class ThisSample  {
+    public static void main(String[] args) {
+       
+      Illustration obj = new Illustration();
+      obj.Scaler();
+      obj.name();
+
+      System.out.println("Object  ......... 100 .........." );
+      Illustration obj100 = new Illustration(100);
+      obj100.Scaler();
+      obj100.name();
+      obj100.invoke();
+      (new Illustration()).getIllustration().name();
+    }
+
+    
+}
+
+class Illustration {
+
+  // declaring an instance variable
+  int instanceVar = 5;
+
+  // declaring an static variable
+  static int staticVar = 10;
+
+  Illustration() {
+    // invoking parameterized constructor
+    this(10);
+  }
+
+  Illustration(int x) {
+    System.out.println("Current class parameterized constructor invoked.");
+    System.out.println("Number is : " + x);
+  }
+
+  void print(Illustration ob) {
+    System.out.println("ob.value = " + ob.instanceVar);
+  }
+
+  void invoke() {
+    // print method is invoked by passing this as an argument
+    print(this);
+  }
+
+
+  Illustration getIllustration() {
+    // returing the instance of current class
+    return this;
+  }
+
+  void Scaler() {
+    // Method-specific variables
+    int instanceVar = 20;
+    int staticVar = 40;
+      
+    // referring to the current class instance and static variables
+    this.instanceVar = 50;
+    this.staticVar = 100;
+
+    // printing the current class instance and static variable.
+    System.out.println("Value of instance variable : " + this.instanceVar);
+    System.out.println("Value of static variable : " + this.staticVar);
+      
+    // printing the method specific variables.
+    System.out.println("instanceVar inside method : " + instanceVar);
+    System.out.println("staticVar inside method: " + staticVar);
+  }
+
+  void name() {
+    // invoking current class scaler method.
+    System.out.println("Call ......... name method" );
+    this.Scaler();
+    System.out.println("Ahmad Aghazadeh.");
+  }
+}
+
+``` 
+### super
+
+
+
+``` java
+class A{
+    void methodP(){
+        // method
+    }
+}
+class B extends A{
+    void methodC(){
+        // method
+    }
+}
+class C extends B{
+    void methodGC(){
+        // method
+    }
+}
+```
+* Let us understand the concept of immediate parent. In the above code snippet of multi-level inheritance class B extends class A, it implies class A is immediate parent of class B. Similarly class C extends class B and now class C has two parents i.e., class A and class B, where class B is immediate parent of class C.
+
+* The **super** is a special keyword in Java that is used to refer to the instance of the **immediate parent class**.
+
+ [Code Sample](examples/ThisSample.java.java)
+
+ ``` java
+ 
+public class SuperSample  {
+    public static void main(String[] args) {
+       
+      Child obj = new Child();
+      obj.print();
+    }
+
+    
+}
+ 
+class Parent {
+
+  int a = 50;
+  String s = "Hello World!";
+  void display() {
+    System.out.println("Hi I am parent method.");
+  }
+  Parent() {
+    System.out.println("Hi I am Parent class constructor.");
+  }
+
+}
+
+// child class extending parent class
+class Child extends Parent {
+
+  Child() {
+    // invoking parent class constructor
+    super();
+  }
+  int a = 100;
+  String s = "Happy Coding!";
+
+  void print() {
+    // referencing to the instance variable of parent class
+    System.out.println("Number from parent class is : " + super.a);
+    System.out.println("String from parent class is : " + super.s);
+
+    // printing a and s of the current/child class
+    System.out.println("Number from child class is : " + a);
+    System.out.println("String from child class is : " + s);
+    display();
+    super.display();
+  }
+  void display() {
+    System.out.println("Hi I am child method.");
+  }
+ 
+}
+
+ ```
+
+### Difference Between this and super Keyword in Java
+
+|                                  **<span class="highlight--red">this</span>** keyword in Java|**<span class="highlight--red">super</span>** keyword in Java|
+|:----|:----|
+|    <span class="highlight--red">this</span> is an implicit reference variable keyword used to represent the current class.|<span class="highlight--red">super</span> is an implicit reference variable keyword used to represent the immediate parent class.|
+|                      <span class="highlight--red">this</span> is to invoke methods of the current class.|<span class="highlight--red">super</span> is used to invoke methods of the immediate parent class.|
+|                 <span class="highlight--red">this</span> is used to invoke a constructor of the current class.|<span class="highlight--red">super</span> is used to invoke a constructor of the immediate parent class.|
+|           <span class="highlight--red">this</span> refers to the instance and static variables of the current class.|<span class="highlight--red">super</span> refers to the instance and static variables of the immediate parent class.|
+|<span class="highlight--red">this</span> can be used to return and pass as an argument in the context of a current class object.|<span class="highlight--red">super</span> can be used to return and pass as an argument in the context of an immediate parent class object.|
+

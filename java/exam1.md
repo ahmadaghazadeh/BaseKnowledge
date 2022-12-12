@@ -348,7 +348,7 @@ System.out.print("apple".compareTo("banana"));
 - [ ] `int0 % 5 != 5`
 - [ ] `Math.isDivisible(int0, 5)`
 
-#### Q21. How many times will this code print "Hello World!"?
+#### **Q21. How many times will this code print "Hello World!"?**
 
 ```java
 class Main {
@@ -361,7 +361,7 @@ class Main {
 }
 ```
 
-- [ ] 10 times
+- [x] 10 times
 - [ ] 9 times
 - [ ] 5 times
 - [ ] infinite number of times
@@ -373,7 +373,7 @@ class Main {
 - [ ] print
 - [ ] iterative
 - [ ] hello
-- [ ] main
+- [x] main
 
 #### Q23. What code would you use in Constructor A to call Constructor B?
 
@@ -389,7 +389,7 @@ public class Jedi {
 
 - [ ] Jedi(name, species, false)
 - [ ] new Jedi(name, species, false)
-- [ ] this(name, species, false)
+- [x] this(name, species, false)
 - [ ] super(name, species, false)
 
 **Note:** `This code won't compile, possibly broken code sample.`
