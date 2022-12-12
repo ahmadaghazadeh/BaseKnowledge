@@ -684,3 +684,66 @@ class Child extends Parent {
 |           <span class="highlight--red">this</span> refers to the instance and static variables of the current class.|<span class="highlight--red">super</span> refers to the instance and static variables of the immediate parent class.|
 |<span class="highlight--red">this</span> can be used to return and pass as an argument in the context of a current class object.|<span class="highlight--red">super</span> can be used to return and pass as an argument in the context of an immediate parent class object.|
 
+## Anonymous Inner Class in Java
+ * It is an inner class without a name and for which only a single object is created. An anonymous inner class can be useful when making an instance of an object with certain “extras” such as overriding methods of a class or interface, without having to actually subclass a class.
+ * Anonymous inner classes are useful in writing implementation classes for listener interfaces in graphics programming. 
+
+### Now let us do discuss the difference between regular class(normal classes) and Anonymous Inner class
+
+1. A normal class can implement any number of interfaces but the anonymous inner class can implement **only one interface at a time**.
+2. A regular class can extend a class and implement any number of interfaces simultaneously. But anonymous Inner class **can extend a class or can implement an interface but not both at a time**.
+3. For regular/normal class, we can write any number of constructors but we can’t write any constructor for anonymous Inner class because the anonymous class does not have any name and while defining constructor class name and constructor name must be same.
+
+### Based on declaration and behavior, there are 3 types of anonymous Inner classes: 
+
+1. Anonymous Inner class that extends a class
+``` java
+  Thread t = new Thread() {
+      
+      // run() method for the thread
+      public void run()
+      {
+          // Print statement for child thread
+          // execution
+          System.out.println("Child Thread");
+      }
+  };
+
+  // Starting the thread
+  t.start();
+
+  // Displaying main thread only for readability
+  System.out.println("Main Thread");
+```
+2. Anonymous Inner class that implements an interface
+``` java
+Runnable r = new Runnable() {
+    
+    // run() method for the thread
+    public void run()
+    {
+        // Print statement when run() is invoked
+        System.out.println("Child Thread");
+    }
+};
+
+// Creating thread in main() using Thread class
+Thread t = new Thread(r);
+
+// Starting the thread using start() method
+// which invokes run() method automatically
+t.start();
+```
+
+3. Anonymous Inner class that defines inside method/constructor argument
+``` java
+Thread t = new Thread(new Runnable() {
+    
+    public void run()
+    {
+        System.out.println("Child Thread");
+    }
+});
+
+t.start();
+```
