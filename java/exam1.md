@@ -419,7 +419,7 @@ public class Main {
 }
 ```
 
-- [ ] [5, 1, 10]
+- [x] [5, 1, 10]
 - [ ] [10, 5, 1]
 - [ ] [1, 5, 10]
 - [ ] [10, 1, 5]
@@ -438,14 +438,14 @@ class Main {
 ```
 
 - [ ] "Hello"
-- [ ] A runtime exception is thrown.
+- [x] A runtime exception is thrown.
 - [ ] The code does not compile.
 - [ ] "ello"
 
-#### Q27. Object-oriented programming is a style of programming where you organize your program around \_ rather than \_ and data rather than logic.
+#### **Q27. Object-oriented programming is a style of programming where you organize your program around \_ rather than \_ and data rather than logic.**
 
 - [ ] functions; actions
-- [ ] objects; actions
+- [x] objects; actions
 - [ ] actions; functions
 - [ ] actions; objects
 
@@ -454,7 +454,7 @@ class Main {
 - [ ] `"nifty".getType().equals("String")`
 - [ ] `"nifty".getType() == String`
 - [ ] `"nifty".getClass().getSimpleName() == "String"`
-- [ ] `"nifty" instanceof String`
+- [x] `"nifty" instanceof String`
 
 #### Q29. What is the output of this code?
 
@@ -475,7 +475,7 @@ class Main {
 - [ ] A runtime exception is thrown.
 - [ ] 3false
 - [ ] 2true
-- [ ] 3true
+- [x] 3true
 
 #### Q30. What is the result of this code?
 
@@ -498,14 +498,14 @@ class Main {
 
 - [ ] It will not compile because of line 7.
 - [ ] Hello!Hello!
-- [ ] Hello!World!
+- [x] Hello!World!
 - [ ] It will not compile because of line 11.
 
 #### Q31. What method can be used to create a new instance of an object?
 
 - [ ] another instance
 - [ ] field
-- [ ] constructor
+- [x] constructor
 - [ ] private method
 
 #### Q32. Which is the most reliable expression for testing whether the values of two string variables are the same?
@@ -513,9 +513,9 @@ class Main {
 - [ ] string1 == string2
 - [ ] string1 = string2
 - [ ] string1.matches(string2)
-- [ ] string1.equals(string2)
+- [x] string1.equals(string2)
 
-#### Q33. Which letters will print when this code is run?
+#### **Q33. Which letters will print when this code is run?**
 
 ```java
 public static void main(String[] args) {
@@ -537,7 +537,7 @@ public static void badMethod() {
 - [ ] A, B, and D
 - [ ] A, C, and D
 - [ ] C and D
-- [ ] A and D
+- [x] A and D
 
 **Explanation**: `` Error` is not inherited from `Exception ``
 
@@ -560,7 +560,7 @@ class Main {
 
 - [ ] It will throw a runtime exception.
 - [ ] It will not compile.
-- [ ] It will print "Hello World!" three times.
+- [x] It will print "Hello World!" three times.
 - [ ] It will run forever.
 
 #### Q35. What is the output of this code?
@@ -580,7 +580,7 @@ class Main {
 - [ ] `[abc, 0, 2, 10]`
 - [ ] The code does not compile.
 - [ ] `[abc, 2, 10, 0]`
-- [ ] `[0, 10, 2, abc]`
+- [x] `[0, 10, 2, abc]`
 
 **Explanation**: The `java.util.Arrays.asList(T... a)` returns a fixed-size list backed by the specified array. (Changes to the returned list "write through" to the array.)
 
