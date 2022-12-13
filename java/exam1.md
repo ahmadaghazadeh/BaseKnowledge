@@ -681,11 +681,11 @@ theList.forEach(System.out::println);
 - [x] final
 - [ ] private
 
-#### Q42. How does the keyword `volatile` affect how a variable is handled?
+#### **Q42. How does the keyword `volatile` affect how a variable is handled?**
 
 - [ ] It will be read by only one thread at a time.
 - [ ] It will be stored on the hard drive.
-- [ ] It will never be cached by the CPU.
+- [x] It will never be cached by the CPU.
 - [ ] It will be preferentially garbage collected.
 
 #### Q43. What is the result of this code?
@@ -697,7 +697,7 @@ System.out.println((int) smooch);
 
 - [ ] an alphanumeric character
 - [ ] a negative number
-- [ ] a positive number
+- [x] a positive number
 - [ ] a ClassCastException
 
 #### Q44. You get a NullPointerException. What is the most likely cause?
@@ -705,7 +705,7 @@ System.out.println((int) smooch);
 - [ ] A file that needs to be opened cannot be found.
 - [ ] A network connection has been lost in the middle of communications.
 - [ ] Your code has used up all available memory.
-- [ ] The object you are using has not been instantiated.
+- [x] The object you are using has not been instantiated.
 
 #### Q45. How would you fix this code so that it compiles?
 
