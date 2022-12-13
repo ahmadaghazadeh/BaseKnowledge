@@ -5,6 +5,7 @@ private static volatile int MY_INT = 0;
 
 public static void main(String[] args)
 {
+	double pi = 3.141;
 	new ChangeListener().start();
 	new ChangeMaker().start();
 }

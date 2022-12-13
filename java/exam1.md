@@ -858,7 +858,7 @@ public class Solution {
 
 #### Q55. Why are ArrayLists better than arrays?
 
-- [ ] You don't have to decide the size of an ArrayList when you first make it.
+- [x] You don't have to decide the size of an ArrayList when you first make it.
 - [ ] You can put more items into an ArrayList than into an array.
 - [ ] ArrayLists can hold more kinds of objects than arrays.
 - [ ] You don't have to decide the type of an ArrayList when you first make it.
@@ -867,7 +867,7 @@ public class Solution {
 
 - [ ] int pi = 3.141;
 - [ ] decimal pi = 3.141;
-- [ ] double pi = 3.141;
+- [x] double pi = 3.141;
 - [ ] float pi = 3.141;
 
 **Reasoning:**
@@ -885,11 +885,11 @@ public class TestReal {
   }
 ```
 
-```
-The default Java type which Java will be using for a float variable will be double.
+ 
+* The default Java type which Java will be using for a float variable will be double.
 So, even if you declare any variable as float, what the compiler has to actually do is to assign a double value to a float variable,
-which is not possible. So, to tell the compiler to treat this value as a float, that 'F' is used.
-```
+which is not possible. So, to tell the compiler to treat this value as a **float, that 'F' is used.**
+ 
 
 #### Q57. Use the magic power to cast a spell
 
@@ -899,7 +899,7 @@ public class MagicPower {
 }
 ```
 
-- [ ] `new MagicPower().castSpell("expecto patronum")`
+- [x] `new MagicPower().castSpell("expecto patronum")`
 - [ ] `MagicPower magicPower = new MagicPower();`
       `magicPower.castSpell();`
 - [ ] `MagicPower.castSpell("expelliarmus");`
@@ -909,7 +909,7 @@ public class MagicPower {
 
 - [ ] constructor
 - [ ] instance
-- [ ] class
+- [x] class
 - [ ] method
 
 #### Q59. What does this code print?
@@ -929,11 +929,11 @@ static void swapsies(int a, int b) {
 ```
 
 - [ ] 10 10
-- [ ] 5 10
+- [x] 5 10
 - [ ] 10 5
 - [ ] 5 5
 
-#### Q60. What is the result of this code?
+#### **Q60. What is the result of this code?**
 
 ```java
 try {
@@ -948,7 +948,7 @@ try {
 ```
 
 - [ ] Hello World
-- [ ] It will not compile because the second catch statement is unreachable
+- [x] It will not compile because the second catch statement is unreachable
 - [ ] Hello World!
 - [ ] It will throw runtime exception
 

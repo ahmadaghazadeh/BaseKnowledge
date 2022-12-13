@@ -804,3 +804,8 @@ In some cases, we may only desire visibility and not atomicity. The use of synch
 * The UnsupportedClassVersionError is a sub-class of the LinkageError and thrown by the Java Virtual Machine (JVM). When a class file is read and when major and minor version numbers are not supported, this error is thrown, a**nd especially during the linking phase, this error is thrown**
 
 **When we tried to compile a program using a higher version of Java and execute it using a JVM of a lower version, this error is thrown**
+
+## Java is Pass by Value, Not Pass by Reference
+Technically, Java is always pass by value, because even though a variable might hold a reference to an object, that object reference is a value that represents the object’s location in memory. Object references are therefore passed by value.
+
+**Both reference data types and primitive data types are passed by value.**
