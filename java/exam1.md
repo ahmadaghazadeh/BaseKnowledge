@@ -718,7 +718,7 @@ public class Nosey {
 }
 ```
 
-- [ ] Make age static.
+- [x] Make age static.
 - [ ] Make age global.
 - [ ] Make age public.
 - [ ] Initialize age to a number.
@@ -736,7 +736,7 @@ public class Duck {
       `ducks.add(waddles);`
 - [ ] `Duck duck = new Duck("Waddles");`
       `ducks.add(waddles);`
-- [ ] `ducks.add(new Duck("Waddles"));`
+- [x] `ducks.add(new Duck("Waddles"));`
 - [ ] `ducks.add(new Waddles());`
 
 #### Q47. If you encounter `UnsupportedClassVersionError` it means the code was `___` on a newer version of Java than the JRE `___` it.
