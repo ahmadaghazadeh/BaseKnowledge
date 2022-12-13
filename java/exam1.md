@@ -803,7 +803,7 @@ public class Solution {
 }
 ```
 
-- [ ] 4
+- [x] 4
 - [ ] 3
 - [ ] 5
 - [ ] A Runtime exception will be thrown
@@ -818,13 +818,13 @@ public class Solution {
 
 - [ ] 1, 2, and 3
 - [ ] only 3
-- [ ] 2 and 3
+- [x] 2 and 3
 - [ ] only 2
 
 #### Q51. Which keyword lets you call the constructor of a parent class?
 
 - [ ] parent
-- [ ] super
+- [x] super
 - [ ] this
 - [ ] new
 
@@ -837,14 +837,14 @@ public class Solution {
   4: System.out.println(c);
 ```
 
-- [ ] It will throw an ArithmeticException.
+- [x] It will throw an ArithmeticException.
 - [ ] It will run and output 0.
 - [ ] It will not compile because of line 3.
 - [ ] It will run and output infinity.
 
-#### Q53. Normally, to access a static member of a class such as Math.PI, you would need to specify the class "Math". What would be the best way to allow you to use simply "PI" in your code?
+#### **Q53. Normally, to access a static member of a class such as Math.PI, you would need to specify the class "Math". What would be the best way to allow you to use simply "PI" in your code?**
 
-- [ ] Add a static import.
+- [x] Add a static import.
 - [ ] Declare local copies of the constant in your code.
 - [ ] This cannot be done. You must always qualify references to static members with the class form which they came from.
 - [ ] Put the static members in an interface and inherit from that interface.
@@ -852,7 +852,7 @@ public class Solution {
 #### Q54. Which keyword lets you use an interface?
 
 - [ ] extends
-- [ ] implements
+- [x] implements
 - [ ] inherits
 - [ ] import
 

@@ -500,6 +500,22 @@ class SynchronizeUsingCopyOnWriteArrayList {
 }
 
 ```
+### Difference Between Array and Arraylist
+
+#### Array
+* Length of Array is static that means one cannot change its length that has been already defined by the developer to that particular element. This Array needs to specify the size of the elements.  
+* In other words, the length of the elements in the array is static or  requires more memory to store the elements and less time to iterate the elements. 
+* Array does not allow generics, though multidimensional in nature. 
+* In the array, giving references to objects or elements  depends upon the type of array such as primitive type or object type.
+* Functions such as indexOf() and remove() are not supported by Arrays in Java.
+#### ArrayList
+* ArrayList uses the size() method to compute the size of the elements. Also, it is dynamic, which means one can change the size of the arraylist if the elements are modified in it, which means the length of the arraylist is variable. 
+* ArrayList requires more memory to store the elements as well as more time to iterate. 
+* ArraList enables the use of generic and single dimensional in nature. 
+* In arrayList, we can convert the primitive int data type into an Integer object with the help of commands such as “arraylist.add(1)” as shown in example. 
+* Since primitive data types can be created in ArrayList, the members of ArrayList are always given references to the  objects at every different memory locations . Thus, in ArrayList, the actual objects or elements are never stored at contiguous locations whereas their References can be stored at contiguous locations. 
+* In ArrayList, primitive types have actual values with contiguous locations, however object type allocation is similar to ArrayList. 
+Operations such as indexOf(), remove() are supported by ArrayList in Java.
 
 ## this vs super
 
