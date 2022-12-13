@@ -743,7 +743,7 @@ public class Duck {
 
 - [ ] executed; interpreting
 - [ ] executed; compiling
-- [ ] compiled; executing
+- [x] compiled; executing
 - [ ] compiled, translating
 
 #### Q48. Given this class, how would you make the code compile?
@@ -770,7 +770,7 @@ public TheClass() {
 }
 ```
 
-- [ ] C
+- [x] C
 
 ```java
 public TheClass() {

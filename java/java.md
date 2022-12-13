@@ -784,3 +784,7 @@ In some cases, we may only desire visibility and not atomicity. The use of synch
 |It improves thread performance.|Synchronized methods degrade the thread performance.|
 |It synchronizes the value of one variable at a time between thread memory and main memory.|It synchronizes the value of all variables between thread memory and main memory.|
 |Volatile fields are not subject to compiler optimization.|Synchronize is subject to compiler optimization.|
+## java.lang.UnsupportedClassVersionError
+* The UnsupportedClassVersionError is a sub-class of the LinkageError and thrown by the Java Virtual Machine (JVM). When a class file is read and when major and minor version numbers are not supported, this error is thrown, a**nd especially during the linking phase, this error is thrown**
+
+**When we tried to compile a program using a higher version of Java and execute it using a JVM of a lower version, this error is thrown**
