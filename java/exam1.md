@@ -1151,7 +1151,7 @@ for (int i = 44; i > 40; i--) {
 
 - [ ] pass by reference
 - [ ] pass by occurrence
-- [ ] pass by value
+- [x] pass by value
 - [ ] API call
 
 #### Q82. In Java, what is the scope of a method's argument or parameter?
