@@ -970,7 +970,7 @@ Reflection is an API that is used to **examine or modify the behavior of methods
  ![image](images/reflection.jpg)
 
   Reflection can be used to get information about class, constructors, and methods as depicted below in tabular format as shown:
-**Class:** The getClass() method is used to get the name of the class to which an object belongs.
+**Class:** The **getClass() or Class.forName("Test")** method is used to get the name of the class to which an object belongs.
 **Constructors:** The getConstructors() method is used to get the public constructors of the class to which an object belongs.
 
 **Methods:** The getMethods() method is used to get the public methods of the class to which an object belongs.
@@ -989,10 +989,11 @@ Method.invoke(Object, parameter)
  [Code Sample](examples/ReflectionSample.java)
 
  ``` java
- import java.lang.reflect.Constructor;
+
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-  
+import java.util.ArrayList;
 // Class 1
 // Of Whose object is to be created
 class Test {
@@ -1043,11 +1044,17 @@ class ReflectionSample {
         // Creating class object from the object using
         // getClass() method
         Class cls = obj.getClass();
+
+        // OR
+        Class<?> clazz = Class.forName("Test");
   
         // Printing the name of class
         // using getName() method
         System.out.println("The name of class is "
                            + cls.getName());
+
+        System.out.println("The name of class is "
+                           + clazz.getName()+" Class.forName");
   
         // Getting the constructor of the class through the
         // object of the class
@@ -1115,9 +1122,24 @@ class ReflectionSample {
   
         // Invoking the method at runtime
         methodcall3.invoke(obj);
+
+        final var test = new ArrayList(10);
+        Class<?> goatClass = test.getClass();
+        Package pkg = goatClass.getPackage();
+
+        System.out.println("Package name is "+
+            pkg.getName());
     }
 }
  ```
+* get Packename
+ ``` java
+    Test test = new Goat("goat");
+    Class<?> goatClass = test.getClass();
+    Package pkg = test.getPackage();
+ ```
+
+
 
 
 

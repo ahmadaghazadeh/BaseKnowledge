@@ -1,7 +1,8 @@
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-  
+import java.util.ArrayList;
 // Class 1
 // Of Whose object is to be created
 class Test {
@@ -52,11 +53,17 @@ class ReflectionSample {
         // Creating class object from the object using
         // getClass() method
         Class cls = obj.getClass();
+
+        // OR
+        Class<?> clazz = Class.forName("Test");
   
         // Printing the name of class
         // using getName() method
         System.out.println("The name of class is "
                            + cls.getName());
+
+        System.out.println("The name of class is "
+                           + clazz.getName()+" Class.forName");
   
         // Getting the constructor of the class through the
         // object of the class
@@ -124,5 +131,12 @@ class ReflectionSample {
   
         // Invoking the method at runtime
         methodcall3.invoke(obj);
+
+        final var test = new ArrayList(10);
+        Class<?> goatClass = test.getClass();
+        Package pkg = goatClass.getPackage();
+
+        System.out.println("Package name is "+
+            pkg.getName());
     }
 }

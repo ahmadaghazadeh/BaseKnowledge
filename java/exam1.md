@@ -1058,7 +1058,7 @@ groucyButton.addActionListener(new ActionListener() {
 
 - [ ] `a -> false;`
 - [ ] `(a) -> false;`
-- [ ] `String a -> false;`
+- [x] `String a -> false;`
 - [ ] `(String a) -> false;`
 
 #### Q73. Which access modifier makes variables and methods visible only in the class where they are declared?
@@ -1066,20 +1066,20 @@ groucyButton.addActionListener(new ActionListener() {
 - [ ] public
 - [ ] protected
 - [ ] nonmodifier
-- [ ] private
+- [x] private
 
 #### Q74. What type of variable can be assigned to only once?
 
 - [ ] private
 - [ ] non-static
-- [ ] final
+- [x] final
 - [ ] static
 
 #### Q75. How would you convert a String to an Int?
 
 - [ ] `"21".intValue()`
 - [ ] `String.toInt("21")`
-- [ ] `Integer.parseInt("21")`
+- [x] `Integer.parseInt("21")`
 - [ ] `String.valueOf("21")`
 
 #### Q76. What method should be added to the Duck class to print the name Moby?
@@ -1098,14 +1098,14 @@ public class Duck {
 }
 ```
 
-- [ ] `public String toString() { return name; } `
+- [x] `public String toString() { return name; } `
 - [ ] `public void println() { System.out.println(name); } `
 - [ ] `String toString() { return this.name; } `
 - [ ] `public void toString() { System.out.println(this.name); } `
 
 #### Q77. Which operator is used to concatenate Strings in Java
 
-- [ ] `+`
+- [x] `+`
 - [ ] `&`
 - [ ] `.`
 - [ ] `-`
@@ -1121,7 +1121,7 @@ for (int i = 44; i > 40; i--) {
 ```
 
 - [ ] two
-- [ ] four
+- [x] four
 - [ ] three
 - [ ] five
 
@@ -1137,13 +1137,13 @@ for (int i = 44; i > 40; i--) {
 
 - [ ] p
 - [ ] r
-- [ ] e
+- [x] e
 - [ ] i
 
 #### Q80. When should you use a static method?
 
 - [ ] when your method is related to the object's characteristics
-- [ ] when you want your method to be available independently of class instances
+- [x] when you want your method to be available independently of class instances
 - [ ] when your method uses an object's instance variable
 - [ ] when your method is dependent on the specific instance that calls it
 
