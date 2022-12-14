@@ -527,7 +527,7 @@ Operations such as indexOf(), remove() are supported by ArrayList in Java.
 
 ### this
 
- [Code Sample](examples/ThisSample.java.java)
+ [Code Sample](examples/ThisSample.java)
 
 ``` java 
  
@@ -864,3 +864,102 @@ parameter -> expression
 * In Java, we can reuse our code using an Is-A relationship or using a Has-A relationship. An **Is-A relationship is also known as inheritance** and a **Has-A relationship is also known as composition** in Java.
  
  ![image](images/IS-A-and-HAS-A-relationship.jpg)
+
+ ### Garbage Collection in Java
+
+ * The main objective of Garbage Collector is to free heap memory by destroying unreachable objects. The garbage collector is the best example of the **Daemon thread** as it is always running in the background. 
+
+Two types of garbage collection activity usually happen in Java.
+
+1. **Minor or incremental Garbage Collection:** It is said to have occurred when unreachable objects in the young generation heap memory are removed.
+2. **Major or Full Garbage Collection:** It is said to have occurred when the objects that survived the minor garbage collection are copied into the old generation or permanent generation heap memory are removed. When compared to the young generation, garbage collection happens less frequently in the old generation.
+
+**Unreachable objects:** An object is said to be unreachable if it doesn’t contain any reference to it. Also, note that objects which are part of the island of isolation are also unreachable. 
+
+ ![image](images/garbagecollection.jpeg)
+
+**Eligibility for garbage collection:** An object is said to be eligible for GC(garbage collection) if it is unreachable. After i = null, integer object 4 in the heap area is suitable for garbage collection in the above image.
+
+### Ways to make an object eligible for Garbage Collector
+1. Nullifying the reference variable
+2. Re-assigning the reference variable
+3. An object created inside the method
+4. Island of Isolation
+
+* Once we make an object eligible for garbage collection, **it may not destroy immediately by the garbage collector**. Whenever JVM runs the Garbage Collector program, then only the object will be destroyed. But when JVM runs Garbage Collector, we can not expect.
+
+1. Using **System.gc()** method: System class contain static method gc() for requesting JVM to run Garbage Collector.
+2. Using **Runtime.getRuntime().gc()** method: Runtime class allows the application to interface with the JVM in which the application is running. Hence by using its gc() method, we can request JVM to run Garbage Collector.
+3. There is no guarantee that any of the above two methods will run Garbage Collector.
+4. The call System.gc() is effectively equivalent to the call : Runtime.getRuntime().gc(). **The only difference is System.gc() is a class method where as Runtime.gc() is an instance method. So, System.gc() is more convenient.**
+
+
+Set references to null(i.e X = Y = null;)
+Call, System.gc();
+Call, System.runFinalization();
+
+ [Code Sample](examples/GarbageCollectorSample.java)
+
+ ### Daemon Thread in Java
+* Daemon thread in Java is a low-priority thread that runs in the background to perform tasks such as garbage collection. Daemon thread in Java is also a service provider thread that provides services to the user thread. Its life depends on the mercy of user threads i.e. when all the user threads die, JVM terminates this thread automatically.
+
+#### Default Nature of Daemon Thread
+* By default, the main thread is always non-daemon but for all the remaining threads, daemon nature will be inherited from parent to child. That is, if the parent is Daemon, the child is also a Daemon and if the parent is a non-daemon, then the child is also a non-daemon.
+* Note: Whenever the last non-daemon thread terminates, all the daemon threads will be terminated automatically.
+
+#### Methods of Daemon Thread
+1. void setDaemon(boolean status): 
+This method marks the current thread as a daemon thread or user thread. For example, if I have a user thread tU then tU.setDaemon(true) would make it a Daemon thread. On the other hand, if I have a Daemon thread tD then calling tD.setDaemon(false) would make it a user thread. 
+2. boolean isDaemon(): 
+This method is used to check that the current thread is a daemon. It returns true if the thread is Daemon. Else, it returns false. 
+
+``` java
+public class DaemonThread extends Thread
+{
+    public DaemonThread(String name){
+        super(name);
+    }
+  
+    public void run()
+    {
+        // Checking whether the thread is Daemon or not
+        if(Thread.currentThread().isDaemon())
+        {
+            System.out.println(getName() + " is Daemon thread");
+        }
+          
+        else
+        {
+            System.out.println(getName() + " is User thread");
+        }
+    }
+      
+    public static void main(String[] args)
+    {
+      
+        DaemonThread t1 = new DaemonThread("t1");
+        DaemonThread t2 = new DaemonThread("t2");
+        DaemonThread t3 = new DaemonThread("t3");
+      
+        // Setting user thread t1 to Daemon
+        t1.setDaemon(true);
+              
+        // starting first 2 threads
+        t1.start();
+        t2.start();
+  
+        // Setting user thread t3 to Daemon
+        t3.setDaemon(true);
+        t3.start();        
+    }
+}
+
+Output: 
+
+t1 is Daemon thread
+t3 is Daemon thread
+t2 is User thread
+
+```
+#### Exceptions in a Daemon thread 
+If you call the setDaemon() method after starting the thread, it would throw **IllegalThreadStateException**.
