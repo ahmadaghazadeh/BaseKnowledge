@@ -1042,14 +1042,14 @@ groucyButton.addActionListener(new ActionListener() {
 
 #### Q70. Java programmers commonly use design patterns. Some examples are the **\_**, which helps create instances of a class, the **\_**, which ensures that only one instance of a class can be created; and the **\_**, which allows for a group of algorithms to be interchangeable.
 
-- [ ] static factory method; singleton; strategy pattern
+- [x] static factory method; singleton; strategy pattern
 - [ ] strategy pattern; static factory method; singleton
 - [ ] creation pattern; singleton; prototype pattern
 - [ ] singleton; strategy pattern; static factory method
 
-#### Q71. Using Java's Reflection API, you can use \_ to get the name of a class and \_ to retrieve an array of its methods.
+#### **Q71. Using Java's Reflection API, you can use \_ to get the name of a class and \_ to retrieve an array of its methods**.
 
-- [ ] this.getClass().getSimpleName(); this.getClass().getDeclaredMethods()
+- [x] this.getClass().getSimpleName(); this.getClass().getDeclaredMethods()
 - [ ] this.getName(); this.getMethods()
 - [ ] Reflection.getName(this); Reflection.getMethods(this)
 - [ ] Reflection.getClass(this).getName(); Reflection.getClass(this).getMethods()

@@ -963,3 +963,162 @@ t2 is User thread
 ```
 #### Exceptions in a Daemon thread 
 If you call the setDaemon() method after starting the thread, it would throw **IllegalThreadStateException**.
+
+## Reflection
+Reflection is an API that is used to **examine or modify the behavior of methods, classes, and interfaces at runtime**. The required classes for reflection are provided under java.lang.reflect package which is essential in order to understand reflection.
+
+ ![image](images/reflection.jpg)
+
+  Reflection can be used to get information about class, constructors, and methods as depicted below in tabular format as shown:
+**Class:** The getClass() method is used to get the name of the class to which an object belongs.
+**Constructors:** The getConstructors() method is used to get the public constructors of the class to which an object belongs.
+
+**Methods:** The getMethods() method is used to get the public methods of the class to which an object belongs.
+
+* We can invoke a method through reflection if we know its name and parameter types. We use two methods for this purpose as described below before moving ahead as follows
+
+``` java
+Class.getDeclaredMethod(name, parametertype)
+Method.invoke(Object, parameter)
+```
+**Tip:** If the method of the class doesn’t accept any parameter then null is passed as an argument.
+**Note:** Through reflection, we can access the private variables and methods of a class with the help of its class object and invoke the method by using the object as discussed above. We use below two methods for this purpose.
+
+ **Field.setAccessible(true):** Allows to access the field irrespective of the access modifier used with the field.
+
+ [Code Sample](examples/ReflectionSample.java)
+
+ ``` java
+ import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+  
+// Class 1
+// Of Whose object is to be created
+class Test {
+    // creating a private field
+    private String s;
+  
+    // Constructor of this class
+  
+    // Constructor 1
+    // Public constructor
+    public Test() { s = "Ahmad Aghazadeh Test Class"; }
+  
+    // Constructor 2
+    // no arguments
+    public void method1()
+    {
+        System.out.println("The string is " + s);
+    }
+  
+    // Constructor 3
+    // int as argument
+    public void method2(int n)
+    {
+        System.out.println("The number is " + n);
+    }
+  
+    // Constructor 4
+    // Private method
+    private void method3()
+    {
+        System.out.println("Private method invoked");
+    }
+}
+  
+// Class 2
+// Main class
+class ReflectionSample {
+  
+    // Main driver method
+    public static void main(String args[]) throws Exception
+    {
+        // Creating object whose property is to be checked
+  
+        // Creating an object of class 1 inside main()
+        // method
+        Test obj = new Test();
+  
+        // Creating class object from the object using
+        // getClass() method
+        Class cls = obj.getClass();
+  
+        // Printing the name of class
+        // using getName() method
+        System.out.println("The name of class is "
+                           + cls.getName());
+  
+        // Getting the constructor of the class through the
+        // object of the class
+        Constructor constructor = cls.getConstructor();
+  
+        // Printing the name of constructor
+        // using getName() method
+        System.out.println("The name of constructor is "
+                           + constructor.getName());
+  
+        // Display message only
+        System.out.println(
+            "The public methods of class are : ");
+  
+        // Getting methods of the class through the object
+        // of the class by using getMethods
+        Method[] methods = cls.getMethods();
+  
+        // Printing method names
+        for (Method method : methods)
+            System.out.println(method.getName());
+  
+        // Creates object of desired method by
+        // providing the method name and parameter class as
+        //  arguments to the getDeclaredMethod() method
+        Method methodcall1
+            = cls.getDeclaredMethod("method2", int.class);
+  
+        // Invoking the method at runtime
+        methodcall1.invoke(obj, 19);
+  
+        // Creates object of the desired field by
+        // providing the name of field as argument to the
+        // getDeclaredField() method
+        Field field = cls.getDeclaredField("s");
+  
+        // Allows the object to access the field
+        // irrespective of the access specifier used with
+        // the field
+        field.setAccessible(true);
+  
+        // Takes object and the new value to be assigned
+        // to the field as arguments
+        field.set(obj, "JAVA");
+  
+        // Creates object of desired method by providing the
+        // method name as argument to the
+        // getDeclaredMethod()
+        Method methodcall2
+            = cls.getDeclaredMethod("method1");
+  
+        // Invokes the method at runtime
+        methodcall2.invoke(obj);
+  
+        // Creates object of the desired method by providing
+        // the name of method as argument to the
+        // getDeclaredMethod() method
+        Method methodcall3
+            = cls.getDeclaredMethod("method3");
+  
+        // Allows the object to access the method
+        // irrespective of the access specifier used with
+        // the method
+        methodcall3.setAccessible(true);
+  
+        // Invoking the method at runtime
+        methodcall3.invoke(obj);
+    }
+}
+ ```
+
+
+
+
