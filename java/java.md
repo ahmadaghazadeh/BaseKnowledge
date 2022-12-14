@@ -820,3 +820,19 @@ Technically, Java is always pass by value, because even though a variable might 
 1. To improve the performance of the system.
 2. To achieve machine level/memory level communication.
 3. To use already existing legacy non-java code.
+
+## advantages & disadvantage of inheritance
+
+### Advantages of Inheritance in OOPS
+1. The main advantage of the inheritance is that it helps in reusability of the code. The codes are defined only once and can be used multiple times. In java we define the super class or base class in which we define the functionalities and any number of child classes can use the functionalities at any time.
+2. Through inheritance a lot of time and efforts are being saved.
+3. It improves the program structure which can be readable.
+4. The program structure is short and concise which is more reliable.
+5. The codes are easy to debug. Inheritance allows the program to capture the bugs easily
+6. Inheritance makes the application code more flexible to change.
+7. Inheritance results in better organisation of codes into smaller, simpler and simpler compilation units.
+### Disadvantages of Inheritance in OOPS
+1. The main disadvantage of the inheritance is that the two classes(base class and super class) are tightly coupled that is the classes are dependent on each other.
+2. If the functionality of the base class is changed then the changes have to be done on the child classes also.
+3. If the methods in the super class are deleted then it is very difficult to maintain the functionality of the child class which has implemented the super class’s method.
+4. It increases the time and efforts take to jump through different levels of the inheritance.

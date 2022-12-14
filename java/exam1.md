@@ -963,7 +963,7 @@ try {
 
 #### Q62. Which operator would you use to find the remainder after division?
 
-- [ ] `%`
+- [x] `%`
 - [ ] `//`
 - [ ] `/`
 - [ ] `DIV`
@@ -974,7 +974,7 @@ try {
 
 - [ ] Overridden methods of the parent class cannot be reused.
 - [ ] Responsibilities are not evenly distributed between parent and child classes.
-- [ ] Classes related by inheritance are tightly coupled to each other.
+- [x] Classes related by inheritance are tightly coupled to each other.
 - [ ] The internal state of the parent class is accessible to its children.
 
 [Reference](http://erpbasic.blogspot.com/2012/01/inheritance-advantages-and.html#:~:text=Main%20disadvantage%20of%20using%20inheritance,used%20independent%20of%20each%20other.&text=4.,case%20of%20using%20that%20method.)
