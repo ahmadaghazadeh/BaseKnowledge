@@ -836,3 +836,20 @@ Technically, Java is always pass by value, because even though a variable might 
 2. If the functionality of the base class is changed then the changes have to be done on the child classes also.
 3. If the methods in the super class are deleted then it is very difficult to maintain the functionality of the child class which has implemented the super class’s method.
 4. It increases the time and efforts take to jump through different levels of the inheritance.
+
+## lambda 
+Lambda Expressions were added in Java 8.
+
+A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+
+![image](images/lambda-expression.jpg)
+``` java
+
+parameter -> expression
+
+(parameter1, parameter2) -> expression
+
+
+(parameter1, parameter2) -> { code block }
+
+```

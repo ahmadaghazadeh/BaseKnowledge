@@ -983,7 +983,7 @@ try {
 
 - [ ] `Array<Integer> numbers = new Array<Integer>(10);`
 - [ ] `Array[int] numbers = new Array[int](10);`
-- [ ] `int[] numbers = new int[10];`
+- [x] `int[] numbers = new int[10];`
 - [ ] `int numbers[] = int[10];`
 
 #### Q65. Refactor this event handler to a lambda expression:
