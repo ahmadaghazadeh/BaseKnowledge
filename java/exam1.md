@@ -957,7 +957,7 @@ try {
 - [ ] finally
 - [ ] native
 - [ ] interface
-- [ ] unsigned
+- [x] unsigned
 
 **Explanation:** `native` is a part of JNI interface
 

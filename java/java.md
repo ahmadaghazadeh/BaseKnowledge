@@ -809,3 +809,14 @@ In some cases, we may only desire visibility and not atomicity. The use of synch
 Technically, Java is always pass by value, because even though a variable might hold a reference to an object, that object reference is a value that represents the object’s location in memory. Object references are therefore passed by value.
 
 **Both reference data types and primitive data types are passed by value.**
+
+## native
+
+* The native keyword in Java is applied to a method to indicate that the method is implemented in native code using JNI (Java Native Interface). The native keyword is a modifier that is applicable only for methods, and we can’t apply it anywhere else. The methods which are implemented in C, C++ are called native methods or foreign methods.
+
+* The native modifier indicates that a method is implemented in platform-dependent code, often seen in C language. Native modifier indicates that a method is implemented in platform-dependent code, often in C.
+
+### Main objectives of the native keyword
+1. To improve the performance of the system.
+2. To achieve machine level/memory level communication.
+3. To use already existing legacy non-java code.
