@@ -986,7 +986,7 @@ try {
 - [x] `int[] numbers = new int[10];`
 - [ ] `int numbers[] = int[10];`
 
-#### Q65. Refactor this event handler to a lambda expression:
+#### **Q65. Refactor this event handler to a lambda expression:**
 
 ```java
 groucyButton.addActionListener(new ActionListener() {
@@ -998,25 +998,25 @@ groucyButton.addActionListener(new ActionListener() {
 ```
 
 - [ ] `groucyButton.addActionListener(ActionListener listener -> System.out.println("Press me one more time..."));`
-- [ ] `groucyButton.addActionListener((event) -> System.out.println("Press me one more time..."));`
+- [x] `groucyButton.addActionListener((event) -> System.out.println("Press me one more time..."));`
 - [ ] `groucyButton.addActionListener(new ActionListener(ActionEvent e) {() -> System.out.println("Press me one more time...");});`
 - [ ] `groucyButton.addActionListener(() -> System.out.println("Press me one more time..."));`
 
 [Reference](https://www.codejava.net/java-core/the-java-language/java-8-lambda-listener-example)
 
-#### Q66. Which functional interfaces does Java provide to serve as data types for lambda expressions?
+#### **Q66. Which functional interfaces does Java provide to serve as data types for lambda expressions?**
 
 - [ ] Observer, Observable
 - [ ] Collector, Builder
 - [ ] Filter, Map, Reduce
-- [ ] Consumer, Predicate, Supplier
+- [x] Consumer, Predicate, Supplier
 
 [Reference](https://www.baeldung.com/java-8-functional-interfaces)
 
 #### Q67. What is a valid use of the hashCode() method?
 
 - [ ] encrypting user passwords
-- [ ] deciding if two instances of a class are equal
+- [x] deciding if two instances of a class are equal
 - [ ] enabling HashMap to find matches faster
 - [ ] moving objects from a List to a HashMap
 
@@ -1025,16 +1025,16 @@ groucyButton.addActionListener(new ActionListener() {
 #### Q68. What kind of relationship does "extends" denote?
 
 - [ ] uses-a
-- [ ] is-a
+- [x] is-a
 - [ ] has-a
 - [ ] was-a
 
 [Reference](https://www.c-sharpcorner.com/UploadFile/3614a6/is-a-and-has-a-relationship-in-java/)
 
-#### Q69. How do you force an object to be garbage collected?
+#### **Q69. How do you force an object to be garbage collected?**
 
 - [ ] Set object to null and call Runtime.gc()
-- [ ] Set object to null and call System.gc()
+- [x] Set object to null and call System.gc()
 - [ ] Set object to null and call Runtime.getRuntime().runFinalization()
 - [ ] There is no way to force an object to be garbage collected
 
