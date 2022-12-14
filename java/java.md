@@ -500,6 +500,10 @@ class SynchronizeUsingCopyOnWriteArrayList {
 }
 
 ```
+
+``` java
+   ArrayList<String> words = new ArrayList<>(Arrays.asList("Hello", "World"));
+```
 ### Difference Between Array and Arraylist
 
 #### Array
@@ -1138,9 +1142,49 @@ class ReflectionSample {
     Class<?> goatClass = test.getClass();
     Package pkg = test.getPackage();
  ```
+## Hashset
+The HashSet class implements the Set interface, backed by a hash table which is actually a HashMap instance. No guarantee is made as to the iteration order of the set which means that the class does not guarantee the constant order of elements over time.
+
+* HashSet stores the elements by using a mechanism called hashing.
+* HashSet contains unique elements only.
+* HashSet allows null value.
+* HashSet class is non synchronized.
+* HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+* HashSet is the best approach for search operations.
+* The initial default capacity of HashSet is 16, and the load factor is 0.75.
+* HashSet also implements Serializable and Cloneable interfaces.
+
+### Difference between List and Set
+A list can contain duplicate elements whereas Set contains unique elements only.
+
+``` java
+Set s = Collections.synchronizedSet(new HashSet(...));
+
+HashSet<E> hs = new HashSet<E>(int initialCapacity, float loadFactor);
+
+``` 
+
+### HashSet vs HashMap
+
+|BASIS|HashSet|HashMap|
+|:----|:----|:----|
+|_Implementation_|HashSet implements Set interface.|HashMap implements Map interface.|
+|_Duplicates_|HashSet doesn’t allow duplicate values.|HashMap store key, value pairs and it does not allow duplicate keys. If key is duplicate then the old key is replaced with the new value.|
+|_Number of objects during storing objects_|HashSet requires only one object add(Object o).|HashMap requires two objects put(K key, V Value) to add an element to the HashMap object.|
+|_Dummy value_|HashSet internally uses HashMap to add elements. In HashSet, the argument passed in add(Object) method serves as key K. Java internally associates dummy value for each value passed in add(Object) method.|HashMap does not have any concept of dummy value.|
+|_Storing or Adding mechanism_|HashSet internally uses the HashMap object to store or add the objects.|HashMap internally uses hashing to store or add objects|
+|_Faster_|HashSet is slower than HashMap.|HashMap is faster than HashSet.|
+|_Insertion_|HashSet uses the add() method for add or storing data.|HashMap uses the put() method for storing data.|
+|_Example_|HashSet is a set, e.g. {1, 2, 3, 4, 5, 6, 7}.|HashMap is a key -> value pair(key to value) map, e.g. {a -> 1, b -> 2, c -> 2, d -> 1}.|
+
+### HashSet vs TreeSet
 
 
-
-
+|BASIS|HashSet|TreeSet|
+|:----|:----|:----|
+|_Speed and internal implementation_|For operations like search, insert and delete. It takes constant time for these operations on average. HashSet is faster than TreeSet. HashSet is Implemented using a hash table.|TreeSet takes O(Log n) for search, insert and delete which is higher than HashSet. **But TreeSet keeps sorted data.** **Also, it supports operations like higher() (Returns least higher element), floor(), ceiling(), etc. These operations are also O(Log n) in TreeSet and not supported in HashSet. TreeSet is implemented using a Self Balancing Binary Search Tree (Red-Black Tree). TreeSet is backed by TreeMap in Java.**|
+|_Ordering_|&nbsp; Elements in HashSet are not ordered.|TreeSet maintains objects in Sorted order defined by either Comparable or Comparator method in Java. TreeSet elements are sorted in ascending order by default. It offers several methods to deal with the ordered set like first(), last(), headSet(), tailSet(), etc.|
+|_Null Object_|HashSet allows the null object.|TreeSet doesn’t allow null Object and throw NullPointerException, Why, because TreeSet uses compareTo() method to compare keys and compareTo() will throw java.lang.NullPointerException.|
+|_Comparison_|HashSet uses equals() method to compare two objects in Set and for detecting duplicates.|TreeSet uses compareTo() method for same purpose. If equals() and compareTo() are not consistent, i.e. for two equal object equals should return true while compareTo() should return zero, then it will break the contract of the Set interface and will allow duplicates in Set implementations like TreeSet|
 
 

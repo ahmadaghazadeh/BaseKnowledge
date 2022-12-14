@@ -1156,7 +1156,7 @@ for (int i = 44; i > 40; i--) {
 
 #### Q82. In Java, what is the scope of a method's argument or parameter?
 
-- [ ] inside the method
+- [x] inside the method
 - [ ] both inside and outside the method
 - [ ] neither inside nor outside the method
 - [ ] outside the method
@@ -1175,9 +1175,9 @@ public class Main {
 - [ ] 5
 - [ ] 8
 - [ ] 1
-- [ ] 3
+- [x] 3
 
-#### Q84. Which change will make this code compile successfully?
+#### **Q84. Which change will make this code compile successfully?**
 
 ```java
 1: public class Main {
@@ -1192,11 +1192,11 @@ public class Main {
 - [ ] Change line 2 to `public static final String message`
 - [ ] Change line 6 to `public void print2(){}`
 - [ ] Remove the body of the `print2` method and add a semicolon.
-- [ ] Remove the body of the `print` method.
+- [x] Remove the body of the `print` method.
 
 **Explanation**: Changing line 2 to `public static final String message` raises the error `message not initialized in the default constructor`
 
-#### Q85. What is the output of this code?
+#### **Q85. What is the output of this code?**
 
 ```java
 import java.util.*;
@@ -1213,18 +1213,18 @@ class Main {
 ```
 
 - [ ] falsefalse
-- [ ] truetrue
+- [x] truetrue
 - [ ] falsetrue
 - [ ] truefalse
 
-#### Q86. Which code snippet is valid?
+#### **Q86. Which code snippet is valid?**
 
 - [ ] `ArrayList<String> words = new ArrayList<String>(){"Hello", "World"};`
 - [ ] `ArrayList words = Arrays.asList("Hello", "World");`
 - [ ] `ArrayList<String> words = {"Hello", "World"};`
-- [ ] `ArrayList<String> words = new ArrayList<>(Arrays.asList("Hello", "World"));`
+- [x] `ArrayList<String> words = new ArrayList<>(Arrays.asList("Hello", "World"));`
 
-#### Q87. What is the output of this code?
+#### **Q87. What is the output of this code?**
 
 ```java
 class Main {
