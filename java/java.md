@@ -1187,4 +1187,4 @@ HashSet<E> hs = new HashSet<E>(int initialCapacity, float loadFactor);
 |_Null Object_|HashSet allows the null object.|TreeSet doesn’t allow null Object and throw NullPointerException, Why, because TreeSet uses compareTo() method to compare keys and compareTo() will throw java.lang.NullPointerException.|
 |_Comparison_|HashSet uses equals() method to compare two objects in Set and for detecting duplicates.|TreeSet uses compareTo() method for same purpose. If equals() and compareTo() are not consistent, i.e. for two equal object equals should return true while compareTo() should return zero, then it will break the contract of the Set interface and will allow duplicates in Set implementations like TreeSet|
 
-
+## PriorityQueue

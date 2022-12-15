@@ -1,6 +1,6 @@
 ## C#
 
-#### 1. C# Interface vs Abstract Class Comparison Table
+## 1. C# Interface vs Abstract Class Comparison Table
 
 | The Basis of comparison|C# Interface|C# Abstract Class|
 |------------------------|------------|-----------------|
@@ -19,7 +19,7 @@
 
 * These both C# Interface vs Abstract Class are great object-oriented programming concepts that are used highly in developing applications as per the requirement. It is purely selected by the technical leads with which they are more comfortable and the business requirement. Both are easy to use and simple to learn in any programming language.
 
-#### 2. Delegates
+## 2. Delegates
 
 * What if we want to pass a function as a parameter? How does C# handles the callback functions or event handler? The answer is - delegate.
 
@@ -157,7 +157,7 @@ class Program
 D8- elegate is used to declare an event and anonymous methods in C#.
 
 
-#### 3.
+## 3. asynchronous
 
 C# and .NET Framework (4.5 & Core) supports asynchronous programming using some native functions, classes, and reserved keywords.
 
@@ -292,9 +292,9 @@ In the above program, we do await result1 and await result2 just before we need 
 
 Thus, you can use async, await, and Task to implement asynchronous programming in .NET Framework or .NET Core using C#.
 
-#### 4. Attributes (Annotation In Java)
+## 4. Attributes (Annotation In Java)
 
-*Attributes are used in C# to convey declarative information or metadata about various code elements such as methods, assemblies, properties, types, etc. Attributes are added to the code by using a declarative tag that is placed using square brackets ([ ]) on top of the required code element. There are two types of Attributes implementations provided by the .NET Framework are:
+* Attributes are used in C# to convey declarative information or metadata about various code elements such as methods, assemblies, properties, types, etc. Attributes are added to the code by using a declarative tag that is placed using square brackets ([ ]) on top of the required code element. There are two types of Attributes implementations provided by the .NET Framework are:
 
 1- Predefined Attributes
 2- Custom Attributes
@@ -322,3 +322,6 @@ Predefined attributes are those attributes that are a part of the .NET Framework
 |Serializable|This attribute signifies that the field of the serializable class can be serialized.|
 |ThreadStatic|This attribute indicates that there is a unique static field value for each thread.|
 |DllImport|This attribute indicates that the method is a static entry point as shown by the unmanaged DLL.|
+
+### Custom Attributes
+* Custom attributes can be created in C# for attaching declarative information to methods, assemblies, properties, types, etc. in any way required. 
