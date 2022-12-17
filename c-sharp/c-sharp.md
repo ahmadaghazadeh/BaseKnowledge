@@ -537,3 +537,49 @@ public class D : E
     }
 }
 ```
+
+## Property
+Properties combine aspects of both fields and methods. To the user of an object, a property appears to be a field, accessing the property requires the same syntax. To the implementer of a class, a property is one or two code blocks, representing a get accessor and/or a set accessor. The code block for the get accessor is executed when the property is read; the code block for the set accessor is executed when the property is assigned a value. A property without a set accessor is considered read-only. A property without a get accessor is considered write-only. A property that has both accessors is read-write. In C# 9 and later, you can use an init accessor instead of a set accessor to make the property read-only.
+
+``` c#
+public class Date
+{
+    private int _month = 7;  // Backing store
+
+    public int Month
+    {
+        get => _month;
+        set
+        {
+            if ((value > 0) && (value < 13))
+            {
+                _month = value;
+            }
+        }
+    }
+}
+```
+
+### Object initializers
+* Object initializers let you assign values to any accessible fields or properties of an object at creation time without having to invoke a constructor followed by lines of assignment statements. The object initializer syntax enables you to specify arguments for a constructor or omit the arguments (and parentheses syntax).
+``` c#
+public class Cat
+{
+    // Auto-implemented properties.
+    public int Age { get; set; }
+    public string Name { get; set; }
+
+    public Cat()
+    {
+    }
+
+    public Cat(string name)
+    {
+        this.Name = name;
+    }
+}
+
+Cat cat = new Cat { Age = 10, Name = "Fluffy" };
+Cat sameCat = new Cat("Fluffy"){ Age = 10 };
+
+```

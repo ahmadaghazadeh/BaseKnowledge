@@ -239,7 +239,7 @@ foreach(string employee in employeeQuery)
 - [ ] public int Age { get - set }
 - [ ] public int Age: get set;
 - [ ] public int Age (get, set );
-- [ ] public int Age { get; set; }
+- [x] public int Age { get; set; }
 
 [Official documentation: Using Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)
 
