@@ -325,3 +325,27 @@ Predefined attributes are those attributes that are a part of the .NET Framework
 
 ### Custom Attributes
 * Custom attributes can be created in C# for attaching declarative information to methods, assemblies, properties, types, etc. in any way required. 
+
+1. Define a custom attribute class that is derived from System.Attribute class.
+2. The custom attribute class name should have the suffix Attribute.
+3. Use the attribute AttributeUsage to specify the usage of the custom attribute class created.
+4. Create the constructor and the accessible properties of the custom attribute class.
+
+``` c#
+    Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActionToViewDataAttribute))
+
+    classType.GetProperties()[i].GetCustomAttributes(true)
+```
+
+## Difference between Ref and Out keywords
+* The out is a keyword in C# which is used for the passing the arguments to methods as a reference type. It is generally used when a method returns multiple values. The out parameter does not pass the property.
+
+* The ref is a keyword in C# which is used for the passing the arguments by a reference. Or we can say that if any changes made in this argument in the method will reflect in that variable when the control return to the calling method. The ref parameter does not pass the property.
+ 
+ |ref keyword|out keyword|
+|:----|:----|
+|It is necessary the parameters should initialize before it pass to ref.|It is not necessary to initialize parameters before it pass to out.|
+|It is not necessary to initialize the value of a parameter before returning to the calling method.|It is necessary to initialize the value of a parameter before returning to the calling method.|
+|The passing of value through ref parameter is useful when the called method also need to change the value of passed parameter.|The declaring of parameter through out parameter is useful when a method return multiple values.|
+|When ref keyword is used the data may pass in bi-directional.|When out keyword is used the data only passed in unidirectional.|
+

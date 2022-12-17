@@ -27,6 +27,7 @@ namespace app.Attributes
 
             PropertyInfo[] properties = classType.GetProperties();
 
+
             // for loop to read through all methods
 
             for (int i = 0; i < properties.GetLength(0); i++)
@@ -37,6 +38,7 @@ namespace app.Attributes
                 // by the GetCustomAttributes method
 
                 object[] attributesArray = properties[i].GetCustomAttributes(true);
+               
 
                 // foreach loop to read through 
                 // all attributes of the method
