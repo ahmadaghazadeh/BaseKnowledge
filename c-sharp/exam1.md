@@ -219,7 +219,7 @@ foreach(string employee in employeeQuery)
       `/_ Single Line _/`
 - [ ] `//\* Multiline`
       `/ Single Line`
-- [ ] `// Single Line`
+- [x] `// Single Line`
       `/* Multiline */`
 
 [w3schools: C# Comments](https://www.w3schools.com/cs/cs_comments.php)
@@ -229,7 +229,7 @@ foreach(string employee in employeeQuery)
 - [ ] Make it public
 - [ ] Make it static
 - [ ] Make it private
-- [ ] Make it virtual
+- [x] Make it virtual
 
 1. [Official documentation: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)
 2. [Official documentation: abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)

@@ -504,3 +504,36 @@ foreach (int i in numQuery2)
 }
 ```
 * In the previous example, notice that the conditional expression (num % 2 == 0) is passed as an in-line argument to the Where method: Where(num => num % 2 == 0). This inline expression is called a **lambda expression**.
+
+
+## virtual and abstract
+* Abstract methods do **not provide an implementation** and they force the derived classes to override the method. It is declared under abstract class. An abstract method only has the method definition
+
+* Virtual methods **have an implementation**, unlike the Abstract method and it can exist in the abstract and non-abstract class. It provides the derived classes with the option of overriding it.
+
+### Virtual Functions
+The virtual keyword is useful in modifying a method, property, indexer, or event. When you have a function defined in a class that you want to be implemented in an inherited class(es), you use virtual functions. The virtual functions could be implemented differently in different inherited class and the call to these functions will be decided at runtime.
+
+``` c#
+public abstract class E
+{
+    public abstract void AbstractMethod(int i);
+
+    public virtual void VirtualMethod(int i)
+    {
+        // Default implementation which can be overridden by subclasses.
+    }
+}
+
+public class D : E
+{
+    public override void AbstractMethod(int i)
+    {
+        // You HAVE to override this method
+    }
+    public override void VirtualMethod(int i)
+    {
+        // You are allowed to override this method.
+    }
+}
+```
