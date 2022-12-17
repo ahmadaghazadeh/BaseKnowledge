@@ -431,3 +431,45 @@ List<Geeks> g = new List<Geeks>
             Console.WriteLine();
         }
 ```
+## Dictionary 
+* In C#, Dictionary is a generic collection which is generally used to store key/value pairs. The working of Dictionary is quite similar to the non-generic hashtable. The advantage of Dictionary is, it is generic type. 
+
+*Important Points:
+
+1. The Dictionary class implements the
+  IDictionary<TKey,TValue> Interface
+  IReadOnlyCollection<KeyValuePair<TKey,TValue>> Interface
+  IReadOnlyDictionary<TKey,TValue> Interface
+  IDictionary Interface
+2. In Dictionary, the key cannot be null, but value can be.
+3. In Dictionary, key must be unique. Duplicate keys are not allowed if you try to use duplicate key then compiler will throw an exception.
+4. In Dictionary, you can only store same types of elements.
+5. The capacity of a Dictionary is the number of elements that Dictionary can hold.
+
+## difference between a.Equals(b) and a == b
+* The Equals method is just a virtual one defined in System.Object, and overridden by whichever classes choose to do so. The == operator is an operator which can be overloaded by classes, but which usually has identity behaviour.
+
+* For reference types where == has not been overloaded, it compares whether two references refer to the same object - which is exactly what the implementation of Equals does in System.Object.
+
+* Value types do not provide an overload for == by default. However, most of the value types provided by the framework provide their own overload. The default implementation of Equals for a value type is provided by ValueType, and uses reflection to make the comparison, which makes it significantly slower than a type-specific implementation normally would be. This implementation also calls Equals on pairs of references within the two values being compared.
+
+``` c#
+string a = new string(new char[] {'h', 'e', 'l', 'l', 'o'});
+string b = new string(new char[] {'h', 'e', 'l', 'l', 'o'});
+
+Console.WriteLine (a==b);
+Console.WriteLine (a.Equals(b));
+
+// Now let's see what happens with the same tests but
+// with variables of type object
+object c = a;
+object d = b;
+
+Console.WriteLine (c==d);
+Console.WriteLine (c.Equals(d));
+
+True
+True
+False
+True
+```

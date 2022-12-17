@@ -107,7 +107,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 #### Q8. What is the difference between an anonymous type and a regular data type?
 
-- [ ] Anonymous types don't have type names
+- [x] Anonymous types don't have type names
 - [ ] Anonymous types can only be static
 - [ ] Anonymous types can be used only in struts
 - [ ] Anonymous types don't work with LINQ.
@@ -118,7 +118,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 - [ ] when you need a jagged collection structure
 - [ ] when you need to store values of the same type
-- [ ] when you need to store key-value pairs rather than single values
+- [x] when you need to store key-value pairs rather than single values
 - [ ] when you need an ordered, searchable list
 
 [Official documentation: Dictionary<TKey,TValue> Class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-5.0)
@@ -127,7 +127,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 - [ ] The .Equals method compares reference identities while the `==` compares contents.
 - [ ] The .Equals method compares primitive values while `==` compares all values.
-- [ ] The .Equals method compares contents while `==` compares reference identity.
+- [x] The .Equals method compares contents while `==` compares reference identity.
 - [ ] The .Equals method compares reference type while `==` compares primitive value types
 
 1. [Official documentation: Object.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals)
