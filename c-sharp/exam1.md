@@ -137,7 +137,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 - [ ] when you try to instantiate two objects at the same time in the same class or struct
 - [ ] when you are trying to execute an action after a user event is registered
-- [ ] when simultaneous instructions are waiting on each other to finish before executing
+- [x] when simultaneous instructions are waiting on each other to finish before executing
 - [ ] when you try to execute a series of events simultaneously on multiple threads
 
 [Official documentation: Deadlocks and race conditions](https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices#deadlocks-and-race-conditions)
@@ -146,7 +146,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 - [ ] It allows access to asynchronous methods in the C# API
 - [ ] It allows thread pooling and synchronous processes in static classes.
-- [ ] It allows the await keyword to be used in a method
+- [x] It allows the await keyword to be used in a method
 - [ ] It allows access to synchronous methods in the C# API
 
 [Official documentation: async](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async)
@@ -156,14 +156,14 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 - [ ] a class or struct, including its variables and functions
 - [ ] a primitive data type that can be created only at compile time
 - [ ] a value type that can be used only with an abstract class
-- [ ] an instance of a class or struct that includes fields, properties, and/or methods
+- [x] an instance of a class or struct that includes fields, properties, and/or methods
 
 [Official documentation: Objects](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/objects)
 
 #### Q14. Which code snippet declares an anonymous type named userData?
 
 - [ ] `var<<!---->T> userData = new <<!---->T> { name = "John", age = 32 };`
-- [ ] `var userData = new { name = "John", age = 32 };`
+- [x] `var userData = new { name = "John", age = 32 };`
 - [ ] `AType userData = new AType { name = "John", age = 32 };`
 - [ ] `Anonymous<T> userData = new Anonymous<T> { name = "John", age = 32 };`
 
@@ -173,7 +173,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 `public void userInput(string charParameters) { }`
 
-- [ ] nothing
+- [x] nothing
 - [ ] a Boolean
 - [ ] a string variable
 - [ ] an integer
@@ -195,7 +195,7 @@ foreach(string employee in employeeQuery)
 }
 ```
 
-- [ ] ascending
+- [x] ascending
 - [ ] unordered
 - [ ] descending
 - [ ] first in, first out
@@ -205,7 +205,7 @@ foreach(string employee in employeeQuery)
 #### Q17. Lambda expressions are often used in tandem with which of the following?
 
 - [ ] Namespaces
-- [ ] LINQ
+- [x] LINQ
 - [ ] Type Aliasing
 - [ ] Assemblies
 

@@ -473,3 +473,34 @@ True
 False
 True
 ```
+
+## Language Integrated Query (LINQ) (C#)
+
+* Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. Traditionally, queries against data are expressed as simple strings without type checking at compile time or IntelliSense support. Furthermore, you have to learn a different query language for each type of data source: SQL databases, XML documents, various Web services, and so on. With LINQ, a query is a first-class language construct, just like classes, methods, events. You write queries against strongly typed collections of objects by using language keywords and familiar operators. The LINQ family of technologies provides a consistent query experience for objects (LINQ to Objects), relational databases (LINQ to SQL), and XML (LINQ to XML).
+
+* For a developer who writes queries, the most visible "language-integrated" part of LINQ is the query expression. Query expressions are written in a declarative **query syntax**.
+
+``` c#
+int[] numbers = { 5, 10, 8, 3, 6, 12};
+
+//Query syntax:
+IEnumerable<int> numQuery1 =
+    from num in numbers
+    where num % 2 == 0
+    orderby num
+    select num;
+
+//Method syntax:
+IEnumerable<int> numQuery2 = numbers.Where(num => num % 2 == 0).OrderBy(n => n);
+
+foreach (int i in numQuery1)
+{
+    Console.Write(i + " ");
+}
+Console.WriteLine(System.Environment.NewLine);
+foreach (int i in numQuery2)
+{
+    Console.Write(i + " ");
+}
+```
+* In the previous example, notice that the conditional expression (num % 2 == 0) is passed as an in-line argument to the Where method: Where(num => num % 2 == 0). This inline expression is called a **lambda expression**.
