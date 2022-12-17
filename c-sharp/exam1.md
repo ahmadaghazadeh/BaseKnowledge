@@ -55,7 +55,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 1. [Official documentation: Attribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=net-5.0)
 2. [Official documentation: Attribute.GetCustomAttribute Method](https://docs.microsoft.com/en-us/dotnet/api/system.attribute.getcustomattribute?view=net-5.0)
 
-#### Q5. What is the difference between the ref and out keywords?
+#### Q5. **What is the difference between the ref and out keywords**?
 
 - [ ] Variables passed to out specify that the parameter is an output parameter, while ref specifies that a variable may be passed to a function without being initialized.
 - [ ] Variables passed to ref can be passed to a function without being initialized, while out specifies that the value is a reference value that can be changed inside the calling method.
@@ -67,7 +67,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 #### Q6. How could you retrieve information about a class, as well as create an instance at runtime?
 
-- [ ] reflection
+- [x] reflection
 - [ ] serialization
 - [ ] abstraction
 - [ ] dependency injection
