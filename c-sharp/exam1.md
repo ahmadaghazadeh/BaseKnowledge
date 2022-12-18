@@ -261,7 +261,7 @@ foreach(string employee in employeeQuery)
 
 [Official documentation: Thread pool characteristics](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool#thread-pool-characteristics)
 
-#### Q23. Which choice represents a class that inherits behavior from a base class?
+#### **Q23. Which choice represents a class that inherits behavior from a base class?**
 
 - [ ] a second base class
 - [ ] a revised class
