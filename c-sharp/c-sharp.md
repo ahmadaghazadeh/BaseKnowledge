@@ -615,3 +615,17 @@ The .Net framework library included the "System.Threading.ThreadPool" class. it 
 * Inheritance, together with encapsulation and polymorphism, is one of the three primary characteristics of object-oriented programming. Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes. The class whose members are inherited is called the base class, and the class that inherits those members is called the derived class. A **derived** class can have only one direct base class. However, inheritance is **transitive**. If ClassC is derived from ClassB, and ClassB is derived from ClassA, ClassC inherits the members declared in ClassB and ClassA.
 
 * Conceptually, a derived class is a **specialization** of the base class. For example, if you have a base class Animal, you might have one derived class that is named Mammal and another derived class that is named Reptile. A Mammal is an Animal, and a Reptile is an Animal, but each derived class represents different specializations of the base class.
+
+## Operator overloading 
+Use the operator keyword to declare an operator. An operator declaration must satisfy the following rules:
+
+It includes both a public and a static modifier.
+A unary operator has one input parameter. A binary operator has two input parameters. In each case, at least one parameter must have type T or T? where T is the type that contains the operator declaration.
+
+## 
+
+* **Throw** preserves the stack trace. So lets say Source1 throws Error1 , its caught by Source2 and Source2 says throw then Source1 Error + Source2 Error will be available in the stack trace.
+
+* **Throw ex** does not preserve the stack trace. So all errors of Source1 will be wiped out and only Source2 error will sent to the client.
+
+![image](images/throw-ex-vs-throw.png)

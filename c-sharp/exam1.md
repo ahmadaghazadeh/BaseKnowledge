@@ -283,7 +283,7 @@ foreach(string employee in employeeQuery)
 
 - [ ] to delete duplicate data
 - [ ] to bind namespaces and assemblies
-- [ ] to query and transform data
+- [x] to query and transform data
 - [ ] to connect assemblies
 
 [Official documentation: Language Integrated Query (LINQ) Overview](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/#query-expression-overview)
@@ -292,7 +292,7 @@ foreach(string employee in employeeQuery)
 
 - [ ] public List<string names> contacts = new List<string names>();
 - [ ] public List(string names) contacts = new List(string names)();
-- [ ] var contacts = new List<string>();
+- [x] var contacts = new List<string>();
 - [ ] var contacts = new List(string);
 
 [Official documentation: List<T> Class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-5.0)
@@ -300,7 +300,7 @@ foreach(string employee in employeeQuery)
 #### Q27. What is the difference between throw exceptions and throw clauses?
 
 - [ ] Throw clauses fire only at runtime, while throw exceptions can fire at any time.
-- [ ] Throw exceptions overwrite the stack trace, while throw clauses retain the stack information.
+- [x] Throw exceptions overwrite the stack trace, while throw clauses retain the stack information.
 - [ ] Throw clauses overwrite the stack trace, while throw exceptions retain the stack information.
 - [ ] Throw exceptions fire only at runtime, while throw clauses can fire during compile time.
 
@@ -310,7 +310,7 @@ foreach(string employee in employeeQuery)
 #### Q28. When an asynchronous method is executed, the code runs but nothing happens other than a compiler warning. What is most likely causing the method to not return anything?
 
 - [ ] The return yield statement is missing at the end of the method.
-- [ ] The method is missing an await keyword in its body.
+- [x] The method is missing an await keyword in its body.
 - [ ] The wait keyword is missing from the end of the method.
 - [ ] The yield keyword is missing from the method.
 
