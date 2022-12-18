@@ -1,4 +1,6 @@
 ﻿
+using app.Core;
+
 namespace app.asynchronous
 {
     public class AsynchonousRun : RunAbstract
@@ -22,6 +24,11 @@ namespace app.asynchronous
             WriteLine("Asynchronous3");
             await Asynchronous3.Run();
             WriteLine("Asynchronous3");
+        }
+
+        public override int Order()
+        {
+            return 1;
         }
     }
 }

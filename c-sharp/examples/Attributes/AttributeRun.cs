@@ -1,6 +1,7 @@
 ﻿using static System.Net.Mime.MediaTypeNames;
 using System.Reflection;
 using System.ComponentModel.DataAnnotations;
+using app.Core;
 
 namespace app.Attributes
 {
@@ -54,6 +55,10 @@ namespace app.Attributes
                     }
                 }
             }
+        }
+        public override int Order()
+        {
+            return 2;
         }
     }
 }

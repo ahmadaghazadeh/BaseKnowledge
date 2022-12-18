@@ -1,28 +1,43 @@
-﻿using app.asynchronous;
-using app.Attributes;
-using app.Enum;
-using app.Event;
-using app.Operator;
-using app.threadPool;
-using System;
-using System.Threading.Tasks;
-
+﻿using app.Core;
+using Microsoft.Extensions.DependencyInjection;
 public class Program
 {
-	public static async Task Main(string[] args)
+    private static ServiceProvider serviceProvider;
+
+    public static async Task Main(string[] args)
     {
-        // await new AsynchonousRun().RunAsync();
-
-        //await new AttributeRun().RunAsync();
-
-        //await new ThreadPoolRun().RunAsync();
-
-       // await new OperatorRun().RunAsync();
-
-       // await new EventRun().RunAsync();
-
-        await new EnumRun().RunAsync();
+        RegisterService();
+        
+        await RunLatestSampleAsync();
+        //RunAllSamples();
+        Console.Read();
     }
 
+    private static async void RunAllSamples()
+    {
+        var services = serviceProvider.GetServices<IRunnable>().ToList();
+        services.Sort();
+        foreach (var service in services)
+        {
+           await service.RunAsync();
+        }
+    }
 
+    private static async Task RunLatestSampleAsync()
+    {
+        var services = serviceProvider.GetServices<IRunnable>().ToList();
+        services.Sort();
+        await services.Last().RunAsync();
+    }
+
+    private static void RegisterService()
+    {
+        var collection = new ServiceCollection();
+        serviceProvider = collection.Scan(scan => {
+            scan.FromAssemblyOf<IRunnable>().
+            AddClasses(classes => classes.AssignableTo<IRunnable>()).
+            AsImplementedInterfaces().
+            WithTransientLifetime();
+        }).BuildServiceProvider();
+    }
 }

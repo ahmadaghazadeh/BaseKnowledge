@@ -19,6 +19,28 @@
 
 * These both C# Interface vs Abstract Class are great object-oriented programming concepts that are used highly in developing applications as per the requirement. It is purely selected by the technical leads with which they are more comfortable and the business requirement. Both are easy to use and simple to learn in any programming language.
 
+
+``` c#
+    public class Test : INameable
+    {
+        public string FirstName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public string LastName => throw new NotImplementedException();
+    }
+    public interface INameable
+    {
+        string FirstName { get; set; }
+        string LastName { get; }
+    }
+```
+
+* An interface can be a member of a namespace or a class. An interface declaration can contain declarations (signatures without any implementation) of the following members:
+
+1. Methods
+2. Properties
+3. Indexers
+4. Events
+
 ## 2. Delegates
 
 * What if we want to pass a function as a parameter? How does C# handles the callback functions or event handler? The answer is - delegate.
@@ -733,3 +755,13 @@ public class EnumConversionExample
     }
 }
 ```
+
+## Regular Expression
+
+* **Word boundary:** The metacharacter \b is an anchor like the caret and the dollar sign. It matches at a position that is called a “word boundary”. This match is zero-length.
+
+# Indexers
+
+An indexer is a special type of property that allows a class or a structure to be accessed like an array for its internal collection. C# allows us to define custom indexers, generic indexers, and also overload indexers.
+
+An indexer can be defined the same way as property with this keyword and square brackets [].

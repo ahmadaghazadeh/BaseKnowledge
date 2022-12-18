@@ -345,17 +345,17 @@ foreach(string employee in employeeQuery)
 
 [Official documentation: Enumeration types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum#conversions)
 
-#### Q32. What character would you use to start a regular expression pattern at a word boundary?
+#### **Q32. What character would you use to start a regular expression pattern at a word boundary?**
 
 - [ ] d
 - [ ] \a
-- [ ] \b
+- [x] \b
 - [ ] \w
 
 1. [regular-expressions: Word Boundaries](https://www.regular-expressions.info/wordboundaries.html)
 2. [Official documentation: Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
 
-#### Q33. To conform to the following interface, which of its members need to be implemented?
+#### **Q33. To conform to the following interface, which of its members need to be implemented?**
 
 ```cs
 public interface INameable
@@ -365,7 +365,7 @@ public interface INameable
 }
 ```
 
-- [ ] Both the FirstName and LastName properties need to be implemented.
+- [x] Both the FirstName and LastName properties need to be implemented.
 - [ ] Neither, they are both optional.
 - [ ] Only the LastName property needs to be implemented.
 - [ ] Only the FirstName property needs to be implemented.

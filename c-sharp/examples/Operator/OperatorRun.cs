@@ -1,4 +1,6 @@
-﻿namespace app.Operator
+﻿using app.Core;
+
+namespace app.Operator
 {
     public class OperatorRun : RunAbstract
     {
@@ -12,6 +14,10 @@
             Console.WriteLine(a * b);  // output: 5 / 8
             Console.WriteLine(a / b);  // output: 10 / 4
             return Task.CompletedTask;
+        }
+        public override int Order()
+        {
+            return 5;
         }
     }
 }

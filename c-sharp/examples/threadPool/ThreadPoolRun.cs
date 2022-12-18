@@ -1,5 +1,7 @@
 ﻿
 
+using app.Core;
+
 namespace app.threadPool
 {
     public class ThreadPoolRun : RunAbstract
@@ -13,12 +15,16 @@ namespace app.threadPool
             }
             Console.WriteLine("Thread {0}",
             Thread.CurrentThread.GetHashCode()); //{0}
-            while (obj.QueueLength != 0)
-            {
-                Thread.Sleep(1000);
-            }
-            Console.Read();
+            //while (obj.QueueLength > 1)
+            //{
+            //    Thread.Sleep(1000);
+            //}
+           
             return Task.CompletedTask;
+        }
+        public override int Order()
+        {
+            return 3;
         }
     }
 }

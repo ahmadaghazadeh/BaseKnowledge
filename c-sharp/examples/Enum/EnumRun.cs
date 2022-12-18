@@ -1,10 +1,15 @@
-﻿namespace app.Enum
+﻿using app.Core;
+
+namespace app.Enum
 {
     public class EnumRun:RunAbstract
     {
+        public override int Order()
+        {
+            return 6;
+        }
 
-      
-public override Task RunAsync()
+        public override Task RunAsync()
         {
             Days meetingDays = Days.Monday | Days.Wednesday | Days.Friday;
             Console.WriteLine(meetingDays);

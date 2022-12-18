@@ -1,4 +1,6 @@
-﻿namespace app.Event
+﻿using app.Core;
+
+namespace app.Event
 {
     public class EventRun : RunAbstract
     {
@@ -16,6 +18,12 @@
             bl.ProcessCompleted += ProcessCompleted; // register with an event
             bl.StartProcess();
             return Task.CompletedTask;
+        }
+
+
+            public override int Order()
+        {
+            return 4;
         }
     }
 }
