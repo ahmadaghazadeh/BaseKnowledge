@@ -1,5 +1,6 @@
 ﻿using app.asynchronous;
 using app.Attributes;
+using app.Enum;
 using app.Event;
 using app.Operator;
 using app.threadPool;
@@ -18,7 +19,9 @@ public class Program
 
        // await new OperatorRun().RunAsync();
 
-        await new EventRun().RunAsync();
+       // await new EventRun().RunAsync();
+
+        await new EnumRun().RunAsync();
     }
 
 

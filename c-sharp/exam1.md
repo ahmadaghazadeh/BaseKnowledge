@@ -316,11 +316,11 @@ foreach(string employee in employeeQuery)
 
 [Official documentation: Starting tasks concurrently](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/#start-tasks-concurrently)
 
-#### Q29. What are C# events?
+#### Q29. **What are C# events?**
 
 - [ ] system actions that communicate directly with the compiler at runtime
 - [ ] actions that execute when the code compiles, generating logs and test output
-- [ ] actions that generate notifications, which are sent to their registered listeners
+- [x] actions that generate notifications, which are sent to their registered listeners
 - [ ] user-only methods that send data to the application's back end
 
 [Official documentation: Introduction to events](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)
@@ -341,7 +341,7 @@ foreach(string employee in employeeQuery)
 - [ ] string currentState = (string)AppState.Loading;
 - [ ] string currentState = AppState.Loading.integralVal;
 - [ ] int currentState = AppState.Loading.rawValue;
-- [ ] int currentState = (int)AppState.Loading;
+- [x] int currentState = (int)AppState.Loading;
 
 [Official documentation: Enumeration types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum#conversions)
 
