@@ -629,3 +629,16 @@ A unary operator has one input parameter. A binary operator has two input parame
 * **Throw ex** does not preserve the stack trace. So all errors of Source1 will be wiped out and only Source2 error will sent to the client.
 
 ![image](images/throw-ex-vs-throw.png)
+
+## Events
+* An event is a notification sent by an object to signal the occurrence of an action. Events in .NET follow the **observer design pattern**.
+
+* In C#, an event is an **encapsulated delegate**. It is dependent on the delegate. The delegate defines the signature for the event handler method of the subscriber class.
+
+### Design goals for event support
+* Enable very minimal coupling between an event source and an event sink. These two components may not be written by the same organization, and may even be updated on totally different schedules.
+
+* It should be very simple to subscribe to an event, and to unsubscribe from that same event.
+
+* Event sources should support multiple event subscribers. It should also support having no event subscribers attached.
+

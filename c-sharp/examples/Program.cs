@@ -1,5 +1,6 @@
 ﻿using app.asynchronous;
 using app.Attributes;
+using app.Event;
 using app.Operator;
 using app.threadPool;
 using System;
@@ -15,7 +16,9 @@ public class Program
 
         //await new ThreadPoolRun().RunAsync();
 
-        await new OperatorRun().RunAsync();
+       // await new OperatorRun().RunAsync();
+
+        await new EventRun().RunAsync();
     }
 
 
