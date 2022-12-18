@@ -265,7 +265,7 @@ foreach(string employee in employeeQuery)
 
 - [ ] a second base class
 - [ ] a revised class
-- [ ] a derived class
+- [x] a derived class
 - [ ] a parent class
 
 [Official documentation: Inheritance](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)
@@ -275,7 +275,7 @@ foreach(string employee in employeeQuery)
 - [ ] hide built-in operators when necessary
 - [ ] add methods to be interpreted by the compiler at runtime
 - [ ] define how enums and other primitive value types work within the rest of the application
-- [ ] define custom functionality for common operators like addition and equality
+- [x] define custom functionality for common operators like addition and equality
 
 [Official documentation: Operator overloading](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)
 
