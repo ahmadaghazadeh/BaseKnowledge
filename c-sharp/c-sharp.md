@@ -583,3 +583,30 @@ Cat cat = new Cat { Age = 10, Name = "Fluffy" };
 Cat sameCat = new Cat("Fluffy"){ Age = 10 };
 
 ```
+## Thread Pooling
+
+* Thread pooling is the process of creating a collection of threads during the initialization of a multithreaded application, and then reusing those threads for new tasks as and when required, instead of creating new threads. Then every process has some **fixed number of threads depending on the amount of memory available**, those threads are the need of the application but we have freedom to increase the number of threads. Every thread in the pool has a specific given task. **The thread returns to the pool and waits for the next assignment when the given task is completed**.
+
+* The thread can then terminate, or sleep until there are new tasks available.
+
+![image](images/threadqueue.gif)
+
+### Creating thread pooling
+
+The .Net framework library included the "System.Threading.ThreadPool" class. it was so easy to use.You need not create the pool of threads, nor do you have to specify how many consuming threads you require in the pool. The ThreadPool class handles the creation of new threads and the distribution of the wares to consume amongst those threads.
+
+### Why we need thread pooling?
+
+* Thread pooling is essential in multithreaded applications for the following reasons.
+
+* Thread pooling improves the response time of an application as threads are already available in the thread pool waiting for their next assignment and do not need to be created from scratch.
+
+* Thread pooling saves the CLR from the overhead of creating an entirely new thread for every short-lived task and reclaiming its resources once it dies.
+
+* Thread pooling optimizes the thread time slices according to the current process running in the system.
+
+* Thread pooling enables us to start several tasks without having to set the properties for each thread.
+
+* Thread pooling enables us to state information as an object to the procedure arguments of the task that is being executed.
+
+* Thread pooling can be employed to fix the maximum number of threads for processing a particular request.

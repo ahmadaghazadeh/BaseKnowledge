@@ -248,7 +248,7 @@ foreach(string employee in employeeQuery)
 - [ ] a class that is denoted by the class keyword (can be seen and used by any other class in the system--thus it is by default public)
 - [ ] something denoted by the abstract keyword and used system wide; if you want any program to create an object of a class you use the abstract class
 - [ ] a class that is denoted by the virtual keyword
-- [ ] a class that can be used only as base class
+- [x] a class that can be used only as base class
 
 [Official documentation: Abstract and Sealed Classes and Class Members](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members)
 
@@ -257,7 +257,7 @@ foreach(string employee in employeeQuery)
 - [ ] The thread is destroyed and memory is freed up.
 - [ ] The thread runs in loop until the next assignment.
 - [ ] The thread goes inactive in the background and waits for garbage collection.
-- [ ] The thread returns to the pool for reuse.
+- [x] The thread returns to the pool for reuse.
 
 [Official documentation: Thread pool characteristics](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool#thread-pool-characteristics)
 
