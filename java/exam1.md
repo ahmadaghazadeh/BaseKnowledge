@@ -1337,7 +1337,7 @@ public class Main {
 - [x] `employees.stream().map(Employee::getName).collect(Collectors.toList());`
 - [ ] `employees.stream().collect((e) -> e.getName());`
 
-#### Q96. This code does not compile. What needs to be changed so that it does?
+#### **Q96. This code does not compile. What needs to be changed so that it does?**
 
 ```java
 public enum Direction {
@@ -1359,11 +1359,11 @@ public enum Direction {
 - [ ] All enums need to be defined on a single line of code.
 - [ ] Add a setter method for the field `shortCode`.
 
-#### Q97. Which language feature ensures that objects implementing the `AutoCloseable` interface are closed when it completes?
+#### **Q97. Which language feature ensures that objects implementing the `AutoCloseable` interface are closed when it completes?**
 
 - [ ] try-catch-finally
 - [ ] try-finally-close
-- [ ] try-with-resources
+- [x] try-with-resources
 - [ ] try-catch-close
 
 #### Q98. What code should go in line 3?
@@ -1382,7 +1382,7 @@ class Main {
 ```
 
 - [ ] `int[][] array = new int[][];`
-- [ ] `int[][] array = new int[3][3];`
+- [x] `int[][] array = new int[3][3];`
 - [ ] `int[][] array = new int[2][2];`
 - [ ] `int[][] array = [][];`
 
@@ -1399,7 +1399,7 @@ class Lambo extends Car {
 ```
 
 - [ ] neither
-- [ ] both
+- [x] both
 - [ ] overloading
 - [ ] overriding
 
@@ -1408,7 +1408,7 @@ class Lambo extends Car {
 - [ ] float
 - [ ] String
 - [ ] double
-- [ ] BigDecimal
+- [x] BigDecimal
 
 [Reference](https://www.scaler.com/topics/java/primitive-data-types/#types-of-primitive-data-types-in-java)
 
@@ -1417,13 +1417,13 @@ class Lambo extends Car {
 - [ ] A class can have multiple constructors with a different parameter list.
 - [ ] You can call another constructor with `this` or `super`.
 - [ ] A constructor does not define a return value.
-- [ ] Every class must explicitly define a constructor without parameters.
+- [x] Every class must explicitly define a constructor without parameters.
 
 #### Q102. What language feature allows types to be parameters on classes, interfaces, and methods in order to reuse the same code for different data types?
 
 - [ ] Regular Expressions
 - [ ] Reflection
-- [ ] Generics
+- [x] Generics
 - [ ] Concurrency
 
 #### Q103. What will be printed?
@@ -1444,7 +1444,7 @@ public class Berries{
 ```
 
 - [ ] raspberry
-- [ ] strawberry
+- [x] strawberry
 - [ ] blueberry
 - [ ] rasp
 
@@ -1461,12 +1461,12 @@ forestSpecies.put("Amazon", 40000);
 int forestCount = forestSpecies.size();
 ```
 
-- [ ] 3
+- [x] 3
 - [ ] 4
 - [ ] 2
 - [ ] When calling the put method, Java will throw an exception
 
-#### Q105. What is a problem with this code?
+#### **Q105. What is a problem with this code?**
 
 ```java
 import java.util.ArrayList;
@@ -1489,11 +1489,11 @@ class Main {
 ```
 
 - [ ] String should be compared using == method instead of equals.
-- [ ] Modifying a collection while iterating through it can throw a ConcurrentModificationException.
+- [x] Modifying a collection while iterating through it can throw a ConcurrentModificationException.
 - [ ] The List interface does not allow an argument of type String to be passed to the remove method.
 - [ ] ArrayList does not implement the List interface.
 
-#### Q106. How do you convert this method into a lambda expression?
+#### **Q106. How do you convert this method into a lambda expression?**
 
 ```java
 public int square(int x) {
@@ -1503,7 +1503,7 @@ public int square(int x) {
 
 - [ ] `Function<Integer, Integer> squareLambda = (int x) -> { x * x };`
 - [ ] `Function<Integer, Integer> squareLambda = () -> { return x * x };`
-- [ ] `Function<Integer, Integer> squareLambda = x -> x * x;`
+- [x] `Function<Integer, Integer> squareLambda = x -> x * x;`
 - [ ] `Function<Integer, Integer> squareLambda = x -> return x * x;`
 
 #### Q107. Which choice is a valid implementation of this interface?
@@ -1536,7 +1536,7 @@ public class MyClass implements MyInterface {
 }
 ```
 
-- [ ] C
+- [x] C
 
 ```java
 public class MyClass implements MyInterface {
@@ -1577,9 +1577,9 @@ public class Main{
 - [ ] 10
 - [ ] 20
 - [ ] null
-- [ ] An error will occur when compiling.
+- [x] An error will occur when compiling.
 
-#### Q109. Which statement must be inserted on line 1 to print the value true?
+#### **Q109. Which statement must be inserted on line 1 to print the value true?**
 
 ```java
 1:
@@ -1588,7 +1588,7 @@ public class Main{
 ```
 
 - [ ] `Integer val = 15;`
-- [ ] `String val = "Sam";`
+- [x] `String val = "Sam";`
 - [ ] `String val = null;`
 - [ ] `Optional<String> val = Optional.empty();`
 

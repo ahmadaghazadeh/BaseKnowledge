@@ -9,20 +9,14 @@ class Main {
 private static volatile int MY_INT = 0;
 
 public static void main(String[] args)
-{
-	  }
-
-	  public enum Direction {
-		EAST("E"),
-		WEST("W"),
-		NORTH("N"),
-		SOUTH("S");
-	
-		private final String shortCode;
-	
-		public String getShortCode() {
-			return shortCode;
+	{
+		List<String> list = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+		for(String value :list) {
+			if(value.equals("a")) {
+				list.remove(value);
+			}
 		}
+		System.out.println(list); // outputs [b,c]	 
 	}
 }
  

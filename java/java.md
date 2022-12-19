@@ -856,6 +856,8 @@ parameter -> expression
 
 (parameter1, parameter2) -> { code block }
 
+Function<Integer, Integer> squareLambda = x -> x * x;
+
 ```
 
 ## hashcode
@@ -1299,4 +1301,44 @@ try(declare resources here) {
 catch(FileNotFoundException e) {
     // exception handling
 }
+```
+
+## Modifying a collection while iterating through it can throw a ConcurrentModificationException.
+
+``` java
+
+List<String> list = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+for(String value :list) {
+    if(value.equals("a")) {
+        list.remove(value);
+    }
+}
+System.out.println(list); // outputs [b,c]
+
+```
+
+## Optional
+
+Every Java Programmer is familiar with `NullPointerException`. It can crash your code. And it is very hard to avoid it without using too many null checks. So, to overcome this, Java 8 has introduced a new class Optional in `java.util` package. It can help in writing a neat code without using too many null checks. By using Optional, we can specify alternate values to return or alternate code to run. This makes the code more readable because the facts which were hidden are now visible to the developer.
+
+``` java
+String[] words = new String[10];
+Optional<String> checkNull
+    = Optional.ofNullable(words[5]);
+if (checkNull.isPresent()) {
+    String word = words[5].toLowerCase();
+    System.out.print(word);
+}
+else
+    System.out.println("word is null");
+outPut:
+word is null
+
+
+Optional<String> empty = Optional.empty();
+System.out.println(empty);
+
+outPut:
+Optional.empty
+
 ```
