@@ -11,5 +11,18 @@ private static volatile int MY_INT = 0;
 public static void main(String[] args)
 {
 	  }
+
+	  public enum Direction {
+		EAST("E"),
+		WEST("W"),
+		NORTH("N"),
+		SOUTH("S");
+	
+		private final String shortCode;
+	
+		public String getShortCode() {
+			return shortCode;
+		}
+	}
 }
  

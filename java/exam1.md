@@ -1354,7 +1354,7 @@ public enum Direction {
 }
 ```
 
-- [ ] Add a constructor that accepts a `String` parameter and assigns it to the field `shortCode`.
+- [x] Add a constructor that accepts a `String` parameter and assigns it to the field `shortCode`.
 - [ ] Remove the `final` keyword for the field `shortCode`.
 - [ ] All enums need to be defined on a single line of code.
 - [ ] Add a setter method for the field `shortCode`.

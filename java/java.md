@@ -1243,3 +1243,60 @@ Here ans variable is assigned 0 as the initial value and i is added to it .
 * A stream consists of source followed **by zero or more intermediate methods combined** together (pipelined) and a terminal method to process the objects obtained from the source as per the methods described.
 * Stream is used to compute elements as per the pipelined methods **without altering** the original value of the object.
 
+## enum
+
+* Enumerations serve the purpose of representing a group of named constants in a programming language.
+
+* Enums are used when we know all possible values at compile time, such as choices on a menu, rounding modes, command-line flags, etc. It is not necessary that the set of constants in an enum type stay **fixed** for all time.
+
+* A Java enumeration is a class type. Although we don’t need to instantiate an enum using new, it has the same capabilities as other classes. This fact makes Java enumeration a very powerful tool. Just like classes, you can give them **constructor, add instance variables and methods, and even implement interfaces**.
+
+* One thing to keep in mind is that, unlike classes, enumerations neither inherit other classes nor can get extended(i.e become superclass). 
+
+``` java
+enum TrafficSignal
+{
+    // This will call enum constructor with one
+    // String argument
+    RED("STOP",1), GREEN("GO",2), ORANGE("SLOW DOWN",3);
+  
+    // declaring private variable for getting values
+    private String action;
+    private int index;
+  
+    // getter method
+    public String getAction()
+    {
+        return this.action;
+    }
+
+    public int getIndex()
+    {
+        return this.index;
+    }
+  
+    // enum constructor - cannot be public or protected
+    private TrafficSignal(String action,int index)
+    {
+        this.action = action;
+        this.index=index;
+    }
+}
+  
+```
+
+## Try-with-resources
+* In Java, the Try-with-resources statement is a try statement that declares one or more resources in it. A resource is an object that must be closed once your program is done using it. For example, a File resource or a Socket connection resource.  The try-with-resources statement ensures that each resource is closed at the end of the statement execution. If we don’t close the resources, it may constitute a resource leak and also the program could exhaust the resources available to it.
+
+* You can pass any object as a resource that implements `java.lang.AutoCloseable`, which includes all objects which implement `java.io.Closeable`.
+
+* By this, now we don’t need to add an extra finally block for just passing the closing statements of the resources. The resources will be closed as soon as the try-catch block is executed. 
+
+``` java
+try(declare resources here) {
+    // use resources
+}
+catch(FileNotFoundException e) {
+    // exception handling
+}
+```
