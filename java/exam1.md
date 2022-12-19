@@ -1272,7 +1272,7 @@ class TaxCalculator {
 
 [Reference](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)
 
-#### Q90. What is the output?
+#### **Q90. What is the output?**
 
 ```java
 import java.util.*;
@@ -1295,7 +1295,7 @@ public class Main {
 
 - [ ] 1 3 2 4
 - [ ] 4 2 3 1
-- [ ] 1 2 3 4
+- [x] 1 2 3 4
 - [ ] 4 3 2 1
 
 #### Q91. What will this code print, assuming it is inside the main method of a class?
@@ -1304,29 +1304,29 @@ public class Main {
 
 - [ ] my
 - [ ] hellomyfriends
-- [ ] hello
+- [x] hello
 - [ ] friends
 
-#### Q92. You have an instance of type Map<String, Integer> named instruments containing the following key-value pairs: guitar=1200, cello=3000, and drum=2000. If you add the new key-value pair cello=4500 to the Map using the put method, how many elements do you have in the Map when you call instruments.size()?
+#### **Q92. You have an instance of type Map<String, Integer> named instruments containing the following key-value pairs: guitar=1200, cello=3000, and drum=2000. If you add the new key-value pair cello=4500 to the Map using the put method, how many elements do you have in the Map when you call instruments.size()?**
 
 - [ ] 2
 - [ ] When calling the put method, Java will throw an exception
 - [ ] 4
-- [ ] 3
+- [x] 3
 
-#### Q93. Which class acts as root class for Java Exception hierarchy?
+#### **Q93. Which class acts as root class for Java Exception hierarchy?**
 
 - [ ] Clonable
-- [ ] Throwable
+- [x] Throwable
 - [ ] Object
 - [ ] Serializable
 
-#### Q94. Which class does not implement the java.util.Collection interface?
+#### **Q94. Which class does not implement the java.util.Collection interface?**
 
 - [ ] java.util.Vector
 - [ ] java.util.ArrayList
 - [ ] java.util.HashSet
-- [ ] java.util.HashMap
+- [x] java.util.HashMap
 
 **Explanation**: HashMap class implements Map interface.
 
@@ -1335,7 +1335,7 @@ public class Main {
 - [ ] `employees.collect(employee -> employee.getName());`
 - [ ] `employees.filter(Employee::getName).collect(Collectors.toUnmodifiableList());`
 - [ ] `employees.stream().map(Employee::getName).collect(Collectors.toList());`
-- [ ] `employees.stream().collect((e) -> e.getName());`
+- [x] `employees.stream().collect((e) -> e.getName());`
 
 #### Q96. This code does not compile. What needs to be changed so that it does?
 

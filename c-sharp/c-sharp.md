@@ -765,3 +765,4 @@ public class EnumConversionExample
 An indexer is a special type of property that allows a class or a structure to be accessed like an array for its internal collection. C# allows us to define custom indexers, generic indexers, and also overload indexers.
 
 An indexer can be defined the same way as property with this keyword and square brackets [].
+

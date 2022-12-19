@@ -10,15 +10,7 @@ private static volatile int MY_INT = 0;
 
 public static void main(String[] args)
 {
-	PriorityQueue<Integer> queue = new PriorityQueue<>();
-		queue.add(4);
-		queue.add(3);
-		queue.add(2);
-		queue.add(1);
-
-		while (queue.isEmpty() == false) {
-			System.out.println( queue.remove());
-		}
+	employees.stream().collect((e) -> e.getName());
  }
 }
  
