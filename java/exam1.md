@@ -1601,7 +1601,7 @@ System.out.println(false || false && true);
 
 - [ ] false </br> true
 - [ ] true </br> true
-- [ ] true </br> false
+- [x] true </br> false
 - [ ] false </br> false
 
 #### Q111. What will this code print?
