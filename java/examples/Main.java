@@ -10,7 +10,6 @@ private static volatile int MY_INT = 0;
 
 public static void main(String[] args)
 {
-	employees.stream().collect((e) -> e.getName());
- }
+	  }
 }
  

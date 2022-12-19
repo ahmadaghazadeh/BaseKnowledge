@@ -1334,8 +1334,8 @@ public class Main {
 
 - [ ] `employees.collect(employee -> employee.getName());`
 - [ ] `employees.filter(Employee::getName).collect(Collectors.toUnmodifiableList());`
-- [ ] `employees.stream().map(Employee::getName).collect(Collectors.toList());`
-- [x] `employees.stream().collect((e) -> e.getName());`
+- [x] `employees.stream().map(Employee::getName).collect(Collectors.toList());`
+- [ ] `employees.stream().collect((e) -> e.getName());`
 
 #### Q96. This code does not compile. What needs to be changed so that it does?
 
