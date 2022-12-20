@@ -1342,3 +1342,48 @@ outPut:
 Optional.empty
 
 ```
+
+## Assert
+
+* An assertion allows testing the correctness of any assumptions that have been made in the program. An assertion is achieved using the assert statement in Java. While executing assertion, it is believed to be true. If it fails, JVM throws an error named AssertionError. It is mainly used for testing purposes during development. 
+
+The assert statement is used with a Boolean expression and can be written in two different ways.
+
+``` java
+assert expression;
+assert expression1 : expression2;
+
+class Test {
+    public static void main(String args[])
+    {
+        int value = 15;
+        assert value >= 20 : " Underweight";
+        System.out.println("value is " + value);
+    }
+}
+
+```
+
+**Output**
+
+value is 15
+
+After enabling assertions:
+
+**Output:** 
+
+Exception in thread "main" java.lang.AssertionError: Underweight
+
+* Enabling Assertions  
+
+By default, assertions are disabled. We need to run the code as given. The syntax for enabling assertion statement in Java source code is: 
+
+``` bash
+java –ea Test
+java –enableassertions Test
+
+java –da Test
+java –disableassertions Test
+```
+
+* Assertions are mainly used to check logically impossible situations. For example, they can be used to check the state a code expects before it starts running or the state after it finishes running. Unlike normal exception/error handling, assertions are generally disabled at run-time. 

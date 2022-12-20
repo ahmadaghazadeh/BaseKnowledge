@@ -1604,7 +1604,7 @@ System.out.println(false || false && true);
 - [x] true </br> false
 - [ ] false </br> false
 
-#### Q111. What will this code print?
+#### **Q111. What will this code print?**
 
 ```java
 List<String> list1 = new ArrayList<>();
@@ -1620,22 +1620,22 @@ System.out.println(list1);
 ```
 
 - [ ] `[Two]`
-- [ ] `[One, Two, Three]`
-- [ ] `[One, Three]`
+- [x] `[One, Two, Three]`
+- [ ] ~~`[One, Three]`~~
 - [ ] `Two`
 
 #### Q112. Which code checks whether the characters in two Strings,named `time` and `money`, are the same?
 
 - [ ] `if(time <> money){}`
-- [ ] `if(time.equals(money)){}`
+- [x] `if(time.equals(money)){}`
 - [ ] `if(time == money){}`
 - [ ] `if(time = money){}`
 
-#### Q113. An **\_** is a serious issue thrown by the JVM that the JVM is unlikely to recover from. An **\_** is an unexpected event that an application may be able to deal with in order to continue execution.
+#### **Q113. An **\_** is a serious issue thrown by the JVM that the JVM is unlikely to recover from. An **\_** is an unexpected event that an application may be able to deal with in order to continue execution.**
 
-- [ ] exception,assertion
+- [ ] ~~exception,assertion~~
 - [ ] AbnormalException, AccidentalException
-- [ ] error, exception
+- [x] error, exception
 - [ ] exception, error
 
 #### Q114. Which keyword would not be allowed here?

@@ -10,13 +10,16 @@ private static volatile int MY_INT = 0;
 
 public static void main(String[] args)
 	{
-		List<String> list = new ArrayList<String>(Arrays.asList("a", "b", "c"));
-		for(String value :list) {
-			if(value.equals("a")) {
-				list.remove(value);
-			}
-		}
-		System.out.println(list); // outputs [b,c]	 
+		List<String> list1 = new ArrayList<>();
+		list1.add("One");
+		list1.add("Two");
+		list1.add("Three");
+
+		List<String> list2 = new ArrayList<>();
+		list2.add("Two");
+
+		list1.remove("Two");
+		System.out.println(list1); 
 	}
 }
  
