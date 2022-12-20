@@ -1710,7 +1710,7 @@ _____ oddOrEven = x -> {
 
 - [ ] `Function<Integer, Boolean>`
 - [ ] `Function<String>`
-- [ ] `Function<Integer, String>`
+- [x] `Function<Integer, String>`
 - [ ] `Function<Integer>`
 
 [Explaination](https://github.com/0nyr/java/tree/main/examples/lambda_function), [Reference](https://www.geeksforgeeks.org/function-interface-in-java-with-examples/)
@@ -1738,7 +1738,7 @@ public class Main {
 - [ ] 6
 - [ ] 3
 - [ ] 4
-- [ ] 7
+- [x] 7
 
 [Explanation](https://github.com/0nyr/java/tree/main/training/linkedin_assessment/what_is_displayed_0)
 
@@ -1750,7 +1750,7 @@ _______ capitalize = (str) -> str.toUpperCase();
 songTitles.stream().map(capitalize).forEach(System.out::println);
 ```
 
-- [ ] `Function<String, String>`
+- [x] `Function<String, String>`
 - [ ] `Stream<String>`
 - [ ] `String<String, String>`
 - [ ] `Map<String, String>`
