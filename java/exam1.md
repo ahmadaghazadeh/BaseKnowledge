@@ -1638,7 +1638,7 @@ System.out.println(list1);
 - [x] error, exception
 - [ ] exception, error
 
-#### Q114. Which keyword would not be allowed here?
+#### **Q114. Which keyword would not be allowed here?**
 
 ```java
 class Unicorn {
@@ -1646,12 +1646,12 @@ class Unicorn {
 }
 ```
 
-- [ ] static
+- [x] static
 - [ ] protected
 - [ ] public
-- [ ] void
+- [ ] ~~void~~
 
-#### Q115. Which OOP concept is this code an example of?
+#### **Q115. Which OOP concept is this code an example of?**
 
 ```java
 List[] myLists = {
@@ -1668,7 +1668,7 @@ for (List list : myLists){
 
 - [ ] composition
 - [ ] generics
-- [ ] polymorphism
+- [x] polymorphism
 - [ ] encapsulation
 
 **Explanation:** switch between different implementations of the `List` interface
@@ -1685,7 +1685,7 @@ System.out.println(b == c);
 ```
 
 - [ ] true; false
-- [ ] false; false
+- [x] false; false
 - [ ] false; true
 - [ ] true; true
 
@@ -1695,7 +1695,7 @@ System.out.println(b == c);
 
 - [ ] native
 - [ ] volatile
-- [ ] synchronized
+- [x] synchronized
 - [ ] lock
 
 [Java Documentation: Synchronized methods](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html)

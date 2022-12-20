@@ -446,6 +446,23 @@ The implementation is iterative merge sort and takes O(n * log(n)).
 * CopyOnWriteArrayList
 
 ``` java
+
+public class SynchronizedCounter {
+    private int c = 0;
+
+    public synchronized void increment() {
+        c++;
+    }
+
+    public synchronized void decrement() {
+        c--;
+    }
+
+    public synchronized int value() {
+        return c;
+    }
+}
+
 import java.util.*;
 
 class SynchronizeExample {
@@ -1387,3 +1404,73 @@ java –disableassertions Test
 ```
 
 * Assertions are mainly used to check logically impossible situations. For example, they can be used to check the state a code expects before it starts running or the state after it finishes running. Unlike normal exception/error handling, assertions are generally disabled at run-time. 
+
+## Function interface
+
+* The Function Interface is a part of the java.util.function package which has been introduced since Java 8, to implement functional programming in Java. It represents a function which takes in one argument and produces a result. Hence this functional interface takes in 2 generics namely as follows:
+
+T: denotes the type of the input argument
+R: denotes the return type of the function
+
+**apply()**
+
+``` java
+Function<Integer, Double> half = a -> a / 2.0;
+
+// Applying the function to get the result
+System.out.println(half.apply(10));
+
+Output
+5.0
+```
+
+andThen()
+
+* It returns a composed function wherein the parameterized function will be executed after the first one. If evaluation of either function throws an error, it is relayed to the caller of the composed function.
+
+``` java
+		    Function<Integer, Double> half = a -> a / 2.0;
+ 
+        // Now treble the output of half function
+        half = half.andThen(a -> 5 * a);
+		
+		    half = half.andThen(a -> a+1);
+        // Applying the function to get the result
+        // and printing on console
+        System.out.println(half.apply(10));//26
+
+```
+compose()
+
+* It returns a composed function wherein the parameterized function will be executed first and then the first one. If evaluation of either function throws an error, it is relayed to the caller of the composed function.
+
+``` java
+		Function<Integer, Double> half = a -> a / 2.0;
+ 
+        // However treble the value given to half function
+        half = half.compose(a -> 3 * a);
+
+		half = half.andThen(a -> a+1);
+ 
+        // Applying the function to get the result
+        System.out.println(half.apply(5)); // 8.5
+```
+
+* As you can see, the difference between compose and andThen is the order they execute the functions. While the compose function executes the caller last and the parameter first, the andThen executes the caller first and the parameter last.
+
+andThen -> first to end
+
+compose -> end to first;
+
+**identity()**
+
+* This method returns a function that returns its only argument.
+
+``` java
+Function<Integer, Integer> i = Function.identity();
+ 
+        // Print statement
+System.out.println(i.apply(10)); //10
+```
+
+## Consumer, Predicate, Function, Supplier, Comparable, ActionListener, Callable 
