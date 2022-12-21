@@ -1473,4 +1473,171 @@ Function<Integer, Integer> i = Function.identity();
 System.out.println(i.apply(10)); //10
 ```
 
-## Consumer, Predicate, Function, Supplier, Comparable, ActionListener, Callable 
+## Consumer
+
+* The Consumer Interface is a part of the java.util.function package which has been introduced since Java 8, to implement functional programming in Java. It represents a function which takes in one argument and produces a result. However these kind of functions don’t return any value.
+
+* **Consumer likes Function but it doesn't have compose and return value.**
+``` java
+Consumer<List<Integer> > modify = list ->
+{
+    for (int i = 0; i < list.size(); i++)
+        list.set(i, 2 * list.get(i));
+};
+
+// Consumer to display a list of integers
+Consumer<List<Integer> >
+    dispList = list -> list.stream().forEach(a -> System.out.print(a + " "));
+
+List<Integer> list = new ArrayList<Integer>();
+list.add(2);
+list.add(1);
+list.add(3);
+
+// using addThen()
+modify.andThen(dispList).accept(list);
+```
+
+## Predicate
+
+* A Functional Interface is an Interface which allows only one Abstract method within the Interface scope. There are some predefined functional interface in Java like Predicate, consumer, supplier etc. The return type of a Lambda function (introduced in JDK 1.8) is a also functional interface.
+
+The Functional Interface PREDICATE is defined in the **java.util.function** package. It improves manageability of code, helps in **unit-testing** them separately, and contain some methods like:
+
+1. isEqual(Object targetRef) : Returns a predicate that tests if two arguments are equal according to Objects.equals(Object, Object). 
+2. and(Predicate other) : Returns a composed predicate that represents a short-circuiting logical AND of this predicate and another.
+3. negate() : Returns a predicate that represents the logical negation of this predicate.
+4. or(Predicate other) : Returns a composed predicate that represents a short-circuiting logical OR of 5. test(T t) : Evaluates this predicate on the given argument.boolean test(T t)
+test(T t) 
+ 
+##  Supplier
+
+* Java 8 Supplier is a functional interface whose functional method is **get()**. The Supplier interface represents an operation that takes no argument and returns a result. As this is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.
+
+```java
+Supplier<Boolean> boolSupplier = () -> product.length() == 10;
+Supplier<Integer> intSupplier = () -> product.length() - 2;
+Supplier<String> supplier = () -> product.toUpperCase();
+
+
+System.out.println(boolSupplier.get());//false
+System.out.println(intSupplier.get());//5
+System.out.println(supplier.get());//ANDROID
+
+//-------------------------------
+
+public static void main(String[] args) {
+    
+    Supplier<Integer> supplier = SupplierDemo::getTwoDigitRandom;
+
+    System.out.println(supplier.get());
+    
+}
+
+public static Integer getTwoDigitRandom() {
+    
+    int random = new Random().nextInt(100);
+    
+    if(random < 10)
+        return 10;
+    
+    return random;
+}
+
+//----------------------------
+  static String product = "Android";
+  static double price = 659.50;
+
+BooleanSupplier boolSupplier = () -> product.length() == 10;
+IntSupplier intSupplier = () -> product.length() - 2;
+DoubleSupplier doubleSupplier = () -> price -20;
+LongSupplier longSupplier = () -> new Date().getTime();
+Supplier<String> supplier = () -> product.toUpperCase();
+
+
+System.out.println(boolSupplier.getAsBoolean());//false
+System.out.println(intSupplier.getAsInt());//5
+System.out.println(doubleSupplier.getAsDouble());//639.5
+System.out.println(longSupplier.getAsLong());// 1581187440978 (it depends on current time)
+System.out.println(supplier.get());//ANDROID
+```
+
+## Comparable, ActionListener, Callable
+
+* The Comparable interface is used to compare an object of the same class with an instance of that class, it provides ordering of data for objects of the user-defined class. The class has to implement the java.lang.Comparable interface to compare its instance, it provides the compareTo method that takes a parameter of the object of that class. In this article, we will see how we can sort an array of pairs of different data types on the different parameters of comparison.
+
+``` java
+
+import java.io.*;
+import java.util.*;
+ 
+class Pair implements Comparable<Pair> {
+    String x;
+    int y;
+ 
+    public Pair(String x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+ 
+    public String toString()
+    {
+        return "(" + x + "," + y + ")";
+    }
+ 
+    @Override public int compareTo(Pair a)
+    {
+        // if the string are not equal
+        if (this.x.compareTo(a.x) != 0) {
+            return this.x.compareTo(a.x);
+        }
+        else {
+            // we compare int values
+            // if the strings are equal
+            return this.y - a.y;
+        }
+    }
+}
+ 
+public class GFG {
+    public static void main(String[] args)
+    {
+ 
+        int n = 4;
+        Pair arr[] = new Pair[n];
+ 
+        arr[0] = new Pair("abc", 3);
+        arr[1] = new Pair("a", 4);
+        arr[2] = new Pair("bc", 5);
+        arr[3] = new Pair("a", 2);
+ 
+        // Sorting the array
+        Arrays.sort(arr);
+ 
+        // printing the
+        // Pair array
+        print(arr);
+    }
+ 
+    public static void print(Pair[] arr)
+    {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+Before Sorting:
+(abc, 3);
+(a, 4);
+(bc, 5);
+(a, 2);
+
+After Sorting:
+(a,2)
+(a,4)
+(abc,3)
+(bc,5)
+
+```
