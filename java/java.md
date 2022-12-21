@@ -1698,4 +1698,40 @@ class CallableRondom implements Callable
 }
   
 
+
 ```
+## UnaryOprator
+
+* The UnaryOperator Interface<T> is a part of the java.util.function package which has been introduced since Java 8, to implement functional programming in Java. It represents a function which takes in one argument and operates on it. However what distinguishes it from a normal Function is that both its argument **and return type are the same**.
+
+``` java
+List<String> dates = new ArrayList<String>();
+UnaryOperator<String> replaceSlashes = date -> date.replace("/", "-");
+dates.replaceAll(replaceSlashes);
+```
+
+## Defualt Stream 
+
+* Before exploring various input and output streams lets look at 3 standard or default streams that Java has to provide which are also most common in use:
+
+![image](images/java-Basic-input-output1.png)
+
+**System.in:** This is the standard input stream that is used to read characters from the keyboard or any other standard input device.
+**System.out:** This is the standard output stream that is used to produce the result of a program on an output device like the computer screen.
+``` java
+System.out.print(parameter);
+System.out.println(parameter);
+``` 
+**System.err:** This is the standard error stream that is used to output all the error data that a program might throw, on a computer screen or any standard output device.
+This stream also uses all the 3 above-mentioned functions to output the error data:
+``` java
+print()
+println()
+printf()
+``` 
+
+* Depending on the type of operations, streams can be divided into two primary classes:
+  
+**Input Stream:** These streams are used to read data that must be taken as an input from a source array or file or any peripheral device. For eg., **FileInputStream, BufferedInputStream, ByteArrayInputStream** etc.
+
+* **Output Stream:** These streams are used to write data as outputs into an array or file or any output peripheral device. For eg., FileOutputStream, BufferedOutputStream, ByteArrayOutputStream etc.

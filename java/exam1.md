@@ -1766,13 +1766,13 @@ _____ processFunction(Integer number, Function<Integer, String> lambda) {
 ```
 
 - [ ] `Integer`
-- [ ] `String`
+- [x] `String`
 - [ ] `Consumer`
 - [ ] `Function<Integer, String>`
 
 [Explanation](https://github.com/0nyr/java/tree/main/training/linkedin_assessment/which_return_type_0)
 
-#### Q122. What function could you use to replace slashes for dashes in a list of dates?
+#### **Q122. What function could you use to replace slashes for dashes in a list of dates?**
 
 ```java
 List<String> dates = new ArrayList<String>();
@@ -1780,8 +1780,8 @@ List<String> dates = new ArrayList<String>();
 dates.replaceAll(replaceSlashes);
 ```
 
-- [ ] `UnaryOperator<String> replaceSlashes = date -> date.replace("/", "-");`
-- [ ] `Function<String, String> replaceSlashes = dates -> dates.replace("-", "/");`
+- [x] `UnaryOperator<String> replaceSlashes = date -> date.replace("/", "-");`
+- [ ] ~~`Function<String, String> replaceSlashes = dates -> dates.replace("-", "/");`~~
 - [ ] `Map<String, String> replaceSlashes = dates.replace("/", "-");`
 - [ ] `Consumer<Date> replaceSlashes = date -> date.replace("/", "-");`
 
@@ -1789,7 +1789,7 @@ dates.replaceAll(replaceSlashes);
 
 #### Q123. From which class do all other classes implicitly extend?
 
-- [ ] `Object`
+- [x] `Object`
 - [ ] `Main`
 - [ ] `Java`
 - [ ] `Class`
@@ -1817,14 +1817,14 @@ public class CurrentDateRunnable implements Runnable {
 }
 ```
 
-- [ ] `Thread thread = new Thread(new CurrentDateRunnable()); thread.start();`
+- [x] `Thread thread = new Thread(new CurrentDateRunnable()); thread.start();`
 - [ ] `new Thread(new CurrentDateRunnable()).join();`
 - [ ] `new CurrentDateRunnable().run();`
 - [ ] `new CurrentDateRunnable().start();`
 
 [Reference](https://www.w3schools.com/java/java_threads.asp)
 
-#### Q125. Which expression is a functional equivalent?
+#### **Q125. Which expression is a functional equivalent?**
 
 ```java
 List<Integer> numbers = List.of(1,2,3,4);
@@ -1836,7 +1836,7 @@ for (Integer x : numbers) {
 }
 ```
 
-- [ ] A
+- [ ] ~~A~~
 
 ```java
 int total = numbers.stream()
@@ -1861,7 +1861,7 @@ int total = numbers.stream()
                         .sum();
 ```
 
-- [ ] D
+- [x] D
 
 ```java
 int total = numbers.stream()
