@@ -1562,7 +1562,7 @@ System.out.println(longSupplier.getAsLong());// 1581187440978 (it depends on cur
 System.out.println(supplier.get());//ANDROID
 ```
 
-## Comparable, ActionListener, Callable
+## Comparable
 
 * The Comparable interface is used to compare an object of the same class with an instance of that class, it provides ordering of data for objects of the user-defined class. The class has to implement the java.lang.Comparable interface to compare its instance, it provides the compareTo method that takes a parameter of the object of that class. In this article, we will see how we can sort an array of pairs of different data types on the different parameters of comparison.
 
@@ -1639,5 +1639,63 @@ After Sorting:
 (a,4)
 (abc,3)
 (bc,5)
+
+```
+
+##  Callable
+
+* There are two ways of creating threads – one by extending the Thread class and other by creating a thread with a **Runnable**. However, one feature lacking in  Runnable is that we cannot make a thread return result when it terminates, i.e. when run() completes. For supporting this feature, the **Callable** interface is present in Java.
+
+``` java
+
+public class CallableSample
+{
+  public static void main(String[] args) throws Exception
+  {
+  
+    // FutureTask is a concrete class that
+    // implements both Runnable and Future
+    FutureTask[] randomNumberTasks = new FutureTask[5];
+  
+    for (int i = 0; i < 5; i++)
+    {
+      Callable callable = new CallableRondom();
+  
+      // Create the FutureTask with Callable
+      randomNumberTasks[i] = new FutureTask(callable);
+  
+      // As it implements Runnable, create Thread
+      // with FutureTask
+      Thread t = new Thread(randomNumberTasks[i]);
+      t.start();
+    }
+  
+    for (int i = 0; i < 5; i++)
+    {
+      // As it implements Future, we can call get()
+      System.out.println(randomNumberTasks[i].get());
+  
+      // This method blocks till the result is obtained
+      // The get method can throw checked exceptions
+      // like when it is interrupted. This is the reason
+      // for adding the throws clause to main
+    }
+  }
+}
+class CallableRondom implements Callable
+{
+  
+  public Object call() throws Exception
+  {
+    Random generator = new Random();
+    Integer randomNumber = generator.nextInt(5);
+  
+    Thread.sleep(randomNumber * 1000);
+  
+    return randomNumber;
+  }
+  
+}
+  
 
 ```
