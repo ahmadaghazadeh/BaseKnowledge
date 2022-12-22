@@ -1999,18 +1999,18 @@ Doggie::fetch
 - [x] method references
 - [ ] bad code
 
-#### Q137. What is the difference between the wait() and sleep methods?
+#### **Q137. What is the difference between the wait() and sleep methods?**
 
 - [ ] Only Threads can wait, but any Object can be put to sleep.
 - [ ] A wait can be woken up by another Thread calling notify whereas a sleep cannot.
-- [ ] When things go wrong, sleep throws an IllegalMonitorStateException whereas wait throws an InterruptedException.
+- [x] When things go wrong, sleep throws an IllegalMonitorStateException whereas wait throws an InterruptedException.
 - [ ] Sleep allows for multi-threading whereas wait does not.
 
-#### Q138. Which is the right way to declare an enumeration of cats?
+#### **Q138. Which is the right way to declare an enumeration of cats?**
 
-- [ ] enum Cats (SPHYNX, SIAMESE, BENGAL);
+- [ ] ~~enum Cats (SPHYNX, SIAMESE, BENGAL);~~
 - [ ] enum Cats ("sphynx", "siamese", "bengal");
-- [ ] enum Cats {SPHYNX, SIAMESE, BENGAL}
+- [x] enum Cats {SPHYNX, SIAMESE, BENGAL}
 - [ ] enum Cats {"sphynx","siamese","bengal}
 
 #### Q139. What happens when this code is run?
@@ -2023,14 +2023,14 @@ System.out.println(horses.get(1).trim());
 
 - [ ] "Sea Biscuit" will be printed.
 - [ ] " Sea Biscuit " will be printed.
-- [ ] An IndexOutOfBoundsException will be thrown.
+- [x] An IndexOutOfBoundsException will be thrown.
 - [ ] A NullPointerException will be thrown.
 
-#### Q140. Which data structure would you choose to associate the amount of rainfall with each month?
+#### **Q140. Which data structure would you choose to associate the amount of rainfall with each month?**
 
 - [ ] Vector
 - [ ] LinkedList
-- [ ] Map
+- [x] Map
 - [ ] Queue
 
 > Explanation (from @yktsang01 in #3915 thread)
@@ -2049,45 +2049,44 @@ LinkedList<Rainfall>
 Queue<Rainfall>
 ```
 
-#### Q141. Among the following which contains date information.
+#### Q141. **Among the following which contains date information.**
 
-- [ ] java.sql timestamp
+- [x] java.sql timestamp
 - [ ] java.io time
 - [ ] java.io.timestamp
 - [ ] java.sql.time
 
-#### Q142. What is the size of float and double in java?
-
-- [ ] 32 and 64
-- [ ] 32 and 32
+#### **Q142. What is the size of float and double in java?**
+- [x] 32 and 64
+- [ ] ~~32 and 32~~
 - [ ] 64 and 64
 - [ ] 64 and 32
 
 #### Q143. When you pass an object reference as an argument to a method call what gets passed?
 
 - [ ] a reference to a copy
-- [ ] a copy of the reference
+- [ ] ~~a copy of the reference~~
 - [ ] the object itself
-- [ ] the original reference
+- [x] the original reference
 
-#### Q144. Which choice demonstrates a valid way to create a reference to a static function of another class?
+#### **Q144. Which choice demonstrates a valid way to create a reference to a static function of another class?**
 
-- [ ] Function<Integer, Integer> funcReference = MyClass::myFunction;
+- [x] Function<Integer, Integer> funcReference = MyClass::myFunction;
 - [ ] Function<Integer, Integer> funcReference = MyClass.myFunction;
 - [ ] Function<Integer, Integer> funcReference = MyClass().myFunction();
-- [ ] Function<Integer, Integer> funcReference = MyClass::myFunction();
+- [ ] ~~Function<Integer, Integer> funcReference = MyClass::myFunction();~~
 
-#### Q145. What is UNICODE?
+#### **Q145. What is UNICODE?**
 
 - [ ] Unicode is used for external representation of words and strings
 - [ ] Unicode is used for internal representation of characters and strings
-- [ ] Unicode is used for external representation of characters and strings
+- [x] Unicode is used for external representation of characters and strings
 - [ ] Unicode is used for internal representation of words and strings
 
 #### Q146. What kind of thread is the Garbage collector thread?
 
 - [ ] User thread
-- [ ] Daemon thread
+- [x] Daemon thread
 - [ ] Both
 - [ ] None of these
 
@@ -2096,11 +2095,11 @@ Queue<Rainfall>
 - [ ] HashMap is Interface and map is class that implements that
 - [ ] HashMap is class and map is interface that implements that
 - [ ] Map is class and Hashmap is interface that implements that
-- [ ] Map is Interface and Hashmap is class that implements that
+- [x] Map is Interface and Hashmap is class that implements that
 
-#### Q148. What invokes a thread's run() method?
+#### **Q148. What invokes a thread's run() method?**
 
-- [ ] JVM invokes the thread's run() method when the thread is initially executed.
+- [x] JVM invokes the thread's run() method when the thread is initially executed.
 - [ ] Main application running the thread.
 - [ ] start() method of the thread class.
 - [ ] None of the above.
@@ -2112,7 +2111,7 @@ Queue<Rainfall>
 - [ ] class declared final is a final class.
 - [ ] Final classes are created so the methods implemented by that class cannot be overriddden.
 - [ ] It can't be inherited.
-- [ ] All of the above.
+- [x] All of the above.
 
 [Explanation](Final classes are created so the methods implemented by that class cannot be overridden. It can't be inherited. These classes are declared final.)
 
@@ -2120,11 +2119,14 @@ Queue<Rainfall>
 
 - [ ] Math.largest(x,y)
 - [ ] Math.maxNum(x,y)
-- [ ] Math.max(x,y)
+- [x] Math.max(x,y)
 - [ ] Math.maximum(x,y)
 
 #### Q151. What do these statments evaluate to?
-
+``` java
+1. true && false
+2. true && false || true
+```
 - [ ] 1. false 2. true
 - [ ] 1. false 2. false
 - [ ] 1. true 2. true
@@ -2132,14 +2134,14 @@ Queue<Rainfall>
 
 #### Q151. `void accept(T t)` is method of -?
 
-- [ ] Consumer
+- [x] Consumer
 - [ ] Producer
-- [ ] Both
+- [ ] ~~Both~~
 - [ ] None
 
 #### Q152. Which of these does `Stream filter()` operates on?
 
-- [ ] Predicate
+- [x] Predicate
 - [ ] Interface
 - [ ] Class
 - [ ] Methods
@@ -2149,9 +2151,9 @@ Queue<Rainfall>
 - [ ] Class
 - [ ] Interface
 - [ ] Predicate
-- [ ] Function
+- [x] Function
 
-#### Q154. What code is needed at line 8?
+#### **Q154. What code is needed at line 8?**
 
 ```java
 1: class Main {
@@ -2177,7 +2179,7 @@ Queue<Rainfall>
 - [ ] for(MapEntry<String, Integer> entry: map.entrySet()) {
 - [ ] for(String entry: map) {
 - [ ] for(Integer entry: map.values()) {
-- [ ] for(Entry<String, Integer> entry: map.entrySet()) {
+- [x] for(Entry<String, Integer> entry: map.entrySet()) {
 
 #### Q155. What will print when Lambo is instantiated?
 
@@ -2197,7 +2199,7 @@ class Lambo extends Car {
 }
 ```
 
-- [ ] blue
+- [x] blue
       white
       white
 - [ ] blue
@@ -2210,7 +2212,7 @@ class Lambo extends Car {
       white
       blue
 
-### Q156. Which command will run a FrogSounds app that someone emailed to you as a jar?
+### **Q156. Which command will run a FrogSounds app that someone emailed to you as a jar?**
 
 - [ ] jar FrogSounds.java
 - [ ] javac FrogSounds.exe
@@ -2219,7 +2221,7 @@ class Lambo extends Car {
 
 #### Q157. What is the default value of short variable?
 
-- [ ] 0
+- [x] 0
 - [ ] 0.0
 - [ ] null
 - [ ] undefined
@@ -2241,14 +2243,14 @@ class variable_scope {
 }
 ```
 
-- [ ] Compilation Error
+- [x] Compilation Error
 - [ ] Runtime Error
 - [ ] 5 6 5 6
 - [ ] 5 6 5
 
 #### Q159. Subclasses of an abstract class are created using the keyword **\_**.
 
-- [ ] extends
+- [x] extends
 - [ ] abstracts
 - [ ] interfaces
 - [ ] implements
@@ -2262,7 +2264,7 @@ System.out::println
 Doggie::fetch
 ```
 
-- [ ] method references
+- [x] method references
 - [ ] bad code
 - [ ] condensed invocation
 - [ ] static references
@@ -2284,7 +2286,7 @@ public class Course {
 }
 ```
 
-- [ ] course java
+- [x] course java
       tutorial Merit campus
 - [ ] course java
       course java tutorial Merit campus

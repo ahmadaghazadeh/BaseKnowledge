@@ -1,25 +1,18 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.TreeSet;
-import java.util.function.Function;
+import java.util.Formatter;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 class Main {
  
-private static volatile int MY_INT = 0;
 
 public static void main(String[] args)
 	{
-		Function<Integer, Double> half = a -> a / 2.0;
- 
-        // However treble the value given to half function
-        half = half.compose(a -> 3 * a);
-
-		half = half.andThen(a -> a+1);
- 
-        // Applying the function to get the result
-        System.out.println(half.apply(5));
+		Formatter data = new Formatter();
+        data.format("course %s", "java ");
+        System.out.println(data);
+        data.format("tutorial %s", "Merit campus");
+        System.out.println(data);
 	}
 }
  
