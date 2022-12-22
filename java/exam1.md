@@ -1880,9 +1880,9 @@ numbers                         // Input `List<Integer>` > [1, 2, 3, 4] <br>
     .sum()                      // Returns the sum as `int` > 20
 ```
 
-#### Q126. Which is not one of the standard input/output streams provided by java.lang.System?
+#### **Q126. Which is not one of the standard input/output streams provided by java.lang.System?**
 
-- [ ] print
+- [x] print
 - [ ] out
 - [ ] err
 - [ ] in
@@ -1895,9 +1895,9 @@ int jar = pickle;
 ```
 
 - [ ] Use the method toInt() to convert pickle before assigning it to jar.
-- [ ] Cast pickle to an int before assigning it to jar.
+- [x] Cast pickle to an int before assigning it to jar.
 - [ ] Make pickle into a double by adding + ".0"
-- [ ] Use the new keyword to create a new Integer from pickle before assigning it to jar.
+- [ ] ~~Use the new keyword to create a new Integer from pickle before assigning it to jar.~~
 
 #### Q128. What value should x have to make this loop execute 10 times?
 
@@ -1906,7 +1906,7 @@ for(int i=0; i<30; i+=x) {}
 ```
 
 - [ ] 10
-- [ ] 3
+- [x] 3
 - [ ] 1
 - [ ] 0
 
@@ -1914,7 +1914,7 @@ for(int i=0; i<30; i+=x) {}
 
 - [ ] IDE; JRE
 - [ ] JDK; IDE
-- [ ] JRE; JDK
+- [x] JRE; JDK
 - [ ] JDK; JRE
 
 [Reference](https://stackoverflow.com/questions/1906445/what-is-the-difference-between-jdk-and-jre)
@@ -1924,7 +1924,7 @@ for(int i=0; i<30; i+=x) {}
 - [ ] java.net
 - [ ] java.util
 - [ ] java.lang
-- [ ] All above
+- [x] All above
 
 [Reference](https://docs.oracle.com/en/java/javase/11/docs/api/allpackages-index.html)
 
@@ -1935,7 +1935,7 @@ String buy = "bitcoin";
 System.out.println(buy.substring(x, x+1) + buy.substring(y, y+2))
 ```
 
-- [ ] int x = 0; int y = 2;
+- [x] int x = 0; int y = 2;
 - [ ] int x = 1; int y = 3;
 - [ ] int x = 0; int y = 3;
 - [ ] int x = 1; int y = 3;
@@ -1944,14 +1944,14 @@ System.out.println(buy.substring(x, x+1) + buy.substring(y, y+2))
 
 - [ ] exception
 - [ ] args
-- [ ] static
+- [x] static
 - [ ] String
 
 [Reference](https://www.geeksforgeeks.org/java-main-method-public-static-void-main-string-args/)
 
 #### Q133. You have a list of Bunny objects that you want to sort by weight using Collections.sort. What modification would you make to the Bunny class?
 
-- [ ] Implement the comparable interface by overriding the compareTo method.
+- [x] Implement the comparable interface by overriding the compareTo method.
 - [ ] Add the keyword default to the weight variable.
 - [ ] Override the equals method inside the Bunny class.
 - [ ] Implement Sortable and override the sortBy method.

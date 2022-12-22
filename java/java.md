@@ -1735,3 +1735,22 @@ printf()
 **Input Stream:** These streams are used to read data that must be taken as an input from a source array or file or any peripheral device. For eg., **FileInputStream, BufferedInputStream, ByteArrayInputStream** etc.
 
 * **Output Stream:** These streams are used to write data as outputs into an array or file or any output peripheral device. For eg., FileOutputStream, BufferedOutputStream, ByteArrayOutputStream etc.
+
+## java main() Method – public static void main(String[] args)
+![image](images/main.jpg)
+
+If you change anything of this method, your application face to exception.
+
+### Can we execute a java program without main method?
+* Yes, we can execute a java program without a main method by using a static block.
+
+A static block in Java is a group of statements that gets executed only once when the class is loaded into the memory by ClassLoader, It is also known as a static initialization block, and it goes into the stack memory.
+
+``` java
+    static
+    {
+        System.out.println(
+            "This class can be executed without main");
+        System.exit(0);
+    }
+```
