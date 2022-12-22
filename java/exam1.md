@@ -1961,7 +1961,7 @@ System.out.println(buy.substring(x, x+1) + buy.substring(y, y+2))
 #### Q134. Identify the incorrect Java feature.
 
 - [ ] Object oriented
-- [ ] Use of pointers
+- [x] Use of pointers
 - [ ] Dynamic
 - [ ] Architectural neural
 
@@ -1985,7 +1985,7 @@ switch (yearsMarried) {
 
 - [ ] cotton
 - [ ] cotton <br> leather
-- [ ] cotton <br> leather <br> I don't gotta buy gifts for nobody!
+- [x] cotton <br> leather <br> I don't gotta buy gifts for nobody!
 - [ ] cotton <br> I don't gotta buy gifts for nobody!
 
 #### Q136. What language feature do these expressions demonstrate?
@@ -1996,7 +1996,7 @@ Doggie::fetch
 
 - [ ] condensed invocation
 - [ ] static references
-- [ ] method references
+- [x] method references
 - [ ] bad code
 
 #### Q137. What is the difference between the wait() and sleep methods?

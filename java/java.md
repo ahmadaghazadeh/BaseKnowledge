@@ -1754,3 +1754,24 @@ A static block in Java is a group of statements that gets executed only once whe
         System.exit(0);
     }
 ```
+
+## method references
+
+``` java
+System.out::println
+
+Doggie::fetch
+```
+
+
+## Difference between wait and sleep in Java
+* **Sleep():** This Method is used to pause the execution of current thread for a specified time in Milliseconds. Here, Thread does not lose its ownership of the monitor and resume’s it’s execution
+
+* **Wait():** This method is defined in object class. It tells the calling thread (a.k.a Current Thread) to wait until another thread invoke’s the notify() or notifyAll() method for this object, The thread waits until it reobtains the ownership of the monitor and Resume’s Execution.
+
+
+|Wait()|	Sleep()|
+|------|---------|
+|Wait() method belongs to Object class.	Sleep() method belongs to Thread class.|Wait() method releases lock during Synchronization.	Sleep() method does not release the lock on object during Synchronization.|
+|Wait() should be called only from Synchronized context.|	There is no need to call sleep() from Synchronized context.||Wait() is not a static method.| 	Sleep() is a static method. |Wait() Has Three Overloaded Methods:wait()wait(long timeout)wait(long timeout, int nanos)||Sleep() Has Two Overloaded Methods:sleep(long millis)millis: milliseconds sleep(long millis,int nanos) nanos: Nanoseconds|
+|public final void wait(long timeout)|	public static void sleep(long millis) throws Interrupted_Execption|
