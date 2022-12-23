@@ -189,7 +189,7 @@ modified: beta-notes.js
 - [x] Staging area
 - [ ] git cache
 
-#### **Q20. What commands would you use to force an overwrite of your local files with the master branch?**
+#### Q20. What commands would you use to force an overwrite of your local files with the master branch?
 
 - [ ] ⠀
 
@@ -224,7 +224,7 @@ modified: beta-notes.js
 #### Q21. Which statement is true when you use the git add -A command?
 
 - [ ] Only new files in the working directory are staged to the index.
-- [ ] All new and updated files from the working directory are staged to the index.
+- [x] All new and updated files from the working directory are staged to the index.
 - [ ] All files in the working directory are staged to the index in alphabetical order.
 - [ ] Only updated files in the working directory are staged to the index.
 
@@ -233,14 +233,14 @@ modified: beta-notes.js
 - [ ] use git show refs/push-notifications
 - [ ] use git show push-notifications
 - [ ] use git show head/refs/push-notifications
-- [ ] use git show refs/head/push-notifications
+- [x] use git show refs/head/push-notifications
 
 [Reference](https://geedew.com/fixing-git-branch-and-tag-name-collision/)
 
-#### Q23. Your team lead needs a list of all commits that will be moved before you perform a rebase. Which command can you use to access that information?
+#### **Q23. Your team lead needs a list of all commits that will be moved before you perform a rebase. Which command can you use to access that information?**
 
 - [ ] git rebase -log
-- [ ] git rebase -i
+- [x] git rebase -i
 - [ ] git rebase -verbose
 - [ ] git rebase -all
 
@@ -255,18 +255,18 @@ git bisect good 69faab6268350295550de7d587bc323d
 - [ ] It runs a merge of a good commit that is discovered using a known bad commit and known good commit
 - [ ] It marks a commit for deletion using a known bad commit and known good commit to determine which commit introduced a bug
 - [ ] It defines a bad commit and resets the HEAD using a known bad commit and known good commit
-- [ ] It performs a binary search using a known bad commit and known good commit to determine which commit introduced a bug
+- [x] It performs a binary search using a known bad commit and known good commit to determine which commit introduced a bug
 
 #### Q25. In a situation where you have several commits for a single task, what is the most efficient way to restructure your commit history?
 
 - [ ] Cherry pick the related commits to another branch.
 - [ ] Delete the task commits and recommit with a new message.
-- [ ] Squash the related commits together into a single coherent commit.
+- [x] Squash the related commits together into a single coherent commit.
 - [ ] Stash the related commits under a new hash.
 
 #### Q26. Which of the following is true of the git push command?
 
-- [ ] By default a push doesn't send tags to the remote repository.
+- [x] By default a push doesn't send tags to the remote repository.
 - [ ] Commits can only be tagged when they are created.
 - [ ] Tags are pushed to the remote repository with their respective commits.
 - [ ] Only annotated tags are automatically pushed to the remote repository with a commit.
@@ -282,14 +282,14 @@ git push -u origin master
 - [ ] git push master
 - [ ] git push origin
 - [ ] Same as before, git push -u origin master
-- [ ] git push
+- [x] git push
 
 #### Q28. How would you create a custom shortcut or command across your git environment?
 
 - [ ] Run git hotfix with the shortcut name.
 - [ ] Assign a shortcut or command using git options file.
 - [ ] Use the git custom-key command.
-- [ ] Create an alias using the git config command.
+- [x] Create an alias using the git config command.
 
 #### Q29. What is the status of the beta-notes.js file in the following output?
 
@@ -301,7 +301,7 @@ Changes not staged for commit:
 modified: beta-notes.js
 ```
 - [ ] beta-notes.js is untracked and has been modified.
-- [ ] beta-notes.js is a tracked file and has been modified, but has not been added to the current commit.
+- [x] beta-notes.js is a tracked file and has been modified, but has not been added to the current commit.
 - [ ] beta-notes.js is untracked but has been added to the current commit.
 - [ ] beta-notes.js is tracked, and the modified file has been added to the current commit.
 
@@ -310,11 +310,11 @@ modified: beta-notes.js
 - [ ] --fix
 - [ ] --quickfix
 - [ ] --modify
-- [ ] --amend
+- [x] --amend
 
-#### **Q31. What is the best way to characterize the git commit structure?**
+#### Q31. What is the best way to characterize the git commit structure?
 - [ ] Data array
-- [ ] Data log
+- [x] Data log
 - [ ] Data snapshot
 - [ ] Data dictionary
 
@@ -322,15 +322,15 @@ modified: beta-notes.js
 
 `git rm --cached testfile.js` 
 
-- [ ] testfile.js will be removed from the staging area and its changes no longer tracked.
-- [ ] testfile.js will be removed from the staging area but its changes will still be tracked.
+- [x] testfile.js will be removed from the staging area and its changes no longer tracked.
+- [ ] ~~testfile.js will be removed from the staging area but its changes will still be tracked.~~
 - [ ] A copy of testfile.js will be cached on your desktop.
 - [ ] The current copy of testfile.js will be saved in the staging area.
 
 #### Q33. After you've successfully merged two branches and committed the changes, what is the next step in keeping your git structure organized?
 
 - [ ] Use the git reset --soft HEAD to roll back one commit.
-- [ ] Run git branch -d `<branch name>` to delete the merged branch.
+- [x] Run git branch -d `<branch name>` to delete the merged branch.
 - [ ] Use git clear-all to clean up any hanging files.
 - [ ] Run git rebase to move the current commit to its original location.
 
@@ -339,19 +339,19 @@ modified: beta-notes.js
 - [ ] This is not possible, as you cannot save locally without committing.
 - [ ] Run git hold to save a local copy of what you're doing to return to later.
 - [ ] Save your work with git local-cache.
-- [ ] Use git stash to save your work and come back later and reapply the stashed commit.
+- [x] Use git stash to save your work and come back later and reapply the stashed commit.
 
 #### Q35. What command would you use to create a new git repository?
 
 - [ ] git add
 - [ ] git start
 - [ ] git new
-- [ ] git init
+- [x] git init
 
 #### Q36. While working on a feature branch you try to use "git rerere" to solve a recurring merge conflict but nothing is happening. What could be causing this issue?
 
 - [ ] The "-all" option isn't added to the command.
-- [ ] "rerere.enabled" isn't enable in the config file.
+- [x] "rerere.enabled" isn't enable in the config file.
 - [ ] The commit hash is missing.
 - [ ] The filepath isn't specified.
 
@@ -360,26 +360,26 @@ modified: beta-notes.js
 - [ ] core.page
 - [ ] page
 - [ ] pager
-- [ ] core.pager
+- [x] core.pager
 
 #### Q38. What does commit object contain?
 
 - [ ] A set of files, representing the state of a project at a given point of time.
 - [ ] Reference to parent commit objects.
-- [ ] An SHA1 name, a 40-character string that uniquely identifies the commit object.
+- [x] An SHA1 name, a 40-character string that uniquely identifies the commit object.
 
 #### Q39. Which option enables inclusion of committer name in custom log format?
 
 - [ ] %ce
 - [ ] %cr
 - [ ] %cd
-- [ ] %cn
+- [x] %cn
 
-#### **Q40. How many ways are present in Git to integrate changes from one branch into another?**
+#### Q40. How many ways are present in Git to integrate changes from one branch into another?
 
-- ~~3~~
+- [ ] 3
 - [ ] 5
-- [ ] 2
+- [x] 2
 - [ ] 4
 
 [Reference link](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
@@ -389,26 +389,26 @@ modified: beta-notes.js
 
 - [ ] git
 - [ ] admin
-- [ ] root
+- [x] root
 - [ ] None of these
 
-#### **Q42. Which command will list tags with the 1.4.2 series?**
+#### Q42. Which command will list tags with the 1.4.2 series?
 
 - [ ] git tag 'v1.4.2'
-- [ ] git tag -l 'v1.4.2.\*'
+- [x] git tag -l 'v1.4.2.\*'
 - [ ] git tag-list 'v1.4.2\*'
 - [ ] git tag 'v1.4.2\*'
 
 #### Q43. Which of the following is an integration manager?
 
 - [ ] lieutenants
-- [ ] benevolent dictator
+- [x] benevolent dictator
 - [ ] Depends upon project type
 - [ ] Depends upon data
 
 #### Q44. Which Git command begins tracking of a new file?
 
-- [ ] add
+- [x] add
 - [ ] addfile
 - [ ] begin
 - [ ] track
@@ -418,18 +418,18 @@ modified: beta-notes.js
 - [ ] All of these
 - [ ] SSH
 - [ ] Git
-- [ ] HTTP
+- [x] HTTP
 
 #### Q46. Which key press returns a set of suggestions to pick from, when writing a Git command?
 
 - [ ] Control
 - [ ] Shift
-- [ ] Tab
+- [x] Tab
 - [ ] Alt
 
 #### Q47. Which of these terms best describes Git?
 
-- [ ] Distributed Version Control System
+- [x] Distributed Version Control System
 - [ ] Issue Tracking System
 - [ ] Integrated Development Environment
 - [ ] Web-Based Repository Hosting Service
@@ -439,13 +439,13 @@ modified: beta-notes.js
 - [ ] duplicate
 - [ ] replicate
 - [ ] copy
-- [ ] clone
+- [x] clone
 
 #### Q49. How does Git think of its data?
 
 - [ ] File
 - [ ] None of these
-- [ ] Snapshot 
+- [x] Snapshot 
 - [ ] Folder
 
 #### Q50. Which option enables inclusion of author name in custom log format?
@@ -453,7 +453,7 @@ modified: beta-notes.js
 - [ ] %am
 - [ ] %ad
 - [ ] %ae
-- [ ] %an
+- [x] %an
 
 #### **Q51. Which version onwards did Git offer reversing a file back to what it looked like when last committed?**
 
