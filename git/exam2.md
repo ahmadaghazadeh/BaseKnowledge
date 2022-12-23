@@ -455,51 +455,51 @@ modified: beta-notes.js
 - [ ] %ae
 - [x] %an
 
-#### **Q51. Which version onwards did Git offer reversing a file back to what it looked like when last committed?**
+#### Q51. Which version onwards did Git offer reversing a file back to what it looked like when last committed?
 
 - [ ] 1.7
-- [ ] 1.6
+- [x] 1.6
 - [ ] 2.0
 - [ ] 1.8
 
 #### Q52. Which strategy is used by Git for merging two branches?
 
 - [ ] LIFO
-- [ ] recursive
+- [x] recursive
 - [ ] FIFO
 - [ ] octopus
 
 #### Q53. What does refs store?
 
-- [ ] SHA-1 value
+- [x] SHA-1 value
 - [ ] None of these
 - [ ] Branch name
 - [ ] Project name
 
 #### **Q54. What Language is used in GIT?**
 
-- [ ] C
-- [ ] ~~C++~~
+- [x] C
+- [ ] C++
 - [ ] C#
 - [ ] Java
 
 #### Q55. What is usually the extension of file which has the public key?
 
 - [ ] ssh
-- [ ] pub
+- [x] pub
 - [ ] key
 - [ ] pk
 
-#### **Q56. What is the difference between initializing a normal repo and a bare repo?**
+#### Q56. What is the difference between initializing a normal repo and a bare repo?
  
 - [ ] Bare repos store their git history in a .git subfolder.
 - [ ] Bare repos do not have the .git extension.
-- [ ] Bare repos do not come with working or checked-out source files.
+- [x] Bare repos do not come with working or checked-out source files.
 - [ ] Bare repos should be used for local rather than remote repos.
 
 #### Q57. How many individual commits can a single repository have?
 
-- [ ] any number of commits
+- [x] any number of commits
 - [ ] only one commit local per repository
 - [ ] only three commits per branch
 - [ ] only one commit per HEAD
@@ -509,13 +509,13 @@ modified: beta-notes.js
 - [ ] heavy and concise
 - [ ] lightweight and immutable
 - [ ] heavy and annotated
-- [ ] lightweight and annotated
+- [x] lightweight and annotated
 
 #### **Q59. After staging a series of changes to the index, which command could you use to review them prior to a commit?**
 
-- [ ] git diff --cached
-- [ ] ~~git diff~~
-- [ ] git diff --HEAD
+- [x] git diff --cached
+- [ ] git diff
+- [ ] ~~git diff --HEAD~~
 - [ ] git status -v -v 
 
 #### Q60. What does the git stash drop command do?
