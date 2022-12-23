@@ -1,6 +1,6 @@
 ## Git
 
-## This is a first exam for git: 100/x=1-(131/38) => x=%70.99
+## This is a first exam for git: (27 of 131 is incorrect) => x=%79.38
 
 #### Q1. How can you check your current git version?
 
@@ -1061,7 +1061,7 @@ Untracked files:
   git commit --patch --no-edit
 ```
 
-#### ~~Q128. Which command would remove a file named wrongfile from the current branch of a repository, the index, and working files?~~
+#### **Q128. Which command would remove a file named wrongfile from the current branch of a repository, the index, and working files?**
 
 - [ ] ⠀
 
@@ -1095,7 +1095,7 @@ git commit -m "Removed file"
 
 - [ ] Send an email to a project owner.
 - [ ] I don't bother reporting software bugs because there's no transparency and they never get fixed anyway.
-- [ ] Search for the bug in the project's existing issues and create a new one if it hasn't been reported yet.
+- [x] Search for the bug in the project's existing issues and create a new one if it hasn't been reported yet.
 - [ ] Use git search -diff to compare all commits in your repository history.
 
 Explanation: A project's issues are visible to anyone who has access to the project, so you may find a resolution is already planned or available. Otherwise, you can create and track the issue yourself.
@@ -1103,7 +1103,7 @@ Explanation: A project's issues are visible to anyone who has access to the proj
 #### Q130. Suppose you have created a bug fix on a new branch and want it to become part of the next production build generated from the main branch. What should you do next?
 
 - [ ] Copy your branch changes and commit them directly to the main branch.
-- [ ] Create a pull request to merge your new branch into the main branch.
+- [x] Create a pull request to merge your new branch into the main branch.
 - [ ] On second thought, maybe I won't share this fix. I'll just put it in my own private version of the source code.
 - [ ] Use git bisect to compare the buggy commit to an early commit that works as expected.
 
@@ -1111,7 +1111,7 @@ Explanation: Pull requests are the correct way to communicate that commits are r
 
 #### Q131. Which command would remove a file named wrongfile from the current branch of a repository, the index, and working files?
 
-- [ ] Fork the project's repository to your GitHub account, clone the forked repository to your local machine, push changes to your repository, and submit a pull request to the target (upstream) repository.
+- [x] Fork the project's repository to your GitHub account, clone the forked repository to your local machine, push changes to your repository, and submit a pull request to the target (upstream) repository.
 - [ ] Clone the project to your local machine and push updates directly to the project repository.
 - [ ] Use git commands to make a copy of the project so that you can work locally. Submit an issue to get your changes into the target repository.
 - [ ] Use git show push-notifications
@@ -1121,7 +1121,7 @@ Explanation: GitHub provides forking functionality designed to allow you to work
 #### Q132. What is GitHub?
 
 - [ ] version control
-- [ ] A hosting platform for Git repositories
+- [x] A hosting platform for Git repositories
 - [ ] for keeping images
 - [ ] for social networking
 
@@ -1129,7 +1129,7 @@ Explanation: GitHub is a popular hosting platform for developers to store their 
 
 #### Q133. Which statement is true of the git push command?
 
-- [ ] By default, a push doesn’t send tags to the remote repository.
+- [x] By default, a push doesn’t send tags to the remote repository.
 - [ ] Only annotated tags are automatically pushed to the remote repository with a commit.
 - [ ] Tags are pushed to the remote repository with their respective commits.
 - [ ] Commits can be tagged only when they are created.
@@ -1138,13 +1138,13 @@ Explanation: GitHub is a popular hosting platform for developers to store their 
 
 - [ ] Add and commit.
 - [ ] branch and checkout.
-- [ ] fetch and merge.
+- [x] fetch and merge.
 - [ ] None of these.
 
 #### Q135. What is the command to set the user email for the current repository?
 
 - [ ] git email.user
-- [ ] git config user.email
+- [x] git config user.email
 - [ ] git config email
 - [ ] All of the above.
 
