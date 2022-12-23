@@ -796,18 +796,18 @@ Which of the following options is correct ?
 
 [reference here](https://git-scm.com/docs/git-reflog)
 
-#### **Q97. How does the `-p` option change the behavior of the `git add` command**
+#### Q97. How does the `-p` option change the behavior of the `git add` command?
 
 - [ ] It causes tracked files in the parent directory to be included in the staged files.
-- [ ] It allows developers to interactively choose which changes to tracked files are staged and outputs the differences for review.
+- [x] It allows developers to interactively choose which changes to tracked files are staged and outputs the differences for review.
 - [ ] It automatically pushes changes to the corresponding branch on the remote repository. 
 - [ ] It allows developers to interactively choose which files are committed and outputs the differences for review.
 
 [reference here](https://git-scm.com/docs/git-add#Documentation/git-add.txt--p)
 
-#### **Q98. After checking out a specific commit, you receive a warning message indicating You are in 'detached HEAD' state. What is Git warning you of?**
+#### Q98. After checking out a specific commit, you receive a warning message indicating You are in 'detached HEAD' state. What is Git warning you of?
 
-- [ ] You are not working on the most recent commit of a branch.
+- [x] You are not working on the most recent commit of a branch.
 - [ ] A teammate has flagged the code with an issue.
 - [ ] The commit does not have a parent.
 - [ ] The branch has not been pushed to the remote repository.
@@ -818,7 +818,7 @@ Which of the following options is correct ?
 
 - [ ] It cannot be recovered.
 - [ ] Find the hash of the branch with the `log` command, then execute `git checkout -b <branchname> <hash>`.
-- [ ] Find the hash of the branch with the `reflog` command, then execute `git checkout -b <branchname> <hash>`.
+- [x] Find the hash of the branch with the `reflog` command, then execute `git checkout -b <branchname> <hash>`.
 - [ ] Execute `git checkout -b <branchname>`.
 
 [Reference](https://stackoverflow.com/questions/1992364/git-recover-deleted-remote-branch)
@@ -828,7 +828,7 @@ Which of the following options is correct ?
 - [ ] Use `git stat`.
 - [ ] Use `git debug --prettyprint`.
 - [ ] Query the remote repository with the commit hash.
-- [ ] Use `git show <commit> --stat`.
+- [x] Use `git show <commit> --stat`.
 
 [Reference](https://git-scm.com/docs/git-show#Documentation/git-show.txt---statltwidthgtltname-widthgtltcountgt)
 
@@ -836,32 +836,32 @@ Which of the following options is correct ?
 
 - [ ] Repository managers are proprietary versions of Git that do not include enhanced features.
 - [ ] Repository managers provide an enhanced command-line tool that is used to manage multiple local repositories.
-- [ ] Repository managers provide an online service for hosting Git repositories that include collaboration features such as pull requests, issue tracking, and peer reviews.
+- [x] Repository managers provide an online service for hosting Git repositories that include collaboration features such as pull requests, issue tracking, and peer reviews.
 - [ ] Repository managers distribute repositories across multiple locations on a user's workstation, providing redundant storage that allows for quick backup and recovery.
 
 [reference](https://www.theserverside.com/video/Git-vs-GitHub-What-is-the-difference-between-them)
 
-#### **Q102. What command finds the HEAD of the current branch?**
+#### Q102. What command finds the HEAD of the current branch?
 
 - [ ] `git head --verify`
 - [ ] `git log --head`
 - [ ] `git hash --head`
-- [ ] `git show-ref --head`
+- [x] `git show-ref --head`
 
 [reference](https://git-scm.com/docs/git-show-ref)
 
-#### **Q103. When Git Workflows contain a long-running branch, what purpose does the long-running branch serve?**
+#### Q103. When Git Workflows contain a long-running branch, what purpose does the long-running branch serve?
 
 - [ ] Long-running branches store unstable code until it os peer reviewed for integration into a feature branch.
 - [ ] Long-running branches correspond to agile sprints and are used to store related to features developed in the sprint.
 - [ ] Long-running branches contain code related to experimental feature development that is merged into short-lived branches such as master.
-- [ ] Long-running branches correspond to different stages of development and are always open for topic/feature branches to be pulled into.
+- [x] Long-running branches correspond to different stages of development and are always open for topic/feature branches to be pulled into.
 
 #### Q104. What command takes changes from the master branch on the remote repository origin and merges then to the local checked-out branch?
 
 - [ ] `git commit -u origin`
 - [ ] `git checkout origin`
-- [ ] `git pull origin master`
+- [x] `git pull origin master`
 - [ ] `git push origin master`
 
 #### **Q105. While pushing changes to a remote repository, you receive the following message. How do you resolve this issue?**
@@ -872,27 +872,27 @@ hint: Updates were rejected because the remote contains work that you do not hin
 ```
 
 - [ ] Use the --atomic option with the push command.
-- [ ] Execute a pull, then resolve any merge conflicts and execute another push.
+- [x] Execute a pull, then resolve any merge conflicts and execute another push.
 - [ ] Execute a fetch, then execute another push.
-- [ ] [Use the --force option with the push command.[
+- [ ] ~~Use the --force option with the push command.~~
 
-#### **Q106. What does the -p option add to the output of the `git log` command?**
+#### Q106. What does the -p option add to the output of the `git log` command?
 
-- [ ] It adds patch output that shows the differences introduced in each commit.
+- [x] It adds patch output that shows the differences introduced in each commit.
 - [ ] It adds patch output that shows a summary listing modified files.
 - [ ] It adds padding to the output and displays a histogram showing the number of lines changed in each commit.
-- [ ] [It adds the full commit message and notes associated with each commit.[
+- [ ] It adds the full commit message and notes associated with each commit.
 
 #### Q107. What is the staging area or index?
 
 - [ ] an area that stores commits prior to them being pushed to the remote repository
 - [ ] an area containing stash entries that can applied to the working files
 - [ ] an area where changes from a branch in the remote repository are stored before they are applied to a local branch
-- [ ] an area that stores information about changes that will be included in the next commit
+- [x] an area that stores information about changes that will be included in the next commit
 
 #### Q108. What command would you use to stage changes to the index strictly for properties files in the current directory?
 
-- [ ] `git add *.properties`
+- [x] `git add *.properties`
 - [ ] `git add %.properties`
 - [ ] `git add .properties`
 - [ ] `git add properties`
@@ -901,15 +901,15 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] files in the local repository that have not been merged into the master branch
 - [ ] staged files that Git does not know about because the have not been committed
-- [ ] files in the working directory that Git does not know about because the have not been staged or committed
+- [x] files in the working directory that Git does not know about because the have not been staged or committed
 - [ ] files in the remote repository that Git does not know about because they have not been tagged
 
-#### **Q110. What type of Git hook could be used to validate that a commit message contains a ticket number?**
+#### Q110. What type of Git hook could be used to validate that a commit message contains a ticket number?
 
 - [ ] pre-commit
-- [ ] commit-msg
+- [x] commit-msg
 - [ ] applypatch-msg
-- [ ] [prepare-commit-msg[
+- [ ] prepare-commit-msg
 
 #### Q111. What is the difference between git stash pop and git stash apply?
 
