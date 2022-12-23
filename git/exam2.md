@@ -914,48 +914,48 @@ hint: Updates were rejected because the remote contains work that you do not hin
 #### Q111. What is the difference between git stash pop and git stash apply?
 
 - [ ] git stash pop pushes the topmost commit to the current branch, while git stash apply caches the last commit in the current branch.
-- [ ] git stash pop applies the topmost entry in the stash to the working files and removes it from the stash, while git stash apply applies the topmost entry in the stash to the working files but leaves it in the stash.
+- [x] git stash pop applies the topmost entry in the stash to the working files and removes it from the stash, while git stash apply applies the topmost entry in the stash to the working files but leaves it in the stash.
 - [ ] git stash pop merges the topmost commit to the current branch, while git stash apply merges the last commit in the current branch.
 - [ ] git stash pop applies the topmost entry in the stash to the working files but leaves it in the stash, while git stash apply applies the topmost entry in the stash to the working files and removes it from the stash.
 
-#### **Q112. After making some major changes to your code, you are a little nervous about committing. What command would you use to review the commit prior to making it?**
+#### Q112. After making some major changes to your code, you are a little nervous about committing. What command would you use to review the commit prior to making it?
 
-- [ ] [git commit --verify[
+- [ ] git commit --verify
 - [ ] git notes show
 - [ ] git commit preview
-- [ ] git commit --dry-run
+- [x] git commit --dry-run
 
 #### **Q113. What statement best describes Git's concept of HEAD?**
 
 - [ ] a pointer to the most recently changed file in the stage/index
 - [ ] a pointer to the master branch
-- [ ] a pointer to the most recent commit in the currently checked-out branch
+- [x] a pointer to the most recent commit in the currently checked-out branch
 - [ ] a pointer to where the repository is stored in memory
 
 #### **Q114. After staging changes to several files, you realize the changes to the config.properties file are incorrect, and need to be removed from the stage and working directory. What command can you use to remove the staged changes to the file?**
 
 - [ ] git reset HEAD^ -- config.properties
-- [ ] git rm config.properties
+- [ ] ~~git rm config.properties~~
 - [ ] git rf config.properties
-- [ ] git checkout HEAD -- config.properties
+- [x] git checkout HEAD -- config.properties
 
 #### Q115. After a recent release with a stack trace, an issue is create that indicates the problem is with a newly added configuration property named MaxConnections. What command can find all commits that add or remove the string MaxConnections?
 
 - [ ] - git grep -a "MaxConnections"
 - [ ] - git log --search-string "MaxConnections"
-- [ ] - git log -S "MaxConnections"
+- [x] - git log -S "MaxConnections"
 - [ ] - git commit --with "MaxConnections"
 
 #### Q116. Your company has moved its remote repository to GitHub at this location: https://github.com/yourcompany/core-api.git. What command updates the remote repository, named origin, to point to the new remote repository at this location?
 
 - [ ] - git remote create-update origin https://github.com/yourcompany/core-api.git
 - [ ] - git remote update origin https://github.com/yourcompany/core-api.git
-- [ ] - git remote set-url origin https://github.com/yourcompany/core-api.git
+- [x] - git remote set-url origin https://github.com/yourcompany/core-api.git
 - [ ] - git remote add https://github.com/yourcompany/core-api.git
 
 #### Q117. When is the cherry-pick command used?
 
-- [ ] - when a commit from one branch needs to be copied into another branch
+- [x] - when a commit from one branch needs to be copied into another branch
 - [ ] - when the HEAD needs to be reset to a specific commit
 - [ ] - when a specific commit needs to be pulled down from the remote repository
 - [ ] - when a hook script needs to be invoked
@@ -965,7 +965,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] - a deleted or archived copy of a repository
 - [ ] - a beta release branch of a repository
 - [ ] - a future branch of a repository
-- [ ] - a separate copy of a repository
+- [x] - a separate copy of a repository
 
 [reference](https://stackoverflow.com/a/9339460/1573267)
 
@@ -973,7 +973,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] - You cannot exclude the files from the repository.
 - [ ] - Tag the files with excluded.
-- [ ] - Add a pattern matching the files to the .gitignore file.
+- [x] - Add a pattern matching the files to the .gitignore file.
 - [ ] - Add the files to the omitted branch
 
 [reference](https://git-scm.com/docs/gitignore)
@@ -982,14 +982,14 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] `git checkout <url>`
 - [ ] `git pull <url>`
-- [ ] `git clone <url>`
+- [x] `git clone <url>`
 - [ ] `git replicate <url>`
 
 #### Q121. What would happen if you ran the `git reset testfile.js` command?
 
 - [ ] testfile.js would be reverted to a blank file.
 - [ ] testfile.js would be reset to its first saved state.
-- [ ] testfile.js would be reverted to its last saved copy.
+- [x] testfile.js would be reverted to its last saved copy.
 - [ ] testfile.js would be removed from the stage/index area, if present.
 
 #### Q122. What situation can occur when attempting to combine branches containing changes to the same piece of code?
@@ -997,12 +997,12 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] lost code
 - [ ] automatic override
 - [ ] collisions
-- [ ] merge conflict
+- [x] merge conflict
 
-#### **Q123. When Git workflows contain a topic branch, what purpose does the topic branch serve?**
+#### Q123. When Git workflows contain a topic branch, what purpose does the topic branch serve?
 
 - [ ] Topic branches store unstable code until it is peer reviewed for integration into another feature branch. <url>
-- [ ] Topic branches correspond to different stages of development and are always open for long-running branches to be pulled into. <url>
+- [x] Topic branches correspond to different stages of development and are always open for long-running branches to be pulled into. <url>
 - [ ] Topic branches are used in waterfall development methodologies to track the state of the code during the various stages of waterfall. <url>
 - [ ] Topic branches are short-lived branches used to store work related to a particular feature. <url>
 
@@ -1010,7 +1010,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 - [ ] Provide detailed commit messages that describe the changes being introduced by the commit. <url>
 - [ ] make large commits that introduce multiple features. <url>
-- [ ] Keep local repository branches in sync with upstream branches in the remote repository by committing,pushing and pulling frequently. <url>
+- [x] Keep local repository branches in sync with upstream branches in the remote repository by committing,pushing and pulling frequently. <url>
 - [ ] Avoid frequent interaction with the remote repository to reduce the probability of pulling conflicts. <url>
 
 #### **Q125. You have changed your mind about adding broccoli to your project. How should you remove it?**
@@ -1021,21 +1021,21 @@ Untracked files:
   brccoli
 ```
 
-- [ ] `git remove broccoli`
-- [ ] [`git clean -f`[
+- [x] `git remove broccoli`
+- [ ] ~~`git clean -f`~~
 - [ ] `git clean`
 - [ ] `git remove .`
 
-#### Q126. What command can you use to remove untracked files from the working directory?
+#### ~~Q126. What command can you use to remove untracked files from the working directory?~~
 
 - [ ] `git rm -all` 
 - [ ] `git rm --cached`
-- [ ] `git clean -d -f`
+- [x] `git clean -d -f`
 - [ ] `git checkout`
 
 #### Q127. After making a commit, you notice that you forgot to include changes to the doge.txt file. What command or commands would you use to add the changes to the commit ?
 
-- [ ] ⠀
+- [x] ⠀
 
 ```bash
   git add doge.txt
@@ -1061,7 +1061,7 @@ Untracked files:
   git commit --patch --no-edit
 ```
 
-#### Q128. Which command would remove a file named wrongfile from the current branch of a repository, the index, and working files?
+#### ~~Q128. Which command would remove a file named wrongfile from the current branch of a repository, the index, and working files?~~
 
 - [ ] ⠀
 
@@ -1084,7 +1084,7 @@ git commit -m "Removed file"
   git commit -m "Removed file"
 ```
 
-- [ ] ⠀
+- [x] ⠀
 
 ```bash
   git rm --cached wrongfile
