@@ -93,47 +93,47 @@ git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231
 - [ ] Run a git rebase to find the buggy commit.
 - [x] Use git bisect to compare the buggy commit to an early commit that works as expected.
 
-#### **Q10. Why would the following command be used?**
+#### Q10. Why would the following command be used?
 
 `git rebase -i HEAD~10`
 
 - [ ] To run a comparative search of the last 10 commits for differences
 - [x] To list the last 10 commits and modify them with either the squash or fixup command
 - [ ] To delete the last 10 commits and reset the HEAD
-- [ ] ~~In order to locally cache the last 10 commits~~
+- [ ] In order to locally cache the last 10 commits
 
-#### **Q11. Why would you use a pre-receive hook in your remote repository?**
+#### Q11. Why would you use a pre-receive hook in your remote repository?
 
 - [ ] You wouldn't, you would use it in the local repository
-- [ ] To execute a script when a remote receives a push that is triggered before any refs are updated
-- [ ] ~~To fire a script after updates are made to the remote repository~~
+- [x] To execute a script when a remote receives a push that is triggered before any refs are updated
+- [ ] To fire a script after updates are made to the remote repository
 - [ ] To debug all commit tags and release versions
 
 #### Q12. What option can you use to apply git configurations across your entire git environment?
 
 - [ ] `--all`
 - [ ] `--master`
-- [ ] `--global`
+- [x] `--global`
 - [ ] `--update`
 
 #### Q13. How could you squash multiple commits together without using git merge --squash?
 
 - [ ] Caching
 - [ ] You can't. git merge --squash is the only git command for that operation.
-- [ ] Rebasing
+- [x] Rebasing
 - [ ] Reflogging
 
 #### Q14. If you cloned an existing git repository, what would happen?
 
 - [ ] A new copy would overwrite the central repository
-- [ ] A copy of the repository would be created on your local machine
+- [x] A copy of the repository would be created on your local machine
 - [ ] Nothing, cloning is not a supported git function
 - [ ] A copy of the repository would be created on the hosting platform
 
-#### Q15. How can you display a list of files added or modified in a specific commit?
+#### **Q15. How can you display a list of files added or modified in a specific commit?**
 
 - [ ] Find the commit in the remote repository, as that's the only place that kind of information is stored.
-- [ ] Use the `diff-tree` command with the commit hash.
+- [x] Use the `diff-tree` command with the commit hash.
 - [ ] Run `git commit --info` with the commit hash.
 - [ ] Access the commit stash data with `git stash`.
 
@@ -149,7 +149,7 @@ build/
 
 - [ ] All files with a .swift, .txt, or metadata file extension, as well as the entire build directory
 - [ ] Only the build directory
-- [ ] All files in the build directory, as well as files ending with .txt or .metadata
+- [x] All files in the build directory, as well as files ending with .txt or .metadata
 - [ ] Only files with .swift and .txt extensions.
 
 A line starting with `#` serves as a comment. Hence `# .swift` does not do anything. See `man gitignore`.
@@ -161,7 +161,7 @@ A line starting with `#` serves as a comment. Hence `# .swift` does not do anyth
 - [ ] Nothing, you can't use multiple options in the same command
 - [ ] Adds all new files to the staging area
 - [ ] Commits all new files with a message
-- [ ] Adds all modified files to the staging area, then commits them with a message
+- [x] Adds all modified files to the staging area, then commits them with a message
 
 #### **Q18. After checking your git status you get the following output, which shows the file beta-notes.js in the commit but also unstaged. How can this situation occur?**
 
@@ -178,15 +178,15 @@ modified: beta-notes.js
 ```
 
 - [ ] There were two copies of beta-notes.js but one was deleted
-- [ ] beta-notes.js was staged, then modified afterwards, creating two different versions of the file
-- [ ] Two copies of beta-notes.js were created, but only one is being tracked
+- [x] beta-notes.js was staged, then modified afterwards, creating two different versions of the file
+- [ ] ~~Two copies of beta-notes.js were created, but only one is being tracked~~
 - [ ] There are two tracked copies of beta-notes.js, but one was removed from the commit
 
 #### Q19. Where are files stored before they are committed to the local repository?
 
 - [ ] Saved files
 - [ ] git documents
-- [ ] Staging area
+- [x] Staging area
 - [ ] git cache
 
 #### **Q20. What commands would you use to force an overwrite of your local files with the master branch?**
@@ -212,7 +212,7 @@ modified: beta-notes.js
   git reset --hard origin/myCurrentBranch
 ```
 
-- [ ]
+- [x]
 
 ```bash
   git fetch --all
