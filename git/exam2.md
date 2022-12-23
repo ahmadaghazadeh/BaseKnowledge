@@ -179,7 +179,7 @@ modified: beta-notes.js
 
 - [ ] There were two copies of beta-notes.js but one was deleted
 - [x] beta-notes.js was staged, then modified afterwards, creating two different versions of the file
-- [ ] ~~Two copies of beta-notes.js were created, but only one is being tracked~~
+- [ ] [Two copies of beta-notes.js were created, but only one is being tracked[
 - [ ] There are two tracked copies of beta-notes.js, but one was removed from the commit
 
 #### Q19. Where are files stored before they are committed to the local repository?
@@ -323,7 +323,7 @@ modified: beta-notes.js
 `git rm --cached testfile.js` 
 
 - [x] testfile.js will be removed from the staging area and its changes no longer tracked.
-- [ ] ~~testfile.js will be removed from the staging area but its changes will still be tracked.~~
+- [ ] [testfile.js will be removed from the staging area but its changes will still be tracked.[
 - [ ] A copy of testfile.js will be cached on your desktop.
 - [ ] The current copy of testfile.js will be saved in the staging area.
 
@@ -515,12 +515,12 @@ modified: beta-notes.js
 
 - [x] git diff --cached
 - [ ] git diff
-- [ ] ~~git diff --HEAD~~
+- [ ] [git diff --HEAD[
 - [ ] git status -v -v 
 
 #### Q60. What does the git stash drop command do?
 
-- [ ] removes the most recent stash entry
+- [x] removes the most recent stash entry
 - [ ] deletes the stash
 - [ ] lists everything in the stash
 - [ ] throws away the oldest entry
@@ -530,12 +530,12 @@ modified: beta-notes.js
 - [ ] `git -b checkout <nameOfBranch>`
 - [ ] `git branch`
 - [ ] `git checkout <nameOfBranch>`
-- [ ] `git checkout -b <nameOfBranch>`
+- [x] `git checkout -b <nameOfBranch>`
 
 #### **Q62. After mistakenly staging a file named myFile to the index, how would you remove it from the index to exclude it from your next commit?**
 
 - [ ] Use git reset HEAD^.
-- [ ] Use git reset myFile.txt.
+- [x] Use git reset myFile.txt.
 - [ ] ~~Use git -rm myFile.txt.~~
 - [ ] Use git reset.
 
@@ -547,19 +547,19 @@ git checkout -b beta-test
 
 - [ ] The beta-test branch will be checked out of the current commit.
 - [ ] The beta-test branch will be checked out and deleted.
-- [ ] A new branch called beta-test will be created and switched to.
+- [x] A new branch called beta-test will be created and switched to.
 - [ ] The beta-test branch will be merged with the master branch.
 
 #### Q64. How does Git internally manage branches?
 
-- [ ] by creating a pointer to the most recent snapshot/commit for the branch.
+- [x] by creating a pointer to the most recent snapshot/commit for the branch.
 - [ ] by creating a data array of branches in the same repository.
 - [ ] by creating a data dictionary of code changes.
 - [ ] be creating a debug log that stores repository changes.
 
 #### Q65. You want to perform a git reset but cannot recall all of the available options. What command would you use to see a description of them?
 
-- [ ] git help reset
+- [x] git help reset
 - [ ] git -h reset
 - [ ] git options reset
 - [ ] git reset help
@@ -569,11 +569,11 @@ git checkout -b beta-test
 - [ ] a version of the repository that mirrors changes made in the local repository's master branch for open-source collaboration efforts
 - [ ] the lead repository elected by the Git arbitrator found within local repositories of collaborating team members
 - [ ] a read-only version of the repository stored on a backup server in case local repositories become lost or corrupted
-- [ ] a version of the repository hosted on the internet or network that is pushed to or pulled from by collaborators
+- [x] a version of the repository hosted on the internet or network that is pushed to or pulled from by collaborators
 
-#### **Q67. After modifying some existing files in a repository, you decide to discard the changes. What command can you use?**
+#### Q67. After modifying some existing files in a repository, you decide to discard the changes. What command can you use?
 
-- [ ] git restore
+- [x] git restore
 - [ ] git undo
 - [ ] git clean 
 - [ ] git checkout
@@ -582,54 +582,54 @@ git checkout -b beta-test
 
 - [ ] Use git restore -p.
 - [ ] Use git merge -u.
-- [ ] Use git merge --abort.
+- [x] Use git merge --abort.
 - [ ] Use git merge --undo.
 
 #### Q69. If you have several commits for a single feature, what is the most efficient way to restructure your commit history?
 
 - [ ] Use git stash to consolidate the commits under a new hash.
-- [ ] Use git squash to consolidate the commits together into a single coherent commit.
+- [x] Use git squash to consolidate the commits together into a single coherent commit.
 - [ ] Delete the task commits and recommit with a new message.
 - [ ] Use git cherry-pick to place the commits in another branch.
 
-#### **Q70. Which command correctly creates a lightweight tag?**
+#### Q70. Which command correctly creates a lightweight tag?
 
-- [ ] `git tag v3.8.1`
+- [x] `git tag v3.8.1`
 - [ ] `git tag --light "v3.8.1"`
 - [ ] `git tag v3.8.1 —-annotate -m "<tagMessage>"`
 - [ ] `git tag -l v3.8.1`
  
-#### **Q71. What is the main issue with using git rebase when working with multiple developers?**
+#### Q71. What is the main issue with using git rebase when working with multiple developers?
 
 - [ ] Rebase affects only your repository and creates a diff in the master branch.
 - [ ] Rebase creates a temporary copy of the master branch in the remote repo.
 - [ ] Rebase moves the HEAD of the remote master branch one commit forward.
-- [ ] Rebase deletes all commit history for the new feature branch.
+- [x] Rebase deletes all commit history for the new feature branch.
 
-#### **Q72. What Git workflow is used by teams that collaborate on a single branch and avoid creating long-lived development branches?**
+#### Q72. What Git workflow is used by teams that collaborate on a single branch and avoid creating long-lived development branches?
 
 - [ ] Git flow
 - [ ] Mainline flow
-- [ ] Trunk-Based Development
+- [x] Trunk-Based Development
 - [ ] GitHub flow
 
-#### Q73. Which option on the git log command allows you to limit output to commits made after certain date?
+#### Q73. **Which option on the git log command allows you to limit output to commits made after certain date?**
 
-- [ ] `--since`
+- [x] `--since`
 - [ ] `--sinceWhen`
 - [ ] `-<n>`
-- [ ] `--afterDate`
+- [ ] ~~`--afterDate`~~
 
 #### Q74. How would you delete unreachable objects older than a specified time from your project database?
 
 - [ ] `git cache --obsolete <time>`
 - [ ] `git branch --rebase <time>`
 - [ ] `git delete --inert <time>`
-- [ ] `git prune --expire <time>`
+- [x] `git prune --expire <time>`
 
 #### **Q75. What conflicts can occur when forcing a push after rebasing?**
 
-- [ ] The remote master branch could have existing changes overwritten.
+- [x] The remote master branch could have existing changes overwritten.
 - [ ] The origin URL will be reset to its default value.
 - [ ] ~~The current HEAD will be deleted and can't be reinstated.~~
 - [ ] Nothing, it's common practice to force a push after rebasing.
@@ -639,7 +639,7 @@ git checkout -b beta-test
 `git reset --soft HEAD^`
 
 - [ ] It resets the working branch to the first commit.
-- [ ] It sets HEAD to previous commit and leaves changes from the undone commit in the stage/index.
+- [x] It sets HEAD to previous commit and leaves changes from the undone commit in the stage/index.
 - [ ] It deletes all previous commits and resets the repository history back to its initial state.
 - [ ] It keeps the HEAD at the current commit, but clears all previous commits.
 
@@ -647,21 +647,21 @@ git checkout -b beta-test
 
 - [ ] Git works only on Linux, while SVN works on all operating systems.
 - [ ] SVN works only on Linux, while Git works on all operating systems.
-- [ ] SVN is a centralized system, while Git is a distributed system.
+- [x] SVN is a centralized system, while Git is a distributed system.
 - [ ] Git a centralized system, while SVN is a distributed system.
 
-#### Q78. **This command is an example of what kind of tag?**
+#### Q78. This command is an example of what kind of tag?
 
 `git tag -a v1.4 -m "ABCD v1.5"`
 
 - [ ] verbose
-- [ ] annotated
-- [ ] ~~lightweight~~
+- [x] annotated
+- [ ] lightweight
 - [ ] deferred
 
 #### Q79. What is the difference between a soft reset (`git reset --soft`) and a hard reset (`git reset –hard`) ?
 
-- [ ] A soft reset only changes the commit that HEAD points to, while a hard reset resets the index and working tree to match the specified commit, discarding any changes.
+- [x] A soft reset only changes the commit that HEAD points to, while a hard reset resets the index and working tree to match the specified commit, discarding any changes.
 - [ ] A soft reset caches the old HEAD pointer, while a hard reset deletes it entirely.
 - [ ] A hard reset changes only where the HEAD is pointing, while a soft reset changes the HEAD and index.
 - [ ] A hard reset caches the old HEAD pointer, while a soft reset deletes it entirely.
@@ -673,13 +673,13 @@ Which of the following options is correct ?
 - [ ] `1. Develop 2. Release 3. Hotfix 4. Feature 5. Master`
 - [ ] `1. Master 2. Release 3. Hotfix 4. Feature 5. Develop`
 - [ ] `1. Develop 2. Master 3. Hotfix 4. Feature 5. Develop`
-- [ ] `1. Master 2. Hotfix 3. Develop 4. Feature 5. Release`
+- [x] `1. Master 2. Hotfix 3. Develop 4. Feature 5. Release`
 
 #### Q81. What information does the git config file store?
 
 - [ ] shell scripts and flags
 - [ ] keychain and account information
-- [ ] local and global repository options
+- [x] local and global repository options
 - [ ] pre-compile scripts and settings
 
 [Reference](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config#:~:text=The%20git%20config%20command%20is,modify%20a%20configuration%20text%20file.)
@@ -687,22 +687,22 @@ Which of the following options is correct ?
 #### **Q82. What is version control?**
 
 - [ ] a type of architecture used to manage large databases
-- [ ] a system that shows, tracks, and controls changes to a set of files over time
+- [x] a system that shows, tracks, and controls changes to a set of files over time
 - [ ] ~~a programmatic design pattern used to manage code between multiple engineering teams~~
 - [ ] a type of software that links a project with a GitHub repository
 
-#### **Q83. What is the difference between using the git stash and git stash pop commands?**
+#### Q83. What is the difference between using the git stash and git stash pop commands?
 
 - [ ] git stash removes a commit from the repo history, while git stash pop saves changes to multiple branches.
 - [ ] git stash saves changes to multiple branches, while git stash pop removes a commit from the repo history.
 - [ ] git stash removes the most recent commit, while git stash pop saves current changes.
-- [ ] git stash creates a stash entry, while git stash pop places the saved state onto the working directory.
+- [x] git stash creates a stash entry, while git stash pop places the saved state onto the working directory.
 
-#### **Q84. Which command can be used to list the branches that have been merged into the currently checked-out branch?**
+#### Q84. Which command can be used to list the branches that have been merged into the currently checked-out branch?
 
 - [ ] git master --status
 - [ ] git branch --status
-- [ ] git branch --merged
+- [x] git branch --merged
 - [ ] git status --merged
 
 #### Q85. How would you configure Git to abort a commit if a smoke test script fails?
@@ -730,7 +730,7 @@ Which of the following options is correct ?
 - [ ] shell script pointers and keychain credentials
 - [ ] updates to branch tips and other references in the local repository
 - [ ] release notes and hook script values
-- [ ] ~~tag and versioning information~~
+- [ ] [tag and versioning information[
 
 #### Q89. You have just completed rebasing your master branch and need to manually update the remote master, even though there is a merge conflict. How can you accomplish this?
 
@@ -874,14 +874,14 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] Use the --atomic option with the push command.
 - [ ] Execute a pull, then resolve any merge conflicts and execute another push.
 - [ ] Execute a fetch, then execute another push.
-- [ ] ~~Use the --force option with the push command.~~
+- [ ] [Use the --force option with the push command.[
 
 #### **Q106. What does the -p option add to the output of the `git log` command?**
 
 - [ ] It adds patch output that shows the differences introduced in each commit.
 - [ ] It adds patch output that shows a summary listing modified files.
 - [ ] It adds padding to the output and displays a histogram showing the number of lines changed in each commit.
-- [ ] ~~It adds the full commit message and notes associated with each commit.~~
+- [ ] [It adds the full commit message and notes associated with each commit.[
 
 #### Q107. What is the staging area or index?
 
@@ -909,7 +909,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 - [ ] pre-commit
 - [ ] commit-msg
 - [ ] applypatch-msg
-- [ ] ~~prepare-commit-msg~~
+- [ ] [prepare-commit-msg[
 
 #### Q111. What is the difference between git stash pop and git stash apply?
 
@@ -920,7 +920,7 @@ hint: Updates were rejected because the remote contains work that you do not hin
 
 #### **Q112. After making some major changes to your code, you are a little nervous about committing. What command would you use to review the commit prior to making it?**
 
-- [ ] ~~git commit --verify~~
+- [ ] [git commit --verify[
 - [ ] git notes show
 - [ ] git commit preview
 - [ ] git commit --dry-run
@@ -1022,7 +1022,7 @@ Untracked files:
 ```
 
 - [ ] `git remove broccoli`
-- [ ] ~~`git clean -f`~~
+- [ ] [`git clean -f`[
 - [ ] `git clean`
 - [ ] `git remove .`
 
