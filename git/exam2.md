@@ -709,47 +709,47 @@ Which of the following options is correct ?
 
 - [ ] Create a post-commit shell script that triggers the action.
 - [ ] Create a post-commit hook to trigger the script.
-- [ ] Create a pre-commit hook to trigger the script.
+- [x] Create a pre-commit hook to trigger the script.
 - [ ] Create a pre-commit shell script that triggers the action.
 
 #### Q86. Which use case is NOT a good candidate for a Git hook?
 
-- [ ] state dependent environment changes
+- [x] state dependent environment changes
 - [ ] continuous integration
 - [ ] increasing code coverage
 - [ ] enforcing commit rules
 
 #### **Q87. After starting to work on a new feature and creating new files in the working directory related to it, the customer determined the feature was no longer required. What command can be used to remove the untracked files from the working directory ?**
 
-- [ ] `git clean -f`
+- [x] `git clean -f`
 - [ ] `git rm .`
-- [ ] `git reset HEAD`
+- [ ] ~~`git reset HEAD`~~
 - [ ] `git checkout .`
 
 #### **Q88. What information do Git reflogs (reference logs) store?**
 - [ ] shell script pointers and keychain credentials
-- [ ] updates to branch tips and other references in the local repository
+- [x] updates to branch tips and other references in the local repository
 - [ ] release notes and hook script values
-- [ ] [tag and versioning information[
+- [ ] ~~tag and versioning information~~
 
 #### Q89. You have just completed rebasing your master branch and need to manually update the remote master, even though there is a merge conflict. How can you accomplish this?
 
 - [ ] `git push --overwrite`
 - [ ] `git push --update`
 - [ ] `git push --assert`
-- [ ] `git push --force-with-lease`
+- [x] `git push --force-with-lease`
 
 #### Q90. What is the difference between `git fetch` and `git pull`
 
 - [ ] `git fetch` creates a new branch off the master branch, while `git pull` creates a new branch off the local repository's master branch.
 - [ ] `git pull` downloads new data from a remote repository without integrating it into local files, while `git fetch` updates the current HEAD branch with the latest changes from the remote server.
-- [ ] `git fetch` updates remote tracking branches with changes from a remote repository, while `git pull` updates remote tracking branches with changes from a remote repository and merges them into their corresponding local branches.
+- [x] `git fetch` updates remote tracking branches with changes from a remote repository, while `git pull` updates remote tracking branches with changes from a remote repository and merges them into their corresponding local branches.
 - [ ] `git fetch` downloads and merges data from the local repository, while `git pull` informs your colleagues you are about to make changes to the master branch.
 
 #### Q91. What command displays the difference between the working tree and the stage/index area, as well as files not tracked by Git?
 
 - [ ] `git current`
-- [ ] `git status`
+- [x] `git status`
 - [ ] `git local`
 - [ ] `git context`
 
@@ -758,32 +758,32 @@ Which of the following options is correct ?
 - [ ] Use `git branch <stash hash>`.
 - [ ] Add the stashed commits to the current commit, then create a new branch.
 - [ ] Use `git checkout -b`.
-- [ ] Run `git stash branch <branch name>`.
+- [x] Run `git stash branch <branch name>`.
 
 [reference here](https://stackoverflow.com/questions/6925099/git-stash-changes-apply-to-new-branch)
 
-#### **Q93. What is the difference between git branch -d and git branch -D?**
+#### Q93. What is the difference between git branch -d and git branch -D?
 
 - [ ] -D deletes the local branch, while -d deletes the branch regardless of push and merge status.
 - [ ] -d deletes the current commit head, while -D deletes the entire branch.
-- [ ] -d deletes the local branch, while -D deletes the local branch regardless of push and merge status.
+- [x] -d deletes the local branch, while -D deletes the local branch regardless of push and merge status.
 - [ ] -D deletes the current commit head, while -d deletes the entire branch.
 
-#### Q94. You stashed three sets of changes but cannot remember the contents of the first stash entry. What command would you use to see the details of the changes in the first of the three stash entries?
+#### **Q94. You stashed three sets of changes but cannot remember the contents of the first stash entry. What command would you use to see the details of the changes in the first of the three stash entries?**
 
-- [ ] git stash show -p stash@{2}
+- [x] git stash show -p stash@{2}
 - [ ] git stash list
 - [ ] git stash show -p stash@{1}
 - [ ] git stash show -p 
 
 [reference here](https://stackoverflow.com/questions/10725729/see-whats-in-a-stash-without-applying-it)
 
-#### **Q95. How would you delete a remote branch in your repository?**
+#### Q95. How would you delete a remote branch in your repository?
 
 - [ ] Use `git --delete <branch_name>`.
 - [ ] Use `git push <remote_name> --d <branch_name>`.
 - [ ] Use `git push <remote_name> --D`.
-- [ ] Use `git push <remote_name> --delete <branch_name>`.
+- [x] Use `git push <remote_name> --delete <branch_name>`.
 
 [reference here](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely)
 
