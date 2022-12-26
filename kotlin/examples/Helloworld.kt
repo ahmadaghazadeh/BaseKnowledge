@@ -1,10 +1,9 @@
 fun main() {
-    callDay05()
+    val stringList = listOf("one", "two", "one")
+    println(stringList.lastIndex)
 }
+ 
+ val <T> List<T>.lastIndex: Int
+    get() = size - 1
 
-fun callDay05(){
-    val highScores = listOf(4000, 2000, 10200, 12000, 9030)
-    for ((index, value) in highScores.withIndex()) {
-        println("the element at $index is $value")
-    }
-}
+ 

@@ -8,7 +8,7 @@ fun main() {
 }
 ```
 
-- [ ] `.withIndex()`
+- [x] `.withIndex()`
 - [ ] `.forEachIndexed()`
 - [ ] `.forEach()`
 - [ ] `.forIndexes()`
@@ -30,7 +30,7 @@ class Airplane(private val name: String) : Aircraft() {
 - [ ] Classes are initialized in the same order they are in the file, therefore, Aircraft should appear after Airplane
 - [ ] The code needs to pass the parameter to the base class's primary constructor. Since it does not, it receives a null
 - [ ] Abstract function always returns null
-- [ ] A superclass is initialized before its subclass. Therefore, name has not been set before it is rendered
+- [x] A superclass is initialized before its subclass. Therefore, name has not been set before it is rendered
 
 [reference](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/issues/4183#issuecomment-1214288158)
 
@@ -39,7 +39,7 @@ class Airplane(private val name: String) : Aircraft() {
 - [ ] Only abstract classes are inheritable by subclasses
 - [ ] Only abstract classes can inherit from multiple superclasses
 - [ ] Only abstract classes can have abstract methods
-- [ ] Only abstract classes can store state
+- [x] Only abstract classes can store state
 
 [reference](https://blog.kotlin-academy.com/abstract-class-vs-interface-in-kotlin-5ab8697c3a14)
 

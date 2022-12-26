@@ -118,3 +118,71 @@ In this example, the sequence processing takes 18 steps instead of 23 steps for 
 * The read-only collection types are covariant. This means that, if a Rectangle class inherits from Shape, you can use a List<Rectangle> anywhere the List<Shape> is required. In other words, the collection types have the same subtyping relationship as the element types. Maps are covariant on the value type, but not on the key type.
 
 * In turn, mutable collections aren't covariant; otherwise, this would lead to runtime failures. If MutableList<Rectangle> was a subtype of MutableList<Shape>, you could insert other Shape inheritors (for example, Circle) into it, thus violating its Rectangle type argument.
+
+* Collection<T> is the root of the collection hierarchy. This interface represents the common behavior of a read-only collection: retrieving size, checking item membership, and so on. Collection inherits from the Iterable<T> interface that defines the operations for iterating elements. You can use Collection as a parameter of a function that applies to different collection types. For more specific cases, use the Collection's inheritors: List and Set.
+
+```kotlin
+fun printAll(strings: Collection<String>) {
+    for(s in strings) print("$s ")
+    println()
+}
+    
+fun main() {
+    val stringList = listOf("one", "two", "one")
+    printAll(stringList)
+    
+    val stringSet = setOf("one", "two", "three")
+    printAll(stringSet)
+}
+```
+
+## Extensions 
+
+* Kotlin provides the ability to extend a class or an interface with new functionality without having to inherit from the class or use design patterns such as **Decorator**. This is done via special declarations called extensions.
+
+```kotlin
+fun MutableList<Int>.swap(index1: Int, index2: Int) {
+    val tmp = this[index1] // 'this' corresponds to the list
+    this[index1] = this[index2]
+    this[index2] = tmp
+}
+
+val list = mutableListOf(1, 2, 3)
+list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'
+```
+### Nullable receiver
+Note that extensions can be defined with a nullable receiver type. These extensions can be called on an object variable even if its value is null, and they can check for this == null inside the body.
+
+This way, you can call toString() in Kotlin without checking for null, as the check happens inside the extension function:
+
+```kotlin
+fun Any?.toString(): String {
+    if (this == null) return "null"
+    // after the null check, 'this' is autocast to a non-null type, so the toString() below
+    // resolves to the member function of the Any class
+    return toString()
+}
+```
+
+### Extension properties
+Kotlin supports extension properties much like it supports functions:
+``` kotlin
+val <T> List<T>.lastIndex: Int
+    get() = size - 1
+
+```
+
+### Companion object extensions
+If a class has a companion object defined, you can also define extension functions and properties for the companion object. Just like regular members of the companion object, they can be called using only the class name as the qualifier:
+
+```kotlin
+class MyClass {
+    companion object { }  // will be called "Companion"
+}
+
+fun MyClass.Companion.printCompanion() { println("companion") }
+
+fun main() {
+    MyClass.printCompanion()
+}
+```
