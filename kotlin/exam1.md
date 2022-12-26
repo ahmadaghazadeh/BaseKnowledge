@@ -46,13 +46,13 @@ class Airplane(private val name: String) : Aircraft() {
 #### Q4. Inside an extension function, what is the name of the variable that corresponds to the receiver object
 
 - [ ] The variable is named **it**
-- [ ] The variable is named **this**
+- [x] The variable is named **this**
 - [ ] The variable is named **receiver**
 - [ ] The variable is named **default**
 
 [reference](https://www.programiz.com/kotlin-programming/extension-functions#:~:text=The%20class%20name%20is%20the,function%20refers%20the%20receiver%20object)
 
-#### Q5. Your application has an **add** function. How could you use its **invoke** methods and display the results?
+#### **Q5. Your application has an **add** function. How could you use its **invoke** methods and display the results?**
 
 ```kotlin
 fun add(a: Int, b: Int): Int {
@@ -60,30 +60,30 @@ fun add(a: Int, b: Int): Int {
 }
 ```
 
-- [ ] `println(add(5,10).invoke())`
+- [x] `println(add(5,10).invoke())`
 - [ ] `println(::add.invoke(5, 10))`
 - [ ] `println(::add.invoke{5, 10})`
 - [ ] `println(add.invoke(5,10))`
 
 [reference](https://kotlinlang.org/docs/operator-overloading.html#invoke-operator)
 
-#### Q6. What is the entry point for a Kotlin application?
+#### **Q6. What is the entry point for a Kotlin application?**
 
 - [ ] `fun static main(){}`
-- [ ] `fun main(){}`
+- [x] `fun main(){}`
 - [ ] `fun Main(){}`
 - [ ] `public static void main(){}`
 
 #### Q7. You are writing a console app in Kotlin that processes test entered by the user. If the user enters an empty string, the program exits. Which kind of loop would work best for this app? Keep in mind that the loop is entered at least once
 
-- [ ] a do..while loop
+- [x] a do..while loop
 - [ ] a for loop
 - [ ] a while loop
 - [ ] a forEach loop
 
 [reference](https://kotlinlang.org/docs/control-flow.html#while-loops)
 
-#### Q8. You pass an integer to a function expecting type Any. It works without issue. Why is a primitive integer able to work with a function that expects an object?
+#### **Q8. You pass an integer to a function expecting type Any. It works without issue. Why is a primitive integer able to work with a function that expects an object?**
 
 ```kotlin
 fun showHashCode(obj: Any){
@@ -97,7 +97,7 @@ fun main() {
 - [ ] While the code runs, it does not produce correct results
 - [ ] The integer is always a class
 - [ ] The compiler runs an implicit `.toClass()` method on the integer
-- [ ] The integer is autoboxed to a Kotlin Int class
+- [x] The integer is autoboxed to a Kotlin Int class
 
 #### Q9. You have started a long-running coroutine whose job you have assigned to a variable named **task**. If the need arose, how could you abort the coroutine?
 
