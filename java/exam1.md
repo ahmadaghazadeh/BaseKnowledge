@@ -663,7 +663,7 @@ theList.forEach(System.out::println);
 `boolean healthyOrNot = isHealthy("avocado");`
 
 - [ ] public void isHealthy(String avocado)
-- [ ] boolean isHealthy(String string)
+- [x] public boolean isHealthy(String string)
 - [ ] public isHealthy("avocado")
 - [ ] private String isHealthy(String food)
 
