@@ -110,7 +110,7 @@ val task = launch {
 - [ ] `task.join()`
 - [ ] `task.abort()`
 - [ ] `job.stop()`
-- [ ] `task.cancel()`
+- [x] `task.cancel()`
 
 [reference](https://kotlinlang.org/docs/cancellation-and-timeouts.html)
 
@@ -118,7 +118,7 @@ val task = launch {
 
 - [ ] You must wrap all implicit conversion in a try/catch block
 - [ ] You can only assign `Long` to an `Int`, not the other way around
-- [ ] There is no implicit conversion from `Int` to `Long`
+- [x] There is no implicit conversion from `Int` to `Long`
 - [ ] All integers in Kotlin are of type `Long`
 
 [reference](https://kotlinlang.org/docs/basic-types.html#explicit-conversions)
@@ -134,8 +134,8 @@ when (die) {
 }
 ```
 
-- [ ] `3,4,5,6`
-- [ ] `in 3..6`
+- [x] `3,4,5,6`
+- [x] `in 3..6`
 - [ ] `3 : 6`
 - [ ] `{3,4,5,6}`
 
@@ -144,7 +144,7 @@ when (die) {
 #### Q12. The function **typeChecker** receives a parameter **obj** of type **Any**. Based upon the type of **obj**, it prints different messages for Int, String, Double, and Float types; if not any of the mentioned types, it prints "unknown type". What operator allows you to determine the type of an object?
 
 - [ ] `instanceof`
-- [ ] `is`
+- [x] `is`
 - [ ] `typeof`
 - [ ] `as`
 
@@ -159,7 +159,7 @@ firstName?.let {
 ```
 
 - [ ] A null pointer exception is thrown
-- [ ] `firstName` is equal to `null`
+- [x] `firstName` is equal to `null`
 - [ ] `firstName` is equal to an empty string
 - [ ] `firstName` is equal to Boolean `false`
 

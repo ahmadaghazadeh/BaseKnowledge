@@ -286,3 +286,118 @@ val hexBytes = 0xFF_EC_DE_5E
 val bytes = 0b11010010_01101001_10010100_10010010
 
 ```
+## Operators
+
+* Use the **is** operator or its negated form **!is** to perform a runtime check that identifies whether an object conforms to a given type:
+
+``` kotlin
+if (obj is String) {
+    print(obj.length)
+}
+
+if (obj !is String) { // same as !(obj is String)
+    print("Not a String")
+} else {
+    print(obj.length)
+}
+```
+### "Unsafe" cast operator
+
+* Usually, the cast operator throws an exception if the cast isn't possible. And so, it's called unsafe. The unsafe cast in Kotlin is done by the infix operator as.
+
+`val x: String = y as String`
+* Note that null cannot be cast to String, as this type is not nullable. If y is null, the code above throws an exception. To make code like this correct for null values, use the nullable type on the right-hand side of the cast:
+
+`val x: String? = y as String?`
+
+### "Safe" (nullable) cast operator
+* To avoid exceptions, use the safe cast operator as?, which returns null on failure.
+
+`val x: String? = y as? String`
+
+## Scope functions
+* The Kotlin standard library contains several functions whose sole purpose is to execute a block of code within the context of an object. When you call such a function on an object with a lambda expression provided, it forms a temporary scope. In this scope, you can access the object without its name. Such functions are called scope functions. There are five of them: let, run, with, apply, and also.
+
+``` kotlin
+Person("Alice", 20, "Amsterdam").let {
+    println(it)
+    it.moveTo("London")
+    it.incrementAge()
+    println(it)
+}
+```
+* The scope functions do not introduce any new technical capabilities, but they can make your code more concise and readable.
+
+* **let** can be used to invoke one or more functions on results of call chains. For example, the following code prints the results of two operations on a collection:
+
+```kotlin
+val numbers = mutableListOf("one", "two", "three", "four", "five")
+val resultList = numbers.map { it.length }.filter { it > 3 }
+println(resultList)    
+
+val numbers = mutableListOf("one", "two", "three", "four", "five")
+numbers.map { it.length }.filter { it > 3 }.let { 
+    println(it)
+    // and more function calls if needed
+} 
+
+val numbers = mutableListOf("one", "two", "three", "four", "five")
+numbers.map { it.length }.filter { it > 3 }.let(::println)
+
+```
+
+### **with**
+
+A non-extension function: the context object is passed as an argument, but inside the lambda, it's available as a receiver (this). The return value is the lambda result.
+
+We recommend with for calling functions on the context object without providing the lambda result. In the code, with can be read as "with this object, do the following."
+
+```kotlin
+val numbers = mutableListOf("one", "two", "three")
+with(numbers) {
+    println("'with' is called with argument $this")
+    println("It contains $size elements")
+}
+```
+
+### **run**
+
+The context object is available as a receiver (this). The return value is the lambda result.
+
+run does the same as with but invokes as let - as an extension function of the context object.
+
+run is useful when your lambda contains both the object initialization and the computation of the return value.
+
+```kotlin
+val letResult = service.let {
+    it.port = 8080
+    it.query(it.prepareRequest() + " to port ${it.port}")
+}
+```
+
+### apply
+The context object is available as a receiver (this). The return value is the object itself.
+
+Use apply for code blocks that don't return a value and mainly operate on the members of the receiver object. The common case for apply is the object configuration. Such calls can be read as "apply the following assignments to the object."
+
+``` kotlin
+val adam = Person("Adam").apply {
+    age = 32
+    city = "London"        
+}
+println(adam)
+```
+
+### also
+The context object is available as an argument (it). The return value is the object itself.
+
+also is good for performing some actions that take the context object as an argument. Use also for actions that need a reference to the object rather than its properties and functions, or when you don't want to shadow the this reference from an outer scope.
+
+When you see also in the code, you can read it as "and also do the following with the object."
+
+```kotlin
+val numbers = mutableListOf("one", "two", "three")
+numbers
+    .also { println("The list elements before adding new one: $it") }
+    .add("four")
+```
