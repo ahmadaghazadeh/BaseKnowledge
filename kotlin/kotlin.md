@@ -220,3 +220,32 @@ println("Hello")
 job.join() // wait until child coroutine completes
 println("Done") 
 ```
+
+* The pattern of async and await in other languages is based on coroutines. If you're familiar with this pattern, the suspend keyword is similar to async. However in Kotlin, await() is implicit when calling a suspend function.
+* Kotlin has a method Deferred.await() that is used to wait for the result from a coroutine started with the async builder.
+
+ * A coroutine started on Dispatchers.Main won't block the main thread while suspended. 
+
+* The library adds a viewModelScope as an extension function of the ViewModel class. This scope is bound to Dispatchers.Main and will automatically be cancelled when the ViewModel is cleared.
+
+* A coroutine dispatcher that is not confined to any specific thread. It executes the initial continuation of a coroutine in the current call-frame and lets the coroutine resume in whatever thread that is used by the corresponding suspending function, without mandating any specific threading policy. Nested coroutines launched in this dispatcher form an event-loop to avoid stack overflows.
+
+![image](images/CoroutineScope.png?raw=png)
+
+![image](images/CoroutineScope1.png?raw=png)
+
+![image](images/Coroutine1.png?raw=png)
+
+![image](images/Coroutine2.png?raw=png)
+
+![image](images/Coroutine3.png?raw=png)
+
+![image](images/Coroutine4.png?raw=png)
+
+
+![image](images/Coroutine5.png?raw=png)
+
+
+![image](images/Coroutine6.png?raw=png)
+
+
