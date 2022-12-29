@@ -401,3 +401,8 @@ numbers
     .also { println("The list elements before adding new one: $it") }
     .add("four")
 ```
+## Inline
+
+* An Inline function is a kind of function that is declared with the keyword "inline" just before the function declaration. Once a function is declared inline, the compiler does not **allocate** any memory for this function, instead the compiler **copies** the piece of code virtually at the calling place at runtime.
+
+* Inlining may cause the **generated code to grow**. However, if you do it in a reasonable way **(avoiding inlining large functions)**, it will pay off in performance, especially at "megamorphic" call-sites inside loops.

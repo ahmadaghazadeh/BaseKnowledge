@@ -180,7 +180,7 @@ fun main() {
 ```
 
 - [ ] The code will give a stack overflow error
-- [ ] The compiler warns of insignificant performance impact
+- [x] The compiler warns of insignificant performance impact
 - [ ] The compiler warns of significant memory usage
 - [ ] The code is significantly faster
 
@@ -195,7 +195,7 @@ for (_____) {
 ```
 
 - [ ] `count in 1..10`
-- [ ] `count in 2..10 step 2`
+- [x] `count in 2..10 step 2`
 - [ ] `count in 1..10 % 2`
 - [ ] `var count=2; count <= 10; count+=2`
 
