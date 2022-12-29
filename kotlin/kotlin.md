@@ -248,4 +248,41 @@ println("Done")
 
 ![image](images/Coroutine6.png?raw=png)
 
+![image](images/Coroutine7.png?raw=png)
 
+
+![image](images/Coroutine8.png?raw=png)
+
+
+![image](images/Coroutine9.png?raw=png)
+
+
+![image](images/Coroutine10.png?raw=png)
+
+
+![image](images/Coroutine11.png?raw=png)
+
+
+![image](images/Coroutine12.png?raw=png)
+
+
+![image](images/Coroutine13.png?raw=png)
+
+![image](images/Coroutine14.png?raw=png)
+
+![image](images/Coroutine15.png?raw=png)
+
+## Numbers & casting
+``` kotlin
+val pi = 3.14 // Double
+val eFloat = 2.7182818284f // Float, actual value is 2.7182817
+
+# You can use underscores to make number constants more readable:
+
+val oneMillion = 1_000_000
+val creditCardNumber = 1234_5678_9012_3456L
+val socialSecurityNumber = 999_99_9999L
+val hexBytes = 0xFF_EC_DE_5E
+val bytes = 0b11010010_01101001_10010100_10010010
+
+```
