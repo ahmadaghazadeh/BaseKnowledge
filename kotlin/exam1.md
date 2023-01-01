@@ -201,14 +201,14 @@ for (_____) {
 
 [reference](https://kotlinlang.org/docs/ranges.html)
 
-#### Q16. What value is printed by println()?
+#### **Q16. What value is printed by println()?**
 
 ```kotlin
 val set = setOf("apple", "pear", "orange", "apple")
 println(set.count())
 ```
 
-- [ ] 3
+- [x] 3
 - [ ] 4
 - [ ] 1
 - [ ] 5

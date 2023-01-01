@@ -406,3 +406,48 @@ numbers
 * An Inline function is a kind of function that is declared with the keyword "inline" just before the function declaration. Once a function is declared inline, the compiler does not **allocate** any memory for this function, instead the compiler **copies** the piece of code virtually at the calling place at runtime.
 
 * Inlining may cause the **generated code to grow**. However, if you do it in a reasonable way **(avoiding inlining large functions)**, it will pay off in performance, especially at "megamorphic" call-sites inside loops.
+
+## Nullable
+
+The only possible causes of an NPE in Kotlin are:
+
+* An explicit call to throw NullPointerException().
+
+* Usage of the !! operator that is described below.
+
+* Data inconsistency with regard to initialization, such as when:
+
+  * An uninitialized this available in a constructor is passed and used somewhere (a "leaking this").
+
+  * A superclass constructor calls an open member whose implementation in the derived class uses an uninitialized state.
+
+**Java interoperation:**
+
+* Attempts to access a member of a null reference of a platform type;
+
+* Nullability issues with generic types being used for Java interoperation. For example, a piece of Java code might add null into a Kotlin MutableList<String>, therefore requiring a MutableList<String?> for working with it.
+
+* Other issues caused by external Java code.
+
+In Kotlin, the type system distinguishes between references that can hold null (nullable references) and those that cannot (non-null references). For example, a regular variable of type String cannot hold null:
+
+``` kotlin
+var a: String = "abc" // Regular initialization means non-null by default
+a = null // compilation error
+```
+To allow nulls, you can declare a variable as a nullable string by writing String?:
+
+
+``` kotlin
+var b: String? = "abc" // can be set to null
+b = null // ok
+print(b)
+```
+
+Now, if you call a method or access a property on a, it's guaranteed not to cause an NPE, so you can safely say:
+
+`val l = a.length`
+
+But if you want to access the same property on b, that would not be safe, and the compiler reports an error:
+
+`val l = b.length // error: variable 'b' can be null`
