@@ -451,3 +451,49 @@ Now, if you call a method or access a property on a, it's guaranteed not to caus
 But if you want to access the same property on b, that would not be safe, and the compiler reports an error:
 
 `val l = b.length // error: variable 'b' can be null`
+
+**Checking for null in conditions**
+
+First, you can explicitly check whether b is null, and handle the two options separately:
+
+**val l = if (b != null) b.length else -1**
+
+**Safe calls**
+Your second option for accessing a property on a nullable variable is using the safe call operator `?.`:
+
+``` kotlin
+val a = "Kotlin"
+val b: String? = null
+println(b?.length)
+println(a?.length) // Unnecessary safe call
+```
+
+* This returns b.length if b is not null, and null otherwise. The type of this expression is Int?.
+
+* To perform a certain operation only for non-null values, you can use the safe call operator together with **let**:
+
+
+``` kotlin
+val listWithNulls: List<String?> = listOf("Kotlin", null)
+for (item in listWithNulls) {
+    item?.let { println(it) } // prints Kotlin and ignores null
+}
+```
+
+**Nullable receiver**
+Extension functions can be defined on a nullable receiver. This way you can specify behaviour for null values without the need to use null-checking logic at each call-site.
+
+* For example, the toString() function is defined on a nullable receiver. It returns the String "null" (as opposed to a null value). This can be helpful in certain situations, for example, logging:
+``` kotlin
+val person: Person? = null
+logger.debug(person.toString()) // Logs "null", does not throw an exception
+```
+* If you want your toString() invocation to return a nullable string, use the safe-call operator ?.:
+
+``` kotlin
+var timestamp: Instant? = null
+val isoTimestamp = timestamp?.toString() // Returns a String? object which is `null`
+if (isoTimestamp == null) {
+   // Handle the case where timestamp was `null`
+}
+```
