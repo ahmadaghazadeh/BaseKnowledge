@@ -497,3 +497,15 @@ if (isoTimestamp == null) {
    // Handle the case where timestamp was `null`
 }
 ```
+
+Instead of writing the complete if expression, you can also express this with the Elvis operator **?:**:
+
+`val l = b?.length ?: -1`
+
+**The !! operator**
+
+The third option is for NPE-lovers: the not-null assertion operator (!!) converts any value to a non-null type and throws an exception if the value is null. You can write b!!, and this will return a non-null value of b (for example, a String in our example) or throw an NPE if b is null:
+
+`val l = b!!.length` 
+
+**Thus, if you want an NPE, you can have it**, but you have to ask for it explicitly and it won't appear out of the blue.
