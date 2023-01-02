@@ -238,7 +238,7 @@ val list2 = (80..100).toList().filter(_____)
 #### Q19. Which code snippet correctly shows a for loop using a range to display "1 2 3 4 5 6"?
 
 - [ ] `for(z in 1..7) println("$z ")`
-- [ ] `for(z in 1..6) print("$z ")`
+- [x] `for(z in 1..6) print("$z ")`
 - [ ] `for(z in 1 to 6) print("$z ")`
 - [ ] `for(z in 1..7) print("$z ")`
 
@@ -248,7 +248,7 @@ val list2 = (80..100).toList().filter(_____)
 
 - [ ] an anonymous object
 - [ ] a static property
-- [ ] a companion object
+- [x] a companion object
 - [ ] a backing field
 
 [reference](https://kotlinlang.org/docs/object-declarations.html#companion-objects)

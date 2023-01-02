@@ -573,3 +573,135 @@ fun main() {
     println(::x.name)
 }
 ```
+
+## Object expressions
+* Sometimes you need to create an object that is a slight modification of some class, without explicitly declaring a new subclass for it. Kotlin can handle this with object expressions and object declarations.
+
+* Object expressions create objects of anonymous classes, that is, classes that aren't explicitly declared with the class declaration. Such classes are useful for one-time use. You can define them from scratch, inherit from existing classes, or implement interfaces. Instances of anonymous classes are also called anonymous objects because they are defined by an expression, not a name.
+
+``` kotlin
+val helloWorld = object {
+    val hello = "Hello"
+    val world = "World"
+    // object expressions extend Any, so `override` is required on `toString()`
+    override fun toString() = "$hello $world"
+}
+
+```
+
+### Object declarations
+
+* This is called an object declaration, and it always has a name following the object keyword. Just like a variable declaration, an object declaration is not an expression, and it cannot be used on the right-hand side of an assignment statement.
+
+*The initialization of an object declaration is **thread-safe and done on first access**.
+
+``` kotlin 
+ 
+object DataProviderManager {
+    fun registerDataProvider(provider: DataProvider) {
+        // ...
+    }
+
+    val allDataProviders: Collection<DataProvider>
+        get() = // ...
+}
+ 
+
+object MyObject
+
+fun main() {
+    println(MyObject) // MyObject@1f32e575
+}
+
+data object MyObject
+
+fun main() {
+    println(MyObject) // MyObject
+}
+
+```
+
+* **Sealed class hierarchies** are a particularly good fit for data object declarations, since they allow you to maintain symmetry with any data classes you might have defined alongside the object:
+
+``` kotlin
+sealed class ReadResult {
+    data class Number(val value: Int): ReadResult()
+    data class Text(val value: String): ReadResult()
+    data object EndOfFile: ReadResult()
+}
+
+fun main() {
+    println(ReadResult.Number(1)) // Number(value=1)
+    println(ReadResult.Text("Foo")) // Text(value=Foo)
+    println(ReadResult.EndOfFile) // EndOfFile
+}
+```
+
+### Companion objects
+
+* There is one important semantic difference between object expressions and object declarations:
+
+Object expressions are executed (and initialized) immediately, where they are used.
+
+Object declarations are **initialized lazily**, when accessed for the first time.
+
+A companion object is initialized when the **corresponding class is loaded (resolved)** that matches the semantics of a Java static initializer.
+
+## Data classes
+
+* It is not unusual to create classes whose main purpose is to hold data. In such classes, some standard functionality and some utility functions are often mechanically derivable from the data. In Kotlin, these are called data classes and are marked with data:
+
+`data class User(val name: String, val age: Int)`
+
+### The compiler automatically derives the following members from all properties declared in the primary constructor:
+
+* equals()/hashCode() pair
+
+* toString() of the form "User(name=John, age=42)"
+
+* componentN() functions corresponding to the properties in their order of declaration.
+
+* copy() function (see below).
+
+### To ensure consistency and meaningful behavior of the generated code, data classes have to fulfill the following requirements:
+
+* The primary constructor needs to have at least one parameter.
+
+* All primary constructor parameters need to be marked as val or var.
+
+* Data classes cannot be abstract, open, sealed, or inner.
+
+### Properties declared in the class body
+
+The compiler only uses the properties defined inside the primary constructor for the automatically generated functions. To exclude a property from the generated implementations, declare it inside the class body:
+
+``` kotlin
+data class Person(val name: String) {
+    var age: Int = 0
+}
+```
+
+Only the property name will be used inside the toString(), equals(), hashCode(), and copy() implementations, and there will only be one component function component1(). While two Person objects can have different ages, they will be treated as equal.
+
+``` kotlin
+data class Person(val name: String) {
+    var age: Int = 0
+}
+fun main() {
+
+    val person1 = Person("John")
+    val person2 = Person("John")
+    person1.age = 10
+    person2.age = 20
+
+    println("person1 == person2: ${person1 == person2}")
+    println("person1 with age ${person1.age}: ${person1}")
+    println("person2 with age ${person2.age}: ${person2}")
+}
+
+output
+
+person1 == person2: true
+person1 with age 10: Person(name=John)
+person2 with age 20: Person(name=John)
+```
