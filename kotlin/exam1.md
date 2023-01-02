@@ -218,17 +218,17 @@ println(set.count())
 #### Q17. Which line of code shows how to display a nullable string's length and shows 0 instead of null?
 
 - [ ] `println(b!!.length ?: 0)`
-- [ ] `println(b?.length ?: 0)`
+- [x] `println(b?.length ?: 0)`
 - [ ] `println(b?.length ?? 0)`
 - [ ] `println(b == null? 0: b.length)`
 
-#### Q18. In the file main.kt, you are filtering a list of integers and want to use an already existing function, removeBadValues. What is the proper way to invoke the function from filter in the line below?
+#### **Q18. In the file main.kt, you are filtering a list of integers and want to use an already existing function, removeBadValues. What is the proper way to invoke the function from filter in the line below?**
 
 ```kotlin
 val list2 = (80..100).toList().filter(_____)
 ```
 
-- [ ] `::removeBadValues`
+- [x] `::removeBadValues`
 - [ ] `GlobalScope.removeBadValues()`
 - [ ] `Mainkt.removeBadValues`
 - [ ] `removeBadValues`

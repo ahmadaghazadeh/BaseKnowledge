@@ -509,3 +509,67 @@ The third option is for NPE-lovers: the not-null assertion operator (!!) convert
 `val l = b!!.length` 
 
 **Thus, if you want an NPE, you can have it**, but you have to ask for it explicitly and it won't appear out of the blue.
+
+## Reflection
+
+### Class references
+
+``` kotlin
+val c = MyClass::class
+
+val widget: Widget = ...
+assert(widget is GoodWidget) { "Bad widget: ${widget::class.qualifiedName}" }
+
+```
+
+### Function references
+
+Alternatively, you can use the function as a function type value, that is, pass it to another function. To do so, use the `::` operator:
+
+```kotlin
+val numbers = listOf(1, 2, 3)
+println(numbers.filter(::isOdd))
+
+fun isOdd(x: Int) = x % 2 != 0
+fun isOdd(s: String) = s == "brillig" || s == "slithy" || s == "tove"
+
+val numbers = listOf(1, 2, 3)
+println(numbers.filter(::isOdd)) // refers to isOdd(x: Int)
+
+output:
+[1, 3]
+
+val predicate: (String) -> Boolean = ::isOdd   // refers to isOdd(x: String)
+
+
+```
+* If you need to use a member of a class or an extension function, it needs to be qualified: `String::toCharArray.`
+
+### Example: function composition
+
+``` kotlin
+fun <A, B, C> compose(f: (B) -> C, g: (A) -> B): (A) -> C {
+    return { x -> f(g(x)) }
+}
+
+
+fun isOdd(x: Int) = x % 2 != 0
+fun length(s: String) = s.length
+
+val oddLength = compose(::isOdd, ::length)
+val strings = listOf("a", "ab", "abc")
+
+println(strings.filter(oddLength))
+
+```
+
+### Property references
+To access properties as first-class objects in Kotlin, use the :: operator:
+```kotlin
+val x = 1
+
+fun main() {
+    println(::x.get())
+    println(::x.name)
+}
+```
