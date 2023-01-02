@@ -705,3 +705,24 @@ person1 == person2: true
 person1 with age 10: Person(name=John)
 person2 with age 20: Person(name=John)
 ```
+
+### Copying
+
+Use the copy() function to copy an object, allowing you to alter some of its properties while keeping the rest unchanged. The implementation of this function for the User class above would be as follows:
+
+``` kotlin
+fun copy(name: String = this.name, age: Int = this.age) = User(name, age)
+
+val jack = User(name = "Jack", age = 1)
+val olderJack = jack.copy(age = 2)
+```
+
+### Data classes and destructuring declarations
+
+``` kotlin
+val jane = User("Jane", 35)
+val (name, age) = jane
+println("$name, $age years of age") // prints "Jane, 35 years of age"
+```
+
+## Pair, Triple, Sealed
