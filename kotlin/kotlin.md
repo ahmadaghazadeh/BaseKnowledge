@@ -813,3 +813,10 @@ fun log(e: Error) = when(e) {
     // the `else` clause is not required because all the cases are covered
 }
 ```
+
+## If there is a name clash, you can disambiguate by using as keyword to locally rename the clashing entity:
+
+``` kotlin
+import org.example.Message // Message is accessible
+import org.test.Message as testMessage // testMessage stands for 'org.test.Message'
+```

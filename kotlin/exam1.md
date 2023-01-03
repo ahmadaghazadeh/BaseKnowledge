@@ -255,7 +255,7 @@ val list2 = (80..100).toList().filter(_____)
 
 #### Q21. Your code need to try casting an object. If the cast is not possible, you do not want an exception generated, instead you want null to be assigned. Which operator can safely cast a value?
 
-- [ ] `as?`
+- [x] `as?`
 - [ ] `??`
 - [ ] `is`
 - [ ] `as`
@@ -269,14 +269,14 @@ class Employee
 class Manager : Employee()
 ```
 
-- [ ] In order to inherit from a class, it must be marked **open**
+- [x] In order to inherit from a class, it must be marked **open**
 - [ ] In order to inherit from a class, it must be marked **public**
 - [ ] In order to inherit from a class, it must be marked **sealed**
 - [ ] In order to inherit from a class, it must be marked **override**
 
 [reference](https://kotlinlang.org/docs/inheritance.html)
 
-#### Q23. Which function changes the value of the element at the current iterator location?
+#### **Q23. Which function changes the value of the element at the current iterator location?**
 
 - [ ] `change()`
 - [ ] `modify()`
@@ -300,7 +300,7 @@ class Supervisor : Employee() {
 
 - [ ] `Employee.display() `
 - [ ] `::display()`
-- [ ] `super.display()`
+- [x] `super.display()`
 - [ ] `override.display()`
 
 [reference](https://kotlinlang.org/docs/inheritance.html#calling-the-superclass-implementation)
@@ -318,7 +318,7 @@ fun main(){
 }
 ```
 
-- [ ] `StatusError` is an object, not a class and cannot be instantiated
+- [x] `StatusError` is an object, not a class and cannot be instantiated
 - [ ] Only one instance of the class `Status` can be instantiated at a time
 - [ ] `Status.Error` must be declared as an immutable type
 - [ ] `Status.Error` is pribate to class and cannot be declared externally
@@ -334,7 +334,7 @@ val seq = sequence { yieldAll(1..20) }
 ```
 
 - [ ] You cannot assign a sequence to a variable
-- [ ] To produce result, a sequence must have terminal operation. In this case, it needs a `.toList()`
+- [x] To produce result, a sequence must have terminal operation. In this case, it needs a `.toList()`
 - [ ] The `.filter{ it < 11 }` should be `.filter{ it > 11 }`
 - [ ] The `yieldAll(1..20)` should be `yieldAll(1..10)`
 
@@ -346,7 +346,7 @@ val seq = sequence { yieldAll(1..20) }
 class Person
 ```
 
-- [ ] `equals(), hashCode(), and toString()`
+- [x] `equals(), hashCode(), and toString()`
 - [ ] `equals(), toHash(), and super()`
 - [ ] `print(), println(), and toString()`
 - [ ] `clone(), equals(), and super()`
@@ -355,7 +355,7 @@ class Person
 
 #### Q28. Which is the proper way to declare a singleton named DatabaseManager?
 
-- [ ] `object DatabaseManager {}`
+- [x] `object DatabaseManager {}`
 - [ ] `singleton DatabaseManager {}`
 - [ ] `static class DatabaseManager {}`
 - [ ] `data class DatabaseManager {}`
@@ -371,7 +371,7 @@ abstract class Person(val name: String) {
 ```
 
 - [ ] The subclass must be marked sealed
-- [ ] You must override the `displayJob()` method
+- [x] You must override the `displayJob()` method
 - [ ] You must mark the subclass as final
 - [ ] An abstract class cannot be extended, so you must change it to open
 
@@ -389,7 +389,7 @@ class UserService{
 }
 ```
 
-- [ ] Use import as to change the type name
+- [x] Use import as to change the type name
 - [ ] Create subtypes with shorter names
 - [ ] Create interfaces with shorter names
 - [ ] Create extension classes with shorter names
