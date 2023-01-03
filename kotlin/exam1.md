@@ -401,14 +401,14 @@ class UserService{
 - [ ] `obj.classInfo()`
 - [ ] `obj.typeInfo()`
 - [ ] `obj::class.simpleName`
-- [ ] `obj::class`
+- [x] `obj::class`
 
 [reference](https://kotlinlang.org/docs/reflection.html#class-references)
 
 #### Q32. Which is the correct declaration of an integer array with a size of 5?
 
 - [ ] `val arrs[5]: Int`
-- [ ] `val arrs = IntArray(5)`
+- [x] `val arrs = IntArray(5)`
 - [ ] `val arrs: Int[5]`
 - [ ] `val arrs = Array<Int>(5)`
 
