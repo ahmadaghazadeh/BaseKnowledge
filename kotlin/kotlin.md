@@ -734,11 +734,37 @@ Pair(first: A, second: B)
 
 
 fun main() {
-    val (x, y) = Pair(1, "Geeks")
+    var pair = Pair("Hello Geeks", "This is Kotlin tutorial")
+    val (x, y) = pair
     println(x)
     println(y)
+    println(pair.first)
+    println(pair.second)
 }
 
 ```
 
-## Triple, Sealed
+## Triple
+Kotlin language provides a simple datatype to store three values in a single instance. This can be done using a data class known as Triple. It is a simple generic class that stores any three values, there is no valuable meaning of the relationship between the three values. The comparison between two Triple objects is done on the basis of values, i.e. two Triples are equal only if all three components are equal. 
+
+``` kotlin
+data class Triple<out A, out B, out C> : Serializable
+Triple(first: A, second: B, third: C)
+
+fun main() {
+    var triple = Triple("Hello Geeks",
+                        "This is Kotlin tutorial",
+                        listOf(10, 20, 30))
+
+    val (x, y, z) = triple
+    println(x)
+    println(y)
+    println(z)
+
+    println(triple.first)
+    println(triple.second)
+    println(triple.third)
+}
+```
+
+## Sealed
