@@ -416,19 +416,19 @@ class UserService{
 
 #### Q33. You have created a class that should be visible only to the other code in its module. Which modifier do you use?
 
-- [ ] `internal`
+- [x] `internal`
 - [ ] `private`
 - [ ] `public`
 - [ ] `protected`
 
 [reference](https://kotlinlang.org/docs/visibility-modifiers.html#classes-and-interfaces)
 
-#### Q34. Kotlin has two equality operators, == and ===. What is the difference?
+#### **Q34. Kotlin has two equality operators, == and ===. What is the difference?**
 
 - [ ] `==` determines if two primitive types are identical. `===` determines if two objects are identical
 - [ ] `==` determines if two references point to the same object. `===` determines if two objects have the same value
 - [ ] `==` determines if two objects have the same value. `===` determines if two strings have the same value
-- [ ] `==` determines if two objects have the same value. `===` determines if two references point to the same object
+- [x] `==` determines if two objects have the same value. `===` determines if two references point to the same object
 
 [reference](https://kotlinlang.org/docs/equality.html#structural-equality)
 

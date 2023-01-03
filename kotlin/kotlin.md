@@ -836,3 +836,18 @@ import org.test.Message as testMessage // testMessage stands for 'org.test.Messa
 * The protected modifier is not available for top-level declarations.
 
 * To use a visible top-level declaration from another package, you should import it.
+
+## Structural equality
+* Structural equality is checked by the == operation and its negated counterpart !=. By convention, an expression like a == b is translated to:
+
+`a?.equals(b) ?: (b === null)`
+* If a is not null, it calls the equals(Any?) function, otherwise (a is null) it checks that b is referentially equal to null.
+
+* Note that there's no point in optimizing your code when comparing to null explicitly: a == null will be automatically translated to a === null.
+
+* To provide a custom equals check implementation, override the equals(other: Any?): Boolean function. Functions with the same name and other signatures, like equals(other: Foo), don't affect equality checks with the operators == and !=.
+
+* Structural equality has nothing to do with comparison defined by the Comparable<...> interface, so only a custom equals(Any?) implementation may affect the behavior of the operator.
+
+# Referential equality
+* Referential equality is checked by the === operation and its negated counterpart !==. a === b evaluates to true if and only if a and b point to the same object. For values represented by primitive types at runtime (for example, Int), the === equality check is equivalent to the == check.
