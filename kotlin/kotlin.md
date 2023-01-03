@@ -725,4 +725,20 @@ val (name, age) = jane
 println("$name, $age years of age") // prints "Jane, 35 years of age"
 ```
 
-## Pair, Triple, Sealed
+## Pair
+Kotlin language provides a simple datatype to store two values in a single instance. This can be done using a data class known as Pair. It is a simple generic class that can store two values of same or different data types, and there can or can not be a relationship between the two values. The comparison between two Pair objects is done on the basis of values, i.e. two Pair objects are equal if their values are equal.
+
+``` kotlin
+data class Pair<out A, out B> : Serializable
+Pair(first: A, second: B)
+
+
+fun main() {
+    val (x, y) = Pair(1, "Geeks")
+    println(x)
+    println(y)
+}
+
+```
+
+## Triple, Sealed
