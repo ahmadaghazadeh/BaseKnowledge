@@ -432,7 +432,7 @@ class UserService{
 
 [reference](https://kotlinlang.org/docs/equality.html#structural-equality)
 
-#### Q35. Which snippet correctly shows setting the variable max to whichever variable holds the greatest value, a or b, using idiomatic Kotlin?
+#### **Q35. Which snippet correctly shows setting the variable max to whichever variable holds the greatest value, a or b, using idiomatic Kotlin?**
 
 - [ ] `val max3 = a.max(b)` (Extension Function is One of the idiomatic Solutions in Kotlin)
 - [ ] `val max = a > b ? a : b`
@@ -448,7 +448,7 @@ enum class Signal { OPEN, CLOSED, SENDING }
 - [ ] `println(Signal.SENDING.position())`
 - [ ] `println(Signal.SENDING.hashCode())`
 - [ ] `println(Signal.SENDING)`
-- [ ] `println(Signal.SENDING.ordinal)`
+- [x] `println(Signal.SENDING.ordinal)`
 
 [reference](https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants)
 

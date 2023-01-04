@@ -851,3 +851,69 @@ import org.test.Message as testMessage // testMessage stands for 'org.test.Messa
 
 # Referential equality
 * Referential equality is checked by the === operation and its negated counterpart !==. a === b evaluates to true if and only if a and b point to the same object. For values represented by primitive types at runtime (for example, Int), the === equality check is equivalent to the == check.
+
+## Enum
+``` kotlin
+
+enum class Direction {
+    NORTH, SOUTH, WEST, EAST
+}
+
+
+enum class Color(val rgb: Int) {
+    RED(0xFF0000),
+    GREEN(0x00FF00),
+    BLUE(0x0000FF)
+}
+
+enum class ProtocolState {
+    WAITING {
+        override fun signal() = TALKING
+    },
+
+    TALKING {
+        override fun signal() = WAITING
+    };
+
+    abstract fun signal(): ProtocolState
+}
+```
+
+* An enum class can implement an interface (but it cannot derive from a class), providing either a common implementation of interface members for all the entries, or separate implementations for each entry within its anonymous class. This is done by adding the interfaces you want to implement to the enum class declaration as follows:
+
+``` kotlin
+enum class IntArithmetics : BinaryOperator<Int>, IntBinaryOperator {
+    PLUS {
+        override fun apply(t: Int, u: Int): Int = t + u
+    },
+    TIMES {
+        override fun apply(t: Int, u: Int): Int = t * u
+    };
+
+    override fun applyAsInt(t: Int, u: Int) = apply(t, u)
+}
+
+// The valueOf() method throws an IllegalArgumentException if the specified name does not match any of the enum constants defined in the class.
+EnumClass.valueOf(value: String): EnumClass
+
+
+EnumClass.values(): Array<EnumClass>
+
+```
+
+* You can access the constants in an enum class in a generic way using the enumValues<T>() and enumValueOf<T>() functions:
+```kotlin
+enum class RGB { RED, GREEN, BLUE }
+
+inline fun <reified T : Enum<T>> printAllValues() {
+    print(enumValues<T>().joinToString { it.name })
+}
+
+printAllValues<RGB>() // prints RED, GREEN, BLUE
+```
+
+* Every enum constant has properties for obtaining its name and position (starting with 0) in the enum class declaration:
+``` kotlin
+val name: String
+val ordinal: Int
+```
