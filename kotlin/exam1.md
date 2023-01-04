@@ -464,7 +464,7 @@ class Detail {
 ```
 
 - [ ] `const` is compatible with Java, but `@JvmField` is not
-- [ ] The compiler will inline const so it is faster and more memory efficient
+- [x] The compiler will inline const so it is faster and more memory efficient
 - [ ] Virtually any type can be used with const but not `@JvmField`
 - [ ] const can also be used with mutable types
 
@@ -489,22 +489,22 @@ fun getAttribute(attribute: Attribute) : String {
 ```
 
 - [ ] Replace `open` with `closed`
-- [ ] Replace `open` with `sealed`
+- [x] Replace `open` with `sealed`
 - [ ] Replace `open` with `private`
 - [ ] Replace `open` with `public`
 
 [reference](https://kotlinlang.org/docs/sealed-classes.html)
 
-#### Q39. You would like to know each time a class property is updated. Which code snippet shows a built-in delegated property that can accomplish this?
+#### **Q39. You would like to know each time a class property is updated. Which code snippet shows a built-in delegated property that can accomplish this?**
 
 - [ ] `Delegates.watcher()`
-- [ ] `Delegates.observable()`
+- [x] `Delegates.observable()`
 - [ ] `Delegates.rx()`
 - [ ] `Delegates.observer()`
 
 [reference](https://kotlinlang.org/docs/delegated-properties.html#observable-properties)
 
-#### Q40. Why doesn't this code compile?
+#### **Q40. Why doesn't this code compile?**
 
 ```kotlin
 val addend = 1
@@ -520,7 +520,7 @@ fun main(){
 - [ ] infix function must be marked public
 - [ ] In Kotlin, add is a keyword
 - [ ] Extension functions use `it`, not `this`, as the default parameter name
-- [ ] infix functions cannot have default values
+- [x] infix functions cannot have default values
 
 [reference](https://kotlinlang.org/docs/functions.html#infix-notation)
 
@@ -529,7 +529,7 @@ fun main(){
 - [ ] `val name = null`
 - [ ] `var name: String`
 - [ ] `val name: String`
-- [ ] `val name: String? = null`
+- [x] `val name: String? = null`
 
 #### Q42. Which line of code is a shorter, more idiomatic version of the displayed snippet?
 
@@ -540,7 +540,7 @@ val len: Int = if (x != null) x.length else -1
 - [ ] `val len = x?.let{x.len} else {-1}`
 - [ ] `val len = x!!.length ?: -1`
 - [ ] `val len:Int = (x != null)? x.length : -1`
-- [ ] `val len = x?.length ?: -1`
+- [x] `val len = x?.length ?: -1`
 
 #### Q43. You are creating a Kotlin unit test library. What else should you add to make the following code compile without error?
 
@@ -555,7 +555,7 @@ fun main(){
 - [ ] The extension function should be marked `public`
 - [ ] Add the prefix `operator` to the `shouldMatch` extension function
 - [ ] The code is not legal in Kotlin (should be `println(msg.shouldEqual("test message"))`)
-- [ ] Add the prefix `infix` to the `shouldMatch` extension function
+- [x] Add the prefix `infix` to the `shouldMatch` extension function
 
 #### Q44. What is the difference between the declarations of COLOR and SIZE?
 
