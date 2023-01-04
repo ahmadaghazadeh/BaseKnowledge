@@ -557,7 +557,7 @@ fun main(){
 - [ ] The code is not legal in Kotlin (should be `println(msg.shouldEqual("test message"))`)
 - [x] Add the prefix `infix` to the `shouldMatch` extension function
 
-#### Q44. What is the difference between the declarations of COLOR and SIZE?
+#### **Q44. What is the difference between the declarations of COLOR and SIZE?**
 
 ```kotlin
 class Record{
@@ -571,7 +571,7 @@ class Record{
 - [ ] Since `COLOR` and `SIZE` are both immutable, they are identical internally
 - [ ] Both are immutable, but the use of the keyword const makes `COLOR` slower and less space efficient than `SIZE`
 - [ ] const makes `COLOR` faster, but not compatible with Java. Without const, `SIZE` is still compatible with Java
-- [ ] Both are immutable, but the use of the keyword const makes `COLOR` faster and more space efficient than `SIZE`
+- [x] Both are immutable, but the use of the keyword const makes `COLOR` faster and more space efficient than `SIZE`
 
 [reference](https://kotlinlang.org/docs/properties.html#compile-time-constants)
 
@@ -591,7 +591,7 @@ fun main() {
 - [ ] Because name is a class parameter, not a property-it is unresolved `main()`.
 - [ ] In order to create an instance of a class, you need the keyword `new`
 - [ ] The reference to name needs to be scoped to the class, so it should be `this.name`
-- [ ] Classes cannot be immutable. You need to change `var` to `val`
+- [x] Classes cannot be immutable. You need to change `var` to `val`
 
 Note: By default, constructor parameters can only be used in the initializer blocks or property initializers declared in the class body. Therefore, to let the `greet` function have access to the `name` parameter, it should be declared as a property: `class Cat (val name: String) { ... }`
 
