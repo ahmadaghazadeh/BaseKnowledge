@@ -452,7 +452,7 @@ enum class Signal { OPEN, CLOSED, SENDING }
 
 [reference](https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants)
 
-#### Q37. Both const and @JvmField create constants. What can const do that @JvmField cannot?
+#### **Q37. Both const and @JvmField create constants. What can const do that @JvmField cannot?**
 
 ```java
 class Detail {

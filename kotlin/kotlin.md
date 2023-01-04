@@ -917,3 +917,63 @@ printAllValues<RGB>() // prints RED, GREEN, BLUE
 val name: String
 val ordinal: Int
 ```
+
+## Calling Kotlin from Java
+
+A Kotlin property is compiled to the following Java elements:
+
+a getter method, with the name calculated by prepending the get prefix
+
+a setter method, with the name calculated by prepending the set prefix (only for var properties)
+
+a private field, with the same name as the property name (only for properties with backing fields)
+
+* For example, var firstName: String compiles to the following Java declarations:
+  
+``` kotlin
+private String firstName;
+
+public String getFirstName() {
+    return firstName;
+}
+
+public void setFirstName(String firstName) {
+    this.firstName = firstName;
+}
+```
+* If the name of the property starts with is, a different name mapping rule is used: the name of the getter will be the same as the property name, and the name of the setter will be obtained by replacing is with set. For example, for a property isOpen, the getter will be called isOpen() and the setter will be called setOpen(). **This rule applies for properties of any type, not just Boolean.**
+
+## Instance fields
+If you need to expose a Kotlin property as a field in Java, annotate it with the @JvmField annotation. The field will have the same visibility as the underlying property. You can annotate a property with @JvmField if it:
+
+has a backing field
+
+is not private
+
+does not have open, override or const modifiers
+
+is not a delegated property
+
+```kotlin
+class User(id: String) {
+    @JvmField val ID = id
+}
+
+// Java
+class JavaClient {
+    public String getID(User user) {
+        return user.ID;
+    }
+}
+
+```
+
+* Usually these fields are private but they can be exposed in one of the following ways:
+
+    * @JvmField annotation
+
+    * lateinit modifier
+
+    * const modifier
+
+Annotating such a property with @JvmField makes it a static field with the same visibility as the property itself.
