@@ -1040,3 +1040,24 @@ infix fun Int.shl(x: Int): Int { ... }
 // is the same as
 1.shl(2)
 ```
+
+## Grouping
+
+``` kotlin
+ val numbers = listOf("one", "two", "three", "four", "five")
+
+ println(numbers.groupBy { it.first().uppercase() }) // {o=[one], t=[two, three], f=[four, five]}
+```
+
+Namely, Grouping supports the following operations:
+
+eachCount() counts the elements in each group.
+
+fold() and reduce() perform fold and reduce operations on each group as a separate collection and return the results.
+
+aggregate() applies a given operation subsequently to all the elements in each group and returns the result. This is the generic way to perform any operations on a Grouping. Use it to implement custom operations when fold or reduce are not enough.
+
+``` kotlin
+val numbers = listOf("one", "two", "three", "four", "five", "six")
+println(numbers.groupingBy { it.first() }.eachCount()) //{o=1, t=2, f=2, s=1}
+```

@@ -1,9 +1,10 @@
  
 
 fun main() {
-     val y = arrayOf(10, 20, 30, 40)
-     val z = listOf(10, 20, 30, 40)
-     
+ val numbers = listOf("one", "two", "three", "four", "five")
+
+println(numbers.groupBy { it.first().uppercase() })
+println(numbers.groupBy(keySelector = { it.first() }, valueTransform = { it.uppercase() }))
 
 }
  

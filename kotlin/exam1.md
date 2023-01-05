@@ -750,7 +750,7 @@ fun main() = runBlocking {
 
 - [ ] `task.complete()`
 - [ ] `task.wait()`
-- [ ] `task.join()`
+- [x] `task.join()`
 - [ ] `task.cancel()`
 
 [reference](https://kotlinlang.org/docs/coroutines-basics.html#an-explicit-job)
@@ -761,7 +761,7 @@ fun main() = runBlocking {
 data class Student(val firstName: String, val lastName: String)
 ```
 
-- [ ] `println(students.groupBy{ it.lastName }.count())`
+- [x] `println(students.groupBy{ it.lastName }.count())`
 - [ ] `println(students.groupBy{ it.lastName.first() }.fold().count())`
 - [ ] `println(students.groupingBy{ it.lastName.first() }.count())`
 - [ ] `println(students.groupingBy{ it.lastName.first() }.size())`
