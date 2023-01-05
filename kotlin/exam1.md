@@ -607,7 +607,7 @@ for (value in 1..5){
 }
 ```
 
-- [ ] `for( (ndx, value) in (1..20).withIndex() ){`
+- [x] `for( (ndx, value) in (1..20).withIndex() ){`
 - [ ] `for( (ndx, value) in (1..20).pair() ){`
 - [ ] `for( Pair(ndx, value) in 1..20 ){`
 - [ ] `for( (ndx, value) in *(1..20) ){`
