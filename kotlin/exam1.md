@@ -704,7 +704,7 @@ println(result)
 
 [reference](https://kotlinlang.org/docs/sequences.html#iterable)
 
-#### Q53. An error is generated when you try to compile the following code. How should you change the call to printStudents to fix the error?
+#### **Q53. An error is generated when you try to compile the following code. How should you change the call to printStudents to fix the error?**
 
 ```kotlin
 fun main() {
@@ -719,19 +719,19 @@ fun printStudents(vararg students: String) {
 
 - [ ] `printStudents(students.toList())`
 - [ ] `printStudents(students!!)`
-- [ ] `printStudents(*students)`
+- [x] `printStudents(*students)`
 - [ ] `printStudents(students[])`
 
 [reference](https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs)
 
-#### Q54. Both y and z are immutable references pointing to fixed-size collections of the same four integers. Are there any differences?
+#### **Q54. Both y and z are immutable references pointing to fixed-size collections of the same four integers. Are there any differences?**
 
 ```kotlin
 val y = arrayOf(10, 20, 30, 40)
 val z = listOf(10, 20, 30, 40)
 ```
 
-- [ ] You can modify the contents of the elements in `y` but not `z`.
+- [x] You can modify the contents of the elements in `y` but not `z`.
 - [ ] There are not any differences. `y` and `z` are a type alias of the same type.
 - [ ] You add more elements to `z` since it is a list.
 - [ ] You can modify the contents of the elements in `z` but not `y`.

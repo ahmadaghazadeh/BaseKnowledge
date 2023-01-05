@@ -1011,3 +1011,32 @@ for (i in (1..4).reversed()) print(i)
 
 println((1..10).filter { it % 2 == 0 })
 ```
+
+## Variable number of arguments 
+``` kotlin
+fun foo(vararg strings: String) { /*...*/ }
+
+foo(strings = *arrayOf("a", "b", "c"))
+
+
+fun <T> asList(vararg ts: T): List<T> {
+    val result = ArrayList<T>()
+    for (t in ts) // ts is an Array
+        result.add(t)
+    return result
+}
+
+val list = asList(1, 2, 3)
+
+```
+## Infix notation
+
+''' kotlin
+infix fun Int.shl(x: Int): Int { ... }
+
+// calling the function using the infix notation
+1 shl 2
+
+// is the same as
+1.shl(2)
+```

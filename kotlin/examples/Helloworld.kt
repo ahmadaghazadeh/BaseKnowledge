@@ -1,17 +1,9 @@
  
 
 fun main() {
-       var triple = Triple("Hello Geeks",
-                        "This is Kotlin tutorial",
-                        listOf(10, 20, 30))
+     val y = arrayOf(10, 20, 30, 40)
+     val z = listOf(10, 20, 30, 40)
+     
 
-    val (x, y, z) = triple
-    println(x)
-    println(y)
-    println(z)
-
-    println(triple.first)
-    println(triple.second)
-    println(triple.third)
 }
  
