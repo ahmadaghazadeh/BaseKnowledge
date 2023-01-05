@@ -639,7 +639,7 @@ fun main(){
 
 [reference](https://kotlinlang.org/docs/destructuring-declarations.html)
 
-#### Q49. This function generates Fibonacci sequence. Which function is missing?
+#### **Q49. This function generates Fibonacci sequence. Which function is missing?**
 
 ```kotlin
 fun fibonacci() = sequence {
@@ -652,7 +652,7 @@ fun fibonacci() = sequence {
 ```
 
 - [ ] `with()`
-- [ ] `yield()`
+- [x] `yield()`
 - [ ] `skip()`
 - [ ] `return()`
 
@@ -665,11 +665,11 @@ for(y in 1..100) y+=2
 ```
 
 - [ ] `y` must be declared with `var` to be mutable
-- [ ] `y` is an implicitly immutable value
+- [x] `y` is an implicitly immutable value
 - [ ] `y` can change only in a while loop
 - [ ] In order to change `y`, it must be declared outside of the loop
 
-#### Q51. You have created a data class, Point, that holds two properties, x and y, representing a point on a grid. You want to use the hash symbol for subtraction on the Point class, but the code as shown will not compile. How can you fix it?
+#### **Q51. You have created a data class, Point, that holds two properties, x and y, representing a point on a grid. You want to use the hash symbol for subtraction on the Point class, but the code as shown will not compile. How can you fix it?**
 
 ```kotlin
 data class Point(val x: Int, val y: Int)
@@ -687,7 +687,7 @@ fun main() {
 
 - [ ] You cannot; the hash symbol is not a valid operator.
 - [ ] You should replace the word hash with octothorpe, the actual name for the symbol.
-- [ ] You should use `minus` instead of hash, then type alias the minus symbol.
+- [x] You should use `minus` instead of hash, then type alias the minus symbol.
 - [ ] You need to replace operator with the word `infix`.
 
 #### Q52. This code snippet compiles without error, but never prints the results when executed. What could be wrong?
@@ -698,7 +698,7 @@ println(result)
 ```
 
 - [ ] The sequence lacks a terminal operation.
-- [ ] The sequence is infinite and lacks an intermediate operation to make `it` finite.
+- [x] The sequence is infinite and lacks an intermediate operation to make `it` finite.
 - [ ] The expression should begin with `generateSequence(0)`.
 - [ ] The `it` parameter should be replaced with `this`.
 

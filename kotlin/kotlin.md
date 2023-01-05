@@ -723,6 +723,13 @@ val olderJack = jack.copy(age = 2)
 val jane = User("Jane", 35)
 val (name, age) = jane
 println("$name, $age years of age") // prints "Jane, 35 years of age"
+
+val name = person.component1()
+val age = person.component2()
+
+map.mapValues { entry -> "${entry.value}!" }
+map.mapValues { (key, value) -> "$value!" }
+
 ```
 
 ## Pair
