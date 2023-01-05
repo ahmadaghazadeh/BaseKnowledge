@@ -618,12 +618,12 @@ for (value in 1..5){
 
 - [ ] `a.from(b)`
 - [ ] `a.range(b)`
-- [ ] `a.rangeTo(b)`
+- [x] `a.rangeTo(b)`
 - [ ] `a.to(b)`
 
 [reference](https://kotlinlang.org/docs/ranges.html)
 
-#### Q48. How can you retrieve the value of the property codeName without referring to it by name or destructuring?
+#### **Q48. How can you retrieve the value of the property codeName without referring to it by name or destructuring?**
 
 ```kotlin
 data class Project(var codeName: String, var version: String)
@@ -635,7 +635,7 @@ fun main(){
 - [ ] `proj.0`
 - [ ] `proj[0]`
 - [ ] `proj[1]`
-- [ ] `proj.component1()`
+- [x] `proj.component1()`
 
 [reference](https://kotlinlang.org/docs/destructuring-declarations.html)
 
