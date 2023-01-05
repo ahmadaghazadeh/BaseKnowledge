@@ -977,3 +977,30 @@ class JavaClient {
     * const modifier
 
 Annotating such a property with @JvmField makes it a static field with the same visibility as the property itself.
+
+## Ranges and progressions
+``` kotlin
+if (i in 1..4) { // equivalent of i >= 1 && i <= 4 
+    print(i)
+}
+
+for (i in 4 downTo 1) print(i)
+
+for (i in 1..8 step 2) print(i)
+
+for (i in 1 until 10) {       // i in 1 until 10, excluding 10
+    print(i)
+}
+
+val versionRange = Version(1, 11)..Version(1, 30)
+
+a.rangeTo(b)
+
+if (i in a..b) {  // a.rangeTo(b)
+    print(i)
+}
+
+for (i in (1..4).reversed()) print(i)
+
+println((1..10).filter { it % 2 == 0 })
+```

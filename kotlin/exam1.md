@@ -614,7 +614,7 @@ for (value in 1..5){
 
 [reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/with-index.html)
 
-#### Q47. The Kotlin .. operator can be written as which function?
+#### **Q47. The Kotlin .. operator can be written as which function?**
 
 - [ ] `a.from(b)`
 - [ ] `a.range(b)`
