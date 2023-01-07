@@ -781,7 +781,7 @@ class BB() : AA() {
 
 - [ ] You need to add a `lateinit` modifier to `AA.price`.
 - [ ] You simply need to add an `override` modifier to `BB.price`.
-- [ ] You need to add an `open` modifier to `AA.price` and an `override` modifier to `BB.price`.
+- [x] You need to add an `open` modifier to `AA.price` and an `override` modifier to `BB.price`.
 - [ ] You need to add a `public` modifier to `AA.price` and a `protected` modifier to `BB.price`.
 
 #### Q58. What is the output of this code?
