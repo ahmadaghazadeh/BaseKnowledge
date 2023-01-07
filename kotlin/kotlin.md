@@ -1061,3 +1061,41 @@ aggregate() applies a given operation subsequently to all the elements in each g
 val numbers = listOf("one", "two", "three", "four", "five", "six")
 println(numbers.groupingBy { it.first() }.eachCount()) //{o=1, t=2, f=2, s=1}
 ```
+
+## Delegated properties
+
+* Lazy properties: the value is computed only on first access.
+
+* Observable properties: listeners are notified about changes to this property.
+
+* Storing properties in a map instead of a separate field for each property.
+
+```kotlin
+
+fun main() {
+val e = Example()
+println(e.p)
+e.p="hello"
+}
+ 
+ class Example {
+    var p: String by Delegate()
+}
+
+class Delegate {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): String {
+        return "$thisRef, thank you for delegating '${property.name}' to me!"
+    }
+
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: String) {
+        println("$value has been assigned to '${property.name}' in $thisRef.")
+    }
+}
+
+output: 
+
+Example@20fa23c1, thank you for delegating 'p' to me!
+hello has been assigned to 'p' in Example@20fa23c1.
+
+```
+* The syntax is: val/var <property name>: <Type> by <expression>. The expression after **by is a delegate**, because the get() (and set()) that correspond to the property will be delegated to its getValue() and setValue() methods. Property delegates don't have to implement an interface, but they have to provide a getValue() function (and setValue() for vars).

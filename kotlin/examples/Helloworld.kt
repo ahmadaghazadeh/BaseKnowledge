@@ -1,7 +1,21 @@
- 
+ import kotlin.reflect.KProperty
 
 fun main() {
- val highScores = listOf(4000, 2000, 10200, 12000, 9030)
-highScores
+val e = Example()
+println(e.p)
+e.p="hello"
 }
  
+ class Example {
+    var p: String by Delegate()
+}
+
+class Delegate {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): String {
+        return "$thisRef, thank you for delegating '${property.name}' to me!"
+    }
+
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: String) {
+        println("$value has been assigned to '${property.name}' in $thisRef.")
+    }
+}
