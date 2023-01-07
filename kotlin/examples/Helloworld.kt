@@ -1,10 +1,7 @@
  
 
 fun main() {
- val numbers = listOf("one", "two", "three", "four", "five")
-
-println(numbers.groupBy { it.first().uppercase() })
-println(numbers.groupBy(keySelector = { it.first() }, valueTransform = { it.uppercase() }))
-
+ val highScores = listOf(4000, 2000, 10200, 12000, 9030)
+highScores
 }
  

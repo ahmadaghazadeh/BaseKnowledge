@@ -784,7 +784,7 @@ class BB() : AA() {
 - [x] You need to add an `open` modifier to `AA.price` and an `override` modifier to `BB.price`.
 - [ ] You need to add a `public` modifier to `AA.price` and a `protected` modifier to `BB.price`.
 
-#### Q58. What is the output of this code?
+#### **Q58. What is the output of this code?**
 
 ```kotlin
 val quote = "The eagle has landed."
@@ -794,7 +794,7 @@ println("The length of the quote is $quote.length")
 - [ ] The length of the quote is The eagle has landed.
 - [ ] A compilation error is displayed.
 - [ ] The length of the quote is `21`
-- [ ] The length of the quote is `The eagle has landed..length`
+- [x] The length of the quote is `The eagle has landed..length`
 
 #### Q59. You have an unordered list of high scores. Which is the simple method to sort the highScores in descending order?
 
@@ -805,7 +805,7 @@ fun main() {
 
 - [ ] `.sortedByDescending()`
 - [ ] `.descending()`
-- [ ] `.sortedDescending()`
+- [x] `.sortedDescending()`
 - [ ] `.sort("DESC")`
 
 #### Q60. Your class has a property name that gets assigned later. You do not want it to be a nullable type. Using a delegate, how should you declare it?
