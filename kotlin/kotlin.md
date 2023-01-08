@@ -1117,4 +1117,28 @@ fun main() {
     println(lazyValue)
 }
 ```
-  
+* By default, the evaluation of lazy properties is **synchronized**: the value is computed only in one thread, but all threads will see the same value. If the synchronization of the initialization delegate is not required to allow multiple threads to execute it simultaneously, pass **LazyThreadSafetyMode.PUBLICATION** as a parameter to lazy().
+
+If you're sure that the initialization will always happen in the same thread as the one where you use the property, you can use **LazyThreadSafetyMode.NONE**. It doesn't incur any **thread-safety guarantees and related overhead**.
+
+#### Observable properties
+* Delegates.observable() takes two arguments: the initial value and a handler for modifications.
+
+* The handler is called every time you assign to the property (after the assignment has been performed). It has three parameters: the property being assigned to, **the old value, and the new value**:
+
+```kotlin
+import kotlin.properties.Delegates
+
+class User {
+    var name: String by Delegates.observable("<no name>") {
+        prop, old, new ->
+        println("$old -> $new")
+    }
+}
+
+fun main() {
+    val user = User()
+    user.name = "first"
+    user.name = "second"
+}
+```
