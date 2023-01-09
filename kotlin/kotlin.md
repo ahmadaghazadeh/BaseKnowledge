@@ -1126,6 +1126,8 @@ If you're sure that the initialization will always happen in the same thread as 
 
 * The handler is called every time you assign to the property (after the assignment has been performed). It has three parameters: the property being assigned to, **the old value, and the new value**:
 
+* If you want to intercept assignments and veto them, use vetoable() instead of observable(). The handler passed to vetoable will be called before the assignment of a new property value.
+
 ```kotlin
 import kotlin.properties.Delegates
 
@@ -1141,6 +1143,18 @@ fun main() {
     user.name = "first"
     user.name = "second"
 }
+
+var max: Int by Delegates.vetoable(0) { property, oldValue, newValue ->
+    newValue > oldValue
+}
+
+println(max) // 0
+
+max = 10
+println(max) // 10
+
+max = 5
+println(max) // 10
 
 ```
 
@@ -1169,5 +1183,17 @@ fun main() {
    myClass.oldName = 42
    println(myClass.newName) // 42
 }
+
+```
+#### Storing properties in a map
+```kotlin
+
+val user = User(mapOf(
+    "name" to "John Doe",
+    "age"  to 25
+))
+
+println(user.name) // Prints "John Doe"
+println(user.age)  // Prints 25
 
 ```

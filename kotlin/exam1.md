@@ -819,7 +819,7 @@ fun main() {
 
 - [ ] `Delegates.vetoable()`
 - [ ] `Delegates.cancellable()`
-- [ ] `Delegates.observer()`
+- [x] `Delegates.observer()`
 - [ ] `Delegates.watcher()`
 
 #### Q62. Which line of code shows how to call a Fibonacci function, bypass the first three elements, grab the next six, and sort the elements in descending order?
