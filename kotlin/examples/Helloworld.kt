@@ -1,16 +1,12 @@
- import kotlin.reflect.KProperty
-
-import kotlin.properties.Delegates
-
-class User {
-    var name: String by Delegates.observable("<no name>") {
-        prop, old, new ->
-        println("$old -> $new , $prop")
-    }
+class MyClass {
+   var newName: Int = 0
+   @Deprecated("Use 'newName' instead", ReplaceWith("newName"))
+   var oldName: Int by this::newName
 }
-
 fun main() {
-    val user = User()
-    user.name = "first"
-    user.name = "second"
+   val myClass = MyClass()
+   // Notification: 'oldName: Int' is deprecated.
+   // Use 'newName' instead
+   myClass.oldName = 42
+   println(myClass.newName) // 42
 }

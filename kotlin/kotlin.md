@@ -1142,3 +1142,30 @@ fun main() {
     user.name = "second"
 }
 ```
+
+#### Delegating to another property
+
+* A property can delegate its getter and setter to another property. Such delegation is available for both top-level and class properties (member and extension). The delegate property can be:
+
+* A top-level property
+
+* A member or an extension property of the same class
+
+* A member or an extension property of another class
+
+* To delegate a property to another property, use the :: qualifier in the delegate name, for example, this::delegate or MyClass::delegate.
+
+``` kotlin
+class MyClass {
+   var newName: Int = 0
+   @Deprecated("Use 'newName' instead", ReplaceWith("newName"))
+   var oldName: Int by this::newName
+}
+fun main() {
+   val myClass = MyClass()
+   // Notification: 'oldName: Int' is deprecated.
+   // Use 'newName' instead
+   myClass.oldName = 42
+   println(myClass.newName) // 42
+}
+```
