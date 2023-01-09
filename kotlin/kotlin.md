@@ -1141,6 +1141,7 @@ fun main() {
     user.name = "first"
     user.name = "second"
 }
+
 ```
 
 #### Delegating to another property
@@ -1168,4 +1169,5 @@ fun main() {
    myClass.oldName = 42
    println(myClass.newName) // 42
 }
+
 ```
