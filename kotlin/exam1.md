@@ -817,9 +817,9 @@ fun main() {
 
 #### **Q61. You want to know each time a class property is updated. If the new value is not within range, you want to stop the update. Which code snippet shows a built-in delegated property that can accomplish this?**
 
-- [ ] `Delegates.vetoable()`
+- [x] `Delegates.vetoable()`
 - [ ] `Delegates.cancellable()`
-- [x] `Delegates.observer()`
+- [ ] `Delegates.observer()`
 - [ ] `Delegates.watcher()`
 
 #### Q62. Which line of code shows how to call a Fibonacci function, bypass the first three elements, grab the next six, and sort the elements in descending order?
@@ -827,7 +827,7 @@ fun main() {
 - [ ] `val sorted = fibonacci().skip(3).take(6).sortedDescending().toList()`
 - [ ] `val sorted = fibonacci().skip(3).take(6).sortedByDescending().toList()`
 - [ ] `val sorted = fibonacci().skip(3).limit(6).sortedByDescending().toList()`
-- [ ] `val sorted = fibonacci().drop(3).take(6).sortedDescending().toList()`
+- [x] `val sorted = fibonacci().drop(3).take(6).sortedDescending().toList()`
 
 [reference](https://kotlinlang.org/docs/collection-parts.html#take-and-drop)
 
@@ -841,7 +841,7 @@ val b = arrayOf(100, 200, 3000)
 - [ ] `val c = list of (a, b)`
 - [ ] `val c = a + b`
 - [ ] `val c = listOf(a+b)`
-- [ ] `val c = listOf(*a, *b)`
+- [x] `val c = listOf(*a, *b)`
 - [reference](https://www.baeldung.com/kotlin/combine-arrays#arrayof-and-the-spread-operator)
 
 #### Q64. This code is occasionally throwing a null pointer exception (NPE). How can you change the code so it never throws as NPE?
@@ -850,7 +850,7 @@ val b = arrayOf(100, 200, 3000)
 println("length of First Name = ${firstName!!.length}")
 ```
 
-- [ ] Replace `!!.` with `?.`
+- [x] Replace `!!.` with `?.`
 - [ ] Replace `!!.` with `?:.`
 - [ ] Surround the line with a try/catch block.
 - [ ] Replace `!!.` with `?.let`.

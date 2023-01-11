@@ -1197,3 +1197,15 @@ println(user.name) // Prints "John Doe"
 println(user.age)  // Prints 25
 
 ```
+
+## Dorp, Take, sortedDescending
+```kotlin
+
+   val numbers = listOf("one", "two", "three", "four", "five", "six")
+    println(numbers.take(3)) [one, two, three]
+    println(numbers.takeLast(3)) [four, five, six]
+    println(numbers.drop(1)) [two, three, four, five, six]
+    println(numbers.dropLast(5)) [one]
+    println(numbers.drop(3).take(2).sortedDescending().toList()) [four, five]
+
+```
