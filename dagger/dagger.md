@@ -48,3 +48,36 @@ val userRepository2: UserRepository = applicationGraph.repository()
 
 assert(userRepository != userRepository2)
 ```
+* Sometimes, you need to have a unique instance of a dependency in a container. You might want this for several reasons:
+1. You want other types that have this type as a dependency to share the same instance, such as multiple ViewModel objects in the login flow using the same LoginUserData.
+An object is expensive to create and you don't want to create a new instance every time it's declared as a dependency (for example, a JSON parser).
+2. You want other types that have this type as a dependency to share the same instance, such as multiple ViewModel objects in the login flow using the same LoginUserData.
+An object is expensive to create and you don't want to create a new instance every time it's declared as a dependency (for example, a JSON parser).
+* In the example, you might want to have a unique instance of UserRepository
+available in the graph so that every time you ask for a UserRepository, you always get the same instance. This is useful in your example because in a real-life application with a more complex application graph, you might have multiple ViewModel objects depending on UserRepository and you don't want to create new instances of UserLocalDataSource and UserRemoteDataSource
+every time UserRepository needs to be provided.
+
+* In manual dependency injection, you do this by passing in the same instance of UserRepository to the constructors of the ViewModel classes; but in Dagger, because you are not writing that code manually, you have to let Dagger know you want to use the same instance. This can be done with scope annotations.
+
+## Scoping with Dagger
+* You can use scope annotations to limit the lifetime of an object to the lifetime of its component. This means that the same instance of a dependency is used every time that type needs to be provided.
+
+* **To have a unique instance** of a UserRepository when you ask for the repository in ApplicationGraph, use the same scope annotation for the @Component interface and UserRepository. You can use the **@Singleton** annotation that already comes with the javax.inject package that Dagger uses:
+
+```kotlin
+// Scope annotations on a @Component interface informs Dagger that classes annotated
+// with this annotation (i.e. @Singleton) are bound to the life of the graph and so
+// the same instance of that type is provided every time the type is requested.
+@Singleton
+@Component
+interface ApplicationGraph {
+    fun repository(): UserRepository
+}
+
+// Scope this class to a component using @Singleton scope (i.e. ApplicationGraph)
+@Singleton
+class UserRepository @Inject constructor(
+    private val localDataSource: UserLocalDataSource,
+    private val remoteDataSource: UserRemoteDataSource
+) { ... }
+```
